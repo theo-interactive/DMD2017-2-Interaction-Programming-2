@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/reset.css">
     <script src="./js/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <title>0831</title>
 </head>
 <body>
@@ -28,11 +28,9 @@
     $(document).ready(function(){
         console.log('Hello World!');
         alert('안녕하세요.');
-        //event - click, mouse hover
     });
 })(jQuery);
 </script>
 </body>
 </html>
-
 ```
