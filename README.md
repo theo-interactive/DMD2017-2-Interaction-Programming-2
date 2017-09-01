@@ -28,17 +28,56 @@ Email : [rh@102labs.com](mailto:rh@102labs.com)
 
 [Webstorm](https://www.jetbrains.com/webstorm/)
 
+JetBrain 사에서 만든 통합개발환경(IDE) 프로그램입니다.
+
 <img src="https://www.jetbrains.com/webstorm/img/screenshots/webstorm-main.png" width="600">
+
+HTML, CSS, Javascript 등 프론트앤드 개발을 할 수 있는 강력한 툴입니다.
+
+대학교 이메일(xxx@xxx.ac.kr / xxx@xxx.edu)을 이용해 JetBrain 사의 모든 IDE 툴의 라이센스 인증이 가능합니다.
+
+[학생용 / 교사용 라이센스 발급 링크](https://www.jetbrains.com/shop/eform/students)
+
+[다운로드 링크](https://www.jetbrains.com/webstorm/download/)
+
+[Download](https://www.jetbrains.com/webstorm/download/)
+
 
 [Visual Studio Code](https://code.visualstudio.com)
 
+MS 사의 소스코드 편집 툴입니다.
+
 <img src="https://code.visualstudio.com/home/home-screenshot-mac-lg-2x.png" width="600">
 
+[다운로드 링크](https://code.visualstudio.com)
 
-## Github / SourceTree
+## Slack
 
-[Github](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
+[Slack](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
+
+업무용 메신저로 오픈 채널, 비공식 채널을 통해 팀 구성원들과 소통할 수 있는 협업 툴입니다.
+
+인터랙션 프로그래밍 2 Slack 채널 : [https://dmd2017-2-ip2.slack.com/](https://dmd2017-2-ip2.slack.com/)
+
+<img src="https://a.slack-edge.com/b5ab6/marketing/img/downloads/screenshots/mac_screenshot@2x.png" width="600">
+
+[다운로드 링크](https://slack.com/downloads)
+
+
+## GitHub / SourceTree
+
+[GitHub](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
+
+개인 프로젝트, 팀원간의 프로젝트 등 소스관리를 할 수 있는 소스 저장소입니다.
+
+인터랙션 프로그래밍 2 GitHub 소스저장소 : [https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2/](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2/)
 
 [SourceTree](https://www.sourcetreeapp.com)
 
+atlassian 사에서 Git 소스를 관리할 수 있는 GUI 툴입니다.
+
 <img src="https://www.sourcetreeapp.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png" width="600">
+
+local 폴더에 git 을 설치하고 SourceTree 에 remote 하여 사용 가능합니다.
+
+[다운로드 링크](https://downloads.atlassian.com/software/sourcetree/SourceTree_2.6.1b.zip?_ga=2.236074755.325546728.1504259188-460571181.1504259188)
