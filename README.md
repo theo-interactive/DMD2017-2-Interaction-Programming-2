@@ -38,9 +38,7 @@ HTML, CSS, Javascript 등 프론트앤드 개발을 할 수 있는 강력한 툴
 
 대학교 이메일(xxx@xxx.ac.kr / xxx@xxx.edu)을 이용해 JetBrain 사의 모든 IDE 툴의 라이센스 인증이 가능합니다.
 
-[학생용 / 교사용 라이센스 발급 링크](https://www.jetbrains.com/shop/eform/students)
-
-[다운로드 링크](https://www.jetbrains.com/webstorm/download/)
+[학생용 / 교사용 라이센스 발급 링크](https://www.jetbrains.com/shop/eform/students) [다운로드 링크](https://www.jetbrains.com/webstorm/download/)
 
 
 ### Visual Studio Code
@@ -53,7 +51,9 @@ MS 사의 소스코드 편집 툴입니다.
 
 [다운로드 링크](https://code.visualstudio.com)
 
-### [Slack](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
+### Slack
+
+[Slack](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
 
 업무용 메신저로 오픈 채널, 비공식 채널을 통해 팀 구성원들과 소통할 수 있는 협업 툴입니다.
 
@@ -66,14 +66,18 @@ MS 사의 소스코드 편집 툴입니다.
 
 ## GitHub / SourceTree
 
-### [GitHub](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
+### GitHub
+
+[GitHub](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2)
 
 개인 프로젝트, 팀원간의 프로젝트 등 소스관리를 할 수 있는 소스 저장소입니다.
 
 인터랙션 프로그래밍 2 GitHub 소스저장소 : [https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2/](https://github.com/ryonghwon/DMD2017-2-Interaction-Programming-2/)
 
 
-### [SourceTree](https://www.sourcetreeapp.com)
+### SourceTree
+
+[SourceTree](https://www.sourcetreeapp.com)
 
 atlassian 사에서 Git 소스를 관리할 수 있는 GUI 툴입니다.
 
