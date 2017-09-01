@@ -36,7 +36,9 @@ HTML, CSS, Javascript 등 프론트앤드 개발을 할 수 있는 강력한 툴
 
 대학교 이메일(xxx@xxx.ac.kr / xxx@xxx.edu)을 이용해 JetBrain 사의 모든 IDE 툴의 라이센스 인증이 가능합니다.
 
-[학생용 / 교사용 라이센스 발급 링크](https://www.jetbrains.com/shop/eform/students) [다운로드 링크](https://www.jetbrains.com/webstorm/download/)
+[학생용 / 교사용 라이센스 발급 링크](https://www.jetbrains.com/shop/eform/students)
+
+[다운로드 링크](https://www.jetbrains.com/webstorm/download/)
 
 
 ### Visual Studio Code
