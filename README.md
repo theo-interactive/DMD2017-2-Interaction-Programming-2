@@ -4,12 +4,14 @@
 
 강의자료 확인과 과제 / 프로젝트 업데이트하여 활용하시길 바랍니다.
 
+
 ## 강의목표
 
 Javascript / jQuery 를 다루는 수업입니다.
 
 - Javascript / jQuery 를 활용하여 UI 제작 및 인터랙션을 구현할 수 있다.
 - 원리를 이해하고 스스로 논리적인 구조를 만들 수 있다.
+
 
 ## 연락처
 
@@ -26,11 +28,11 @@ Email : [rh@102labs.com](mailto:rh@102labs.com)
 
 [Webstorm](https://www.jetbrains.com/webstorm/)
 
-<img src="https://www.jetbrains.com/webstorm/img/screenshots/webstorm-main.png" width="400">
+<img src="https://www.jetbrains.com/webstorm/img/screenshots/webstorm-main.png" width="600">
 
 [Visual Studio Code](https://code.visualstudio.com)
 
-<img src="https://code.visualstudio.com/home/home-screenshot-mac-lg-2x.png" width="400">
+<img src="https://code.visualstudio.com/home/home-screenshot-mac-lg-2x.png" width="600">
 
 
 ## Github / SourceTree
@@ -39,4 +41,4 @@ Email : [rh@102labs.com](mailto:rh@102labs.com)
 
 [SourceTree](https://www.sourcetreeapp.com)
 
-<img src="https://www.sourcetreeapp.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png" width="400">
+<img src="https://www.sourcetreeapp.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png" width="600">
