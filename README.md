@@ -22,6 +22,7 @@ Phone : 010 9137 8688
 Email : [rh@102labs.com](mailto:rh@102labs.com)
 
 궁금한 사항은 연락주시길 바랍니다.
+너무 늦은 시간엔 답변하지 않습니다.
 
 
 ## Javascript IDE
