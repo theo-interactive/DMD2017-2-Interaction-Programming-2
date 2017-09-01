@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <script src="./js/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <title>0831</title>
+    <title>1WEEK</title>
 </head>
 <body>
     <h1>1WEEK - 08/31</h1>
