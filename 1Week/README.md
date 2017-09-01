@@ -4,7 +4,7 @@
 
 수업시간에 진행했던 Visual Studio Code 를 익혀보고, jQuery 로드했던 소스를 작성합니다.
 
-학번_이름 폴더 생성 후 index.html, css, js 폴더 구조까지 만들어서 폴더 업로드합니다.
+'학번_이름' 폴더 생성 후 index.html, css, js 폴더 구조까지 만들어서 폴더 업로드합니다.
 
 jQuery 로드(ready) 되는 함수 부분에 
 
