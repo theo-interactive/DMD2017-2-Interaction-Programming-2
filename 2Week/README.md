@@ -9,7 +9,7 @@
 ### Quest 1.
 
 1. selectors 라는 이름을 가진 Object 객체를 생성합니다.
-2. number 프로퍼티를 갖고 있으며 그 값은 2 (int) 입니다.
+2. number 프로퍼티를 갖고 있으며 그 값은 2 (number) 입니다.
 3. string 프로퍼티를 추가하고 빈 문자열 ‘ ’ 을 할당합니다.
 4. selectors Object 객체에 dom 프로퍼티를 추가합니다.
 5. dom 프로퍼티 값은 ‘header’ 문자열을 원소로 가진 배열로 할당합니다.
