@@ -55,16 +55,15 @@
     <h1>2WEEK - 09/13</h1>
     <h2>학번 / 이름</h2>
     <script>
-        <!-- Answer -->
-        <!-- A1. -->
+        //Answer 1.
 
-        <!-- A2. -->
+        //Answer 2.
 
-        <!-- A3. -->
+        //Answer 3.
 
-        <!-- A4. -->
+        //Answer 4.
 
-        <!-- A5. -->
+        //Answer 5.
     </script>
 </body>
 </html>
