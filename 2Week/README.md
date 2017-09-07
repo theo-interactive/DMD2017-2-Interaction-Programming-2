@@ -2,19 +2,19 @@
 
 ## Reference site
 
-Awwwards [https://www.awwwards.com](https://www.awwwards.com){:target="_blank"}
+Awwwards [https://www.awwwards.com](https://www.awwwards.com){: target="_blank" }
 
-the FWA [https://thefwa.com](https://thefwa.com){:target="_blank"}
+the FWA [https://thefwa.com](https://thefwa.com){: target="_blank" }
 
-CSS Design Awards [http://www.cssdesignawards.com](http://www.cssdesignawards.com){:target="_blank"}
+CSS Design Awards [http://www.cssdesignawards.com](http://www.cssdesignawards.com){: target="_blank" }
 
-CSSAWDS [https://www.cssawards.net](https://www.cssawards.net){:target="_blank"}
+CSSAWDS [https://www.cssawards.net](https://www.cssawards.net){: target="_blank" }
 
-Site Inspire [https://www.siteinspire.com](https://www.siteinspire.com){:target="_blank"}
+Site Inspire [https://www.siteinspire.com](https://www.siteinspire.com){: target="_blank" }
 
-Pttrns [https://pttrns.com](https://pttrns.com){:target="_blank"}
+Pttrns [https://pttrns.com](https://pttrns.com){: target="_blank" }
 
-codepen.io [https://codepen.io](https://codepen.io){:target="_blank"}
+codepen.io [https://codepen.io](https://codepen.io){: target="_blank" }
 
 <hr/>
 
