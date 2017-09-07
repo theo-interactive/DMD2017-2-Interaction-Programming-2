@@ -90,6 +90,8 @@ codepen.io [https://codepen.io](https://codepen.io)
 </html>
 ```
 
+<hr/>
+
 ## 인터랙션 사이트 기획서
 
 간략한 사이트 기획서 작성합니다.
