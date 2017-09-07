@@ -26,14 +26,13 @@ codepen.io [https://codepen.io](https://codepen.io)
 
 ### Quest 1.
 
-1. selectors 라는 이름을 가진 Object 객체를 생성합니다.
-2. number 프로퍼티를 갖고 있으며 그 값은 2 (number) 입니다.
+1. selectors 라는 이름을 가진 객체를 생성합니다.
+2. number 프로퍼티를 갖고 있으며 그 값은 2 (number type) 입니다.
 3. string 프로퍼티를 추가하고 빈 문자열 ‘ ’ 을 할당합니다.
-4. selectors Object 객체에 dom 프로퍼티를 추가합니다.
-5. dom 프로퍼티 값은 ‘header’ 문자열을 원소로 가진 배열로 할당합니다.
-6. selectors Object 객체의 dom 배열 프로퍼티에 ‘main’, ‘footer’ 라는 문자열을 ‘header’ 원소의 뒤로 순서대로 추가합니다.
-7. selectors Object 객체의 string 프로퍼티를 삭제합니다.
-8. console.log 메서드를 이용해서 selectors 를 출력합니다.
+4. selectors 객체에 dom 프로퍼티 배열을 추가하고 ‘header’ 문자열 원소를 할당합니다.
+5. selectors 객체의 dom 배열 프로퍼티에 ‘main’, ‘footer’ 라는 문자열을 ‘header’ 원소의 뒤에 순서대로 추가합니다.
+6. selectors 객체의 string 프로퍼티를 삭제합니다.
+7. console.log 메서드를 이용해서 selectors 객체를 출력합니다.
 
 ### Quest 2.
 
@@ -112,6 +111,12 @@ codepen.io [https://codepen.io](https://codepen.io)
 - 자신을 브랜딩 할 수 있는 사이트
 - 롤모델, 명사나 기업의 브랜드
 - 이외의 진행하고자 하는 자유 주제
+
+## 제출형식
+
+학번_이름_프로젝트 명칭.ppt/pdf
+
+ex) 20170000_김용원_프로젝트 명칭.ppt/pdf
 
 ## 제출방법
 
