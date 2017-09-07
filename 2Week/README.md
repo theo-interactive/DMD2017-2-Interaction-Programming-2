@@ -1,5 +1,23 @@
 # 2 WEEK
 
+## Reference site.
+
+Awwwards [https://www.awwwards.com](https://www.awwwards.com)
+
+the FWA [https://thefwa.com](https://thefwa.com)
+
+CSS Design Awards [http://www.cssdesignawards.com](http://www.cssdesignawards.com)
+
+CSSAWDS [https://www.cssawards.net](https://www.cssawards.net)
+
+Site Inspire [https://www.siteinspire.com](https://www.siteinspire.com)
+
+Pttrns [https://pttrns.com](https://pttrns.com)
+
+codepen.io [https://codepen.io](https://codepen.io)
+
+<hr/>
+
 2주차 과제입니다.
 
 ## Javascript Review
@@ -31,7 +49,7 @@
 ### Quest 4.
 
 1. var orders = { name : [‘본인 이름’], coffee : [‘아메리카노’, ‘에스프레소’, ‘카페라떼’] }; 객체를 선언합니다.
-2. orders 객체의 coffee 프로퍼티 배열이 가지는 원소들을 반복문을 이용하여 (3) 의 문자열로 console.log 메서드를 이용하여 출력합니다.
+2. orders 객체의 coffee 프로퍼티 배열이 가지는 원소들을 반복문을 이용하여 (3) 의 문자열로 console.log 메서드를 이용해서 출력합니다.
 3. 문자열 : “name 님, 주문하신 coffee 1잔 나왔습니다.”
 
 ### Quest 5.
