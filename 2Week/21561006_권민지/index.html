@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2WEEK</title>
+</head>
+<body>
+    <h1>2WEEK - 09/13</h1>
+    <h2>21561006 / 권민지</h2>
+    <script>
+        //1. selectors 이름을 가진 오브젝트 생성
+        var selectors = {};
+        //2. number 프로퍼티를 갖고 있으며 그 값은 2
+        selectors.number = 2;
+        //3. string 프로퍼티 추가 빈 문자열 '' 할당
+        selectors.string = '';
+        // console.log(selectors);
+        //4. selectors object 객체에 dom 프로퍼티 추가
+        selectors.dom = ['header'];
+        //6. 'main', 'footer' 추가
+        selectors.dom.push('main');
+        selectors.dom.push('footer');
+        //7. selectors object 객체의 string 프로퍼티를 삭제
+        delete selectors.string;
+        //8. console.log를 이용해서 selectors 출력
+        console.log(selectors);
+    </script>
+
+</body>
+</html>
