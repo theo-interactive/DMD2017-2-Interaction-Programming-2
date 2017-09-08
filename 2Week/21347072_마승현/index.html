@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2WEEK</title>
+</head>
+<body>
+    <h1>2WEEK - 09/13</h1>
+    <h2>21347072 / 마승현</h2>
+<script>
+//Answer 1.
+    console.log('Answer 1.')
+    var selectors = {
+        number : 2
+    };
+    selectors.string = '';
+    selectors.dom = ['header'];
+    selectors.dom.push('main','footer');
+    delete selectors.string;
+    console.log(selectors);
+//Answer 2.
+    console.log('Answer 2.')
+    // var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+    // for(var i = cars.length -1 ; i > -1; --i){
+    //     console.log(cars[i]);
+    // }
+    //or
+    var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+    cars.reverse();
+    for(var i = 0, lth = cars.length; i <  lth; ++i){
+        console.log(cars[i]);
+    }
+//Answer 3.
+    console.log('Answer 3.')
+    var propertys;
+    for(var p in document){
+      propertys = propertys + ', ' + p;
+    }
+    propertys = 'document의 프로퍼티는 다음과 같습니다 : ' + propertys;
+    console.log(propertys);
+//Answer 4.
+    console.log('Answer 4.')
+    var orders = {
+        name : ['마승현'],
+        coffee : ['아메리카노', '에스프레소', '카페라뗴']
+    };
+    var getOrder = function(coffee){
+        return orders.name + '님, 주문하신 ' + orders.coffee[coffee] + ' 1잔 나왔습니다.';
+    }
+    console.log(getOrder(1));
+//Answer 5.
+    console.log('Answer 5.')
+    var time = new Date;
+    var hour = time.getHours();
+    var day = time.getDay();
+    var weekend = ['mon','tus','wen','thu','fri','sat','sun']
+    var Person = {
+        name : '마승현',
+        age : '25',
+        hobby : ['게임','요리','독서','방울이랑놀기'],
+        dream : ['행복한 삶','프론트엔드 개발자']
+    }
+    var timeTable = {
+        mon : ['콘텐츠 프로그래밍','미디어 프로그래밍'],
+        tus : ['캡스톤'],
+        wen : ['포트폴리오'],
+        thu : ['인터렉션 프로그래밍','콘텐츠 디자인']
+    }
+    var timeCheckAndHi = function(){
+        if(hour <= 9){
+            var hi = '좋은 아침입니다. ';
+        }else if(hour > 9 && hour <= 20){
+            var hi = '날씨가 참 좋네요. ';
+        }else{
+            var hi = '밤에는 좀 춥네요. ';
+        }
+        return '안녕하세요, '+ hi;
+    }
+    var school = {
+        allClass: function(){
+            var all = 0;
+            for(var i in timeTable){
+                all = timeTable[i].length + all;
+            }
+            return all;
+        },
+        todayClass:function(day){
+            var todayNum = day - 1;
+            var text = weekend[todayNum];
+            if(timeTable.hasOwnProperty(text)){
+                var test = timeTable[text];
+                return test.length;
+            }else{
+                return 0;
+            }
+        },
+        stress:function(tc){
+            if(tc >= 2){
+                return ' 피곤합니다.';
+            }else if(tc == 1){
+                return ' 할만 합니다.'
+            }else if(tc <= 0){
+                return ' 만세!'
+            }
+        }
+    }
+    console.log(
+        timeCheckAndHi() +
+        '제 이름은 ' + Person.name + '이고, 나이는 ' + Person.age + '살 입니다.'
+    );
+    console.log(
+        '저는 2학기에 '+ school.allClass() +'개 의 수업을 들으며 오늘은 ' + school.todayClass(day)+'개 의 수업이 있습니다.' + school.stress(school.todayClass(day))
+    )
+    console.log(
+        '저의 취미는 ' + Person.hobby + ' 입니다'
+    )
+    console.log(
+        '제 꿈은 ' + Person.dream[0] + '을 사는것이며 현재 목표는 ' + Person.dream[1] +' 입니다.'
+    )
+</script>
+</body>
+</html>
