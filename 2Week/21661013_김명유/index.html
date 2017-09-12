@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2WEEK</title>
+</head>
+<body>
+    <h1>2WEEK - 09/13</h1>
+    <h2>21661013 / 김명유</h2>
+    <script>
+
+      //Answer1
+
+      var selectors = {
+        number : 2
+      };
+      selectors.string = '';
+      selectors.dom =['header'];
+      selectors.dom.push('main');
+      selectors.dom.push('footer');
+      delete selectors.string;
+      console.log(selectors);
+
+      //Answer2
+
+      var cars = ['Hyundai','Kia','Samsung','GM'];
+      var reverse = cars.reverse();
+      console.log(reverse);
+
+      //Answer3
+
+      var documentTest = 0;
+      function test(num){
+        for(var i = 0; i < num; i++){
+          documentTest++;
+          console.log(documentTest);
+        }
+      }
+      test(4);
+
+      //Answer4
+      
+      var orders = {
+        name:['김명유'],
+        coffee:['아메리카노','에스프레소','카페라떼']
+      };
+      for(var i = 0; i < orders.coffee.length; i++){
+        console.log(orders.name+'님, 주문하신 '+orders.coffee[i]+' 1잔 나왔습니다.');
+      }
+
+      //Answer5
+
+      var me = {
+        name : '김명유',
+        age : 21
+      };
+      console.log('안녕하세요 저는 '+me.name+'입니다'+' 나이는 '+me.age+'살 입니다');
+
+    </script>
+</body>
+</html>
