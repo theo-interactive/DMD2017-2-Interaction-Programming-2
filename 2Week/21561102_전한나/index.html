@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2WEEK</title>
+</head>
+<body>
+    <h1>2WEEK - 09/13</h1>
+    <h2>21561102 / 전한나</h2>
+    <script>
+        //Answer 1.
+        var selectors = {};
+            selectors.number = 2;
+            selectors.string = '';
+            selectors.dom = ['header'];
+            delete selectors.string;
+            selectors.dom.push('main','footer');
+            console.log(selectors);
+
+        //Answer 2.
+        /*  
+        var cars = [‘Hyundai’, ‘Kia’, ‘Samsung’, ‘GM’]; 배열을 선언합니다.
+        cars 배열 문자열 원소를 역순으로 출력하는 반복문을 작성합니다.
+        console.log 메서드를 이용해서 cars 를 출력합니다.
+        */
+        var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+        cars.reverse();
+        for(var i = 0; i < cars.length; i++){
+            console.log(cars[i]);
+        }
+
+        //Answer 3.
+        /*
+        전역변수 document 의 프로퍼티 및 메서드 등을 console.log 메서드를 이용해서 출력하는 반복문을 작성합니다.
+        여러가지 방법의 반복문을 이용하여 작성해도 됩니다.
+        */
+        var hanna ={
+            name : '한나',
+            age : 22,
+            school : 'kaywon'
+        }
+        console.log('안녕하세요 제 이름은 '+hanna.name+'입니다. 나이는 '+hanna.age+'살 이고 '+hanna.school+'에 다니고 있습니다');
+
+        //Answer 4.
+        /*
+        var orders = { name : [‘본인 이름’], coffee : [‘아메리카노’, ‘에스프레소’, ‘카페라떼’] }; 객체를 선언합니다.
+        orders 객체의 coffee 프로퍼티 배열이 가지는 원소들을 반복문을 이용하여 (3) 의 문자열로 console.log 메서드를 이용해서 출력합니다.
+        문자열 : “name 님, 주문하신 coffee 1잔 나왔습니다.”
+        */
+        var order = {
+            name : ['전한나'],
+            coffee : ['아메리카노', '에스프레소', '카페라떼'],
+        };
+        for(var i = 0; i < order.coffee.length; i++){
+            console.log(order.name + '님, 주문하신 ' + order.coffee[i] + ' 1잔 나왔습니다.');
+        };
+
+        //Answer 5.
+        /*
+        객체, 배열, 반복문, 함수 등을 이용하여 자기 소개를 하는 문자열을 출력합니다.
+        자신의 소개를 해주세요.
+        */
+        var me = {
+            name : ['전한나'],
+            age : ['22'],
+            hobby : ['음악듣기', '책읽기', '영화보기'],
+        };
+        for(var i = 0; i < me.hobby.length; i++){
+            console.log('제 이름은 ' + me.name + '입니다.' + ' 저는' + me.age + '살 입니다.' + ' 취미는 ' + me.hobby[i] + ' 입니다.' + ' 잘 부탁드립니다.');
+        };
+    </script>
+    
+</body>
+</html>
