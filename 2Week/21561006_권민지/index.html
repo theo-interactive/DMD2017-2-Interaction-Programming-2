@@ -10,22 +10,85 @@
     <h1>2WEEK - 09/13</h1>
     <h2>21561006 / 권민지</h2>
     <script>
-        //1. selectors 이름을 가진 오브젝트 생성
+        //Answer 1.
         var selectors = {};
-        //2. number 프로퍼티를 갖고 있으며 그 값은 2
         selectors.number = 2;
-        //3. string 프로퍼티 추가 빈 문자열 '' 할당
         selectors.string = '';
-        // console.log(selectors);
-        //4. selectors object 객체에 dom 프로퍼티 추가
         selectors.dom = ['header'];
-        //6. 'main', 'footer' 추가
         selectors.dom.push('main');
         selectors.dom.push('footer');
-        //7. selectors object 객체의 string 프로퍼티를 삭제
         delete selectors.string;
-        //8. console.log를 이용해서 selectors 출력
         console.log(selectors);
+
+
+        //Answer 2.
+        var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+        for(var i = 3; i >-1; --i) {
+            console.log(cars[i]);
+        }
+
+        //Answer 3.
+        // 전역변수 document 의 프로퍼티 및 메서드 등을 console.log 메서드를 이용해서 출력하는 반복문을 작성합니다.
+        // 여러가지 방법의 반복문을 이용하여 작성해도 됩니다.
+
+
+
+
+
+        
+
+
+        //Answer 4.
+        var orders = { 
+            name : ['권민지'], 
+            coffee : ['아메리카노', '에스프레소', '카페라떼'] 
+        };
+
+        for(var i = 0; i < orders.coffee.length; i++){
+            console.log(orders.name + ' 님, 주문하신 ' + orders.coffee[i] + ' 1잔 나왔습니다.');
+        }
+
+
+        //Answer 5.
+        // 객체, 배열, 반복문, 함수 등을 이용하여 자기 소개를 하는 문자열을 출력합니다.
+        // 자신의 소개를 해주세요.
+
+        var intro = '안녕하세요.';
+        const name = '권민지';
+        var person = {
+            age : 24,
+            birth : '3월 15일'
+        };
+        var hobby = ['음악듣기', '영화보기'];
+        var like = ['여행', '강아지와 산책', '카페가는 것'];
+        var dream = ['프론트엔드 개발자', '많이 부족한 자바스크립트와 제이쿼리 공부를 열심히 아주 열심히 '];
+
+        var run = (function(){
+            console.log(intro);
+        }());
+
+        function introduceMyself(){
+            return '저는 ' + name + '입니다. 제 나이는 ' + person.age + ', ' + person.birth + '에 태어났습니다.';
+        };
+        console.log(introduceMyself());
+
+        var message = hobby.join();
+        console.log('저의 취미는 ' + message + ' 입니다.');
+
+        var count = -1;
+        while(count < 2){
+            count++;
+            console.log('제가 좋아하는 것은 ' + like[count] + '입니다');
+        }
+
+
+
+
+
+        var fighting = (function(){
+            console.log('많이 부족하지만 그래도 열심히 하겠습니다!');
+        }());
+
     </script>
 
 </body>

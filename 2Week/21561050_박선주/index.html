@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>2week</title>
+    </head>
+    <body>
+        Example 2017 - 09 - 07
+        <script>
+        //1
+            var selectors = {
+                number : 2
+            }
+            selectors.string = '';
+            selectors.dom = ['header'];
+            selectors.dom.push('main','footer');
+            delete selectors.string;
+
+            console.log(selectors);
+
+        //2
+            var cars = ['Hyundai', 'Kia', 'Samsung', 'GM']
+            var reverse = cars.reverse();
+            console.log(reverse);
+
+        //3
+            var text;
+            for(var i in document){
+                console.log(i);
+            }
+
+        //4
+            var orders = {
+                name : ['박선주'],
+                coffee : ['아메리카노','에스프레소','카페라떼']
+            };
+            function myOrder(coffee){
+                return orders.name + '님, 주문하신 ' + orders.coffee[coffee] + ' 1잔 나왔습니다.';
+            }
+            console.log(myOrder(1));
+
+        //5
+            var me = {
+                name :'박선주',
+                age : '22',
+                hobby : ['게임','그림그리기','쇼핑'],
+                character : ['동그란 외형','동그란 눈','하얀피부','얇은 입술']
+            }
+            function introductuin(){
+                return '저의 이름은' + me.name + '이고 나이는' + me.age + '살 입니다. 저의 취미는' + me.hobby + '이며 저의 생김새는' +
+                me.character[0] + '이며' + me.character[1] + ',' + me.character[2] + ',' + me.character[3] + '를 가지고 있습니다.';
+            }
+            console.log(introductuin());
+
+        </script>
+    </body>
+</html>
