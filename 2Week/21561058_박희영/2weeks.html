@@ -10,6 +10,9 @@
 <body>
     <h1>2week -0907</h1>
     <script>
+
+    //Quest 1.    
+    console.log('Quest 1.');
     var selectors = { 
         number : 2, string : '', dom : ['header']
         };
@@ -17,6 +20,80 @@
         selectors.dom.push('main','footer');
         delete selectors.string;
         console.log(selectors);
+    
+    //Quest 2. 
+    console.log('Quest 2.');
+    var cars = ['Hyundai', 'Kia', 'Samsung', 'GM']; 
+
+    for(var i = 3; i >= 0; i--){
+        console.log(cars[i]);
+    }   
+    // var reverse = cars.reverse();
+    // console.log(reverse);
+
+    //Quest 3.
+    console.log('Quest 3.');
+    var globalVarIs =0;
+    var sum = 0;
+
+    while(globalVarIs <10){
+        globalVarIs++;
+        sum =globalVarIs;
+        console.log(globalVarIs + '전역변수 : ',sum);
+    }
+    console.log('최종 : ',sum);
+    
+    //Quest 4.
+    console.log('Quest 4.');
+    var orders = { name : ['박희영'], coffee : ['아메리카노', '에스프레소', '카페라떼'] };
+
+    var myOrder = function(coffeeIs){
+        for(var i = 0; i < 3; i++){
+            return orders.name + '님, 주문하신 ' + orders.coffee[coffeeIs] + ' 1잔 나왔습니다.';
+        }  
+    }
+    console.log(myOrder(2));
+
+    //Quest 5. 
+    console.log('Quest 5.');  
+
+    const name ='박희영';
+    let phonemNum = '01065995366';
+    var food = '냉면';
+
+    function aboutMe(){
+        console.log('안녕하세요 제 이름은 ' + name +'입니다. 전화번호는 ' + phonemNum +'이고요');
+        console.log('지금 제가 먹고 싶은 것은 ' + food +'입니다.');
+    }
+    aboutMe(food = '초밥');
+
+    var school = {schoolNum : 21561058, nameIs : '계원예술대학교', grade :'second', house : '미원파크빌'};
+    delete school.house;
+    school.favoriteSub = ['인터렉션'];
+    school.favoriteSub.push('unity','디자인','기획');
+    
+    var aboutSchool = (function(){
+        if(school.grade==='second'){
+            var last = '졸업반입니다';
+        }
+        else{
+            var last = '열심히 학교생활 중입니다';
+        }
+        console.log('저는 ' + school.nameIs +'에 재학중입니다 '+last);
+    }());
+
+    var favoriteIs = function(index){
+        for(var i =0; i<4; i++){
+            console.log(school.favoriteSub[i]);
+        }
+        console.log('제가 제일 좋아하는 과목은 ' + school.favoriteSub +'등 이지만 아무래도 ' +index +'순위는 ' + school.favoriteSub[index]+'입니다.');
+    }
+    favoriteIs(0);
+
+
+
+    
+
 
     </script>
 
