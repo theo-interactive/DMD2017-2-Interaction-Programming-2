@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2WEEK - 9/7 : var,let,const </h1>
+    <script>
+        /*
+        var foo = 1;
+        console.log(foo);
+        // -> 1
+        foo = 2;
+        console.log(foo);
+        // -> 2
+
+        foo = 'apple';
+        foo = 'orange';
+
+        //상수 : let
+        let foo = 1;
+        //let foo = 2; -> 위에 이미 함수로 설정했기 때문에 동시에 사용하면 에러남.
+        console.log(foo);
+        */
+
+        /*
+        //상수선언 : const ( 고정값 )
+        const foo = 1; 
+        console.log(foo);
+        //foo = 2;
+        // ->  foo의 값을 변경하려하면 에러남.
+        //console.log(foo);
+        */
+
+        /*
+        var foo;
+        let boo;
+
+        foo = 1;
+        boo = 2;
+
+        console.log(foo);
+        console.log(boo);
+
+        //const는 값을 지정해주지 않으면 에러남.
+        const abc = '값이 있어야 함'; 
+
+        console.log(abc);
+        */
+
+        /*
+        //typeof : 선언된 값이 어떤 타입인가
+        var foo = 1;
+        var boo = 'apple';
+
+        //숫자열  'number'
+        console.log(typeof foo);
+        //문자열 'string'
+        console.log(typeof boo);
+
+        var abc = {name : 'apple', number: 1};
+        //오브젝트 'object'
+        // -> 'object'
+        console.log('1', typeof abc);
+        // -> 'string'
+        console.log('2', typeof abc.name);
+        //-> 'number'
+        console.log('3', typeof abc.number);
+
+        var xyz = [1,2,3,4];
+        //배열 'object array';
+        //$ isArray -> 배열인지 찾을 수 있음. ( jQuery )
+        console.log(typeof xyz);
+        */
+
+        /*
+        var car = {};
+        car.name = 'Tesla';
+        car.model ='Model 3'
+        // = 위아래 같은 의미
+        /*
+        var car = {
+            name = 'Tesla'
+            model = 'Model 3'
+        };
+        */
+        
+        /*
+        //name 삭제
+        var car ={};
+        car.name = 'Tesla';
+        delete car.name();
+        console.log(name);
+        */
+
+    
+
+
+
+
+    </script>
+</body>
+</html>
