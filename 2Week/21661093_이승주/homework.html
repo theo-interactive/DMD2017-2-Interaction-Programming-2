@@ -45,9 +45,11 @@
         //Answer 2.
         //var cars = [‘Hyundai’, ‘Kia’, ‘Samsung’, ‘GM’]; 선언합니다.
         //cars 배열 문자열 원소를 역순으로 출력하는 반복문을 작성합니다.
-        var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
-        cars.reverse();
 
+        var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+         for(var i = cars.length; i >= 0; i--){
+                console.log(cars[i]);
+            }
 
 
 
@@ -57,7 +59,10 @@
 
         //Answer 3.
         //전역변수 document 의 프로퍼티 및 메서드 등을 출력하는 반복문을 작성합니다.
-
+            var document = {};
+            for(var i in document){
+                console.log(document[i]);
+            }
 
 
 
@@ -69,10 +74,27 @@
         //coffee 배열들의 원소를 (3)의 문자열로 반복문을 이용해 출력합니다.
         //“name 님, 주문하신 coffee 1잔 나왔습니다.”
         var orders = { name : ['이승주'], coffee : ['아메리카노', '에스프레소', '카페라떼'] };
-
+            for(var i = 0; i < orders.coffee.length; i++){
+                console.log(orders.name + '님, 주문하신 ' + orders.coffee[i] + ' 1잔 나왔습니다.');
+            };
 
         //Answer 5.
         //객체, 배열, 반복문, 함수를 이용하여 자기 소개를 하는 문자열을 출력합니다.
+        var me = {
+                name : '이승주',
+                age : 24,
+                birth : '94년 11월 11일',
+                hobby : ['노래듣기', '잠자기', '책읽기']]
+            };
+            function introduce(){
+                for(var i = 0; i < me.hobby.length; i++){
+                    for(var o = 0; o < me.greeting.length; o++){
+                        console.log('안녕하세요. ' + me.name + '입니다. ' +'저는' + me.age + '살이고, 생일은 ' + me.birth + '입니다.  저의 취미는 ' + me.hobby[i] + '입니.');
+                    }
+                }
+            };
+            introduce();
+        
     </script>
 </body>
 </html>
