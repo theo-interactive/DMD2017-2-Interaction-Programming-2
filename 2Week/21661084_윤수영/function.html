@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2Week - 9/7 - funtion</h1>
+    <script>
+        /*
+        //함수 선언
+        function myName(){
+            //실행되는 코드
+        }
+
+        //리터럴 함수 선언.
+        var myName = function(){
+            console.log('안녕하세요 저는 지금 배가 너무고파요.');
+        };
+        myName();
+        // 위와 같은 내용
+        function myName(){
+            console.log('안녕하세요 저는 지금 배가 너무고파요');
+        }
+        myName();
+        */
+
+        /*
+        //함수 return
+        function myCar(){
+            var car = 'Tesla';
+        }
+        console.log(myCar());
+        //위와 같은 내용
+        function myCar(){
+            var car = 'Apple';
+            return car;
+            //------------- 끝
+            car = 'Hyundai';
+        }
+        console.log(myCar());
+        */
+
+        /*
+        //파라미터 parameter
+        var cup = '';
+        function myCoffee(Coffee){
+            coffee = '아메리카노';
+        };
+        function myCoffee(coffee = '화이트모카'){
+            //coffee = '망고';
+            return coffee;
+        }
+        console.log(myCoffee(cup));
+        console.log(myCoffee());
+        */
+        /*
+        function myOrder(name, menu = '아메리카노', cup = 1){
+            return name + ' 고객님 주문하신 ' + menu + ',' + cups + '나와요';
+        }
+        console.log(myOrder());
+        console.log(myOrder('나는야'));
+        console.log(myOrder('나는야', '배가고파', 2));
+        */
+        
+        /*
+        //즉시실행함수
+        var run = (function(){
+            //console.log('쉬고싶다');
+            //var x = 2;
+            //var y = 1; 
+
+            var x = 2, y = 1, sum;
+            sum = x + y;
+
+            console.log(sum);
+
+            returm sum;
+
+        }());
+        */
+
+        /*
+        // 전역변수, 지역변수 
+        var name = '쉬는시간';
+        console.log('초기 전역 변수', name);
+        function changeName(){
+            var name = 'break time';
+            console.log('지역 변수 : ', name);
+        }
+        changeName();
+        console.log('전역 변수 : ', name);
+        */
+
+        // ----- name 전역 변수 선언 안함.
+        function changeName(){
+            var name = '으악';
+        }
+        changeName();
+        //비어있음
+        console.log(name);
+        
+        
+        </script>
+</body>
+</html>
