@@ -131,6 +131,15 @@
             console.log('2 index', index);
         });
 
+        var genre = ['액션','미스터리/스릴러','판타지','멜로/로맨스/드라마','공포'];
+        genre.forEach(function(name,index){
+            if(index > 4){
+            break;
+        }
+        console.log('genre',name);
+        });
+
+
         //반복문 - for of - 배열.
         var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
         for(var name of cars){
