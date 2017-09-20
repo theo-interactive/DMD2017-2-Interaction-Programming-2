@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Timmana');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+a{text-decoration: none; color:#000;}
+/* finish */
+body{
+    font-family: 'Timmana', sans-serif;
+	color: #fff;
+}
+nav{
+    font-size: 20px;
+    position: fixed;
+    display: block;
+    height: 100%;
+    background-color: rgba(255,255,255,0.3);
+    min-width: 200px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+   /*  animation: menuSlide 2s ease-in-out normal; */
+}
+nav ul{
+    margin-top: 50px;
+}
+nav ul li{
+    padding: 20px;
+    text-align: end;
+}
+nav ul li:hover{
+    border-right: solid 5px white;
+    border-left: solid 5px white;
+    background-color: rgba(255,255,255,0.4);
+}
+header img{
+    position: fixed;
+    width: 80px;
+    left: 10%;
+    top:10%;
+}
+article{
+    background-color: black;
+    height: 100vh;
+}
+video{
+/*     position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; */
+    transform: translateX(0%) translateY(-15%);
+    position: fixed;
+    top: 0; 
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -10;
+}
+#maintxt{
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    left: 10%;
+    z-index: 10;
+    /* animation: txtOpersity 3s ease-in; */
+}
+#maintxt h1{
+    font-size: 50px;
+}
+/* .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+} */
+#header{
+    background-color: transparent;
+}
+#biography{
+    background: url("../images/_T4A9996.jpg")no-repeat;
+    background-size: cover;
+}
+.BiographyTxt{
+    position: relative;
+    top: 65%;
+    left: 10%;
+    display: block;
+    width: 370px;
+}
+.BiographyTxt>h1{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.BiographyTxt>p{
+    font-size: 12px;
+    line-height: 20px;
+}
+#work{
+    top: 10%;
+}
+#work>ol{
+    font-size: 10px;
+    line-height: 15px;
+}
+.profile{
+    height: 100%;
+    width: 50%;
+    float: left;
+    color: transparent;
+}
+.profile .profTxt{
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 50%;
+}
+.profile:hover{
+    color: white;
+    opacity: 0.5;
+}
+.profile:nth-child(1){
+    /*background-color:red;*/
+    background: url("../images/_T4A9852.jpg")no-repeat;
+    background-size: cover;
+}
+.profile:nth-child(2){
+    /*background-color:#FFD200;*/
+    background: url("../images/_T4A8669.jpg")no-repeat;
+    background-size: cover;
+}
+/* 가로가 1500px 이하일때 */
+@media (max-width: 1000px)
+{
+    #part2{
+        background-size: 160%;
+        background-color:#111111;
+    }
+}
+/* 가로가 1000px 이하일때 */
+@media (max-width: 770px)
+{
+    #part2{
+        background-size: 180%;
+        background-color:#111111;
+    }
+}
+/* 가로가 770px 이하일때 */
+@media (max-width: 480px)
+{
+    #part2{
+        background-size: 210%;
+        background-color:#111111;
+    }
+}
+}
