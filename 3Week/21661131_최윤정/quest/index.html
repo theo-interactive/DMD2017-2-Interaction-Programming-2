@@ -72,7 +72,6 @@
 
         //Answer 3.
         //문서내의 li 태그들 중 0 index 에 위치한 노드를 선택하고, 해당 태그에 zero 클래스를 추가합니다.
-        //console.log($($('li')[0]).addClass('zero'));
         $('li').eq(0).addClass('zero');
 
         //Answer 4.
@@ -81,7 +80,6 @@
 
         //Answer 5.
         //문서내의 li 태그들 중 data-role attribute 가 link 인 노드를 선택하고, 해당 태그에 role 클래스를 추가합니다.
-        //다시확인
         $('li[data-role="link"]').addClass('role');
 
         //Answer 6.
@@ -104,9 +102,6 @@
         //menu 7 텍스트를 포함하고 있는 a 엘리먼트를 선택할 수 있는 여러 가지 방법을 찾아, console.log 메서드를 이용하여 출력합니다.
         console.log('Answer 9 ------------');
         console.log($("a:contains('Menu 7')").text());
-        //console.log($('a').filter('Menu 7'));
-        //대소문자 구분
-        //.css("background-color", "blue")
         
         //Answer 10.
         //아이디가 radio-2 가 아닌 input radio 엘리먼트의 부모 노드를 찾고, 자식 노드 label 엘리먼트에 emphasis 클래스를 추가합니다.
@@ -116,11 +111,6 @@
         //sub-last 클래스를 가진 li 엘리먼트를 찾고 last 클래스를 가진 부모 노드를 찾은 후, 1) 자식노드 a 엘리먼트에 emphasis 클래스 / 2) 모든 자식노드 a 엘리먼트들에 bold 클래스를 추가합니다.
         $('li.sub-last').parents('.last').children('a').addClass('emphasis');
         $('li.sub-last').parents('.last').find('a').addClass('bold');
-        /*
-        var last = $('li.sub-last').parents('.last');
-        last.children('a').addClass('emphasis');
-        last.find('a').addClass('bold');
-        */
 
     });
 })(jQuery);
