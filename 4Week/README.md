@@ -2,7 +2,7 @@
 
 4주차 과제입니다.
 
-## jQuery
+## jQuery Manipulation (조작)
 
 1. 'sample' 폴더 다운받습니다.
 2. '학번_이름' 폴더를 '4Week' 폴더에 생성합니다.
