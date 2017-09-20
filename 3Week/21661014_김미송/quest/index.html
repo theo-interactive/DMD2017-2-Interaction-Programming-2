@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    a{color:#333}
+    .active{background-color:#f00}
+    .current{background-color:#0f0}
+    .zero{background-color:#0ff}
+    .inner{background-color:#f0f}
+    .role{background-color:#00f}
+    .emphasis{background-color:#ff0;color:#fff}
+    .bold{font-weight:600}
+    .hidden{display:none}
+</style>
+</head>
+<body>
+<h1>Example 03</h1>
+<nav role="navigation">
+    <ul class="gnb">
+        <li><a id="menu-1" href="#menu-1">Menu 1</a></li>
+        <li class="prev"><a href="#" class="type-2">Menu <span>2</span></a></li>
+        <li class="next"><a href="#">Menu 3</a></li>
+        <li data-role="link"><a href="#">Menu <span>4</span></a></li>
+        <li><a href="#">Menu 5</a></li>
+        <li><a href="#">Menu 6</a></li>
+        <li><a href="#">Menu 7</a></li>
+        <li><a href="#">Menu 8</a></li>
+        <li><a href="#">Menu 9</a></li>
+        <li class="last">
+            <a href="#">Menu 10</a>
+            <ol>
+                <li><a href="#">Sub menu 10-1</a></li>
+                <li><a href="#">Sub menu <span>10-2</span></a></li>
+                <li class="sub-last"><a href="#">Sub menu 10-3</a></li>
+            </ol>
+        </li>
+    </ul>
+</nav>
+<section role="banner">
+    <div id="radio-list">
+        <div class="radio-item">
+            <input id="radio-1" type="radio" name="radio" value="1"/>
+            <label for="radio-1">Radio 1</label>
+        </div>
+        <div class="radio-item">
+            <input id="radio-2" type="radio" name="radio" value="2"/>
+            <label for="radio-2">Radio 2</label>
+        </div>
+        <div class="radio-item">
+            <input id="radio-3" type="radio" name="radio" value="3"/>
+            <label for="radio-3">Radio 3</label>
+        </div>
+    </div>
+</section>
+<script>
+(function($){
+    $(document).ready(function(){
+        //Answer 1.
+            $('li').addClass('active');
+        
+        //Answer 2.
+            $('a.type-2').addClass('current');
+        
+        //Answer 3.
+            $('li').eq(0).addClass('zero');
+
+        //Answer 4.
+            $('a:has(span)').addClass('inner');
+
+        //Answer 5.
+            $('li[data-role="link"]').addClass('role');
+        
+        //Answer 6.
+            console.log($('#radio-list').children().length);
+        
+        //Answer 7.
+            console.log($('.type-2').parent().index());
+        
+        //Answer 8.
+            console.log($('#radio-1').val());
+        
+        //Answer 9.
+            console.log($('a:contains("menu 7")'));
+        
+        //Answer 10.
+            //$('input[id!="#radio-2"]').parent().children('label').addClass('emphasis');
+            $('input:not(#radio-2)').parent().children('label').addClass('emphasis');
+        
+        //Answer 11.
+            $('li.sub-last').parents('.last').children('a').addClass('emphasis');
+            $('li.sub-last').parents('.last').find('a').addClass('bold');
+        
+    });
+})(jQuery);
+</script>
+</body>
+</html>

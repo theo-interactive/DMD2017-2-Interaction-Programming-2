@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21661086 이서진</title>
+</head>
+<body>
+    <h1>2WEEK - 09/13</h1>
+    <h2> 21661086 / 이서진 </h2>
+    <script>
+        // Answer 1.
+        console.log('[문제 1번]');
+        var selectors ={
+            number : 2
+        };
+        selectors.string = '';
+        selectors.dom = ['header'];
+        selectors.dom.push('main','footer');
+        delete selectors.string;
+        console.log(selectors);
+
+        /* Answer 2.
+            var cars = [‘Hyundai’, ‘Kia’, ‘Samsung’, ‘GM’]; 선언합니다.
+            cars 배열 문자열 원소를 역순으로 출력하는 반복문을 작성합니다.
+        */
+        console.log('[문제 2번]');
+        var cars = ['Hyundai', 'Kia', 'Samsung', 'GM'];
+        var reverse = cars.reverse();
+        for(var i = 0, max = cars.length; i < max; i++){
+            console.log(reverse[i]);    
+        }
+        /* Answer 3.
+            전역변수 document 의 프로퍼티 및 메서드 등을 출력하는 반복문을 작성합니다. */
+        console.log('문제 3번.....');
+   
+        // document가 가지고 있는 key값을 찾아준다.
+        for(key in document){
+            console.log(document[key]);
+        }
+        
+        
+        
+
+        /* Answer 4.
+            var orders = { name : [‘본인 이름’], coffee : [‘아메리카노’, ‘에스프레소’, ‘카페라떼’] }; 선언합니다.
+            coffee 배열들의 원소를 (3)의 문자열로 반복문을 이용해 출력합니다.
+            “name 님, 주문하신 coffee 1잔 나왔습니다.”*/
+        console.log('[문제 4번]');
+        var orders = { 
+            name : ['이서진'], 
+            coffee : ['아메리카노', '에스프레소', '카페라떼'] 
+            };
+            
+              // 3개를 순서대로 출력
+              for (var a of orders.coffee){
+                 console.log(orders.name + '님, 주문하신 ' + a +'1잔 나왔습니다') } 
+
+              // 마지막 원소만 출력
+              for (var b= 0; b < 3; b++){
+                  b = orders.coffee;
+                  console.log(orders.name + '님, 주문하신 ' + b[2] +'1잔 나왔습니다') } 
+                
+
+        console.log('[문제 5번]');
+        // Answer 5.
+            var name = '이서진';
+            var age = '';
+            var x = 10;
+            var y = 12;
+            age = x + y;
+            var hobby = ['영화감상', '맛집탐방','사진찍기'];
+                  
+            function myFavorite(color='보라계열',weather='가을'){
+             return '좋아하는 컬러는' + ' ' +color +'이며,'+ '좋아하는 계절은' +' ' + weather +'입니다.';
+             }
+
+            var genre = ['액션' ,'미스터리/스릴러' ,'판타지' ,'멜로/로맨스/드라마' ,'공포'];
+            for(var c = 0, max = genre.length; c < max; c++){
+                 if(c === 4){
+                     break;
+                }
+            }
+            delete genre[4];
+            var rank = genre.reverse();
+            var favorite_movie = {
+                Theater :['CGV','메가박스'],
+                EternalSunshine : ['이터널 선샤인'],
+                Equals : ['이퀄스'],
+                Carol : ['캐롤'],
+                Her : ['그녀']  
+            };  
+            favorite_movie.BlueJasmin=[];
+            favorite_movie.BlueJasmin.push('블루 재스민');
+      
+           
+
+       
+        console.log('안녕하세요! 저는'+' '+ name +'이고,'+' '+  age +'살 입니다.');
+        console.log('저에게는'+' '+ x +'살 차이의'+' '+'귀여운'+' '+ y+'살'+' '+ '여동생이 있습니다.');
+        console.log('저의 취미는'+ ' ' +hobby + '이고,'+'\n'+ myFavorite());
+        console.log(
+            '좋아하는 장르는'+' '+c+'가지이고'+'\n'+'<'+rank+' >'+'순으로 좋아합니다.'+'\n'+'\n'
+            +'제일 많이 이용하는 극장은'+' '+favorite_movie.Theater[0]+'아트하우스관 이며,'+
+            '\n'+'좋아하는 영화는');
+        delete favorite_movie.Theater;
+        console.log(favorite_movie);
+        console.log('입니다');
+
+
+        
+        
+
+    </script>
+    
+    
+</body>
+</html>

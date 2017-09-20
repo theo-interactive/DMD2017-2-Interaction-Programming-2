@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2WEEK - 9/7 - Function</h1>
+    <script>
+        /*
+        //함수 선언.
+        function myName(){
+            //실행되는 코드
+        }
+        
+        //리터럴 함수 선언.
+        var myName = function(){
+            console.log('안녕하세요. 제 이름은...');
+        };
+        myName();
+        
+        function myName(){
+            console.log('안녕하세요. 제 이름은...');
+        }
+        myName();
+        
+        //함수 return.
+        function myCar(){
+            var car = 'Tesla';
+        }
+        console.log(myCar());
+        
+        
+        function myCar(){
+            var car = 'Apple';
+            return car;
+            //---------- 끝.
+            car = 'Hyundai';
+        }
+        console.log(myCar());
+        
+        //파라미터 parameter.
+        var cup = '카페라떼';
+        function myCoffee(coffee = '플랫화이트'){
+            //coffee = '아메리카노';
+            return coffee;
+        };
+        console.log(myCoffee(cup));
+        console.log(myCoffee());
+        
+        function myOrder(name, menu = '아메리카노', cups = 1){
+             return name + ' 고객님, 주문하신 ' + menu + ', ' + cups + '잔 나왔습니다.';
+        }
+        console.log(myOrder());
+        console.log(myOrder('김용원'));
+        console.log(myOrder('김용원', '에스프레소', 3));
+
+        
+        //즉시실행함수.
+        var run = (function(){
+            //console.log('즉시 실행');
+            // var x = 2;
+            // var y = 1;
+            var x = 2, y = 1, sum;
+            sum = x + y;
+            console.log(sum);
+            return sum;
+        }());
+        
+   ;
+        //스코프. 전역변수, 지역변수.
+        var name = '김용원';
+        function changeName(){
+            var name = 'Kim Yongwon';
+            console.log('지역', name);
+        }
+        changeName();
+        console.log(name);
+        
+        var name = '김용원';
+        console.log('초기 전역 변수', name);
+        function changeName(){
+            name = 'Kim Yongwon';
+            console.log('지역 변수', name);
+        }
+        changeName();
+        console.log('전역 변수', name);
+        */
+        //----- name 전역 변수 선언 안함.
+        function changeName(){
+            var name = '김용원';
+        }
+        changeName();
+        console.log(name);
+        //비어있음.
+    </script>
+</body>
+</html>

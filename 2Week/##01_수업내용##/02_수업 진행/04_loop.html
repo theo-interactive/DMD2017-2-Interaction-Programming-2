@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2WEEK - 9/7 - Loop</h1>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+
+    <script>
+        /*
+        //반복문 - for.
+        for(var i = 0; i < 10; i++){
+            console.log(i);
+            document.write('for loop ' + i + '<br/>');
+        }
+        
+        var buttons = document.getElementsByClassName('button');
+        for(var i = 0, max = buttons.length; i < max; i++){
+            console.log(buttons[i]);
+            buttons[i].innerHTML = 'Button '+ i;
+            //buttons[0], buttons[1]...
+        }
+        
+
+        //반복문 - while.
+        var count = 0;
+        var sum = 0;
+        while(count < 10){
+            count++;
+            sum += count;
+            console.log(count + ' 반복문 실행 시 : ', sum);
+        }
+        console.log('* 최종 : ', sum);
+    
+        while(true){
+            //조건이 변경이 안되어서 탈출 불가.
+            console.log('반복 실행');
+        }
+        
+
+        //반복문 for 중첩.
+        for(var i = 0; i < 10; i++){
+            console.log(i);
+            for(var j = 0; j < 10; j++){
+                console.log(i, j);
+                for(var k = 0; k < 10; k++){
+                    console.log(i,j,k);
+                }
+            }
+        }
+        
+
+        //감소하는 반복문.
+        for(var i = 10; i >= 0; i--){
+            console.log(i);
+        }
+        
+
+        // <, <=, >, >=
+        // => ES6 배열에서 쓰는 기능 중 하나. 비교 연산자는 잘 확인 할 것.
+
+        // ==, != true, false.
+        // ===, !== 
+
+        var i = 0;
+        var i = '0';
+        
+        if(i == '0'){
+        }
+
+        if(i === '0'){
+        }
+
+        //반복문 탈출. break.
+        for(var i = 0; i < 10; i++){
+            if(i === 5){
+                break;
+            }
+            //console.log(i);
+            document.write('for loop ' + i + '<br/>');
+        }
+        
+        
+        //반복문 지속. continue.
+        for(var i = 0; i < 10; i++){
+            if(i === 5){
+                continue;
+            }
+            if(i === 8){
+                break;
+            }
+            console.log(i);
+            document.write('for loop ' + i + '<br/>');
+        }
+        
+
+        //반복문 - for in 객체(Object).
+        var cars = {tesla : '테슬라', audi : '아우디'};
+        var name = '';
+        var nameKorean = [];
+        for(var name in cars){
+            nameKorean.push(cars[name]);
+            // cars.tesla;
+            // ->cars['tesla'];
+        }
+        console.log(nameKorean);
+        
+
+        //반복문 - forEach, $ $.each();
+        var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        cars.forEach(function(name){
+            console.log(name);
+        });
+        
+
+        //forEach break. ?
+        var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        cars.forEach(function(name, index){//parameter 1 - 배열의 원소, parameter 2 - 순서(index)
+            // console.log(name, index);
+            if(index >= 2){
+                break;
+            }
+            console.log('1 name', name);
+            console.log('2 index', index);
+        });
+
+        var genre = ['액션','미스터리/스릴러','판타지','멜로/로맨스/드라마','공포'];
+        genre.forEach(function(name,index){
+            if(index > 4){
+            break;
+        }
+        console.log('genre',name);
+        });
+
+
+        //반복문 - for of - 배열.
+        var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        for(var name of cars){
+            console.log(name);
+        }
+        */
+
+        //for of break. ?
+        var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        var i = 0;
+        for(var name of cars){
+            if(i >= 2){
+                break;
+            }
+            console.log(name);
+            i++;
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
