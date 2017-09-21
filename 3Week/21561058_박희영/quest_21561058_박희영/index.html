@@ -73,7 +73,7 @@
 
         //Answer 3.서내의 li 태그들 중 0 index 에 위치한 노드를 선택하고, 해당 태그에 zero 클래스를 추가합니다.
         console.log('Answer 3');
-        var $lizero = $('li').eq(0);
+        var $lizero = $('li').eq(0);//li:eq(0)로 찾아도 된다
         $lizero.addClass('zero');
 
         //Answer 4.서내의 a 태그들 중 span 태그를 포함하고 있는 노드를 선택하고, 해당 태그에 inner 클래스를 추가합니다.
@@ -98,10 +98,12 @@
         //Answer 7.type-2 클래스를 가지고 있는 노드의 부모 노드를 찾고, 그 index 값을 console.log 메서드를 이용하여 출력합니다.
         console.log('Answer 7');
         console.log($('.type-2').parent().length);
+        console.log($('.type-2').parent().index());
 
         //Answer 8.아이디가 radio-1 인 input radio 엘리먼트의 value 를 출력하는 여러 가지 방법을 찾아, console.log 메서드를 이용하여 출력합니다.
         console.log('Answer 8');
         console.log($('#radio-1').attr('value'));
+        console.log($('#radio-1').prop('value'));
         console.log($('#radio-1').val());
         // console.log($('#radio-1:has(value)').attr('value'));
         console.log($('input#radio-1').attr('value'));
@@ -113,6 +115,7 @@
         console.log('Answer 9');
         console.log($('a:has(span)'));
         console.log($('a').has('span'));
+        //위서부터 찾기, 필터를 이용해서 찾기 문자열이 이쓴지 체크하기등 다양한 방법이 있다.
 
         //Answer 10.아이디가 radio-2 가 아닌 input radio 엘리먼트의 부모 노드를 찾고, 자식 노드 label 엘리먼트에 emphasis 클래스를 추가합니다.
         console.log('Answer 10');

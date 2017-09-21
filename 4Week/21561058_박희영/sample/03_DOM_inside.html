@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 04</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    .hidden{display:none}
+    div{border:2px solid #000}
+    div div{margin:5px;border:1px solid #f00}
+    p{margin:10px;background-color:#ff0}
+    .double{border-color:#00f}
+    .red{color:#f00}
+    .blue{color:#00f}
+</style>
+</head>
+<body>
+<h1>Example 04 - DOM Inside</h1>
+
+<!-- append -->
+<!-- <p>안녕하세요 : </p>  
+<strong>Hello World</strong>   -->
+
+<!-- appendTo -->
+<!-- <span>Hello</span> 
+<div class="say-1">안녕하세요 : </div>  -->
+
+<!-- prepend -->
+<!-- <p>Hello</p> 
+<strong>안녕하세요 : </strong>   -->
+
+<!-- prependTo -->
+<!-- <span>안녕하세요 : </span> 
+<div class="say-2">Hello</div>  -->
+
+<!-- html -->
+<!-- <span>Hello</span>
+<div></div>
+<div></div>
+<div></div> -->
+
+<!-- text -->
+<p><b>Hello</b> World</p>
+<p></p>
+
+<script>
+(function($){
+
+    // // $(document).ready(function(){
+    // //     $('div').html('<div><strong>hello</strong></div>');
+    // //     //값들을 배열처리해서 각각 붙여줄때 많이 씀정보가 공통되어서 붙을때 많이 사용
+    // // });
+
+    // // console.log($('p').text());
+    // pText = $('p').first().text(); //텍스트만 찾는것
+    // console.log(pText);
+    // // $('p').last().html(pText); //html 전체를 찾는것
+    // $('p').last().text(pText);
+
+        
+
+
+
+})(jQuery);
+</script>
+</body>
+</html>
