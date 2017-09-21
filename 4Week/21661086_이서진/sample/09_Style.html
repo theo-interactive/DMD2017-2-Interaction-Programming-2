@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 04</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    ul{display:flex;list-style:none}
+    li{flex:1;width:50px;height:50px}
+    .result{padding:20px;background-color:#666;color:#fff}
+    .box{width:100px;height:100px;padding:10px;background-color:#000;color:#fff}
+    .box-1{width:100px;height:50px;margin:25px;padding:25px;background-color:#666;border:20px solid #333}
+    .container{position:relative}
+    /* .box-2{position:absolute;width:200px;height:200px;top:20px;left:300px;background-color:#333} */
+    .box-2{position:relative;width:200px;height:200px;top:20px;left:300px;background-color:#333}
+    .box-3{margin:10px;padding:5px;border:2px solid #333}
+    .box-4{overflow:auto;position:relative;width:200px;height:100px;margin:10px;padding:10px;background-color:#333;border:2px solid #333}
+    .box-4 p{width:500px;height:500px;margin:10px;padding:5px;border:2px solid #666}
+</style>
+</head>
+<body>
+<h1>Example 04 - Style</h1>
+
+<!-- css -->
+<!-- <ul>
+    <li style="background-color:#f00">&nbsp;</li>
+    <li style="background-color:#0f0">&nbsp;</li>
+    <li style="background-color:#00f">&nbsp;</li>
+    <li style="background-color:#ff0">&nbsp;</li>
+    <li style="background-color:#0ff">&nbsp;</li>
+</ul>
+<div class="result"></div> -->
+
+<!-- width, height -->
+<!-- <div class="box">나는 작은 상자입니다.</div>
+
+<div class="box-1">&nbsp;</div>
+<div class="result"></div> -->
+
+
+<!-- position, offset -->
+ <!-- <div class="container"> 
+    <div class="box-2">&nbsp;</div>
+ </div> 
+<div class="result"></div> -->
+
+<!-- scroll -->
+<div class="box-3">Hello</div>
+
+<div class="box-4">
+    <p>Hello</p>
+</div>
+<div class="box-3">Hello</div>
+
+<div class="box-4">
+    <p>Hello</p>
+</div>
+<div class="box-3">Hello</div>
+
+<div class="box-4">
+    <p>Hello</p>
+</div>
+<div class="box-3">Hello</div>
+
+<div class="box-4">
+    <p>Hello</p>
+</div>
+<div class="box-3">Hello</div>
+
+<div class="box-4">
+    <p>Hello</p>
+</div>
+
+<button>스크롤 값 찾기</button>
+<div class="result"></div>
+
+<script>
+(function($){
+    $(document).ready(function(){
+        
+        $('li').each(function(i,d){
+            // 0 .... 1.....4
+            console.log($(this).css('background-color')); //get
+            //$(this).css('background-color','skyblue');
+            $(this).text('melong');
+            if(i == 0 || i == 3){
+                $(this).css({
+                    'background-color':'skyblue',
+                    'color' : 'white',
+                    'height':'200px',
+                    'text-decoration':'underline'
+                });
+             }
+        });
+
+     /* [     width & height     ] */
+     
+     /* 
+        1. width & height 
+        2. innerWidth & innerHeight : padding까지 값
+        3. outerWidth & outerHeight : border까지의 값
+        3. outerWidth(true) & outerHeight(true) : margin까지의 값
+     
+     
+      */
+
+      /*
+       $('.box').width(400);  // 가로로 400 늘어남.
+       console.log($('.box').width()); // 가로 값 찾기
+       $('.box').width(400).height(300); // 가로로 400 세로로 300 늘어남.
+
+
+       console.log($('.box-1').width());
+       console.log($('.box-1').innerWidth());
+       console.log($('.box-1').outerWidth());
+       console.log($('.box-1').outerWidth(true));
+
+
+       $('.box-1').outerHeight(500 , true); // outerWidth(true)를 500으로
+       //$('.box-1').outerHeight(300); //outerWidth를 300으로
+       console.log($('.box-1').outerHeight(true));
+
+       */
+
+      /*
+
+       $('.box-1').click(function(){
+            $(this).width('+=50'); // 50만큼 width 값 증가
+            $(this).width('-=10'); // 10만큼 width 값 감소
+       });
+
+      */
+
+      /*  [     position       ]     */
+
+    //   console.log($('.box-2').position()); // top & left 값만 가져올 수 있다.
+    //   console.log($('.box-2').position().top);
+    //   console.log($('.box-2').position().left);
+
+      /*  [     offset     ]     */
+
+    //   console.log($('.box-2').offset());
+    //   console.log($('.box-2').offset().top);
+    //   console.log($('.box-2').offset().left);
+
+      /*  [     scrollTop    ]     */
+
+      console.log($('.box-3').scrollTop());
+      console.log($('.box-4').scrollTop());
+      console.log($('.box-3').scrollLeft());
+      console.log($('.box-4').scrollLeft());
+      $('.box-4').scrollTop(300);    // 스크롤 300부터 시작
+      $('.box-4').scrollLeft(300);
+
+      // 전체 스크롤
+      //$(window).scrollTop();
+      console.log($(window).scrollTop());
+      $(window).scroll(function(){
+          console.log($(this).scrollTop());
+      });
+
+    });
+})(jQuery);
+</script>
+</body>
+</html>

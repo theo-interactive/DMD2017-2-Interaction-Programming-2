@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 04</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    .hidden{display:none}
+    div{border:2px solid #000}
+    div div{margin:5px;border:1px solid #f00}
+    p{margin:10px;background-color:#ff0}
+    .double{border-color:#00f}
+    .red{color:#f00}
+    .blue{color:#00f}
+</style>
+</head>
+<body>
+<h1>Example 04 - DOM Outside</h1>
+
+<!-- after -->
+<!-- <b>Hello</b>
+<p>안녕하세요 : </p>  -->
+
+<!-- before -->
+<!-- <p>Hello</p>
+<b>안녕하세요 : </b>  -->
+
+<!-- insertAfter -->
+<!-- <p>안녕하세요 : </p>
+<div class="say-1">Hello!</div>  -->
+
+<!-- insertBefore -->
+<div class="say-2">안녕하세요 : </div>
+<p>Hello</p>
+
+<script>
+(function($){
+    $(document).ready(function(){
+        
+         /* [ after ]  &  [ before ] */
+         // $('p').after($('b')); // b 태그 앞에 p 태그를 
+         // $('p').before($('b')); //p 태그 앞에 b 태그를 
+
+
+        /* [ insertAfter ]   &   [ insertBefore ]*/
+         // $('붙는태그').insertAfter($('기준점 태그'));
+         // $('p').insertAfter($('.say-1')); // p태그가 .say-1뒤로
+
+         
+         //$('p').insertBefore($('.say-2')); // p태그가 .say-2 앞으로
+
+         
+    });
+})(jQuery);
+</script>
+</body>
+</html>

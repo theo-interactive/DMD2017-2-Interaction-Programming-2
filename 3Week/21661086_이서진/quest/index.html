@@ -95,6 +95,10 @@
         var eight = $('#radio-1').val();
         var eight = $('#radio-1').attr('value');
         var eight = $('#radio-1').prop('value');
+		/*ADD
+		var eight = $('#.radio-list').children().eq(0).children('input').val();
+		var eight = $('.radio-item').find('input').eq(0).val();*/
+		
 
         /* 
           HTML 에 관련된 것은 .attr() 을 이용하고, 
@@ -106,6 +110,9 @@
 
         var nine = $('a:contains(Menu 7)');
         var nine = $('a').filter(':contains(Menu 7)');
+		// ADD
+		var nine = $('li:eq(5)').next().children('a');
+		var nine = $('li:eq(7)').prev().children('a');
 
         /* find : 각 요소의 하위요소를 선택 & filter 각 요소를 선택 */
         console.log(nine);
@@ -113,6 +120,8 @@
         
         //Answer 10. 아이디가 radio-2 가 아닌 input radio 엘리먼트의 부모 노드를 찾고, 자식 노드 label 엘리먼트에 emphasis 클래스를 추가합니다.
         var ten = $("input:not(#radio-2)").parent().children('label').addClass('emphasis');
+		//ADD
+		var ten = $('input').not('#radio-2').parent().children('label').addClass('emphasis');
         console.log(ten);
         
         /* Answer 11. sub-last 클래스를 가진 li 엘리먼트를 찾고 last 클래스를 가진 부모 노드를 찾은 후, 
