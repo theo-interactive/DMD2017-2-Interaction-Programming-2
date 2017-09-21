@@ -1,0 +1,120 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/***********/
+
+body{font-family: 'Roboto', sans-serif; width: auto;}
+
+section{
+    width: 100%;height: 100%;
+	position: fixed;
+    text-align: center;
+}
+
+#menu ul{
+	margin: 30px auto 0;
+	display: table;
+    
+}
+#menu li{
+	float: left;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: 500;
+}
+#header{vertical-align:middle;}
+#header p{
+    position: absolute;
+	top: 10%;
+    padding-top: 15px;
+    width: 100%; text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+#one video,#three video{
+	width: 950px; height: 560px;	
+	position: absolute;	
+	transform:translate(-50%,-100%);
+}
+#one p{
+	 position: absolute;
+	top: 10%;
+    padding-top: 15px;
+    width: 100%; text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+#footer p{
+    position: absolute; top: 50%; margin-top: -50px;
+    padding-top: 15px;
+    width: 100%; text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+#two img{
+	position: relative;
+   width: 560px;
+	height:720px;
+	transform:translate(0%,-80%);
+}
+#two p{
+	 position: absolute;
+	top: 10%;
+    padding-top: 15px;
+    width: 100%; text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+#three p{
+ position: absolute;
+	top: 10%;
+    padding-top: 15px;
+    width: 100%; text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+
+

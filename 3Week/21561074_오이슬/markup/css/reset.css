@@ -1,3 +1,5 @@
+/*@import url("style_main.css");*/
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -16,11 +18,15 @@ time, mark, audio, video {
     outline:0;
     font-size:100%;
     vertical-align:baseline;
-    background:transparent;
+    /*background:transparent; 수정*/
 }
 
-body {
+body *{
     line-height:1;
+    /* 추가 */
+    color:#555;
+    font-size:12px;
+    font-weight:normal;
 }
 
 article,aside,details,figcaption,figure,
@@ -92,3 +98,6 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+/* 추가 */
+a{text-decoration:none;}

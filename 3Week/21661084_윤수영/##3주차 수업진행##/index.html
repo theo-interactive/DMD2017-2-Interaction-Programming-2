@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    .active{background-color:#f00}
+    .hidden{display:none}
+</style>
+</head>
+<body>
+<h1>Example 03</h1>
+<ul>
+    <li><a id="menu-1" class="type-1" href="#menu-1">Menu 1</a></li>
+    <li><a href="#" class="type-2">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li><a href="#">Menu 4</a></li>
+</ul>
+<ul id = "list-2">
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu <span>2</span></a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li data-role="link" class="hidden"><a href="#">Menu <span>4</span></a></li>
+</ul>
+
+<ul>
+    <li><a id="menu-1" href="#">Menu 1</a>
+        <ol>
+            <li><a href="">Menu 1-1</a></li>
+            <li><a href=""><span>Menu 1-2</span></a></li>
+        </ol>
+    </li>
+    <li><a href="#">Menu <span>2</span></a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li data-role="link"><a href="#">Menu <span>4</span></a></li>
+</ul>
+
+<script>
+    //jQuery ready
+    //$(document) : 선택자 찾기
+    //$(document).ready();
+    //$(document).ready(function(){...});
+    $(document).ready(function(){
+        //실행
+        console.log('document ready');
+        //태그선택
+        //var bool;
+        //bool = true;
+        //var $li = $('li');
+        //console.log('$li');
+
+        //var $ul = $('ul');
+        //console.log('$ul');
+
+        //console.log($('#menu-1'));
+        //console.log($('a#menu-1.type-1'));
+
+        /*
+        console.log($('ul'));
+        console.log(document.getElementsByTagName('ul'));
+
+        console.log($('#menu-1'));
+        console.log(document.getElementById('menu-1'));
+
+        console.log($('.type-2'));
+        console.log(document.getElementsByClassName('type-2'));
+        //a태그 안에 id 값 menu-1를 가진 태그 출력
+        console.log($('a[href="#menu-1"]'));
+        //#만 가진 tag출력
+        console.log($('a[href="#"]'));
+
+        console.log($('a[href="#menu-1"]'));
+        console.log($('a[href="#"]'));
+        console.log($('a[href!="#"]'));
+        */
+
+        /*
+        //li의 길이
+        console.log($('li').length);
+        //n번쨰 li 갯수 찾기
+        console.log($('li')[0]);
+        console.log($('li')[10]);
+        //0번째 li를 찾음
+        console.log($('li').get(0));
+        //n번째 li를 배열로 출력
+        console.log($('li').eq(0));
+        */
+
+        /*
+        console.log($('li'));
+        //first = eq
+        //console.log($('li:first'));
+        //console.log($('li').first());
+
+        console.log($('li:last'));
+        console.log($('li').last());
+        */
+
+        //a 태그 자식 요소 중 span 가지고 있을 경우. 
+        //console.log($('a:has(span)'));
+        //a태그 자식 요소중 span 이 없을 경우 
+        //console.log($('a:not(span)'));
+
+        /*
+        console.log($('a:not(.type-1)'));
+        
+        console.log($('a:not(.type-1'));
+        console.log($('a:not(.type-2'));
+        console.log($('a:not(#menu-1)'));
+        */
+
+        //find:아래에 있는 요소들을 다 찾아줌
+        
+        //Selectors. 선택자
+        /*
+        //index.
+        console.log($('li').index());
+        //출력값 : -1 , 배열에 아무 수가 없으면 -1로 출력
+        console.log($('li').index('li.last'));
+
+        $.each($('li'),function(i,d){
+            //console.log($(d));
+            //console.log($(d).index());
+            $('li').index(d);
+        });
+        */
+
+        var $ul = $('ul');
+        //children()
+        //console.log($ul.children('li'));
+        // == $('li')
+        //console.log($('li'));
+        //css와 찾는 방식이 같음
+        //console.log($('ul#list-2').children('li'));
+        //console.log($('ul#list-2').children('li').children('a'));
+        //console.log($('ul#list-2').children('li').children('a').children('span'));
+        //한번에 찾기
+        //console.log($('ul.#list-2').find('span'));
+
+        //last 체인닝
+        //console.log($('ul').children(':last'));
+        //console.log($('ul').children().last());
+        //first
+        //console.log($('ul').children('li:first'));
+        //console.log($('ul').children('li').first());
+
+        //console.log($('ul').children('a'));
+        //console.log($('ul').find('a'));
+
+        //parent()
+        //console.log($('li').parent());
+        //console.log($('li').parent('ul'));
+        //console.log($('a').parent());
+        //console.log($('span').parent());
+        //console.log($('span').parent('li'));
+
+        //parents()
+        //console.log($('li').parents());
+        //console.log($('li').parents('ul'));
+        //console.log($('a').parents());
+        //console.log($('a').parents('.hidden'));
+        //console.log($('a').parents('[data-role="link"]'));
+        //console.log($('span').parents('[data-role="link"]'));
+        
+        //prev()
+        console.log($('ul#list-2').prev());
+        //$('ul#list-2').prev().addClass('active');
+        //prevAll()
+        //console.log($('ul#list-2').prevAll().addClass('active'));
+        //$('ul#list-2').prevAll().addClass('active');
+        
+        //next()
+        console.log($('ul#list-2').next());
+        //nextAll()
+        console.log($('ul#list-2').nextAll());
+        $('ul#list-2').next().addClass('hidden');
+
+        //find()
+        
+
+
+    });
+
+
+
+</script>
+</body>
+</html>

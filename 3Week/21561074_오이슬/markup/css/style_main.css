@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* google 시스템폰트 나눔고딕 */
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+body{font-family:"NanumGothic", NanumGothic, "나눔고딕";}
+
+/* HEADER */
+header{height:1050px; background:url('../img/grassland.jpg'); background-repeat:no-repeat; background-size:contain;}
+header nav{padding:50px 0 0 200px;}
+nav .gnb{overflow:hidden;}
+nav .gnb li{float:left; width:50px;}
+.gnb li a{padding:6px; text-align:center;}
+header h1{font-family:'Berlin Sans FB'; font-size:120px; color:#444; text-align:center; letter-spacing:-1px; padding-top:300px;}
+
+
+/* CONTENTS */
+.contents{}
+/* SECTION 공통 */
+.contents section{width:1200px; margin:0 auto;}
+section h2{font-size:50px; text-align:center; margin-top:120px; padding-bottom:50px;}
+section h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}
+/* CONTENT_UPDATE */
+section:first-child{background:url('../img/overTheSea.png') no-repeat left bottom; background-size:contain;}
+/*.contents > section:first-child h2{font-size:50px; text-align:center; margin-top:120px; padding-bottom:50px;}
+.contents > section:first-child h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}*/ /*공통*/
+.contents > section:first-child div{width:130px; color:brown; margin:0 auto; padding:100px 0 300px;}
+.contents > section:first-child p{width:80px; margin:150px auto 340px;}
+/* CONTENT_PLAY */
+section + section{}
+section + section article{overflow:hidden; margin:100px 0;}
+section + section article.first_art{margin-top:200px;}
+section + section article span{display:block; float:left; width:40%; height:270px;}
+section + section article.right span{float:right;}
+section + section article span img{width:100%;}
+section + section article p{float:right; width:40%; line-height:180%; padding-top:90px;}
+section + section article.right p{float:left;}
