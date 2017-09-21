@@ -1,0 +1,182 @@
+	#navigation_div {
+		position:relative;
+		margin:0px;
+		padding:0px;
+    left:400px;
+		width:1000px;
+		overflow: auto;
+		margin-left:300px;
+
+	}
+	#navigation_div h2{
+		font-family: verdana, sans-serif;
+		font-weight: normal;
+		font-size: 36px;
+		color: #626262;
+		float:left;
+	}
+	#navigation_div #navigation_list{
+		list-style: none;
+		float:left;
+	}
+	#navigation_div a{
+		font-family: verdana, sans-serif;
+		font-size: 13px;
+		color:#626262;
+		text-decoration: none;
+	}
+	#navigation_div a:hover{
+		color:#00aeff;
+	}
+	#navigation_div ul{
+		margin-left:20px;
+		margin-right:20px;
+	}
+	#navigation_div li{
+		float:left;
+		padding-left:20px;
+		padding-right:20px;
+		padding-top:0px;
+		padding-bottom:0px;
+		margin:0px;
+	}
+
+	#logo {
+	position: absolute;
+	}
+
+
+
+
+/*footer*/
+ #page_footer{
+          background-color: #000000;
+          position:relative;
+          left:0;
+          bottom:0;
+          width:100%;
+          overflow: auto;
+          color:#aaa;
+          padding-top:10px;
+          padding-bottom:10px;
+          clear:both;
+         
+      
+        }
+        #footer_utility{
+          position:relative;
+          overflow: auto;
+          padding: 0px;
+          margin: 0px;
+        }
+        #footer_utility li{
+          float:left;
+          list-style: none;
+          border-right: solid 2px #626262;
+          margin: 0px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        #footer_utility li:last-child{
+          border-style: none;
+        }
+        #family_site_link li{
+          float:left;
+          list-style: none;
+          margin: 5px;
+        }
+        #page_footer #copyright_limji{
+          margin:10px;
+          float:left;
+        }
+        }
+        #family_site_link{
+          float:right;
+          position:left;
+        }
+
+
+		a:link {color:#888; text-decoration:none;}
+		a:visited {color:#888; text-decoration:none;}
+		a:active {color:#888; text-decoration:none;}
+		a:hover {color:#333; text-decoration:none;}
+
+		
+/*footer_layout*/
+		#page_footer_layout{
+          background-color: #000000;
+          position:relative;
+          bottom:0;
+          overflow: auto;
+          color:#aaa;
+          padding-top:10px;
+          padding-bottom:10px;
+          clear:both;
+         
+      
+        }
+        #footer_utility_layout{
+          position:relative;
+          overflow: auto;
+          padding: 0px;
+          margin: 0px;
+        }
+        #footer_utility_layout li{
+          float:left;
+          list-style: none;
+          border-right: solid 2px #626262;
+          margin: 0px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        #footer_utility_layout li:last-child{
+          border-style: none;
+        }
+        #family_site_link_layout li{
+          float:left;
+          list-style: none;
+          margin: 5px;
+        }
+        #page_footer_layout #copyright_limji_layout{
+          margin:10px;
+          float:left;
+        }
+        }
+        #family_site_link_layout{
+          float:right;
+          position:left;
+        }
+
+
+#main_footer_layout{
+          background-color: #000000;
+          position:absolute;
+          bottom:0;
+          width:99%;
+          overflow: auto;
+          color:#aaa;
+          padding-top:10px;
+          clear:both;
+        }
+
+#video {
+    display: inline-block;
+    width: auto\9 !important; /* ie8 */
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+}
+.video-container {
+    position: relative;
+    height: 0;
+    padding-top: 0px;
+    padding-bottom: 55%;
+    overflow: hidden;
+}
+.video-container iframe,.video-container object,.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
