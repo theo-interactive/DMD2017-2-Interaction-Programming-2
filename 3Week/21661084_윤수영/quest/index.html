@@ -74,36 +74,57 @@
         console.log('3. ');
         console.log($('li').eq(0));
         $('li').eq(0).addClass("zero");
+
+        /*
+        $('li').eq(0).addClass('zero');
+        $('li:eq(0)').addClass('zero');
+        */
         //Answer 4. 문서내의 a 태그들 중 span 태그를 포함하고 있는 노드를 선택하고, 해당 태그에 inner 클래스를 추가합니다.
         //has 사용 , inner 사용
         console.log('4. ');
         console.log($('a:has(span)'));
         $('a:has(span)').addClass("inner");
+
+        /*
+        $('a').has('span').addClass('inner');
+        */
         //Answer 5. 문서내의 li 태그들 중 data-role attribute 가 link 인 노드를 선택하고, 해당 태그에 role 클래스를 추가합니다.
         console.log('5. ');
         console.log($('li').parents('[data-role="attribute"]'));
+        //$('li[data-role="link"]').addClass('role');
         //Answer 6. radio-list 아이디를 가지고 있는 노드의 자식 노드들의 길이를 구하고 console.log 메서드를 이용하여 출력합니다.
         console.log('6. ');
         console.log($('li:has(radio-list)'.length));
+        //console.log($('#radio-list').children().length);
         //Answer 7. type-2 클래스를 가지고 있는 노드의 부모 노드를 찾고, 그 index 값을 console.log 메서드를 이용하여 출력합니다.
         console.log('7. ');
         //parent() : 함수는 DOM 트리를 구성하는 요소들의 부모들을 찾아서 새로운 jQuery 객체 집합을 구성
         console.log($('.type-2').parent().index());
+        //console.log($('.type-2').parent().index());
         //Answer 8. 아이디가 radio-1 인 input radio 엘리먼트의 value 를 출력하는 여러 가지 방법을 찾아, console.log 메서드를 이용하여 출력합니다.
         console.log('8. ');
         console.log($('#radio-1').attr('value'));
         console.log($('#radio-1').val());
+        /*
+        console.log($('input#radui-1').val());
+        console.log($('input#radio-list').children().eq(0).children('label').)
+        */
         //Answer 9. menu 7 텍스트를 포함하고 있는 a 엘리먼트를 선택할 수 있는 여러 가지 방법을 찾아, console.log 메서드를 이용하여 출력합니다.
         console.log('9. ');
         console.log($("a:contains('Menu 7')"));
         //Answer 10.아이디가 radio-2 가 아닌 input radio 엘리먼트의 부모 노드를 찾고, 자식 노드 label 엘리먼트에 emphasis 클래스를 추가합니다.
         console.log('10. ');
         console.log($('input:not(#radio-2)').parent().children('label').addClass('emphasis'));
+        /*
+        $('input').not('#radio-2').parent().children('label').addClass('emphasis');
+        */
         //Answer 11. sub-last 클래스를 가진 li 엘리먼트를 찾고 last 클래스를 가진 부모 노드를 찾은 후,
         //1) 자식노드 a 엘리먼트에 emphasis 클래스 / 2) 모든 자식노드 a 엘리먼트들에 bold 클래스를 추가합니다.
         console.log('11. ');
         console.log($('li.sub-last').parents('.last').children('a').addClass('emphasis'));
         console.log($('li.sub-last').parents('.last').find('a').addClass('bold'));
+        //$('li.sub-list').parents('.last').children('a').addClass('emphasis');
+        //$('li.sub-list').parents('.last').fin('a').addClass('bold');
     });
 })(jQuery);
 </script>
