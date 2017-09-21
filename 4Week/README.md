@@ -9,7 +9,7 @@
 3. '학번_이름' 폴더 내에 'quest', 'markup' 의 하위 폴더를 생성합니다.
 4. 'quest' 폴더에 다운받은 'sample' 폴더 내의 css, img, js 폴더와 10_Quest.html 파일을 복사하고 index.html 로 파일명을 수정, 작성하여 업로드합니다.
 
-### Quest 1
+### Quest 1.
 
 - my-name 아이디를 가진 span 노드를 생성하고 ‘제 이름은 본인이름입니다.’ 의 내용을 추가하여 hello 아이디를 가진 div 노드의 첫 번째 노드로 추가합니다.
 
