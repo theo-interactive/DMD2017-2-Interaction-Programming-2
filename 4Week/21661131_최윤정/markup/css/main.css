@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+html,body{
+    height: 100%;
+    background: url('../img/saulbass.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.main_{position: absolute;font-family: 'Open Sans', sans-serif;color: white;}
+.main_ h1{font-size: 100px;margin-top: 50px;margin-left: 50px;}
+.main_ p{margin-left: 50px;}
+
+
+
+
+/******** menu *******/
+/* .menu{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+} */
