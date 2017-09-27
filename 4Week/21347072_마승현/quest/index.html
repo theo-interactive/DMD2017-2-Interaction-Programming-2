@@ -46,7 +46,7 @@ $('div#hello').append(spanNode);
 // img 노드를 포함하고 있는 div 노드를 banner-container 클래스를 가지는 div 노드에 추가합니다.
 var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
 for(var i = 0; i<images.length; i++){
-    var makeDiv = $("div.banner-item");
+    var makeDiv = $("<div class='banner-item'></div>");
     var test = $(" <img src=' " + images[i] + " ' >" );
     makeDiv.append(test)
     $('div.banner-container').append(makeDiv);
