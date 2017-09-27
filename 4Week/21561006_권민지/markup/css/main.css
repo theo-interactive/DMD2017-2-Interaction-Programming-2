@@ -1,0 +1,96 @@
+/* common */
+html, body {width:100%;height:100%;overflow-x:hidden;}
+body {background-color: #000;}
+.tokyo-wrap, .wrap {width:100%;height:100%;position:relative;background-color: #000;}
+a {cursor:pointer;}
+
+
+/* 1차 */
+
+/* main */
+.main-wrap {width:100%;height:100%;}
+.main-wrap img {position:absolute;top:0;bottom:0;margin:auto;background-size: contain;width:100%;}
+
+/* about */
+.about {position: absolute;top:0;bottom:0;margin:auto;height:110px;
+    text-align:center;color:#9D9D9D;font-size:30px;}
+.about-txt {color:#555555;font-size:20px;padding:0 100px;margin-top:20px;}
+
+
+/* content */
+/* .c_slide {width:100%;height:630px;}
+.c_slide li {float:left;height:591px;width:25%;list-style: none;position:relative;}
+.c_slide li img {height:590px;width:auto;position: relative;}
+.c_slide li img:hover {transform: scale(1.1);transition-duration: 0.4s;} */
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+figure.line {
+    font-family: 'Raleway', Arial, sans-serif;color: #fff;
+    position: relative;float: left;overflow: hidden;
+    max-width: 25%;height: 100%;background-color: #000000;
+    color: #fff;text-align: center;
+}
+
+figure.line * {
+    box-sizing: border-box;
+    transition: all 0.6s ease;
+}
+figure.line img {opacity: 0.7;max-width: 100%;height: 100%;}
+figure.line:after {
+    background: #000;
+    width: 0;height: 6px;
+    position: absolute;left: 0;top: 0;
+    content: '';transition: all 0.3s ease-in-out;
+}
+figure.line figcaption {
+    position: absolute;top: 50%;left: 0;
+    width: 100%;padding: 0 30px;
+    transform: translateY(-50%);
+}
+figure.line h2, figure.line span {margin: 0;width: 100%;}
+figure.line h2 {
+    font-weight: 700;font-size:22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+figure.line span {
+    color: #e6e6e6;
+    font-weight:lighter;font-size:14px;line-height:16px;
+}
+figure.line a {
+    position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+    z-index: 1;
+}
+figure.line.blue:after {
+    background-color: #2980b9;
+}
+figure.line.blue h2 {
+    color: #409ad5;
+}
+figure.line.red:after {
+    background-color: #c0392b;
+}
+figure.line.red h2 {
+    color: #d65548;
+}
+figure.line.yellow:after {
+    background-color: #FBCD75;
+}
+figure.line.yellow h2 {
+    color: #FBCD75
+}
+figure.line.black:after {
+    background-color: #6D6D6D;
+}
+figure.line.black h2 {
+    color: #6D6D6D;
+}
+figure.line:hover img,
+figure.line.hover img {
+    transform: scale(1.2);
+}
+figure.line:hover:after,
+figure.line.hover:after {
+    width: 100%;
+}
