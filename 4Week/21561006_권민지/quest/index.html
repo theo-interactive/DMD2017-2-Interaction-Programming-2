@@ -52,9 +52,8 @@
 
         for(var i = 0; i < images.length; i++){
             var banner = $('<div></div>').addClass('banner-item');
-            imgSrc = $('<img>');
-            imgSrc.attr('src', './img/banner/' + 0 + (i+1) + '.jpg');
-            banner.append(imgSrc);
+            var image = $('<img>').attr('src', images[i]);
+            banner.append(image);
             //console.log(banner);
             $('.banner-container').append(banner);
         }
@@ -121,6 +120,8 @@
         div.box-1 의 width 가 0px 이 되면 2 의 조건과 3 조건을 반복합니다.
         힌트 - Boolean 또는 Class 를 조건문에 함께 이용합니다.
         */
+
+
 
     });
 })(jQuery);
