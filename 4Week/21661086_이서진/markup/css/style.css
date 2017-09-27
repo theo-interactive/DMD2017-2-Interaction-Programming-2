@@ -1,0 +1,149 @@
+#intro_loader{
+    display: none;
+}
+header .menu-btn{
+    position: absolute;
+    z-index:9999;
+    top:30px;
+    left:30px;
+    height:50px;
+    width:50px;
+    color:transparent;
+}
+header .menu-btn svg{
+    height:40px;
+    width:40px;
+    fill:#e6dbff;
+}
+header .menu-wrap{
+    display: none;
+}
+header .share-btn{
+    position: absolute;
+    z-index: 1000;
+    top:30px;
+    right:30px;
+    height:50px;
+    width:50px;
+
+}
+section .main-video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section .main-video #main_text-warp{
+    position: absolute;
+    display:table;
+    top:0;
+    left:0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    vertical-align:middle;
+
+}
+section .main-video #main_text{
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    color:#e6dbff;
+
+}
+section .main-video #main_text span{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+section .main-video #main_text span#main_title_text{
+    padding-top: 20%;
+    font-size: 110px;
+    letter-spacing: 40px;
+}
+section .main-video #main_text span#main_sub_text{
+    padding-top: 2%;
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-family: montserrat-hairline;
+
+}
+section .main-video button.audio_Control{
+    position: relative;
+    float: left;
+    width:30px;
+    height:30px;
+    left:30px;
+    bottom:50px;
+}
+section .main-video #clock{
+    position: relative;
+    right:30px;
+    bottom:40px;
+    float:right;
+
+}
+section#synopsis{
+    margin-top: 5%;
+}
+section .wrap{
+    text-align: center;
+    width:100%;
+    height:100%;
+}
+
+section h2{
+    font-size: 50px;
+}
+section #synopsis-text{
+    font-family: montserrat-hairline;
+    color:black;
+    font-size: 18px;
+    line-height: 30px;
+}
+section #synopsis-text dl{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+}
+
+section #synopsis-text dt{
+    margin:0 auto;
+    width: 70%;
+    height: 100%;
+}
+section #synopsis-text b{
+    font-family: montserrat;
+    font-weight: normal;
+    word-wrap: break-word ;
+}
+section #synopsis-text span{
+    display: inline-block;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+}
+section #synopsis-text p{
+    display: inline-block;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    
+}
+section #synopsis-text span img{
+    width: 100%;
+    height: 100%;
+}
+section #synopsis-btn{
+    margin: 0 auto;
+    width: 50%;
+    height: 30px;
+
+}
+section #synopsis-btn span{
+    width: 30px;
+    height: 30px;
+    background-color:lightgray;
+    border-radius:100%;
+}
