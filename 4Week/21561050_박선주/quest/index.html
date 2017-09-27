@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<link rel="stylesheet" href="./css/reset.css"/>
+<link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<p class="move-bottom">아래로 가고 싶어요.</p>
+<section>
+    <div id="hello">안녕하세요.</div>
+    <div class="banner">
+        <div class="banner-wrap">
+            <div class="banner-container"></div>
+        </div>
+    </div>
+    <p class="move-top">위로 가고 싶어요.</p>
+    <p class="error">삭제해주세요.</p>
+    <p class="modify"><span>수정</span> 해주세요.</p>
+
+    <ul class="list-1">
+        <li>리스트 1</li>
+    </ul>
+
+    <ul class="list-2">
+        <li>리스트 5</li>
+    </ul>
+
+    <button class="btn-1">박스 버튼</button>
+    <div class="box-1">&nbsp;</div>
+</section>
+<script>
+(function($){
+    $(document).ready(function(){
+        //Answer 1.
+        var myname = $('<span id="my-name">제 이름은 박선주 입니다.</span>');
+        $('div#hello').append(myname);
+
+        //Answer 2.
+        var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
+        for(var i = 0; i < images.length; i++){
+            var img = $('<img src="' + images[i] +'">');
+            $('div.banner-container').append(img);
+        }
+
+        //Answer 3.
+        $('p.move-top').prependTo('body').addClass('move').text('위로 이동했습니다.');
+
+        //Answer 4.
+        $('p.move-bottom').appendTo('body').addClass('move').text('아래로 이동했습니다.')
+
+        //Answer 5.
+        $('p.error').remove();
+
+        //Answer 6.
+        $('p.modify').text('수정되었습니다');
+
+        //Answer 7.
+        $('p.modify').empty().remove();
+
+        //Answer 8.
+        var list1 = $('ul.list-1');
+        for(var i = 2; i <= 4; i++){
+            var listClone1 = $('ul.list-1 > li:first').clone();
+            listClone1.text('리스트 ' + i );
+            listClone1.appendTo(list1);
+        }
+
+        //Answer 9.
+        var list2 = $('ul.list-2');
+        for(var i = 4; i >= 1; i--){
+            var listClone2 = $('ul.list-2 > li:last').clone();
+            listClone2.text('리스트 ' + i);
+            listClone2.prependTo(list2);
+        }
+
+        //Answer 10.
+        $('.box-1').width(100);
+        $('button.btn-1').click(function(){
+            if(box.){
+                if(){
+
+                }
+            }else{
+                if(){
+
+                }
+            }
+    })
+    });
+})(jQuery);
+</script>
+</body>
+</html>
