@@ -121,8 +121,21 @@
         힌트 - Boolean 또는 Class 를 조건문에 함께 이용합니다.
         */
 
-
-
+        var $box = $('div.box-1');
+        var $boolean = true;
+        $('button.btn-1').click(function(){
+            if($boolean == true){
+                $box.width('+=100');
+                    if($box.width() >= 500){
+                        $boolean = false;
+                    }
+            }else if($boolean == false){
+                $box.width('-=100');
+                    if($box.width() == 0){
+                        $boolean = true;
+                    }
+            }
+        });
     });
 })(jQuery);
 </script>
