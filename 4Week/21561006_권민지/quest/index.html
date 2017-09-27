@@ -126,14 +126,14 @@
         $('button.btn-1').click(function(){
             if($boolean == true){
                 $box.width('+=100');
-                    if($box.width() >= 500){
-                        $boolean = false;
-                    }
+                if($box.width() >= 500){
+                    $boolean = false;
+                }
             }else if($boolean == false){
                 $box.width('-=100');
-                    if($box.width() == 0){
-                        $boolean = true;
-                    }
+                if($box.width() == 0){
+                    $boolean = true;
+                }
             }
         });
     });
