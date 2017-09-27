@@ -38,16 +38,18 @@ $(document).ready(function(){
 // document.ready
 //Answer 1.
 //my-name 아이디를 가진 span 노드를 생성하고 ‘제 이름은 본인이름입니다.’ 의 내용을 추가하여 hello 아이디를 가진 div 노드의 첫 번째 노드로 추가합니다.
-var spanNode = $('<span> 제 이름은 마승현 입니다.</span>');
+var spanNode = $('<span="my-name"> 제 이름은 마승현 입니다.</span>');
 $('div#hello').append(spanNode);
 //Answer 2.
-//images 배열의 원소 수 만큼 banner-item 클래스를 가지는 div 노드 객체를 생성합니다.
+// images 배열의 원소 수 만큼 banner-item 클래스를 가지는 div 노드 객체를 생성합니다.
 // 배열의 원소를 src 속성으로 가지는 img 노드를 생성하고, 1 에서 생성한 div 노드에 추가합니다.
 // img 노드를 포함하고 있는 div 노드를 banner-container 클래스를 가지는 div 노드에 추가합니다.
 var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
 for(var i = 0; i<images.length; i++){
+    var makeDiv = $("div.banner-item");
     var test = $(" <img src=' " + images[i] + " ' >" );
-    $('div.banner-container').append(test);
+    makeDiv.append(test)
+    $('div.banner-container').append(makeDiv);
 }
 //Answer 3.
 //p.move-top 노드를 body 의 가장 위로 이동시킵니다. 이동 후 p.move-top 에 move 라는 클래스를 추가하고, 노드 안의 내용을 ‘위로 이동했습니다.’ 로 변경합니다.
