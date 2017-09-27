@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<p class="move-bottom">아래로 가고 싶어요.</p>
+<section>
+    <div id="hello">안녕하세요.</div>
+    <div class="banner">
+        <div class="banner-wrap">
+            <div class="banner-container"></div>
+        </div>
+    </div>
+    <p class="move-top">위로 가고 싶어요.</p>
+    <p class="error">삭제해주세요.</p>
+    <p class="modify"><span>수정</span> 해주세요.</p>
+
+    <ul class="list-1">
+        <li>리스트 1</li>
+    </ul>
+
+    <ul class="list-2">
+        <li>리스트 5</li>
+    </ul>
+
+    <button class="btn-1">박스 버튼</button>
+    <div class="box-1">&nbsp;</div>
+</section>
+<script>
+(function($){
+    $(document).ready(function(){
+        //Answer 1.
+        $('#hello').wrapInner('<span id="my-name">제 이름은 오이슬입니다.</span>')
+
+        
+        var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
+        //Answer 2.
+        $('.banner-container').wrapInner('<div class="banner-item"><img src="./img/banner/01.jpg" alt=""/></div><div class="banner-item"><img src="./img/banner/02.jpg" alt=""/></div><div class="banner-item"><img src="./img/banner/03.jpg" alt=""/></div>');
+        
+        //Answer 3.
+        $('p.move-top').insertBefore($('#hello')).html('위로 이동했습니다.');
+        
+        //Answer 4.
+        $('p.move-bottom').insertAfter('.box-1').addClass('move').html('아래로 이동했습니다.');
+        
+        //Answer 5.
+        $('p.error').remove();
+        
+        //Answer 6.
+        $('p.modify').html('수정되었습니다.');
+
+        //Answer 7.
+        $('p.modify').empty().remove();
+        
+        //Answer 8.
+        for(var i = 2; i <= 4; i++){
+            var clBack = $('ul.list-1 li:first').clone();
+            clBack.text('리스트 '+i);
+            clBack.appendTo('ul.list-1');
+        }
+        
+        //Answer 9.
+        for(var i = 4; i > 0; i--){
+            var clFront = $('ul.list-2 li:first').clone();
+            clFront.text('리스트 '+i);
+            clFront.prependTo('ul.list-2');
+        }
+        
+        //Answer 10.
+        var box = $('div.box-1');
+        var box_incre = (function(){
+            var count = 1;
+            $('button.btn-1').click(function(){
+                if(count == 5){
+                    console.log('증가 끝');
+                    box_decre();
+                    return;
+                }
+                $(box).width('+=100');
+                console.log('증가'+$(box).width());
+                count++;
+                return;
+            });
+            return;
+        });
+        var box_decre = (function(){
+            var count = 5;
+            $('button.btn-1').click(function(){
+                if(count == 0){
+                    console.log('감소 끝');
+                    box_incre();
+                    return;
+                }
+                $(box).width('-=100');
+                console.log('감소'+$(box).width());
+                count++;
+                return;
+            });
+            return;
+        });
+        box_incre();
+        
+        // if($(box).width() == 500){
+        //     $('button.btn-1').click(function(){
+        //         $(box).width('-=100');
+        //         console.log('감소'+$(box).width());
+        //     });
+        // }        
+    });
+        // if($(box).width() != 500){
+        //     $('button.btn-1').click(function(){
+        //         $(box).width('+=100');
+        //         console.log('증가'+$(box).width());
+        //         cout++;
+        //     });
+        // }
+        //망했습니다..
+
+})(jQuery);
+</script>
+</body>
+</html>
