@@ -29,16 +29,21 @@ header span img{width:100%;}
 .contents section{width:1200px; margin:0 auto;}
 section h2{font-size:50px; text-align:center; margin-top:120px; padding-bottom:50px;}
 section h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}
+
 /* CONTENT_UPDATE */
-section:first-child{background:url('../img/overTheSea.png') no-repeat left bottom; background-size:contain;}
+section:first-child{position:relative; /*background:url('../img/overTheSea.png') no-repeat left bottom; background-size:contain;*/}
 /*.contents > section:first-child h2{font-size:50px; text-align:center; margin-top:120px; padding-bottom:50px;}
 .contents > section:first-child h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}*/ /*공통*/
-.contents > section:first-child div{width:130px; color:brown; margin:0 auto; padding:100px 0 300px;}
-.contents > section:first-child p{width:80px; margin:150px auto 340px;}
+section:first-child > div{padding-top:100px;}
+section:first-child > div img{width:100%;}
+section:first-child > div + div{position:absolute; top:0; width:100%;}
+section:first-child > div + div p{text-align:center; line-height:180%; margin:50px auto 340px;}
+section:first-child > div + div p strong:first-child{display:block; font-size:30px; font-weight:900; margin:0 auto;}
+section:first-child > div + div p span{display:block; font-size:14px; color:red; margin:20px;}
 /* CONTENT_PLAY */
 section + section{}
 section + section article{overflow:hidden; margin:100px 0;}
-section + section article.first_art{margin-top:200px;}
+section + section article.first_art{margin-top:100px;}
 section + section article span{display:block; float:left; width:40%; height:270px;}
 section + section article.right span{float:right;}
 section + section article span img{width:100%;}
