@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<style>
+    #hello{color:#999}
+    #my-name{text-decoration:underline;color:#000}
+    .move{padding:10px;background-color:#000;color:#fff}
+    .box-1{width:100px;height:100px;background-color:#f00}
+</style>
+</head>
+<body>
+<p class="move-bottom">아래로 가고 싶어요.</p>
+<section>
+    <div id="hello">안녕하세요.</div>
+    <div class="banner">
+        <div class="banner-wrap">
+            <div class="banner-container"></div>
+        </div>
+    </div>
+    <p class="move-top">위로 가고 싶어요.</p>
+    <p class="error">삭제해주세요.</p>
+    <p class="modify"><span>수정</span> 해주세요.</p>
+
+    <ul class="list-1">
+        <li>리스트 1</li>
+    </ul>
+
+    <ul class="list-2">
+        <li>리스트 5</li>
+    </ul>
+
+    <button class="btn-1">박스 버튼</button>
+    <div class="box-1">&nbsp;</div>
+</section>
+<script>
+(function($){
+    $(document).ready(function(){
+
+        //Answer 1.
+        $('#hello').append('<span id="my-name">제 이름은 김용원입니다.</span>');
+        
+        var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
+        //Answer 2.
+        
+        //loop.
+        var max = images.length;
+        for(var i = 0; i < max; i++){
+            //0... 1... 2...
+            //images[i]
+            // var html = '<div class="banner-item"><img src="' + images[i] + '"/></div>';
+            // $('.banner-container').append(html);
+        }
+
+        $.each(images, function(i, d){
+            //1.
+            // var html = '<div class="banner-item"><img src="' + d + '"/></div>';
+            // $('.banner-container').append(html);
+            //2.
+            $('<div class="banner-item"></div>').append('<img src="' + d + '"/>').appendTo('.banner-container');  
+        });
+
+        //Answer 3.
+        console.log('Answer 5.');
+        var $moveTop = $('p.move-top');
+        $('body').prepend($moveTop);
+        // $moveTop.replaceWith('<p class="move move-top">위로 이동했습니다.</p>');
+        $moveTop.addClass('move');
+        $moveTop.html('위로 이동했습니다.');
+
+        //Answer 4.
+        console.log('Answer 6.');
+        var $moveBottom = $('p.move-bottom');
+        $('body').append($moveBottom);
+        //$moveBottom.replaceWith('<p class="move move-bottom">아래로 이동했습니다.</p>');
+        $moveBottom.addClass('move');
+        $moveBottom.html('아래로 이동했습니다.');
+
+        //Answer 5.
+        var $error = $('p.error');
+        $error.remove();
+
+        //Answer 6.
+        var $modify = $('p.modify');
+        //$modify.text('수정되었습니다.');
+        $modify.html('수정되었습니다.');
+
+        //Answer 7.
+        $modify.empty().remove();
+        $modify.html('').remove();
+
+        //Answer 8.
+        var $list = $('.list-1 li');
+        for(var i = 0; i < 3; i++){
+            //0... 1.. 2...
+            //$list.after('<li>리스트 ' + parseInt(4 - i) + '</li>');
+            //console.log(i);
+            $list.after('<li>리스트 ' + (4 - i) + '</li>');
+            //console.log(parseInt(4 - i));
+        }
+
+        //Answer 9.
+        var $list = $('.list-2 li');
+        for(var i = 0; i < 4; i++){
+            console.log(i);
+            $list.before('<li>리스트 ' + (1 + i)  + '</li>');
+            
+        }
+
+        //Answer 10.
+        var $btn1 = $('.btn-1');
+        var $box1 = $('.box-1');
+        var bool = false;
+        //bool - true, false.
+        $btn1.click(function(){
+            if(!bool){
+                $box1.width('+=100');
+                if($box1.width() >= 500){
+                    bool = true;
+                }
+            }else{
+                $box1.width('-=100');
+                if($box1.width() <= 0){
+                    bool = false;
+                }
+            }
+        });
+    });
+})(jQuery);
+</script>
+</body>
+</html>
