@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 05</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<h1>Example 05 - Mouse Events</h1>
+<ul>
+    <li><a id="menu-1" href="#">Menu 1</a></li>
+    <li><a id="menu-2" href="#">Menu 2</a></li>
+    <li><a id="menu-3" href="#">Menu 3</a></li>
+    <li><a id="menu-4" href="#">Menu 4</a></li>
+    <li><a id="menu-5" href="#">Menu 5</a></li>
+    <li><a id="menu-6" href="#">Menu 6</a></li>
+    <li><a id="menu-7" href="#">Menu 7</a></li>
+    <li><a id="menu-8" href="#">Menu 8</a></li>
+</ul>
+<script>
+(function($){
+    $(document).ready(function(){
+        //Mouse Events.
+        //click.
+        $('#menu-1').click(function(){
+            console.log('Menu 1 click');
+        });
+
+        //dblclick
+        $('#menu-2').dblclick(function(){
+            console.log('Menu 2 double click');
+        });
+
+        // $('#menu-3').mousedown(function(){
+        //     console.log('Menu 3 mouse down');
+        //     //마우스가 눌리는 시점.
+        // });
+        // $('#menu-3').mouseup(function(){
+        //     console.log('Menu 3 mouse up');
+        //     //마우스가 눌린 후 놓는 시점.
+        // });
+        $('#menu-4').mousemove(function(){
+            console.log('Menu 4 mouse move');
+            //마우스가 영역에서 움직일 때.
+        });
+
+        var bool = false;
+        $('#menu-3').mousedown(function(event){
+            event.preventDefault();
+            //1. 실행될 때 bool - true. 실행을 시킬거다.
+            //if(!bool){
+            if(bool == false){
+                console.log('Menu 3 mouse down');
+                bool = true;
+            }
+        }).mousemove(function(evt){
+            evt.preventDefault();
+            if(bool){
+                //true.
+                console.log('Menu 3 mouse move');
+            }else{
+                return false;
+            }
+        }).mouseup(function(e){
+            e.preventDefault();
+            if(bool){
+                bool = false;
+                console.log('Menu 3 mouse up');
+            }
+        });
+
+        //mouseover
+        //mouseout
+        $('#menu-5').mouseover(function(){
+            console.log('Menu 5 mouse over');
+        }).mouseout(function(){
+            console.log('Menu 5 mouse out');
+        });
+        //mouseenter
+        //mouseleave
+        $('#menu-6').mouseenter(function(){
+            console.log('Menu 6 mouse enter');
+        }).mouseleave(function(){
+            console.log('Menu 6 mouse leave');
+        });
+
+        $('#menu-7').on('mouseenter mouseleave mousemove', function(e){
+            //console.log(e);
+            //console.log(e.type);
+            //event.type - 현재 적용되고 있는 이벤트
+            // if(e.type == 'mouseenter'){
+            //     console.log('1.')
+            // }else if(e.type == 'mouseleave'){
+            //     console.log('2.')
+            // }else if(e.type == 'mousemove'){
+            //     console.log('3.')
+            // }else{
+                
+            // }
+            //=======
+            switch(e.type){
+                case 'mouseenter':
+                    console.log('S 1.');
+                    break;
+                case 'mouseleave':
+                    console.log('S 2.');
+                    break;
+                case 'mousemove':
+                    console.log('S 3.');
+                    break;
+                default : 
+                    break;
+            
+            }
+        });
+        $('#menu-8').hover(function(){
+            //1. over. //mouseenter
+            console.log('Menu 8 over');
+        }, function(){
+            //2. out. //mouseleave
+            console.log('Menu 8 out');
+        });
+        //=====
+        $('#menu-8').on('mouseenter mouseleave', function(){});
+
+
+        var mouseIn = function(){
+            //mouseenter.
+        }
+        var mouseOut = function(){
+            //mouseleave.
+        }
+        $('#menu-8').hover(mouseIn, mouseOut);
+
+        
+
+
+        //hover
+
+
+
+
+
+
+
+
+    });
+})(jQuery);
+</script>
+</body>
+</html>
