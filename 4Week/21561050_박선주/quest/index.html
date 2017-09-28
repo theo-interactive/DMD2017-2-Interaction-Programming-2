@@ -79,18 +79,18 @@
         }
 
         //Answer 10.
-        $('.box-1').width(100);
+        var box = $('.box-1');
+        box.width(100);
         $('button.btn-1').click(function(){
-            if(box.){
-                if(){
-
+            if(box < 100){
+                box.width('+=100');
                 }
-            }else{
-                if(){
+            }else{box.width('-=100');
+                if(box >= 500){
 
                 }
             }
-    })
+    }) //실행이 안되서 시도중입니다아...
     });
 })(jQuery);
 </script>
