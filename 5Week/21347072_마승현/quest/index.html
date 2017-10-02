@@ -211,7 +211,7 @@ var paddleCheck = function(){
 paddleCheck();
 
 $dotnav.find('span').on('click',function(){
-    _id = $(this).parent().index();ø
+    _id = $(this).parent().index();
     $bancon.stop().animate({
         right: _id * $banitem.width() + 'px'
     },600,dotSelect);
