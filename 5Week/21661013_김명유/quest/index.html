@@ -130,7 +130,7 @@
         function slideLeft(){
           if($_id > 0){
             $_id--;
-            $('.banner-container').css({
+            $('.banner-container').animate({
               'position' : 'absolute',
               'left' : -$moveW * $_id
             })
@@ -146,7 +146,7 @@
         function slideRight(){
           if($_id < $('.banner-item').length-1){
             $_id++;
-            $('.banner-container').css({
+            $('.banner-container').animate({
               'position' : 'absolute',
               'left' : -$moveW * $_id
             })
