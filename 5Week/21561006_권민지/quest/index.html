@@ -90,7 +90,7 @@
         //.banner-container 노드의 width 를 .banner-wrap 의 width x .banner-item 의 개수 의 너비만큼 계산하여 적용하고, 
         //height 는 100% 로 지정합니다.
         //Answer 3.
-        $banContainer.css({'width' : $banItem.length * $('.banner-container').width(), 'height' : '100%'});
+        $banContainer.css({'width' : $('.banner-wrap').width() * $banItem.length, 'height' : '100%'});
 
 
         //Quest 4.
