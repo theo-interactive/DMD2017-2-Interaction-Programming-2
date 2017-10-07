@@ -68,7 +68,12 @@
 <script>
 (function($){
     $(document).ready(function(){
+        var _id = 0;
+        var $banItem = $('.banner-item');
+        var $banContainer = $('.banner-container');
         
+        paddleCheck();
+
         //Quest 1.
         //.banner 노드의 CSS 속성 중 overflow 를 hidden 으로 변경합니다.
         //Answer 1.
@@ -85,31 +90,33 @@
         //.banner-container 노드의 width 를 .banner-wrap 의 width x .banner-item 의 개수 의 너비만큼 계산하여 적용하고, 
         //height 는 100% 로 지정합니다.
         //Answer 3.
-        var itemNum = $('.banner-item').length;
-        var width = $('.banner-container').width();
-        $('.banner-container').css({'width' : itemNum * width, 'height' : '100%'});
+        $banContainer.css({'width' : $banItem.length * $('.banner-container').width(), 'height' : '100%'});
+
 
         //Quest 4.
         //.banner-item 노드의 float 속성을 left 로 변경하고, 
         //width 를 .banner-wrap 의 width 와 동일하게, 
         //height 를 100% 로 지정합니다.
         //Answer 4.
-        $('.banner-item').css(
+        $banItem.css(
             {
                 'float'  : 'left',
                 'width'  : $('.banner-wrap').width(),
                 'height' : '100%'
             });
 
+
         //Quest 5.
         //.banner-item 의 자식노드 img 요소의 width 를 100% 로 지정합니다.
         //Answer 5.
-        $('.banner-item').find('img').css('width', '100%');
+        $banItem.find('img').css('width', '100%');
+
 
         //Quest 6.
         //.paddle-nav 의 자식노드 .arrow.prev 노드의 left 속성을 18px 로 지정합니다.
         //Answer 6.
         $('.paddle-nav').find('.arrow.prev').css('left', '18px');
+
 
         //Quest 7.
         //.paddle-nav 의 자식노드 .arrow.next 노드의 right 속성을 18px 로 지정합니다.
@@ -122,7 +129,7 @@
         //Answer 8.
         $('.dot-nav').css('bottom', '20px');
         
-        // 시도는 해볼 것
+
         //Quest 9.
         //0 값을 가지는 _id 변수를 선언하고 slideLeft 함수를 생성합니다.
         //slideLeft 함수 실행시 .banner-container 를 자식노드 .banner-item 의 
@@ -130,20 +137,32 @@
         //(힌트. 함수 실행 시 _id 변수의 값을 -- 하여 감소시키고 위치값 계산)
         //Answer 9.
         //함수 생성, 자식 노드의 width만큼 이동하는 애니메이션
+        function slideLeft(){
+            if(_id > 0){
+                _id--;
+                $banContainer.stop().animate({'right' : _id * $banItem.width()}, 1000, dotSelect(), paddleCheck());
+            }
+        }
 
-
-        
 
         //Quest 10.
-        //slideRight 함수를 생성하고 실행시 .banner-container 를 자식노드 .banner-item 의 width 만큼 오른쪽으로 이동하도록 애니메이션을 작성합시다.
+        //slideRight 함수를 생성하고 실행시 .banner-container 를 자식노드 
+        //.banner-item 의 width 만큼 오른쪽으로 이동하도록 애니메이션을 작성합시다.
         //(힌트. 함수 실행 시 _id 변수의 값을 ++ 하여 증감시키고 위치값 계산)
         //Answer 10.
+        function slideRight(){
+            if(_id < $banItem.length - 1){
+                _id++;
+                $banContainer.stop().animate({'right' : _id * $banItem.width()}, 1000, dotSelect(), paddleCheck());
+            }
+        }
         
 
         //Quest 11.
         //.arrow.prev 노드 클릭시 slideLeft, .arrow.next 노드 클릭시 slideRight 이벤트가 실행되도록 적용합니다.
         //Answer 11. 
-
+        $('.arrow.prev').on('click', slideLeft);
+        $('.arrow.next').on('click', slideRight);
         
 
         //Quest 12.
@@ -151,7 +170,10 @@
         //클래스 추가에 앞서 이전에 지정 된 span.selected 클래스가 있을 경우 삭제(remove)시킵니다.
         //slideLeft, slideRight 함수에서 동작하는 애니메이션이 끝나는 함수(callback)에서 dotSelect 함수가 실행될 수 있도록 적용합니다.
         //Answer 12. 
-
+        function dotSelect(){
+            $('span').removeClass('selected').eq(_id).addClass('selected');
+        }
+        
 
         //Quest 13.
         //paddleCheck 함수를 생성하고 해당 조건문을 적용합니다.
@@ -161,7 +183,31 @@
         //DOM이 준비되면 초기에 paddleCheck 함수를 실행하고, slideLeft, slideRight 함수에서 동작하는 애니메이션이 끝나는 시점(callback)에 paddleCheck 함수가 실행될 수 있도록 적용합니다.
         //Answer 13.
         //버튼 사라지게
+        
+        //1. 
+        function paddleCheck(){
+            switch(_id){
+                case 0:
+                    $('.arrow.prev').addClass('disabled');
+                    break;
+                case $banItem.length - 1:
+                    $('.arrow.next').addClass('disabled');
+                    break;
+                default :
+                    $('.arrow').removeClass('disabled');
+            }
+        }
 
+        //2.
+        // function paddleCheck(){
+        //     if(_id == 0){
+        //         $('.arrow.prev').addClass('disabled');
+        //     }else if(_id == $banItem.length - 1){
+        //         $('.arrow.next').addClass('disabled');
+        //     }else{
+        //         $('.arrow').removeClass('disabled');
+        //     }
+        // }
     });
 })(jQuery);
 </script>
