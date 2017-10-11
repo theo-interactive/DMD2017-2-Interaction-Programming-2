@@ -71,7 +71,6 @@
 <script>
 (function($){
 $(document).ready(function(){
-
 	//Quest 1.
 	//.banner 노드의 CSS 속성 중 overflow 를 hidden 으로 변경합니다.
 	//Answer 1.
@@ -133,7 +132,7 @@ $(document).ready(function(){
 	//slideRight 함수를 생성하고 실행시 .banner-container 를 자식노드 .banner-item 의 width 만큼 오른쪽으로 이동하도록 애니메이션을 작성합시다.
 	//(힌트. 함수 실행 시 _id 변수의 값을 ++ 하여 증감시키고 위치값 계산)
 	//Answer 9, 10
-
+	
 	//Quest 11.
 	//.arrow.prev 노드 클릭시 slideLeft, .arrow.next 노드 클릭시 slideRight 이벤트가 실행되도록 적용합니다.
 	//Answer 11.
@@ -152,6 +151,61 @@ $(document).ready(function(){
 	//(3) _id 값이 0 이나 마지막이 아닐 경우, .arrow 노드의 'disabled' 클래스를 모두 삭제합니다.
 	//DOM이 준비되면 초기에 paddleCheck 함수를 실행하고, slideLeft, slideRight 함수에서 동작하는 애니메이션이 끝나는 시점(callback)에 paddleCheck 함수가 실행될 수 있도록 적용합니다.
 	//Answer 13.
+	
+	var _id = 0;
+	var itemN = $('.banner-item').length;
+	var itemW = $('.banner-item').width();	
+
+		$('.next').click(function(){
+			slideRight();
+		});
+
+		$('.prev').click(function(){
+			slideLeft();
+		});
+
+	function slideLeft(){
+		_id--;
+		if(_id==-1){
+			_id = itemN-1;
+		}
+		$('.banner-container').animate({left: -(itemW*_id)},1000); 
+		paddleCheck();
+		dotSelect();
+	}
+
+
+	function slideRight(){
+		_id++;
+		if(_id==itemN){
+			_id = 0;
+		}
+		$('.banner-container').animate({left: -(itemW*_id)},1000); 
+		paddleCheck();
+		dotSelect();
+	}
+
+
+	function dotSelect(){
+		$('.dot-nav').find('span').removeClass('selected');
+		$('.dot-nav span:eq('+_id+')').addClass('selected');
+	}
+
+	function paddleCheck(){
+		if(_id == 0){
+			$('.prev').addClass('disabled');		
+		}else if(_id == itemN-1){
+			$('.next').addClass('disabled');
+		}else if(0 < _id < itemN-1){
+			$('.next').removeClass('disabled');
+			$('.prev').removeClass('disabled');
+		}
+	};	
+	
+	
+	
+paddleCheck();
+	
 
 });
 })(jQuery);
