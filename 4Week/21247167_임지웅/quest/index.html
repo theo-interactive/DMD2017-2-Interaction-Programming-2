@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Example 03</title>
+<link rel="stylesheet" href="./css/reset.css"/>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<p class="move-bottom">아래로 가고 싶어요.</p>
+<section>
+    <div id="hello">안녕하세요.</div>
+    <div class="banner">
+        <div class="banner-wrap">
+            <div class="banner-container"></div>
+        </div>
+    </div>
+    <p class="move-top">위로 가고 싶어요.</p>
+    <p class="error">삭제해주세요.</p>
+    <p class="modify"><span>수정</span> 해주세요.</p>
+
+    <ul class="list-1">
+        <li>리스트 1</li>
+    </ul>
+
+    <ul class="list-2">
+        <li>리스트 5</li>
+    </ul>
+
+    <button class="btn-1">박스 버튼</button>
+    <div class="box-1">&nbsp;</div>
+</section>
+<script>
+(function($){
+    $(document).ready(function(){
+        // my-name 아이디를 가진 span 노드를 생성하고 ‘제 이름은 본인이름입니다.’ 의 내용을 추가하여
+        // hello 아이디를 가진 div 노드의 첫 번째 노드로 추가합니다.
+        //Answer 1.
+        
+        $myName = $('<span id="my-name">임지웅</span>');
+        $('div#hello').append($myName);
+        
+        //images 배열의 원소 수 만큼 banner-item 클래스를 가지는 div 노드 객체를 생성합니다.
+        // 배열의 원소를 src 속성으로 가지는 img 노드를 생성하고, 1 에서 생성한 div 노드에 추가합니다.
+        // img 노드를 포함하고 있는 div 노드를 banner-container 클래스를 가지는 div 노드에 추가합니다.
+        //Answer 2.
+        var images = ['./img/banner/01.jpg', './img/banner/02.jpg', './img/banner/03.jpg'];
+        for(var a = 0; a < images.length; a++){
+          var $banner_Item = $('<div class="banner-item"></div>');
+          $('div.banner-container').append($banner_Item);
+        }
+        for(var b = 0; b < images.length; b++){
+          var $img = '<img src="' + images[b] + '">';
+          $('div.banner-item').eq(b).append($img);
+        }
+
+        //Answer 3.
+        $('p.move-top').prependTo('body').addClass('move').text('위로 이동');
+
+        //Answer 4.
+        $('p.move-bottom').appendTo('body').addClass('move').text('아래로 이동');
+
+        //Answer 5.
+        $('p.error').remove();
+
+        // //Answer 6.
+        $('p.modify').text('수정됨');
+
+
+        // //Answer 7.
+        $('p.modify').empty().remove();
+
+
+
+        // //Answer 8.
+        var firstli = $('ul.list-1 > li:first');
+        for(var c = 2; c <= 4; c++){
+          var clone = firstli.clone();
+          clone.text('리스트 ' + c);
+          clone.appendTo('ul.list-1');
+        }
+
+
+        // //Answer 9.
+        var lastli = $('ul.list-2 > li:last');
+        for(var d = 4; d >= 1; d--){
+          var clone = lastli.clone();
+          clone.text('리스트 ' + d);
+          clone.prependTo('ul.list-2');
+        }
+
+        //Answer 10.
+        $('div.box-1').width(100);
+        var $bool = true;
+        $('button.btn-1').click(function(){
+          var $box = $('div.box-1');
+          if($box.width() < 500){
+            if($bool == true){
+              $box.width('+=100');
+            } else if($bool == false){
+              $box.width('-=100');
+            }
+          } else if($box.width() >= 500){
+            $box.width('-=100');
+            $bool = false;
+          }
+          if($box.width() == 0){
+            $bool = true;
+          }
+        })
+    });
+})(jQuery);
+</script>
+</body>
+</html>
