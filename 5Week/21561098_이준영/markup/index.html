@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>PORTFOLIO</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/hud.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				menu: '#menu',
+				afterLoad: function(anchorLink, index){
+					if(anchorLink == 'firstPage'){
+						$('.hud').addClass('index0');
+					}else if(anchorLink !== 'firstPage'){
+						$('.hud').removeClass('index0');						
+					}
+
+					if(anchorLink == 'secondPage'){
+						$('.hud').addClass('index1');
+					}else if(anchorLink !== 'secondPage'){
+						$('.hud').removeClass('index1');						
+					}					
+					
+					if(anchorLink == '3rdPage'){
+						$('.hud').addClass('index2');
+					}else if(anchorLink !== '3rdPage'){
+						$('.hud').removeClass('index2');						
+					}	
+				}
+			});
+			$("#count").delay(4000).fadeOut();
+		});
+	</script>
+</head>
+<body>
+
+
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">HOME</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">ABOUT</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">WORKS</a></li>
+</ul>
+
+<div id="hud-box">
+	<div id="count">0</div>
+	<div id="gradient-overlay"></div>
+	<div id="circle0-box">
+		<div class="hud circle circle0" id="circle0-0">
+			<svg>
+				<circle cx="400" cy="400" r="40" fill="none" stroke-width="1" stroke="white"></circle>
+				<circle cx="400" cy="400" r="60" fill="none" stroke-width="16" stroke="white" stroke-dasharray="2 4" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="60" fill="none" stroke-width="18" stroke="black" stroke-dasharray="100 80" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="80" fill="none" stroke-width="1" stroke="white"></circle>
+				<circle cx="400" cy="400" r="180" fill="none" stroke-width="2" stroke="white"></circle>
+				<circle cx="400" cy="400" r="240" fill="none" stroke-width="120" stroke="rgba(255,255,255,0.1)"></circle>
+				<circle cx="400" cy="400" r="300" fill="none" stroke-width="16" stroke="rgba(255,255,255,0.5)" stroke-dasharray="2 8" stroke-dashoffset="0" ></circle>
+				<circle cx="400" cy="400" r="390" fill="none" stroke-width="16" stroke="rgba(255,255,255,0.2)" stroke-dasharray="120 30" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="380" fill="none" stroke-width="40" stroke="rgba(255,255,255,0.2)" stroke-dasharray="380 810" stroke-dashoffset="0"></circle>
+				
+				
+				<circle cx="400" cy="400" r="205" fill="none" stroke-width="32" stroke="white" stroke-dasharray="20 8" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="205" fill="none" stroke-width="34" stroke="black" stroke-dasharray="1115 800" stroke-dashoffset="0"></circle>
+			</svg>
+		</div>
+	</div>
+	<div id="circle1-box">
+		<div class="hud circle circle1" id="circle1-0"></div>
+		<div class="hud circle circle1" id="circle1-1"></div>
+		<div class="hud circle circle1" id="circle1-2"></div>
+	</div>
+	<div id="folionav-box">
+		<div class="hud folionav" id="folionav1">
+			<svg>
+				<polyline points="0,0 0,45 80,125 80,150 105,175 255,175 280,150 280,125 360,45 360,0" fill="none" stroke-width="1" stroke="white"></polyline>
+				<line x1="180" y1="95"  x2="180" y2="35" fill="none" stroke-width="2" stroke="white"></line>
+				<circle cx="180" cy="90" r="5" fill="white"></circle>
+			</svg>
+		</div>
+		<div class="hud folionav" id="folionav2">
+			<svg>
+				<polyline points="0,0 45,0 125,80 150,80 175,105 175,255 150,280 125,280 45,360 0,360" fill="none" stroke-width="1" stroke="white"></polyline>
+				<line x1="95" y1="180"  x2="35" y2="180" fill="none" stroke-width="2" stroke="white"></line>
+				<circle cx="90" cy="180" r="5" fill="white"></circle>
+			</svg>		
+		</div>
+		<div class="hud folionav" id="folionav3">
+			<svg>
+				<polyline points="0,0 0,45 80,125 80,150 105,175 255,175 280,150 280,125 360,45 360,0" fill="none" stroke-width="1" stroke="white"></polyline>
+				<line x1="180" y1="95"  x2="180" y2="35" fill="none" stroke-width="2" stroke="white"></line>
+				<circle cx="180" cy="90" r="5" fill="white"></circle>
+			</svg>		
+		</div>
+		<div class="hud folionav" id="folionav4">
+			<svg>
+				<polyline points="0,0 45,0 125,80 150,80 175,105 175,255 150,280 125,280 45,360 0,360" fill="none" stroke-width="1" stroke="white"></polyline>
+				<line x1="95" y1="180"  x2="35" y2="180" fill="none" stroke-width="2" stroke="white"></line>
+				<circle cx="90" cy="180" r="5" fill="white"></circle>
+			</svg>		
+		</div>
+	</div>
+<div class="hud" id="page-title">
+	<svg>
+		<polyline points="0,30 120,150 550,150" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.4)"></polyline>
+		<polyline points="1720,30 1600,150 1170,150" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.4)"></polyline>
+		<polyline points="200,150 230,180 320,180" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.4)"></polyline>
+		<polyline points="1520,150 1490,180 1400,180" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.4)"></polyline>
+		<line x1="0" y1="120"  x2="85" y2="120" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.2)"></line>
+		<line x1="1720" y1="120"  x2="1635" y2="120" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.2)"></line>
+		<line x1="150" y1="150"  x2="220" y2="150" fill="none" stroke-width="4" stroke="rgba(255,255,255,0.5)"></line>
+		<line x1="1570" y1="150"  x2="1500" y2="150" fill="none" stroke-width="4" stroke="rgba(255,255,255,0.5)"></line>
+	</svg>
+	<div id="page-title-box">
+		<svg>
+			<polyline points="30,40 66,76 166,76" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+			<polyline points="510,40 474,76 374,76" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>	
+			<line x1="166" y1="64"  x2="166" y2="88" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.5)"></line>
+			<line x1="374" y1="64"  x2="374" y2="88" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.5)"></line>
+
+		</svg>
+	</div>
+</div>
+</div>
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="title-box" id="title0-box">
+			<div id="title0-top-control">
+				<div class="arrow-box">
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</div>
+				<div id="control-left"></div>
+				<div id="control-center"></div>
+				<div id="control-right"></div>
+			</div>
+			<div id="title0-top-progress"><div></div></div>
+			<div id="title0-sight-left">
+				<div class="sight-point"></div>
+				<div class="sight-point"></div>
+				<div class="sight-corner"></div>
+			</div>
+			<div id="title0-sight-right">
+				<div class="sight-point"></div>
+				<div class="sight-point"></div>
+				<div class="sight-corner"></div>
+			</div>
+			<h1 class="helios">I'M LEE JUN YOUNG</h1>
+			<h2>A WEB PUBLISHER</h2>
+			<div id="title0-bottom-control">
+				<svg width="450" height="25">
+					<line x1="0" y1="0" x2="25" y2="25" fill="none" stroke-width="1" stroke="white"></line>
+					<line x1="25" y1="25" x2="425" y2="25" fill="none" stroke-width="1" stroke="white"></line>
+					<line x1="425" y1="25" x2="450" y2="0" fill="none" stroke-width="1" stroke="white"></line>
+				</svg>
+				<div class="svg-line-point"></div>
+				<div class="svg-line-point"></div>
+				<div class="svg-line-point"></div>
+				<div class="arrow-box">
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div id="title0-bottom-progress"><div></div></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="title-box" id="title1-box">
+		</div>
+		<div class="contents-box" id="about-box">
+			<div class="about-content" id="info">
+				<div class="long-bar"></div>
+				<div class="info-content" id="profile">
+					<svg>
+						<circle cx="40" cy="40" r="30" stroke="red" fill="none" stroke-width="2" stroke-dasharray="120 100"></circle> 
+					</svg>
+					<h2>PROFILE</h2>
+					<h1 class="helios">P</h1>
+					<dl>
+						<dt>이름</dt><dd>이준영</dd>
+						<dt>생일</dt><dd>1993.11.25</dd>
+					</dl>
+					<div class="bar"></div>
+				</div>
+				<div class="info-content" id="school">
+					<svg>
+						<circle cx="40" cy="40" r="30" stroke="red" fill="none" stroke-width="2" stroke-dasharray="120 100"></circle>  
+					</svg>
+					<h2>SCHOOL</h2>
+					<h1 class="helios">S</h1>
+					<dl>
+						<dt>학교</dt><dd>계원예술대학교</dd>
+						<dt>학과</dt><dd>디지털미디어디자인</dd>
+					</dl>
+					<div class="bar"></div>
+				</div>
+				<div class="info-content" id="contact">
+					<svg>
+						<circle cx="40" cy="40" r="30" stroke="red" fill="none" stroke-width="2" stroke-dasharray="120 100"></circle> 
+					</svg>
+					<h2>CONTACT</h2>
+					<h1 class="helios">C</h1>
+					<dl>
+						<dt>연락처</dt><dd>010-7278-8789</dd>
+						<dt>이메일</dt><dd>ab12b1125@gmail.com</dd>
+					</dl>
+					<div class="bar"></div>
+				</div>
+				<div class="info-content" id="resume">
+					<svg>
+						<polyline points="0,50 50,4 276,4" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.4)"></polyline>
+						<circle cx="276" cy="4" r="4" fill="white" stroke-width="none"></circle>
+					</svg>
+					<h1 class="helios">RESUME DOWNLOAD</h1>
+				</div>
+			</div>
+			<div class="about-content" id="skills">
+				<div class="skills-content" id="programming-skill">
+					<h1 class="helios">programming skills</h1>
+					<div class="skill" id="htmlcss">
+						<h2>HTML/CSS</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:80%"></div><div class="skill-bar-end" style="right:75%"></div></div>
+					</div>
+					<div class="skill" id="js">
+						<h2>JAVASCRIPT</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:60%"></div><div class="skill-bar-end" style="right:55%"></div></div>
+					</div>
+					<div class="skill" id="jquery">
+						<h2>JQUERY</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:65%"></div><div class="skill-bar-end" style="right:60%"></div></div>
+					</div>
+				</div>
+				<div class="skills-content" id="design-skill">
+					<h1 class="helios">design skills</h1>
+					<div class="skill" id="photoshop">
+						<h2>PHOTOSHOP</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:60%"></div><div class="skill-bar-end" style="right:55%"></div></div>
+					</div>
+					<div class="skill" id="illustrator">
+						<h2>ILLUSTRATOR</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:40%"></div><div class="skill-bar-end" style="right:35%"></div></div>
+					</div>
+					<div class="skill" id="etc">
+						<h2>ETC</h2>
+						<div class="skill-bar-100"><div class="skill-bar" style="width:55%"></div><div class="skill-bar-end" style="right:50%"></div></div>
+					</div>
+				</div>
+			</div>
+			<div class="about-content" id="keywords">
+				<div class="keyword" id="keyword0">
+					<svg>
+						<circle cx="100" cy="100" r="99" fill="none" stroke="white" stroke-width="1"></circle>
+					</svg>
+				</div>
+				<div  class="keyword" id="keyword1">
+					<svg>
+						<circle cx="100" cy="100" r="99" fill="none" stroke="white" stroke-width="1"></circle>
+					</svg>			
+				</div>
+			<div class="keyword"  id="keyword2">
+				<svg>
+					<circle cx="100" cy="100" r="99" fill="none" stroke="white" stroke-width="1"></circle>
+				</svg>			
+			</div>
+			<div class="keyword"  id="keyword3">
+				<svg>
+					<circle cx="100" cy="100" r="99" fill="none" stroke="white" stroke-width="1"></circle>
+				</svg>
+			</div>
+			<div class="keyword-bar" id="keyword-bar-left"></div>
+			<div class="keyword-bar" id="keyword-bar-right"></div>
+			<div id="keyword-content-box">
+				<svg width="940" height="110">
+					<polyline points="0,0 50,50 180,50" fill="none" stroke-width="1" stroke="white"></polyline>
+					<line x1="180" y1="38"  x2="180" y2="62" fill="none" stroke-width="2" stroke="white"></line>
+					<polyline points="940,0 890,50 710,50" fill="none" stroke-width="1" stroke="white"></polyline>
+					<line x1="710" y1="38"  x2="710" y2="62" fill="none" stroke-width="2" stroke="white"></line>
+				</svg>
+				<div id="keyword-content">
+					<p>Keyword content</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	</div>
+	<div class="section" id="section2">
+        <div class="slide active" id="slide1">
+                <h1>Output</h1>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>Slide 2</h1>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Slide 3</h1>
+        </div>
+	</div>
+</div>
+
+
+</body>
+</html>

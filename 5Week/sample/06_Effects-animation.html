@@ -14,6 +14,7 @@
 <body>
 <h1>Example 05 - Effects-animation</h1>
 <button class="btn-play">Play</button>
+<button class="btn-play2">Play2</button>
 <button class="btn-stop">Stop</button>
 <button class="btn-force-play">Force Play</button>
 <button class="btn-reset">Reset</button>
@@ -21,6 +22,28 @@
 <script>
 (function($){
     $(document).ready(function(){
+		var $box = $('.box');
+		$('.btn-play').on('click',function(){
+			//.box 노드에 애니메이션 효과를 부여한다.
+			//animate - {css 속성}, duration (시간)
+			//animate - {css 속성}, duration (시간), callback(끝난 시점의 함수)
+			$box.animate({'left': '+=' + 100 +'px'},2000);
+		});
+		$('.btn-play2').on('click',function(){
+			$box.animate({'left': '+=' + 100 +'px','top':200,'width':300+'px'},400,function(){
+				//callback
+				console.log('애니메이션 완료');
+			});
+		});
+		$('.btn-stop').on('click',function(){
+			$box.stop();
+		});
+		$('.btn-force-play').on('click',function(){
+			$box.stop(true).animate({'left': '+=' + 200 + 'px'},500);
+		});
+		$('.btn-reset').on('click',function(){
+			$box.stop(true).css({'left':0});
+		});
     });
 })(jQuery);
 </script>
