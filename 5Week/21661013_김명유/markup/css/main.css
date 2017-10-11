@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900');
+html,body,section{height: 100%; font-family: 'Lato', sans-serif;}
+body{overflow-x: hidden;}
+li{list-style: none;}
+
+section {background-color: #fff2e5; position: relative; height: 100%;}
+.index, .ost{overflow: hidden;}
+
+/*--- index ---*/
+
+.index .main_visual{
+  position: relative;
+  width: 80%; height: 100%;
+  margin: 0 auto;
+}
+.index .main_visual h1{
+  font-size: 12.5em;
+  color:#cf7876;
+  letter-spacing: 30px;
+  font-weight: 900;
+}
+.index .main_visual h1 span{
+  display: block;
+  position: absolute;
+  right: 0;
+}
+.index .photo{
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+}
+.index .photo img{height: 100%;}
+.index .main_visual .box{
+  width: 40%; height: 300px;
+  border: 1.9em solid #f9ad81;
+  text-indent: -9999px;
+}
+.index .main_visual .info{
+  font-size: 0.9em;
+  line-height: 2.7em; letter-spacing: 0.2em;
+  font-size: 0.8em;
+  float: right;
+  width: 300px;
+}
+.index .main_visual .info dl dt{float: left;}
+.index .main_visual .info dl dt::after{content: '|'; margin: 0 10px 0 10px;}
+.index .main_visual .info dl dd{text-align: right;}
+/*--- about ---*/
+.about .colorb{height: 300px; background-color: #000;}
+.about .content{background-color: #ff0000;}
+/*--- ost ---*/
+
+section .content{
+  position: absolute;
+  width: 1300px; height: 500px;
+  top: 50%; left: 50%;
+  margin: -250px 0 0 -650px;
+}
+.ost .content{margin: -280px 0 0 -650px;}
+.ost{background: url('../images/background.jpg');background-size : cover; color:#fff;}
+.ost .content h2{
+  font-size: 50px;
+  font-weight: normal;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 20px;
+  margin: 40px 0 20px;
+  text-align: right;
+}
+.ost .content ul{height: 100%; width: 100%;}
+.ost .content ul li{float: left; height: 100%;}
+.ost .content ul li.album{width: 450px;}
+.ost .content ul li.track{width: 650px; padding: 0 100px;}
+.ost .content ul li.album{}
+.ost .content ul li.album img{display: block; width: 500px; margin: 0 auto;}
+
+
+.ost .content .tracklist_wrap{
+  width: 100%; height: 373px; overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+.ost .content .tracklist_wrap::-webkit-scrollbar {display:none;}
+.ost .content .track .tracklist_wrap table{width: 100%; font-size: 10px;}
+.ost .content .track .tracklist_wrap table tr{height: 60px;}
+.ost .content .track .tracklist_wrap table td{vertical-align: middle;}
+.ost .content .track .tracklist_wrap table .num{width: 20%;}
+.ost .content .track .tracklist_wrap table .song{width: 50%;}
+.ost .content .track .tracklist_wrap table .time{width: 30%; text-align: right;}
+.ost .content .track .tracklist_wrap table span{display: none;}
+.ost .bar{
+  width: 100%; height: 60px;
+  position: fixed;
+  bottom: 0;
+}
+.ost .bar div{float: left;}
+.ost .bar div:first-child{width: 30%;}
+.ost .bar div:last-child{width: 70%;}
+.ost .bar div:first-child ul{width: 120px; margin: 0 auto;}
+.ost .bar div ul{font-size: 11px;}
+.ost .bar div ul li{
+  float: left;
+  width: 20px; height: 20px;
+  background: url('../images/icon.png')no-repeat;
+  background-size: 40px;
+  margin-top: 20px;
+  text-indent: -9999px;
+}
+.ost .bar div ul li.prev{background-position: 0 -20px;}
+.ost .bar div ul li.play{background-position: 0 0px; margin: 20px 30px;}
+.ost .bar div ul li.next{background-position: -20px -20px;}
+.ost .bar div:last-child ul{text-align: center; padding-right: 20%; line-height: 60px;}
+
+
+.photo .content{background-color: #fff; height: 300px;}
+.photo .content .photolist_wrap{height: 100%; overflow-x: scroll; -ms-overflow-style: none;}
+.photolist_wrap::-webkit-scrollbar {display:none;}
+.photo .content .photolist_wrap ul{height: 100%; width: 3700px;}
+.photo .content .photolist_wrap ul li{float: left; height: 200px;}
+.photo .content .photolist_wrap img.w{width: 300px; height: 200px;}
+.photo .content .photolist_wrap img.h{width: auto; height: 100%;}
