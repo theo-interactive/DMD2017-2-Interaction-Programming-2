@@ -22,7 +22,7 @@ main{ position:relative;}
 
 #introduce{}
 #introduce h2{    z-index: 4; width: 100%; position: absolute; top: 200px; }
-#introduce h2 img{    width: 700px;}
+#introduce h2 img{ }
 
 #introduce .introduce_scroller{  }
 #introduce .explain {     position: relative;  z-index: 5;}
