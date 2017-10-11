@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/menu.css"/>
+    <link rel="stylesheet" href="./css/about.css"/>
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <div class="btn"></div>
+        <div onclick="history.back();" class="page_cover"></div>
+        <div id="menu">
+            <div onclick="history.back();" class="close"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">MAIN</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="poster.html">POSTER</a></li>
+                    <li><a href="title_sequence.html">TITLE<br />SEQUENCE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="back">
+            <h1>About</h1>
+        </div>
+        
+        <div class="article">
+            <div id="left">
+                <p></p>
+            </div>
+            <div id="right">
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script>
+        $(".btn").click(function() {
+          $("#menu,.page_cover,html").addClass("open");
+          window.location.hash = "#open";
+        });
+        
+        window.onhashchange = function() {
+          if (location.hash != "#open") {
+            $("#menu,.page_cover,html").removeClass("open");
+          }
+        };
+    </script>
+</body>
+</html>
