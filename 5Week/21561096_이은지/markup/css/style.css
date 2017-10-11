@@ -1,0 +1,159 @@
+   @font-face{
+   font-family: "Miller-Regular";
+   src:url("../font/font/Miller-Regular.otf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+   }
+
+body{
+    margin:0;
+    height:1346px;
+    background-color: black;
+
+}
+#wrap {
+    border-top:13px solid black ;
+    height:1346px;
+    min-width: 1000px;
+    
+}
+ul,li{ list-style: none; }
+a{text-decoration: none;}
+/*메뉴*/
+#header{
+    position: fixed;
+    width: 20%;
+    height:1346px;
+    top: 0; 
+    left: 0; 
+    background-color: #000;
+    z-index: 99;
+}
+#header nav{
+    position: relative; 
+    width:100%; 
+    height:100%; 
+    background-color: #212121; 
+    left:50%;
+    margin-left:-45%;
+    border: 1px solid white;
+}
+#header h1{
+    
+}
+#header nav ul{
+    position: absolute; 
+    top:250px; 
+    right:120px;
+
+}
+#header nav ul li{
+    width:100%;
+    border:2px solid #fff;
+    margin:30px 80px;
+
+}
+#header nav ul li a{
+    border: 1px solid white;
+    display: block;
+    font-size: 17px; 
+    font-weight: bold; 
+    text-align: left; 
+    line-height: 1.8;
+    color:#fff;
+    padding:5px;
+    
+}
+
+
+/*메인 시작*/
+
+#main_body{
+    width:100%;
+    height:660px;
+}
+article { height: 330px; float: left; }
+/* 각 박스(article)의 크기 지정 */
+article:nth-child(1)  { width: 60%; background-color: #ddd; height:660px;}
+article:nth-child(2)  { width: 20%; background-color: #ccc; }
+article:nth-child(3)  { width: 20%; background-color: #000; }
+article:nth-child(4)  { width: 30%; background-color: #aaa; }
+article:nth-child(5)  { width: 10%; background-color: #ccc; }
+
+/* 각 박스(article)의 이미지  
+article .gi1 { background-image: url(../img/pic1.jpg); }
+article .gi2 { background-image: url(../img/pic2.jpg); }
+article .gi3 { background-image: url(../img/pic3.jpg); }
+article .gi4 { background-image: url(../img/pic4.jpg); }*/
+
+
+#next_body{
+    position:relative;
+    left:20%;
+    width:80%;
+    height:673px;
+   
+}
+#next_body article{height:336px; float: left; }
+/* 각 박스(article)의 크기 지정 */
+#next_body article:nth-child(1)  { width: 25%; background-color: #ccc;}
+#next_body article:nth-child(2)  { width: 25%; background-color: #aaa; }
+#next_body article:nth-child(3)  { width:25%; background-color: #000; clear:both;  }
+#next_body article:nth-child(4)  { width: 25%; background-color: red; }
+#next_body article:nth-child(5)  { width: 50%; background-color: #ddd; height:672px;position:absolute;left:50%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*시작시 로딩*/
+.loading-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5em;
+  letter-spacing: .085em;
+  margin: 4.5rem 0 1rem;
+}
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  background: #fff;
+  transition: .75s;
+  z-index: 999
+}
+
+.loading-title {
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-progress {
+  height: 11px;
+  background: #fff;
+  top: -11px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  transition: .35s;
+  border: 1px solid #fff;
+}
+
+
+  
+  

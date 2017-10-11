@@ -12,30 +12,47 @@
 </head>
 
 <body>
+  <nav class="dot-nav">
+        <ul>
+        <li><span class="">&nbsp;</span></li><li>
+            <span class="">&nbsp;</span></li><li>
+            <span class="">&nbsp;</span></li><li>
+            <span class="selected">&nbsp;</span></li><li>
+        </li></ul>
+    </nav>
   <div id="main" class="sctn">
-    <div class="wrap">
-      <header>
-        <h1 class="logo"><a href="#">LOGO</a></h1>
-        <nav>
-          <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h2>AQUA PLANET</h2>
+    <div class="moon">
+      <img src="./img/moon.png" alt="introimg" />
     </div>
+    <h2>AQUA PLANET</h2>
+    <div id="mainwrap"class="wrap">
+
+      <div class="logo"><h3>AQUA PLANET</h3><img src="./img/main.png" alt="introimg" /></div>
+    <!-- wave, rocket는 마우스 스크롤에따라 동작하는 애니메이션을 넣을 것입니다 -->
+
   </div>
+  <div class="waves">
+    <span><img id="wv1"src="./img/wave1.png" alt="introimg"></span>
+    <span><img id="wv2"src="./img/wave2.png" alt="introimg"></span>
+    <span><img id="wv3"src="./img/wave3.png" alt="introimg"></span>
+    <span><img id="wv4"src="./img/wave4.png" alt="introimg"></span>
+    <span><img id="wv5"src="./img/wave5.png" alt="introimg"></span>
+  </div>
+</div>
 
   <div id="intro1" class="sctn">
     <div class="wrap">
       <div class="introgall">
         <div class="half">
-          <p class="intro" id="orange"><span>아쿠아 플라넷 제주</span>는</p>
-          <p class="intro">해양생물 보존의 가치를 공유하며, <br /><span>인간과 자연이 공생</span>하며 느낄 수 있는 <br />최고의 즐거움을 제공합니다.</p>
+          <div>
+            <p class="intro" id="orange"><span>아쿠아 플라넷 제주</span>는</p>
+            <p class="intro">해양생물 보존의 가치를 공유하며, <br /><span>인간과 자연이 공생</span>하며 느낄 수 있는 <br />최고의 즐거움을 제공합니다.</p>
+          </div>
         </div>
         <div class="half">
-          <img id="introimg" src="./img/introimg.png" alt="introimg">
+          <div>
+            <img id="introimg" src="./img/introimg.png" alt="introimg">
+          </div>
         </div>
       </div>
     </div>
@@ -76,62 +93,137 @@
         <a>식물<span class="bar">bar</span></a>
         <a>미생물<span class="bar">bar</span></a>
       </div>
-      <div class="card a" id="selectCard">
-        <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
-        <div class="title">
-          <div class="name">작은발톱수달</div>
-          <div class="sub">동물</div>
+      <div class="oceangall">
+        <div class="card a" id="selectCard">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
         </div>
-      </div>
-      <div class="card b">
-        <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
-        <div class="title">
-          <div class="name">가든일</div>
-          <div class="sub">식물</div>
+        <div class="card b">
+          <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
+          <div class="title">
+            <div class="name">가든일</div>
+            <div class="sub">식물</div>
+          </div>
         </div>
-      </div>
-      <div class="card c">
-        <div class="photodiv"><img class="photo" src="img/3.jpg"></div>
-        <div class="title">
-          <div class="name">해파리</div>
-          <div class="sub">미생물</div>
+        <div class="card c">
+          <div class="photodiv"><img class="photo" src="img/3.jpg"></div>
+          <div class="title">
+            <div class="name">해파리</div>
+            <div class="sub">미생물</div>
+          </div>
         </div>
-      </div>
-      <div class="card a">
-        <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
-        <div class="title">
-          <div class="name">작은발톱수달</div>
-          <div class="sub">동물</div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
         </div>
-      </div>
-      <div class="card a">
-        <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
-        <div class="title">
-          <div class="name">작은발톱수달</div>
-          <div class="sub">동물</div>
+        <div class="card b">
+          <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
+          <div class="title">
+            <div class="name">가든일</div>
+            <div class="sub">식물</div>
+          </div>
         </div>
-      </div>
-      <div class="card b">
-        <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
-        <div class="title">
-          <div class="name">가든일</div>
-          <div class="sub">식물</div>
+        <div class="card b">
+          <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
+          <div class="title">
+            <div class="name">가든일</div>
+            <div class="sub">식물</div>
+          </div>
         </div>
-      </div>
-      <div class="card c">
-        <div class="photodiv"><img class="photo" src="img/3.jpg"></div>
-        <div class="title">
-          <div class="name">해파리</div>
-          <div class="sub">미생물</div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
         </div>
-      </div>
-      <div class="card a">
-        <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
-        <div class="title">
-          <div class="name">작은발톱수달</div>
-          <div class="sub">동물</div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
         </div>
+        <div class="card b">
+          <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
+          <div class="title">
+            <div class="name">가든일</div>
+            <div class="sub">식물</div>
+          </div>
+        </div>
+        <div class="card c">
+          <div class="photodiv"><img class="photo" src="img/3.jpg"></div>
+          <div class="title">
+            <div class="name">해파리</div>
+            <div class="sub">미생물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card a">
+          <div class="photodiv"><img class="photo" src="img/1.jpg"></div>
+          <div class="title">
+            <div class="name">작은발톱수달</div>
+            <div class="sub">동물</div>
+          </div>
+        </div>
+        <div class="card b">
+          <div class="photodiv"><img class="photo" src="img/2.jpg"></div>
+          <div class="title">
+            <div class="name">가든일</div>
+            <div class="sub">식물</div>
+          </div>
+        </div>
+        <div class="card c">
+          <div class="photodiv"><img class="photo" src="img/3.jpg"></div>
+          <div class="title">
+            <div class="name">해파리</div>
+            <div class="sub">미생물</div>
+          </div>
+        </div>
+
+
       </div>
+
     </div>
   </div>
   </div>
@@ -162,7 +254,6 @@
 										</p>
 									</div>
 								</div>
-								<div class="clock_new" ></div>
 								<div class="end">
 									<h3>마감시간</h3>
 									<div class="clock clfix">
@@ -179,7 +270,7 @@
 							</div>
 						</div>
 					</div>
-      <table width="100%" cellspacing="0" class="board_floor">
+      <table width="50%" cellspacing="0" class="board_floor">
         <caption>
           층별 안내도
         </caption>
@@ -190,7 +281,7 @@
         </colgroup>
         <tbody>
           <tr class="bg_f1_tr">
-            <th rowspan="3" scope="row" class="bg_f4_h"><a href="gallery_info3.jsp#gallery_detail">2F</a></th>
+            <th rowspan="3" scope="row" class="bg_f4_h"><a href="#">2F</a></th>
             <td><span class="tit1_1">전시실</span></td>
             <td class="gray">아쿠아리움, 마린사이언스, 키즈플라넷</td>
           </tr>
@@ -203,7 +294,7 @@
             <td class="gray">아쿠아플레이스, 빈스앤베리즈</td>
           </tr>
           <tr class="bg_f2_tr">
-            <th rowspan="3" scope="row" class="bg_f3_h"><a href="gallery_info2.jsp#gallery_detail">1F</a></th>
+            <th rowspan="3" scope="row" class="bg_f3_h"><a href="#">1F</a></th>
             <td><span class="tit2_1">전시실</span></td>
             <td class="gray">아쿠아리움, 오션아레나</td>
           </tr>
@@ -216,7 +307,7 @@
             <td class="gray">앤티앤스 프레즐</td>
           </tr>
           <tr class="bg_f3_tr">
-            <th rowspan="3" scope="row" class="bg_f2_h"><a href="gallery_info.jsp#gallery_detail">B1F</a></th>
+            <th rowspan="3" scope="row" class="bg_f2_h"><a href="#">B1F</a></th>
             <td><span class="tit3_1">전시실</span></td>
             <td class="gray">아쿠아리움, 오션아레나 입구</td>
           </tr>
