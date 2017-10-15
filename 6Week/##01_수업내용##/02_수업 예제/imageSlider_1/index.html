@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Image Slider</title>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div class="banner">
+    <nav role="navigation" class="paddle-nav">
+        <ul>
+            <li><button class="arrow prev"></button></li>
+            <li><button class="arrow next"></button></li>
+        </ul>
+    </nav>
+    <nav class="dot-nav">
+        <ul>
+        <li><span class="selected">&nbsp;</span></li><li>
+            <span>&nbsp;</span></li><li>
+            <span>&nbsp;</span></li><li>
+            <span>&nbsp;</span></li><li>
+        </ul>
+    </nav>
+    <div class="banner-wrap">
+        <div class="banner-container">
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner-01.jpg"/>
+                </div>
+                <div class="component text-area">
+                    <div class="title">Title 1</div>
+                    <div class="desc">Description 1</div>
+                </div>
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner-02.jpg"/>
+                </div>
+                <div class="component text-area">
+                    <div class="title">Title 2</div>
+                    <div class="desc">Description 2</div>
+                </div>
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner-03.jpg"/>
+                </div>
+                <div class="component text-area">
+                    <div class="title">Title 3</div>
+                    <div class="desc">Description 3</div>
+                </div>
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner-04.jpg"/>
+                </div>
+                <div class="component text-area">
+                    <div class="title">Title 4</div>
+                    <div class="desc">Description 4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+(function($){
+    $(document).ready(function(){
+        $('.banner-wrap').width($('.banner').width()).height($('.banner').height());
+        $('.banner-container').width($('.banner-wrap').width() * $('.banner-item').length).height('100%');
+        $('.banner-item').css({'width' : $('.banner-wrap').width(), 'height' : '100%'});
+        var _id = 0;
+        var _max = $('.banner-item').length;
+        var _isAni = false;
+        var slideLeft = function(){
+            if(_isAni) return false;
+            if(_id === 0){
+                return false;
+            }else{
+                _id--;
+                slide();
+            }
+        }
+        var slideRight = function(){
+            if(_isAni) return false;
+            if(_id === _max - 1){
+                return false;
+            }else{
+                _id++;
+                slide();
+            }
+        }
+        var slide = function(bool = false){
+            if(!bool){
+                _isAni = true;
+                $('.banner-container').stop(true).animate({'margin-left' : $('.banner').width() * _id * -1}, 500, function(){
+                    dotSelect();
+                    paddleCheck();
+                    _isAni = false;
+                });                
+            }else{
+                $('.banner-container').stop(true).css({'margin-left' : $('.banner').width() * _id * -1});
+                dotSelect();
+                paddleCheck();
+                _isAni = false;
+            }
+        }
+        var dotSelect = function(){
+            var $span = $('.dot-nav').find('span');
+            $span.removeClass('selected');
+            $span.eq(_id).addClass('selected');
+        }
+        var paddleCheck = function(){
+            var $arrow = $('.paddle-nav').find('.arrow');
+            if(_id === 0){
+                $('.arrow.prev').addClass('disabled');
+                $('.arrow.next').removeClass('disabled');
+            }else if(_id === _max - 1){
+                $('.arrow.prev').removeClass('disabled');
+                $('.arrow.next').addClass('disabled');
+            }else{
+                $arrow.removeClass('disabled');
+            }
+        }
+        $(window).trigger('resize');
+        $('.arrow.prev').on('click', slideLeft);
+        $('.arrow.next').on('click', slideRight);
+        paddleCheck();
+    });
+})(jQuery);
+</script>
+</body>
+</html>

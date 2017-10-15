@@ -1,0 +1,175 @@
+/* ---- RESET ---- */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,button,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time,menu,select,legend{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:400}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none;height:0}
+[hidden]{display:none}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html,button,input,select,textarea{font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;word-spacing:-1px;-webkit-text-size-adjust:none}
+body{margin:0}
+a:active,a:hover,a:focus{outline:0}
+b,strong{font-weight:bold}
+ul,ol{list-style:none}
+img{border:0;-ms-interpolation-mode:bicubic}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+form{margin:0}
+legend{border:0;padding:0;white-space:normal;*margin-left:-7px}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}
+button,input{line-height:normal}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;*overflow:visible}
+button[disabled],input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;*height:13px;*width:13px}
+input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type=search]::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+a,button{-webkit-tap-highlight-color:transparent}
+button{border:0 none;background-color:transparent;cursor:pointer}
+textarea{overflow:auto;vertical-align:top;resize:none;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif}
+table{border-collapse:collapse;border-spacing:0}
+html,button,input,select,textarea,a{color:#212121}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+img{vertical-align:middle}
+a{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none}
+a:hover{color:#212121}
+a:hover,a:link,a:visited,a:active{text-decoration:none}
+a.select{cursor:default !important;-webkit-transition:none !important;-moz-transition:none !important;-ms-transition:none !important;-o-transition:none !important;transition:none !important}
+input{-webkit-appearance:none;border-radius:0;font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+fieldset{border:none}
+
+/* ---- LAYOUT ---- */
+body{font-family:'SF Pro Display',Apple SD Gothic Neo,Malgun Gothic,Dotum,Helvetica,Helvetica Neue,Arial,Verdana,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;word-spacing:-1px;-webkit-text-size-adjust:none}
+
+/* flex */
+.grid{/* flex container */
+    display:flex;
+    display:-webkit-flex;
+    /* width:100%;  */
+    width:500px;
+    height:400px;   
+    /* height:80vh; */
+    margin:20px; 
+    padding:10px;
+    border:2px solid #303030;
+    box-sizing:border-box; 
+}
+.grid-item{/* flex items */
+    width:100px; 
+    height:100px;   
+    /* margin:20px;  */
+    /* padding:0 25px;  */
+    font-family:'Rubik';
+    font-size:60px;
+    line-height:100px;
+    background-color:#303030;
+    text-align:center;
+    color:#fff;
+}
+/* flex-direction */
+/* row, row-reverse,
+   column, column-reverse */
+.grid{
+    /* flex-direction:row; */ /* 기본값 */
+    /* flex-direction:row-reverse; */
+    /* flex-direction:column; */
+    /* flex-direction:column-reverse; */
+    /* flex-wrap:nowrap; */ /* 기본값 */
+    /* flex-wrap:wrap; */
+    /* flex-direction:row-reverse; */
+    /* flex-wrap:wrap-reverse; */
+    /* flex-flow: <flex-direction>' '<flex-wrap>; 축약형 */
+    /* flex-flow:row-reverse wrap-reverse; */
+    flex-wrap:wrap;
+    /* justify-content:flex-start; */ /* 기본값 */
+    /* justify-content:flex-end; */
+    /* justify-content:center; */
+    /* justify-content:space-between; */
+    /* justify-content:space-around; */
+    /* justify-content:space-evenly; */
+    /* align-items:flex-start; */ /* 기본값 */
+    /* align-items:flex-end; */
+    /* align-items:center; */
+    /* align-items:baseline; */
+    /* align-items:stretch; */
+    /* align-content:auto; */ /* 기본값 */
+    align-content:flex-start; 
+    /* align-content:flex-end; */
+    /* align-content:center; */
+    /* align-content:space-between; */
+    /* align-content:space-around; */
+    /* align-content:stretch; */
+    /* justify-content:space-around; */
+    /* align-content:space-around; */
+}
+.grid-item{
+    /* order:1; */
+    /* flex-grow:1; */
+    /* flex-shrink:1; */
+    /* flex-basis:16.6%; */
+    /* flex: <flex-grow>' '<flex-shrink>' '<flex-basis> */
+    /* flex:1 1 25%; */
+}
+.grid-item:nth-of-type(2){
+    /* flex-grow:3; */
+    /* flex-shrink:5; */
+    /* flex:2 1 15%; */
+    /* flex:2 1;  */
+    /* flex-grow:2; */
+    /* flex-basis:15%; */
+    align-self:flex-end;
+    background-color:#888888;
+}
+.grid-item:nth-of-type(3){
+    align-self:center;
+    background-color:#666666;
+}
+/*
+.grid-item:nth-of-type(2){
+    order:2;
+    background-color:#888888;
+}
+.grid-item:nth-of-type(1){
+    order:99;
+    background-color:#666666;
+}
+.grid-item:nth-of-type(4){
+    order:-1;
+    background-color:#aaaaaa;
+}
+*/
+
+
+
+
+/* 필터 :nth-of-type(순서) */
+/* .grid-item:nth-of-type(1){height:120px;line-height:90px} */ /* 첫번째 .grid-item */
+/* .grid-item:nth-of-type(2){height:150px;line-height:120px} */ /* 두번째 .grid-item */
+/* .grid-item:nth-of-type(3){height:100px;line-height:90px} */ /* 세번째 .grid-item */
+/* .grid-item:nth-of-type(4){height:130px;line-height:130px} */ /* 네번째 .grid-item */
+/* .grid-item:nth-child(2n){height:150px;line-height:120px} */
+
+
+
+
+
+/*-- flex-container --*/
+
+/* flex-direction */
+/* flex-wrap */
+/* flex-flow */
+
+/* justify-content */
+/* align-items */
+/* align-content */
+
+/*-- flex-items --*/
+/* order */
+/* flex-grow */
+/* flex-shrink */
+/* flex-basis */
+/* flex */
+
+/* align-self */
