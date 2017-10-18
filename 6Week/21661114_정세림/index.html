@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script><!--물체의애니메이션-->
+    
+    <script>
+    $(document).ready(function() {
+        var movementStrength = 50;
+        var height = movementStrength / $(window).height();
+        var width = movementStrength / $(window).width();
+/*         $("#part2").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            var newvalueY = height * pageY * -1 - 50;
+            $('#part2').css("background-position", newvalueX+"px"+newvalueY+"px");
+        }); */
+/*         $(".profile").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            $('.profile').css("background-position", newvalueX+"px");
+        }); */
+        $(".profile:nth-child(1)").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            $('.profile:nth-child(1)').css("background-position", newvalueX+"px");
+        });
+        $(".profile:nth-child(2)").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            $('.profile:nth-child(2)').css("background-position", newvalueX+"px");
+        });
+    });
+    </script>
+    <title>Bolbbalgan4</title>
+</head>
+<body>
+    <header>
+        <a href="#header"><img src="./images/logowhite.png" alt="logowhite"></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#header">BOLBBALGAN4</a></li>
+            <li><a href="#biography">BIOGRAPHY</a></li>
+            <li><a href="#member">PROFILE</a></li>
+            <li><a href="#ALBUM">ALLBUM</a></li>
+        </ul>
+        <ul id="sns">
+                <li class="sns"><a href="https://www.facebook.com/bolbbalgan4"><img src="./images/fb.png" alt=""></a></li>
+                <li class="sns"><a href="https://www.instagram.com/bolbbalgan4/"><img src="./images/ist.png" alt=""></a></li>
+                <li class="sns"><a href=""><img src="./images/twt.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <section>
+            <video autoplay loop preload="auto">
+                <source src="./images/main.mp4" type="video/mp4">
+            </video>
+        <article id="header">        
+        <div id="maintxt" class="clearfix">
+            <h1>볼빨간사춘기</h1>
+            <p>우주를줄게 _ Music Video<br>
+            SHOFARMUSIC</p> 
+        </div>
+        </article>
+        <article id="biography">
+            <div id="about" class="BiographyTxt">
+                <h1>ABOUT Bolbbalgan4</h1>
+                <p>서툴고 미숙한 시기, 사춘기라는 이유만으로도 포용할 수 있는 그런 때가 있다.<br> 
+                순수하고 솔직한, 때 타지 않은 말간 감성들을 담아 노래하고픈 볼빨간사춘기.<br>
+                그대들의 싱그러웠던 사춘기 잔상을 톡톡 튀는 음악으로 전하고자 한다. </p>
+            </div>
+            <div id="work" class="BiographyTxt">
+                <h1>SHOW DETAILS</h1>
+                <ol>2016년 01월 SHOFAR SHOW Vol.4</ol>
+                <ol>2016년 05월 그린플러그드 서울 2016</ol>
+                <ol>2016년 06월 레인보우 아일랜드 2016</ol>
+                <ol>2016년 06월 루프탑라이브</ol>
+                <ol>2016년 07월 SECRET 음감회</ol>
+                <ol>2016년 08월 여수레드캐럿페스티벌</ol>
+                <ol>2016년 09월 H.A.N.D 페스티벌</ol>
+            </div>
+        </article>
+        <article id="member">
+            <div class="profile">
+                <div class="profTxt">
+                    <h1>안지영(AN Jiyoung)</h1>
+                    <h2>1995.09.14</h2>
+                    <h3>position: Vocal</h3>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profTxt">
+                    <h1>우지윤(Woo Jiyoon)</h1>
+                    <h2>1996.01.06</h2>
+                    <h3>position: GUitar</h3>
+                </div>
+            </div>
+        </article>
+        <article id="ALBUM">
+            <div class="music">
+                <div class="musicwrap">
+                    <div id="musicplayer">
+                        <article class="atc1" id="top">
+                                <h1>ALBUM</h1>
+                            <div class="nnn">
+                               <ul class="carousel">
+                                 <li class="items main-pos" id="1">
+                                    <div class="playerbox">
+                                        <dl>
+                                            <dt>1. 우주를 줄께
+                                            <!-- <audio src="./music/galuxy.m4a" controls></audio> -->
+                                            </dt>  
+                                            <dt>2. 싸운날
+                                            <!-- <audio src="./music/fightday.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>3. YOU(=I)
+                                            <!-- <audio src="./music/you=i.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>4. 심술
+                                            <!-- <audio src="./music/mean.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>5. 나만 안되는 연애
+                                            <!-- <audio src="./music/mardtolove.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>6. 초콜릿
+                                            <!--  <audio src="http://merciless.me/electro.mp3"controls></audio> -->
+                                            </dt>
+                                            <dt>7. 프리지아
+                                            <!-- <audio src="http://merciless.me/base.mp3" controls></audio> -->
+                                            </dt>
+                                            <dt>8. X Song
+                                            <!--  <audio src="http://merciless.me/slade-merry xmas.mp3" controls></audio> -->
+                                            </dt>
+                                            <dt>9. 반지
+                                            <!-- <audio src="http://merciless.me/electro.mp3" controls></audio> -->
+                                            </dt>
+                                            <dt>10. 사랑에 빠졌을 때
+                                            <!-- <audio src="http://merciless.me/base.mp3" controls></audio> -->
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                    <audio src="./music/you=i.m4a" controls></audio>
+                                 </li>
+                                 <li class="items right-pos" id="2">
+                                    <div class="playerbox">
+                                        <dl>
+                                            <dt>1. 좋다고 말해
+                                            <audio src="./music/tellmelike.m4a"></audio>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                    <audio src="./music/tellmelike.m4a" controls></audio>
+                                 </li>
+                                 <li class="items back-pos" id="3">
+                                    <div class="playerbox">
+                                        <dl>
+                                            <dt>1. 남이 될 수 있을까</dt>
+                                        </dl>
+<!--                                         <audio src="http://merciless.me/base.mp3"></audio> -->
+                                    </div>
+                                    <audio controls></audio>
+                                 </li>
+                                 <li class="items left-pos" id="4">
+                                    <div class="playerbox">
+                                        <dl>
+                                            <dt>1. 썸 탈거야
+                                            <!-- <audio src="./music/galuxy.m4a" controls></audio> -->
+                                            </dt>  
+                                            <dt>2. Blue
+                                            <!-- <audio src="./music/fightday.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>3. 고쳐주세요
+                                            <!-- <audio src="./music/you=i.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>4. 상상
+                                            <!-- <audio src="./music/mean.m4a" controls></audio> -->
+                                            </dt>
+                                            <dt>5. 나의 사춘기
+                                            <!-- <audio src="./music/mardtolove.m4a" controls></audio> -->
+                                            </dt>
+                                        </dl>
+<!--                                        <audio src="http://merciless.me/ehp1.mp3">1. 썸 탈거야</audio>
+                                            <audio src="http://merciless.me/awesome.mp3">2. Blue</audio>
+                                            <audio src="http://merciless.me/saturday.mp3">3. 고쳐주세요</audio>
+                                            <audio src="http://merciless.me/mer_jul1.mp3">4. 상상</audio>
+                                            <audio src="http://merciless.me/slade-merry xmas.mp3">5. 나의 사춘기에게</audio> -->
+                                    </div>
+                                    <audio controls></audio>
+                                 </li>
+                                        
+                               </ul>
+                             <span>
+                               <a id="prev">prev</a>
+                               <a id="next">next</a>
+                             </span>
+                                
+                            </div> 
+                         </article>
+                    </div>
+                    <div id="musiclist">
+                 
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- <article id=""></article> -->
+    </section>
+    <footer id="main">
+            <p>Copyrightⓒ2017 MALANG_97. All rights reserved</p>    
+    </footer>  
+</body>
+<script>
+        // 메인 이미지 슬라이드 
+              
+                //global variables
+                var items = [];
+                var startItem = 1;
+                var position = 0;
+                var itemCount = $('.carousel li.items').length;
+                var leftpos = itemCount;
+                var resetCount = itemCount;
+        
+                //unused: gather text inside items class
+                $('li.items').each(function(index) {
+                    items[index] = $(this).text();
+                });
+        
+                //swap images function
+                function swap(action) {
+                  var direction = action;
+        
+                  //moving carousel backwards
+                  if(direction == 'counter-clockwise') {
+                    var leftitem = $('.left-pos').attr('id') - 1;
+                    if(leftitem == 0) {
+                      leftitem = itemCount;
+                    }
+        
+                    $('.right-pos').removeClass('right-pos').addClass('back-pos');
+                    $('.main-pos').removeClass('main-pos').addClass('right-pos');
+                    $('.left-pos').removeClass('left-pos').addClass('main-pos');
+                    $('#'+leftitem+'').removeClass('back-pos').addClass('left-pos');
+
+        
+                    startItem--;
+                    if(startItem < 1) {
+                      startItem = itemCount;
+                    }
+                  }
+        
+                  //moving carousel forward
+                  if(direction == 'clockwise' || direction == '' || direction == null ) {
+                    function pos(positionvalue) {
+                      if(positionvalue != 'leftposition') {
+                        //increment image list id
+                        position++;
+        
+                        //if final result is greater than image count, reset position.
+                        if((startItem+position) > resetCount) {
+                          position = 1-startItem;
+                        }
+                      }
+        
+                      //setting the left positioned item
+                      if(positionvalue == 'leftposition') {
+                        //left positioned image should always be one left than main positioned image.
+                        position = startItem - 1;
+        
+                        //reset last image in list to left position if first image is in main position
+                        if(position < 1) {
+                          position = itemCount;
+                        }
+                      }
+        
+                      return position;
+                    }  
+        
+                   $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
+                   $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
+                   $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
+                   $('#'+ pos('leftposition') +'').removeClass('left-pos').addClass('back-pos');
+        
+                    startItem++;
+                    position=0;
+                    if(startItem > itemCount) {
+                      startItem = 1;
+                    }
+                  }
+                }
+        
+                //next button click function
+                $('#next').click(function() {
+                  swap('clockwise');
+                });
+        
+                //prev button click function
+                $('#prev').click(function() {
+                  swap('counter-clockwise');
+                });      
+            </script>
+</html>
