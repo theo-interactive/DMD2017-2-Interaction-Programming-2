@@ -88,7 +88,7 @@ header img{
 }
 article{
     color: white;
-    background-color: #5d0101;
+    background-color: black;
     height: 100vh;
 }
 video{
@@ -175,7 +175,7 @@ video{
 .profile:nth-child(2):hover{
     opacity: 0.5;
 }
-.music h1{
+.atc1 h1{
     text-align: center;
     padding-top: 80px;
     margin-bottom: -80px;
@@ -214,7 +214,10 @@ section .atc1 .nnn{margin: 0 auto;}
 .atc1 > .nnn ul li:nth-child(2){background:url(../images/redDiary.jpg)no-repeat;background-size: cover;background-position:bottom}
 .atc1 > .nnn ul li:nth-child(3){background:url(../images/redDiary2.jpg)no-repeat;background-size: cover;}
 .atc1 > .nnn ul li:nth-child(4){background:url(../images/redDiary3.jpg)no-repeat;background-size: cover;}
-
+.atc1#top{
+    background: url("../images/bg1.png")no-repeat;
+    background-size:cover; 
+}
 iframe{width: 100%; height: 100%;}
 .atc1 > .nnn ul li p {
   color: white;
@@ -234,7 +237,7 @@ iframe{width: 100%; height: 100%;}
 }
 
 .atc1 > .nnn ul .left-pos {
-  opacity: .5;
+  opacity: .7;
   margin-left: -12em !important;
   z-index: 1000;
   -webkit-transform: scale(.75);
@@ -244,14 +247,14 @@ iframe{width: 100%; height: 100%;}
 
 .atc1 > .nnn ul .back-pos {
   margin-left: 0 !important;
-  opacity: .05;
+  opacity: .7;
   -webkit-transform: scale(.5);
   -moz-transform: scale(.5);
   transform: scale(.5);
 }
 
 .atc1 > .nnn ul .right-pos {
-  opacity: .5;
+  opacity: .7;
   margin-left:  12em !important;
   z-index: 1000;
   -webkit-transform: scale(.75);
@@ -270,7 +273,7 @@ iframe{width: 100%; height: 100%;}
 audio{
     width: 600px;
 }
-footer#main p{width:100%; padding:10px 0; background-color:#5d0101; text-align: center; margin-top: 80px;}
+footer#main p{width:100%; padding:30px 0; background-color:#5d0101; text-align: center;}
 
 /* 가로가 1500px 이하일때 */
 @media (max-width: 1000px)
