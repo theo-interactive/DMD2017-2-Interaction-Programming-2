@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* google 시스템폰트 나눔고딕 */
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+body{
+    font-family:"NanumGothic", NanumGothic, "나눔고딕";
+}
+
+/* HEADER */
+header{position:relative;}
+header div img{width:100%;}
+header .head_con{position:absolute; top:0; left:3%; width:97%; padding-top:30px;}
+.head_con > a{float:left; display:block; width:50px;}
+.head_con a img{width:100%;}
+.head_con nav{float:left; padding-top:12px;}
+nav .gnb{overflow:hidden; padding-left:10px;}
+nav .gnb li{float:left;}
+.gnb li a{padding:8px; text-align:center;}
+header h1{position:absolute; left:50%; font-family:'Berlin Sans FB'; font-size:120px; color:#444; text-align:center; letter-spacing:-1px; padding-top:280px; margin-left:-395px;}
+/* 캐릭터들 */
+header span{position:absolute;}
+header span img{width:100%;}
+.bal{position:absolute; top:-50px; right:5%; width:22%}
+.mage{bottom:0; left:0; width:34%;}
+.baba{bottom:30px; right:34%; width:13%;}
+
+/* Balloon animation */
+.bal.move{
+    animation-name:move;
+    animation-duration:15s;
+    animation-iteration-count:infinite;
+
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name:move;
+    -webkit-animation-duration:15s;
+    -webkit-animation-iteration-count:infinite;
+}
+.bal.moveEnd{
+    right:5%;
+    top:-50px;
+}
+@keyframes move{
+    0%{right:5%; top:-50px;}
+    10%{right:6%; top:-20px;}
+    20%{right:8%; top:-40px;}
+    30%{right:10%; top:-20px;}
+    40%{right:10%; top:-30px;}
+    50%{right:8%; top:0px;}
+    60%{right:6%; top:-30px;}
+    70%{right:4%; top:0px;}
+    80%{right:3%; top:-40px;}
+    90%{right:4%; top:-20px;}
+    100%{right:5%; top:-50px;}
+}
+@-webkit-keyframes move{
+    0%{right:5%; top:-50px;}
+    10%{right:6%; top:-20px;}
+    20%{right:8%; top:-40px;}
+    30%{right:10%; top:-20px;}
+    40%{right:10%; top:-30px;}
+    50%{right:8%; top:0px;}
+    60%{right:6%; top:-30px;}
+    70%{right:4%; top:0px;}
+    80%{right:3%; top:-40px;}
+    90%{right:4%; top:-20px;}
+    100%{right:5%; top:-50px;}
+}
+
+
+
+/* CONTENTS */
+.contents{
+    background:url('../img/forest.jpg') no-repeat top;
+    background-size:100%;
+}
+/* SECTION 공통 */
+.contents section{width:1200px; margin:0 auto;}
+section h2{font-size:50px; font-weight:900; text-align:center; padding-top:300px; margin-bottom:50px;}
+section h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}
+
+/* CONTENT_UPDATE */
+section:first-child{position:relative; font-weight:900; margin-top:-2px; /*background:url('../img/overTheSea.png') no-repeat left bottom; background-size:contain;*/}
+/*.contents > section:first-child h2{font-size:50px; text-align:center; margin-top:120px; padding-bottom:50px;}
+.contents > section:first-child h2 span{display:block; width:40px; height:2px; background:#444; margin:40px auto 0;}*/ /*공통*/
+section:first-child > div{padding-top:800px;}
+section:first-child > div img{width:100%;}
+section:first-child > div + div{position:absolute; top:-400px; width:100%;}
+section:first-child > div + div p{text-align:center; font-weight:900; line-height:180%; margin:50px auto 340px;}
+section:first-child > div + div p strong:first-child{display:block; font-size:30px; font-weight:900; margin:0 auto;}
+section:first-child > div + div p span{display:block; font-size:14px; font-weight:900; color:#888; margin:20px;}
+section:first-child > div + div p strong:last-child{font-weight:900; color:red;}
+/* CONTENT_PLAY */
+section + section article{overflow:hidden; margin:100px 0;}
+section + section article.first_art{margin-top:100px;}
+section + section article span{display:block; float:left; width:40%;}
+section + section article.right span{float:right;}
+section + section article span img{width:100%;}
+section + section article p{float:right; width:40%; line-height:180%; padding-top:90px;}
+section + section article.right p{float:left;}
