@@ -1,0 +1,218 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px&amp;subset=latin-ext" rel="stylesheet">
+        <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+        <title>Tokyo</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="banner">
+                <nav role="navigation" class="paddle-nav">
+                    <ul>
+                        <li><button class="arrow prev"></button></li>
+                        <li><button class="arrow next"></button></li>
+                    </ul>
+                </nav>
+                <nav class="dot-nav">
+                    <ul>
+                    <li><span class="selected">&nbsp;</span></li><li>
+                        <span>&nbsp;</span></li><li>
+                        <span>&nbsp;</span></li><li>
+                    </ul>
+                </nav>
+                <div class="banner-wrap">
+                    <span class="fixed">東京</span>
+                    <div class="banner-container">
+                        <div class="banner-item">
+                            <div class="image-area">
+                                <img src="./img/main-1.jpg" alt="도쿄 이미지"/>
+                            </div>
+                            <div class="text-area">
+                                <div class="desc">cultivated</div>
+                                <div class="title">TOKYO</div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="image-area">
+                                <img src="./img/main-2.jpg" alt="도쿄 불꽃놀이"/>
+                            </div>
+                            <div class="text-area">
+                                <div class="desc">colourful</div>
+                                <div class="title">TOKYO</div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="image-area">
+                                <img src="./img/main-3.jpg" alt="후지산"/>
+                            </div>
+                            <div class="text-area">
+                                <div class="desc">charming</div>
+                                <div class="title">TOKYO</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-grid">
+                <div class="graph-item">
+                    <img src="./img/graph1.png" alt="아이콘">
+                    <span>01</span>
+                    <span>Five million people a year</span>
+                </div>
+                <div class="graph-item">
+                    <img src="./img/graph2.png" alt="아이콘">
+                    <span>02</span>
+                    <span>An annual increase in tourism</span>
+                </div>
+                <div class="graph-item">
+                    <img src="./img/graph3.png" alt="아이콘">
+                    <span>03</span>
+                    <span>Increase in visitor population</span>
+                </div>
+            </div>
+
+            <div class="par-wrap">
+                <img src="./img/par-img2.jpg" alt="도쿄 이미지">
+                <div class="txt-wrap">
+                    <span>お会あいできてうれしいです。</span>
+                    <span>Tokyo is full of charms and promises a fun visit every time. Discover yet another new attraction in Tokyo.</span>
+                </div>
+            </div>
+
+        <div class="info">
+            <ul>
+                <li id="left-area">
+                <div class="info-wrap">
+                    <img src="./img/info-land.jpeg" alt="도쿄타워">
+                    <div class="txt-box">
+                        <h3>LANDMARK</h3>
+                        <p>In addition, several skyscrapers house restaurants on their top floors from where diners can simultaneously enjoy good food and good views of the city.</p>
+                    </div>
+                    <span>Night View</span>
+                </div>
+            </li>
+            <li id="right-area">
+            <div class="info-wrap">
+                <div class="txt-box">
+                    <h3>CITY</h3>
+                    <p>It is one of Japan's 47 prefectures, consisting of 23 central city wards and multiple cities, towns and villages west of the city center.</p>
+                </div>
+                <img src="./img/info-city.jpeg" alt="도쿄 이미지">
+                <span>various of Tokyo</span>
+            </div>
+            <div class="info-wrap">
+                    <div class="txt-box">
+                        <h3>FOOD</h3>
+                        <p>There is many things to do for all ages and all different types of food to satisfy. With many restaurants, shops, and hotels one could never be bored.</p>
+                    </div>
+                    <img src="./img/info-food.jpg" alt="음식 사진">
+                    <span>Enjoy Taste food</span>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div class="slide_wrap">
+            <a href="slide/city.html" target="_blank">
+            <div class="slide">
+                <h2>City</h2>
+                <span>The 23 wards Area</span>
+                <div class="slide_inner">
+                    <p>consisting of 23 central city wards and multiple cities, towns and villages west of the city center.</p>
+                </div>
+            </div>
+        </a>
+        <a href="slide/land.html" target="_blank">
+            <div class="slide">
+                <h2>Landmark</h2>
+                <span>Night Views</span>
+                <div class="slide_inner">
+                    <p>As dusk falls, the sprawling metropolis of Tokyo transforms into a city of bright lights.</p>
+                </div>
+            </div>
+        </a>
+        <a href="slide/food.html" target="_blank">
+            <div class="slide">
+                <h2>Food</h2>
+                <span>Enjoy Taste</span>
+                <div class="slide_inner">
+                    <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
+                </div>
+            </div>
+        </a>
+        </div>
+    </div>
+<script>
+    (function($){
+        $(document).ready(function(){
+            $('.banner-wrap').width($('.banner').width()).height($('.banner').height());
+            $('.banner-container').width($('.banner-wrap').width() * $('.banner-item').length).height('100%');
+            $('.banner-item').css({'width' : $('.banner-wrap').width(), 'height' : '100%'});
+            var _id = 0;
+            var _max = $('.banner-item').length;
+            var _isAni = false;
+            var slideLeft = function(){
+                if(_isAni) return false;
+                if(_id === 0){
+                    return false;
+                }else{
+                    _id--;
+                    slide();
+                }
+            }
+            var slideRight = function(){
+                if(_isAni) return false;
+                if(_id === _max - 1){
+                    return false;
+                }else{
+                    _id++;
+                    slide();
+                }
+            }
+            var slide = function(bool = false){
+                if(!bool){
+                    _isAni = true;
+                    $('.banner-container').stop(true).animate({'margin-left' : $('.banner').width() * _id * -1}, 500, function(){
+                        dotSelect();
+                        paddleCheck();
+                        _isAni = false;
+                    });                
+                }else{
+                    $('.banner-container').stop(true).css({'margin-left' : $('.banner').width() * _id * -1});
+                    dotSelect();
+                    paddleCheck();
+                    _isAni = false;
+                }
+            }
+            var dotSelect = function(){
+                var $span = $('.dot-nav').find('span');
+                $span.removeClass('selected');
+                $span.eq(_id).addClass('selected');
+            }
+            var paddleCheck = function(){
+                var $arrow = $('.paddle-nav').find('.arrow');
+                if(_id === 0){
+                    $('.arrow.prev').addClass('disabled');
+                    $('.arrow.next').removeClass('disabled');
+                }else if(_id === _max - 1){
+                    $('.arrow.prev').removeClass('disabled');
+                    $('.arrow.next').addClass('disabled');
+                }else{
+                    $arrow.removeClass('disabled');
+                }
+            }
+            $(window).trigger('resize');
+            $('.arrow.prev').on('click', slideLeft);
+            $('.arrow.next').on('click', slideRight);
+            paddleCheck();
+        });
+})(jQuery);
+</script>
+        </div>
+    </body>
