@@ -133,10 +133,6 @@ body {
 }
 
 
-/*.half div:nth-child(2) {
-left: 50;
-}*/
-
 .half div p:first-child {
   padding-top: 18%;
 }
@@ -158,10 +154,6 @@ left: 50;
   width: 100%;
   height: 90%;
 }
-
-
-/*#main>.wrap{width: 100%;height: 100%;
-background: url('../img/mainwave.png')no-repeat center;  background-size: cover;padding: 0;}*/
 
 .waves {
   position: absolute;
@@ -191,12 +183,17 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   animation: wave 15s infinite;
 }
 
-
-/*@keyframes wave {
-  0%{left: 0%;}
-  50%{left: -20%;}
-  100%{left: 0%;}
-}*/
+@keyframes wave {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: -20%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 
 #main h2 {
   color: #fff;
@@ -212,7 +209,8 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   background: url('../img/bubble.png')no-repeat;
   background-size: contain;
 }
-.paddle-nav{
+
+.paddle-nav {
   position: absolute;
   width: 100%;
   height: 52px;
@@ -220,15 +218,18 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   z-index: 50;
   top: 50%;
 }
-.paddle-nav ul li{
+
+.paddle-nav ul li {
   width: 52px;
   height: 52px;
   display: inline-block;
   float: left;
 }
-.paddle-nav ul li:last-child{
+
+.paddle-nav ul li:last-child {
   float: right;
 }
+
 .paddle-nav a {
   display: inline-block;
   margin: 0;
@@ -245,14 +246,14 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   background-size: cover;
   background-position: center;
 }
+
 .paddle-nav li:first-child a {
   transform: rotate(180deg);
 }
+
 .paddle-nav a:hover {
   background-color: #fff;
 }
-
-
 
 .intro1gall {
   position: absolute;
@@ -287,8 +288,6 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   height: 768px;
   float: left;
   list-style: none;
-  /*background-color: rgba(250, 250, 250, 0.2);
-  border: 5px solid #fff;*/
 }
 
 .introgall .half p.intro {
@@ -303,7 +302,8 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
 .introgall .half p#orange {
   color: #ffffff;
   font-size: 45px;
-  margin-bottom: 30px;font-weight: bolder;
+  margin-bottom: 30px;
+  font-weight: bolder;
 }
 
 .introgall .half p#orange>span {
@@ -325,13 +325,20 @@ background: url('../img/mainwave.png')no-repeat center;  background-size: cover;
   background-size: contain;
   background-position: center;
 }
-.wrapinner{
-  height: 500px; width: 700px;
+
+.wrapinner {
+  height: 500px;
+  width: 700px;
   background-color: #fff;
-  padding: 10%;position: absolute;
-  top:0;bottom: 0; left: 0; right: 0;
+  padding: 10%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
 }
+
 #intro2 .wrap h2 {
   color: #000000;
   font-size: 25px;
@@ -376,13 +383,13 @@ li#value3 {
 }
 
 #aquafriends {
-    background: url('../img/bg_univers.jpg')no-repeat;
-    background-position: center;
-    background-size: cover;
+  background: url('../img/bg_univers.jpg')no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #spaceinfo {
-  background: linear-gradient( #061839,#061839,#061839, #1eaddd);
+  background: linear-gradient( #061839, #061839, #061839, #1eaddd);
 }
 
 #howto {
@@ -426,7 +433,6 @@ ul#friendsgall li {
   border-radius: 5px;
 }
 
-
 .data_box .map_box .map_tb1 th {
   background: #fafafa;
   width: 20%;
@@ -439,7 +445,6 @@ ul#friendsgall li {
 #aquafriends .wrap {
   text-align: center;
 }
-
 
 .btn {
   text-align: center;
@@ -514,80 +519,6 @@ ul#friendsgall li {
 .btn a:nth-child(4)>span.bar {
   background-color: #42e7a6;
 }
-/*
-#selectCard .photodiv {
-  display: inline-block;
-  border: 3px solid #fff;
-  padding: 7px;
-  border-radius: 50%;
-}
-
-#selectCard .photo {
-  border-radius: 50%;
-}
-
-#selectCard .title {
-  color: #ffffff;
-}
-
-#selectCard {
-  text-align: center;
-  width: 200px;
-  height: 264px;
-  background: none;
-}
-
-.card {
-  width: 175px;
-  height: 264px;
-  margin: 15px;
-  overflow: hidden;
-  background-color: #ffffff;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.photodiv {
-  width: 175px;
-  height: 204px;
-  cursor: pointer;
-}
-
-.photo {
-  width: 175px;
-  height: 204px;
-  cursor: pointer;
-}
-
-.title {
-  padding-left: 15px;
-  padding-top: 10px;
-}
-
-.name {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.sub {
-  font-size: 7px;
-  font-weight: normal;
-  line-height: 14px;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-.oceangall {
-  /*width: 60%; margin: 0 auto;*/
-}
 
 #grid {
   max-width: 80%;
@@ -628,79 +559,105 @@ ul#friendsgall li {
 /*갤러리끝*/
 
 
-/*#spaceinfo .wrap{
-    background: url('../img/triangle.png')no-repeat;
-    background-size: cover;
-    background-position: center;
-}*/
-#spaceinfo h2{
+#spaceinfo h2 {
   display: inline-block;
   font-size: 60px;
-  font-weight: bold;float: left;
+  font-weight: bold;
+  float: left;
 }
-#spaceinfo .todayTime h2,p {
+
+#spaceinfo .todayTime h2, p {
   display: inline-block;
   font-size: 30px;
   color: #f0eded;
   margin-left: 40px;
 }
-.timeInfo{width: 50%;float: right;display: inline-block;}
 
+.timeInfo {
+  width: 50%;
+  float: right;
+  display: inline-block;
+}
 
 .timeInfo>div {
   text-align: right;
   display: inline-block;
 }
+
 .timeInfo h3 {
   display: inline-block;
   color: #d5d5d5;
 }
 
 .clock {
-  display: inline-block; margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
-.clock p{
+
+.clock p {
   display: inline-block;
   margin-top: 12px;
 }
 
-.floorguide{
-  width: 520px;height: 520px;
+.floorguide {
+  width: 520px;
+  height: 520px;
   background-color: rgba(200, 250, 250, 0.8);
   box-sizing: border-box;
   padding: 30px;
   margin-top: 30px;
 }
-.spaceWrap{
-  width: 100%; height: 100%;
+
+.spaceWrap {
+  width: 100%;
+  height: 100%;
   border: 3px solid #fff;
   background-color: rgba(250, 250, 250, 0.1);
   box-sizing: border-box;
   padding: 4%;
-  position: relative;margin: auto;
+  position: relative;
+  margin: auto;
 }
-.floorguide{position: absolute;width: 40%;
-  height: 430px; top:50%;margin-top: -190px;}
-.floorguide2{
-  position: absolute;width: 48%;
-  top:50%;margin-top: -190px;
- right: 4%;
+
+.floorguide {
+  position: absolute;
+  width: 40%;
+  height: 430px;
+  top: 50%;
+  margin-top: -190px;
+}
+
+.floorguide2 {
+  position: absolute;
+  width: 48%;
+  top: 50%;
+  margin-top: -190px;
+  right: 4%;
   background-color: #fff;
 }
-.floorwrap{width: 100%;height:100%;}
-.floorwrap img{
+
+.floorwrap {
+  width: 100%;
+  height: 100%;
+}
+
+.floorwrap img {
   width: 90%;
   display: inline-block;
   margin: auto;
 }
-.floorguide table{
-  height: 340px;;
-margin: auto;
-color: #333333;
-font-weight: 400;
+
+.floorguide table {
+  height: 340px;
+  ;
+  margin: auto;
+  color: #333333;
+  font-weight: 400;
 }
-.floorguide table caption{
-  color: #000000; font-size: 25px;
+
+.floorguide table caption {
+  color: #000000;
+  font-size: 25px;
 }
 
 .board_floor caption {
@@ -712,13 +669,16 @@ font-weight: 400;
   border-top: 1px solid #181818;
   margin-top: 10px;
 }
-.floorguide table tr{
+
+.floorguide table tr {
   line-height: 30px;
 }
-.floorguide table td{
+
+.floorguide table td {
   font-size: 10px;
 }
-.floorguide a{
+
+.floorguide a {
   cursor: pointer;
   text-decoration: none;
   color: #193c5c;
@@ -765,65 +725,97 @@ font-weight: 400;
   cursor: default
 }
 
+
 /*howto*/
 
 #howmap {
   color: #fff;
   font-size: 15px;
-width: 100%;
-line-height: 1.5em;
-border-bottom: 1px solid #ccc;
+  width: 100%;
+  line-height: 1.5em;
+  border-bottom: 1px solid #ccc;
 }
+
 #howmap {
   color: #fff;
   font-size: 15px;
-width: 100%;
-line-height: 1.5em;
-border-bottom: 1px solid #ccc;
+  width: 100%;
+  line-height: 1.5em;
+  border-bottom: 1px solid #ccc;
 }
 
-#howmap tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
+#howmap tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
 }
 
-
-#howto .wrap .spaceWrap h2{
-  width: 100%;text-align: right;
-  font-size: 50px;float: right; margin-right: 5px;
+#howto .wrap .spaceWrap h2 {
+  width: 100%;
+  text-align: right;
+  font-size: 50px;
+  float: right;
+  margin-right: 5px;
 }
-#howto .wrap .spaceWrap h3{text-align: right;
-  font-size: 20px;float: right; margin-right: 5px;
+
+#howto .wrap .spaceWrap h3 {
+  text-align: right;
+  font-size: 20px;
+  float: right;
+  margin-right: 5px;
   color: #fff;
 }
-.howhalf{
+
+.howhalf {
   position: relative;
-  width: 50%; height: 100%;float: left;margin-top: -50px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin-top: -50px;
 }
-#howto .wrap .spaceWrap img{
-  position: absolute; left: 0;
-  width: 500px;margin: 0 auto;width: 100%;
+
+#howto .wrap .spaceWrap img {
+  position: absolute;
+  left: 0;
+  width: 500px;
+  margin: 0 auto;
+  width: 100%;
 }
-#howto dl{
+
+#howto dl {
   background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
   padding: 30px;
   color: #fff;
 }
-#howto dl dt{
+
+#howto dl dt {
   color: #000;
-  font-size: 20px;text-align: center;
-  margin-bottom: 20px;margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-#howto dl dt:first-child{
+
+#howto dl dt:first-child {
   margin-top: 0;
 }
-#howto dl dd{
+
+#howto dl dd {
   color: #474747;
-  width: 500px; margin: 0 auto;
-  font-size: 15px;text-align: center;line-height: 20px;
-  margin-bottom: 20px;margin-top: 20px;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-#informhowto{width: 100%; position: absolute;
-  left:80%;bottom:2%;margin-left: 50px;}
+
+#informhowto {
+  width: 100%;
+  position: absolute;
+  left: 80%;
+  bottom: 2%;
+  margin-left: 50px;
+}
