@@ -1,6 +1,7 @@
 # 9 WEEK
 
 9주차 과제입니다.
+
 API를 처음 다루기 때문에 과제가 어려울 수 있으니 슬랙으로 질의응답 가능합니다.
 
 ## GreenSock Animation Platform(GASP) / Youtube iframe API
