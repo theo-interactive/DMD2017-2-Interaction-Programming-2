@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sprite Animation</title>
+<link rel="stylesheet" href="./css/style.css"/>
+<script src="js/libs/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div>
+    <div class="zootopia icon">&nbsp;</div>
+    <div class="minion icon">&nbsp;</div>
+  </div>
+</div>
+</body>
+
+<script type="text/javascript">
+
+var Sprite;
+$(document).ready(function(){
+Sprite = {
+  _isReverse:false,
+  _timer: 0,
+  appInit:function(){
+    var _this = Sprite;
+    _this.reset();
+    _this.resetInit();
+  },
+  layout:function(checkClass){
+    if(checkClass == 'm'){
+      this.$el = $('.minion');
+    }else if(checkClass == 'z'){
+      this.$el = $('.zootopia');
+    }
+  },
+  reset:function(){
+    this._cuId = 0;
+    this._max = 12;
+    this._row = 3;
+    this._col = 4;
+    this._endRow = 3;
+    this._endCow = 4;
+    this._maxW = 600;
+    this._maxH = 450;
+    this._width = this._maxW / this._col;
+    this._height = this._maxH / this._row;
+  },
+  resetInit:function(){
+
+  },
+  play:function(bool){
+    var _this = Sprite;
+    clearInterval(_this._timer);
+    if(bool == true){
+      _this._isReverse = true;
+    }else if(bool == false){
+      _this._isReverse = false;
+    }
+    console.log(_this._isReverse)
+    _this._timer = setInterval(_this.progress,100);
+  },
+  progress:function(){
+    var _this = Sprite;
+    if(!!_this._isReverse){
+      _this._cuId++;
+    }else{
+      _this._cuId--;
+    };
+    if(_this._cuId >= _this._max){
+      _this._cuId = 0;
+    }else if(_this._cuId < 0){
+      _this._cuId = 0;
+    }
+    _this.update();
+  },
+  update:function(){
+    var _this = Sprite ,x,y;
+    x = _this._cuId % _this._row * _this._width * -1;
+    y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+    _this.$el.css({'background-position': x + 'px ' + y + 'px'})
+  }
+};// Sprite
+
+Sprite.appInit();
+$('.icon').hover(function(){
+  if($(this).hasClass('minion')){
+    Sprite.layout('m')
+  }else if($(this).hasClass('zootopia')){
+    Sprite.layout('z')
+  }
+  Sprite.play(true);
+},function(){
+  Sprite.play(false);
+})
+
+});
+</script>
+</html>
