@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<title>Sprite Animation</title>
+<link rel="stylesheet" href="./css/style.css"/>
+
+</head>
+<body>
+<div id="wrap">
+    <p>01 . Chicken </p>
+    <div class="chicken"></div>
+    
+    <p>02 . Mim </p>
+    <div class="mim"></div>
+</div>
+<script type = "text/javascript">
+var Chicken;
+var Mim;
+$(document).ready(function(){
+    Chicken = {
+        _isReverse: false,
+        _timer : 0,
+        appInit:function(){
+            // this = Sprite라는 변수를 의미        // var_this = Sprite;라고 만들어줘도댐~
+            // Sprite안에 있는 layout,reset,resetInit 함수를 불러온다.
+            var _this =  Chicken;
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+           // _this.play();
+        },
+        layout:function(){
+            this.$el = $('.chicken');
+        },
+        reset:function(){
+            this._cuId = 0;
+            // 이미지 갯수 체크
+            this._max = 19;
+            this._row = 4;
+            this._col = 5;
+            this._maxW = 400;
+            this._maxH = 320;
+            this._width = this._maxW / this._col;    // 80
+            this._height = this._maxH / this._row;   // 80
+
+        },
+        resetInit:function(){
+
+        },
+        play:function(){
+            var _this =  Chicken;
+            //clearInterval(_this._timer);
+            _this._timer = setInterval(_this.progress,70);
+            /*
+            $over = $('.chicken');
+           
+            $over.on('mouseover mouseout',function(e){
+                if(e.type == 'mouseover'){
+                    console.log("chicken_over"+Chicken._cuId);
+                    
+                    _this._timer = setInterval(_this.progress,70);
+                }
+                else if(e.type == 'mouseout'){
+                    console.log("chicken_out"+Chicken._cuId);
+                   Chicken._isReverse = false;
+              
+                }
+
+            });
+            */
+
+        },
+        stop:function(){
+
+        },
+        progress:function(){
+            var _this = Chicken;
+            if(!_this._isReverse){
+                // 순방향
+                _this._cuId++;
+             
+            }else{
+                // 역방향
+                _this._cuId--;
+            }
+            // if(_this._cuId < 0){
+            //     _this._cuId = 0;
+            // }
+            if(_this._cuId >= _this._max){
+                _this._cuId = _this._max;
+            }
+           _this.update();
+
+        },
+        update:function(){
+            var _this =  Chicken, x, y;
+            //_this._CuId = 10;
+
+            // **************************************************************
+            x = _this._cuId % _this._row * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+            // **************************************************************
+            _this.$el.css({'background-position':x +'px ' + y +'px '});
+            
+            
+        },
+
+        
+           // console.log(_this._CuId % _this._row);     x의 위치
+           //console.log(Math.floor(_this._CuId / _this.col));    
+    };
+
+     Mim = {
+        _isReverse: false,
+        _timer : 0,
+        appInit:function(){
+            // this = Sprite라는 변수를 의미        // var_this = Sprite;라고 만들어줘도댐~
+            // Sprite안에 있는 layout,reset,resetInit 함수를 불러온다.
+            var _this =  Mim;
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+            _this.play();
+        },
+        layout:function(){
+            this.$el = $('.mim');
+        },
+        reset:function(){
+            this._cuId = 0;
+            // 이미지 갯수 체크
+            this._max = 11;
+            this._row = 3;
+            this._col = 4;
+            this._maxW = 320;
+            this._maxH = 240;
+            this._width = this._maxW / this._col;    // 80
+            this._height = this._maxH / this._row;   // 80
+
+        },
+        resetInit:function(){
+
+        },
+        play:function(){
+            var _this =  Mim;
+            //clearInterval(_this._timer);
+            $over = $('.mim');
+           
+            $over.on('mouseover mouseout',function(e){
+                if(e.type == 'mouseover'){
+                    console.log("mim_over"+Mim._cuId);
+                    _this._timer = setInterval(_this.progress,70);
+              
+                    
+
+                }else if(e.type == 'mouseout'){
+                    console.log("mim_out");
+              
+                }
+
+            });
+                                        
+
+        },
+        stop:function(){
+
+        },
+        progress:function(){
+            var _this = Mim;
+            if(!_this._isReverse){
+                // 순방향
+                _this._cuId++;
+            }else{
+                // 역방향
+
+            }
+            // if(_this._cuId < 0){
+            //     _this._cuId = 0;
+            // }
+            if(_this._cuId >= _this._max){
+                _this._cuId = _this._max;
+            }
+            _this.update();
+
+        },
+        update:function(){
+            var _this =  Mim, x, y;
+            //_this._CuId = 10;
+
+            // **************************************************************
+            x = _this._cuId % _this._row * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+            // **************************************************************
+            _this.$el.css({'background-position':x +'px ' + y +'px '});
+            
+
+
+           // console.log(_this._CuId % _this._row);     x의 위치
+           //console.log(Math.floor(_this._CuId / _this.col));
+        }
+
+        
+
+    };
+   
+    $over = $('.chicken');
+           
+    $over.on('mouseover mouseout',function(e){
+        if(e.type == 'mouseover'){
+            console.log("chicken_over"+Chicken._cuId);
+            
+            //Chicken._isReverse = true;
+            Chicken.play();
+       
+        }
+        else if(e.type == 'mouseout'){
+            console.log("chicken_out"+Chicken._cuId);
+            //Chicken._isReverse = false;
+            //_isReverse = false;
+            Chicken.play();
+        }
+    });
+
+    Chicken.appInit();
+    Mim.appInit();
+
+});
+</script>
+</body>
+</html>
