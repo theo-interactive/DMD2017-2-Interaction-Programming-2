@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@font-face {
+	font-family:'SF Pro Display';
+	font-style:normal;
+	font-weight:600;
+	src:local('☺︎'), url("../fonts/sf-pro-display_semibold.woff2") format("woff2");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+@font-face {
+	font-family:'SF Pro Display';
+	font-style:normal;
+	font-weight:400;
+	src:local('☺︎'), url("../fonts/sf-pro-display_regular.woff2") format("woff2");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+@font-face {
+	font-family:'SF Pro Text';
+	font-style:normal;
+	font-weight:600;
+	src:local('☺︎'), url("../fonts/sf-pro-text_semibold.woff2") format("woff2");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+@font-face {
+	font-family:'SF Pro Text';
+	font-style:normal;
+	font-weight:700;
+	src:local('☺︎'), url("../fonts/sf-pro-text_bold.woff2") format("woff2");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+@font-face {
+	font-family:'SF Pro Text';
+	font-style:normal;
+	font-weight:400;
+	src:local('☺︎'), url("../fonts/sf-pro-text_regular.woff2") format("woff2");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:300;
+	src:local('☺︎'), url("../fonts/SFProIcons_light.woff") format("woff");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:500;
+	src:local('☺︎'), url("../fonts/SFProIcons_medium.woff") format("woff");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:400;
+	src:local('☺︎'), url("../fonts/SFProIcons_regular.woff") format("woff");
+	/* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+*{font-family: 'Slabo 27px', serif;list-style:none;}
+html, body {height:100%;}
+.wrap {min-height:100%;background-color:#171717}
+
+
+/* slide */
+.slide_wrap {position:relative;width:100%;height:100%;margin-top:-4px;}
+
+.slide{
+	position:relative;display:inline-block;width:33.3%;height:746px;
+	margin-left:-4px;overflow:hidden;
+}
+.slide_wrap a:first-child .slide{
+	background:url(../img/slide-city.jpg)no-repeat center;
+	background-size:cover;
+}
+.slide_wrap a:nth-of-type(2) .slide{
+	background:url(../img/slide-land.jpg)no-repeat center;
+	background-size:cover;
+}
+.slide_wrap a:last-child .slide{
+	background:url(../img/slide-food.jpg)no-repeat center;
+	background-size:cover;
+}
+.slide h2 {
+    position: absolute;left:50px;bottom:210px;
+    font-size:50px;color:#fff;font-weight:bold;text-transform:uppercase;
+}
+.slide span, .slide_inner {
+    position: absolute;left:50px;bottom:160px;
+    font-size:20px;color:#fff;opacity:0.8;
+}
+.slide .slide_inner {bottom:50px;font-size:16px;width:400px;}
+
+body{width:100%;height:100%;margin:0 auto;}
+.banner{overflow:hidden;position:relative;width:100%;height:100%;}
+/* 이미지에 맞는 사이즈 width값에 맞는 height 찾아서 적어줌 */
+.banner .paddle-nav, .banner .dot-nav{position:absolute}
+.banner .paddle-nav {top:0;right:0;left:0;bottom:0;}
+/* width 100% 하지 않아도 맞춰짐 */
+.paddle-nav button{overflow:hidden;position:absolute;top:50%;width:52px;height:52px;margin-top:-26px;background-color:rgba(0,0,0,0.2);border-radius:50%;text-indent:-9999px;}
+.paddle-nav button:before{display:block;position:absolute;width:100%;height:100%;text-indent:0;color:#fff;font-family:'SF Pro Icons';font-size:60px;line-height:60px;top:0;}
+/* 위에 button text-indent 상속받아서 안나오니까 다시 지정해줌 */
+.paddle-nav, .dot-nav{z-index:100;}
+.paddle-nav button.arrow{opacity:1.0;-webkit-transition:opacity 120ms ease-in-out}
+.paddle-nav button.arrow.disabled{opacity:0.0;}
+.paddle-nav button.arrow.prev{left:18px}
+.paddle-nav button.arrow.next{right:18px}
+/* prev -   */
+/* next -   */
+.paddle-nav button.arrow.prev:before{content:'';margin-left:-2px;}
+.paddle-nav button.arrow.next:before{content:'';margin-left:2px;}
+.banner .dot-nav{bottom:20px;width:100%;text-align:center;line-height:10px;}
+/* 기본 line-height:19? 높이 지정하려면 맞게 줘야 함 */
+.dot-nav li{display:inline-block;padding-right:7px;padding-left:7px;}
+.dot-nav li span{display:block;position:relative;width:10px;height:10px;background-color:rgba(0,0,0,0.25);border-radius:50%;cursor:pointer;
+-webkit-transition:background-color 120ms ease-in-out}
+.dot-nav li span.selected{background-color:#fff;}
+.dot-nav li span:hover{background-color:rgba(0,0,0,0.8)}
+.banner .banner-wrap{overflow:hidden;position:relative;width:100%;height:100%;}
+.banner .banner-container{position:absolute;top: 0;}
+.banner .banner-container .banner-item{position:relative;float:left;width:100%;height:100%;}
+/*float 주면 어딘가에 clear both 해줘야 함
+<div class="clear"></div> 에 clear both
+아니면 밑에와 같은 방식으로*/
+.banner .banner-container:after{content:'';display:block;position:relative;clear:both;width:0;height:0}
+.banner .banner-item{overflow:hidden}
+.banner .banner-item .image-area{position:relative;width:100%;height:100%}
+.banner .banner-item .image-area img{width:100%}
+.banner-item .text-area{position:absolute;top:0;bottom:0;margin:auto;width:100%;height:70px;text-align:center;color:#fff;}
+.banner-item .text-area .title{display:inline-block;font-family:'Roboto', sans-serif;font-size:60px;font-weight:700;}
+.banner-item .text-area .desc{display:inline-block;margin-right:40px;font-family:'Roboto', sans-serif;font-size:40px;font-weight:400;}
+
+
+/* info */
+
+.info{position:relative;height:200%;width:100%;padding:4% 0;}
+.info li {position:relative;width:40%;float:left;margin:0 5%;}
+.info-wrap{
+	display:inline-block;width:100%;height:48%;overflow:hidden;
+}
+.info-wrap img {
+	animation: goRight 2s;
+	animation-delay: 1s;
+}
+
+/* .info ul li:last-of-child img{
+	animation: goRight 2s;
+	animation-delay: 5s;
+}  */
+
+/* .hidden{ opacity: 0;} */
+.info-wrap img{position:absolute;width:70%;}
+.info-wrap .txt-box{
+    position: absolute;
+    background-color: rgba(255,255,255,0.96);
+    padding: 60px;
+	width: 150px;
+	text-align:justify;
+	z-index:5;
+}
+.txt-box h3{
+	font-family:'Roboto', sans-serif;
+	margin-bottom:40px;width:70px;
+	font-size:30px;font-weight:bold;
+	word-break:keep-all;
+}
+.txt-box p{font-size:18px;line-height:20px;}
+.info ul{width:98%;height:100%;overflow:hidden}
+.info-wrap span{
+	position: absolute;
+	font-size:20px;
+    font-weight: bold;
+	color: #dd232a;
+}
+#left-area{margin-top:25%;}
+#left-area .info-wrap img{right:0;}
+#left-area .info-wrap .txt-box{top:160px;left:0;}
+#left-area .info-wrap span{transform:rotate(90deg);right:0;}
+#right-area .info-wrap:first-of-type {margin-bottom:4%;}
+#right-area .info-wrap:first-of-type img{left:0;}
+#right-area .info-wrap:first-of-type .txt-box{right:0;top:10%;}
+#right-area .info-wrap:first-of-type span{top:3%;left:-16%}
+#right-area .info-wrap:last-of-type img{left:0;}
+#right-area .info-wrap:last-of-type span{top:54%;right:20%;}
+#right-area .info-wrap:last-child .txt-box{top:76%;left:-16%;}
+
+/* graph */
+
+.graph{width:100%;height:50%;}
+.graph-grid{
+	display: flex;display: -webkit-flex;
+	flex-wrap:wrap;
+	align-items: flex-start;justify-content :space-evenly;
+}
+.graph-item {display:inline-block;position:relative;margin:4% 0;width:230px;height:150px;text-align: left;}
+.graph-item img {width:90px;height:90px;display:block;margin-left:35px;}
+.graph-item span:first-of-type{font-size:30px;font-weight:bold;color:#ccc;}
+.graph-item span:last-of-type{font-size:14px;font-weight:lighter;color:#888}
+
+.par-wrap {
+	background-image:url('../img/par-img2.jpg');
+	width:100%;height:100%;position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.par-wrap .txt-wrap{
+	position: absolute;top: 0;bottom: 0;left: 0;right: 0;
+	margin: auto;text-align:center;height:70px;
+}
+.par-wrap span{margin-bottom:20px;color:#fff;font-size:28px;text-align:center;display:block;}
+.par-wrap span:last-of-type{font-size:18px;color:#ccc;}
+.paral {height:300px;}
+
+@keyframes goRight {
+	from { left: 50%; right: 0; } 
+	40% { left: 0; right: 0; }
+	60% { left: 0; right: 0; }
+	to { left: 0; right: 50%; }
+}

@@ -63,10 +63,8 @@ nav ul li:hover{
 }
 nav #sns .sns{
     padding: 0;
-    clear: both;
+    float: left;
     width: 50px;
-    margin-right: 20px;
-    float: right;
 }
 nav #sns .sns:hover{
     border: none;
@@ -77,6 +75,7 @@ nav #sns .sns img{
 }
 nav #sns{
     margin-top: 50px;
+    margin-left: 20px;
 }
 
 header img{
