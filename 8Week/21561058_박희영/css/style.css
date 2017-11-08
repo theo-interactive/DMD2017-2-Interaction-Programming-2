@@ -42,5 +42,27 @@ fieldset{border:none}
 
 /* ---- LAYOUT ---- */
 body {background:#ffffff}
-.zootopia{width:144px;height:144px;margin:20px;background-image:url(../img/sticker.png);background-repeat:no-repeat;background-position:0 0;background-size:576px 432px}
-.minion{width:144px;height:144px;margin:20px;background-image:url(../img/minion.png);background-repeat:no-repeat;background-position:0 0;background-size:1008px 1008px}
+#wrap div{display: inline-block;}
+.zootopia{width:144px;height:144px;margin:20px;
+  background-image:url(../img/sticker.png);
+  background-repeat:no-repeat;background-position:0 0;
+  background-size:576px 432px}
+.minion{
+  width:144px;height:144px;
+  margin:20px;
+  background-image:url(../img/minion.png);
+  background-repeat:no-repeat;background-position:0 0;
+  background-size:1008px 1008px}
+
+.dog{width:160px;height:160px;
+    margin:20px;background-image:url(../img/b.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:640px 640px
+  }
+.banana{width:160px;height:160px;
+    margin:20px;background-image:url(../img/c.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:480px 480px
+  }
