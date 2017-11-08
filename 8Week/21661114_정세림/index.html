@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sprite Animation</title>
+<link rel="stylesheet" href="./css/main.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+<div class="smarf ani">&nbsp;</div>
+<div class="mario ani">&nbsp;</div>
+</div>
+<script type="text/javascript">
+var Sprite;
+$(document).ready(function(){
+    Sprite = {
+        _isReverse:false,
+        _timer:0,
+        appInit:function(){
+            var _this = Sprite;
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+        },
+        layout:function(){
+            this.$el = $('.mario');
+        },
+        reset:function(){
+            this._cuId = 0;
+            this._max = 20;
+            this._col = 10;
+            this._row = 2;
+            this._maxW = 396;
+            this._maxH = 96;
+            this._width = this._maxW / this._col;//144
+            this._height = this._maxH / this._row;//144
+            this.update();
+        },
+        resetInit:function(){
+        },
+        play:function(){
+            var _this = Sprite;
+            clearInterval(_this._timer);
+            if(event == false){
+                _this._isReverse = false;
+            }else if(event == true){
+                _this._isReverse = true;
+            }
+            _this._timer = setInterval(_this.progress, 100);
+        },
+        stop:function(){
+        },
+        progress:function(){
+            var _this = Sprite;
+            if(!_this._isReverse){
+                //순방향
+                _this._cuId++;
+            }else{
+                //역방향
+                _this._cuId--;
+            }
+            if(_this._cuId >= _this._max - 1){
+                _this._cuId = _this._max - 1;
+            }else if(_this._cuId < 0){
+                 _this._cuId = 0;
+            }
+            _this.update();
+        },
+        update:function(){
+            var _this = Sprite, x, y;
+            x = _this._cuId % _this._row * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+            _this.$el.css({'background-position':x + 'px ' + y + 'px'});
+        }
+    };
+    Sprite.appInit();
+
+    Sprite2 = {
+        _isReverse:false,
+        _timer:0,
+        appInit:function(){
+            var _this2 = Sprite2;
+            _this2.layout();
+            _this2.reset();
+            _this2.resetInit();
+        },
+        layout:function(){
+            this.$el2 = $('.smarf');
+        },
+        reset:function(){
+            this._cuId = 0;
+            this._max = 16;
+            this._col = 4;
+            this._row = 4;
+            this._maxW = 396;
+            this._maxH = 412;
+            this._width = this._maxW / this._col;//144
+            this._height = this._maxH / this._row;//144
+            this.update();
+        },
+        resetInit:function(){
+        },
+        play:function(){
+            var _this2 = Sprite2;
+            clearInterval(_this2._timer);
+            if(event == false){
+                _this._isReverse = false;
+            }else if(event == true){
+                _this._isReverse = true;
+            }
+            _this2._timer = setInterval(_this2.progress, 60);
+        },
+        stop:function(){
+        },
+        progress:function(){
+            var _this2 = Sprite2;
+            if(!_this2._isReverse){
+                //순방향
+                _this2._cuId++;
+            }else{
+                //역방향
+                _this2._cuId--;
+            }
+            if(_this2._cuId >= _this2._max - 1){
+                _this2._cuId = _this2._max - 1;
+            }
+            _this2.update();
+        },
+        update:function(){
+            var _this2 = Sprite2, x, y;
+            //********.
+            x = _this2._cuId % _this2._row * _this2._width * -1;
+            y = Math.floor(_this2._cuId / _this2._col) * _this2._height * -1;
+            //********.
+            _this2.$el2.css({'background-position':x + 'px ' + y + 'px'});
+        }
+    };
+    Sprite2.appInit();
+
+        $('.smarf').mouseenter(function(){
+            Sprite2.play(false);
+        });
+        $('.smarf').mouseleave(function(){
+            Sprite2.play(true);
+        });
+
+        $('.mario').mouseenter(function(){
+            Sprite.play(false);
+        });
+        $('.mario').mouseleave(function(){
+            Sprite.play(true);
+        });              
+});
+</script>
+</body>
+</html>

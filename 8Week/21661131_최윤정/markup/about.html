@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/menu.css"/>
+    <link rel="stylesheet" href="./css/about.css"/>
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <title>About</title>
+</head>
+<body>
+    <section>
+            <header>
+                    <!-- <div class="title"><h1>About</h1></div> -->
+                    <div class="btn"></div>
+                    <div onclick="history.back();" class="page_cover"></div>
+                    <div id="menu">
+                        <div onclick="history.back();" class="close"></div>
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">MAIN</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="poster.html">POSTER</a></li>
+                                <li><a href="title_sequence.html">TITLE<br />SEQUENCE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+        <div id="section_body">
+            <div class="back">
+                <h1> About</h1>
+                <div id="back_content">
+                    <h2>솔 바스는 1920년 뉴욕에서 태어났다. </h2>
+                    <p>
+                        솔 바스는 20대 때부터 할리우드에서의 본격적인 커리어를 쌓아갔다. <br />
+                        지금의 확고부동한 명성을 안겨준 오프닝 타이틀 시퀀스 작업에서는 30대 무렵인 1950년대부터 두각을 나타냈다. <br />
+                        <!-- 1954년에 오토 프레밍거가 제작과 연출을 겸한 뮤지컬 영화 <카르멘 존스>에서 솔 바스는 포스터를 디자인했는데, <br />
+                        결과물에 대해 오토 프레밍거가 상당히 만족스러워 하며 내친김에 오프닝 타이틀 시퀀스 작업까지 맡겼다고 한다.<br />
+                        이렇게 솔 바스는 자신의 기량과 크리에이티비티를 가장 잘 표현해낼 수 있는 영역으로 인도되었고, 서서히 날개를 펼치기 시작한 것이다. -->
+                    </p>
+                </div>
+            </div>
+            <div class="article">
+                <div id="left">
+                    <div id="p_button">
+                        <a href="poster.html"><p>Poster</p></a>
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="t_button">
+                        <a href="title_sequence.html"><p>Opening</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script>
+        $(".btn").click(function() {
+          $("#menu,.page_cover,html").addClass("open");
+          window.location.hash = "#open";
+        });
+        
+        window.onhashchange = function() {
+          if (location.hash != "#open") {
+            $("#menu,.page_cover,html").removeClass("open");
+          }
+        };
+    </script>
+</body>
+</html>
