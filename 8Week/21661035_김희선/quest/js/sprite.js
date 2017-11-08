@@ -33,6 +33,7 @@ $(document).ready(function(){
         },  
         resetInit:function(){
         },
+    
         play:function(){
             var _this = Sprite;
             clearInterval(_this._timer);
@@ -67,6 +68,10 @@ $(document).ready(function(){
             //********.
             _this.$el.css({'background-position':x + 'px ' + y + 'px'});            
         }
+      
     };
     Sprite.appInit();
+    // $('#kuma').hover(
+       
+    // );
 });
