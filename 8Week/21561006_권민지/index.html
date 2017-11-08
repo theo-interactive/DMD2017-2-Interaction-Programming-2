@@ -29,20 +29,20 @@ var Sprite;
                 _this.reset();
                 _this.resetInit();
             },
-            layout:function(c){
-                if(c){
+            layout:function(){
+                if(this._elCheck){
                     this.$el = $('.cat');
-                }else if(!c){
+                }else if(!this._elCheck){
                     this.$el = $('.penguin');
                 }
                 console.log(this.$el);
             },
-            reset:function(c){
+            reset:function(){
                 //img에 맞게
-                if(c){
+                if(this._elCheck){
                     this._maxW = 660;
                     this._maxH = 650;
-                }else if(!c){
+                }else if(!this._elCheck){
                     this._maxW = 740;
                     this._maxH = 450;
                 }
@@ -102,8 +102,8 @@ var Sprite;
         $('.cat').mouseover(function(){
             console.log("mouseover");
             Sprite._elCheck = true;
-            Sprite.layout(Sprite._elCheck);
-            Sprite.reset(Sprite._elCheck);
+            Sprite.layout();
+            Sprite.reset();
             Sprite._isReverse = false;
             Sprite.play();
         });
@@ -116,8 +116,8 @@ var Sprite;
         $('.penguin').mouseover(function(){
             console.log("mouseover");
             Sprite._elCheck = false;
-            Sprite.layout(Sprite._elCheck);
-            Sprite.reset(Sprite._elCheck);
+            Sprite.layout();
+            Sprite.reset();
             Sprite._isReverse = false;
             Sprite.play();
         });
