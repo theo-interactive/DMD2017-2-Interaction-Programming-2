@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/skrollr.js"></script>
+    <title>Equals</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu-btn">
+            Menu-Bt
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <g id="menu">
+                    <rect id="menu_point1" x="0" y="0" width="2" height="2">menu_point1</rect>
+                    <rect id="menu_point2" x="6" y="0" width="2" height="2">menu_point2</rect>
+                    <rect id="menu_point3" x="12" y="0" width="2" height="2">menu_point3</rect>
+                    <rect id="menu_point4" x="0" y="6" width="2" height="2">menu_point4</rect>
+                    <rect id="menu_point5" x="6" y="6" width="2" height="2">menu_point5</rect>
+                    <rect id="menu_point6" x="12" y="6" width="2" height="2">menu_point6</rect>
+                    <rect id="menu_point7" x="0" y="12" width="2" height="2">menu_point7</rect>
+                    <rect id="menu_point8" x="6" y="12" width="2" height="2">menu_point8</rect>
+                    <rect id="menu_point9" x="12" y="12" width="2" height="2">menu_point9</rect>
+                </g>
+            </svg>
+        </div>
+        <div class="share-btn">
+            <span id="share_icon"></span>
+        </div>
+        
+        <div class="menu-wrap">
+            <div id="list-wrap">
+                <nav id="category">
+                    <ul id="category_name">
+                        <li><a id="menu_close" >X</a></li>
+                        <li><a id="category_one" class="category">SYNOPSIS</a></li>
+                        <li><a id="category_two" class="category">CHARACTERS</a></li>
+                        <li><a id="category_three" class="category">TRAILER</a></li>
+                        <li><a id="category_four" class="category">SOUND TRACK</a></li>
+                        <li><a id="category_five" class="category"> PHOTO</a></li> 
+                    </ul> 
+                    <div id="category_home"><span><a>home</a></span></div>
+                    
+                     
+                </nav>
+            </div>   
+        </div>
+    </header>
+    <section id ="main">
+        <div class="overflow">
+                <div id="main-bottom">
+                        <div id="sound_Control"></div>
+                        <div id="clock" style="display:none">
+                            <span id="sec">0</span>
+                            <span id="min">0</span> <span>:</span> <span id="hour">0</span>
+                        </div> 
+                    </div>
+            <div class="main-video">
+                <video src="video/equals.mp4" autoplay type="video/mp4" 
+                 id="video" autoplay loop></video>
+                    <div id="main_text-warp">
+                        <div id="main_text">
+                        <div id="logo">
+                        <span id="main_title_text" data text="EQUALS"style="display:none">EQUALS</span>
+                        <span id="main_sub_text" 
+                        style="display:none">FIND YOUR EQUALS</span>
+                        </div>
+                        </div>
+                        <div id="ticket"><a href="http://tickets.equals-the-movie.com/" target="blank">Ticket</a></div>
+                    </div>
+            </div>     
+     
+        </div>
+    </section>
+    <!-- 패럴럭스 스크롤링 사용예정-->
+    <section id="contents_container">
+        <section id="synopsis"  style="display:none">
+            <div class="wrap">
+                <div id="synopsis-text">
+                    <h2>SYNOPSIS</h2>
+                    <div id="synopsis_01">
+                        <span><img src="image/synopsis_01.gif" id="synopsis_01_img"></span>
+                        <p id="synopsis-text_01">
+                            <span id="one">01</span><br>
+                            <span id="text"><b>Nia and Silas</b> work in the same office.<br>
+                            They live in a society where human <b>emotion</b> has been genetically<b> eliminated.</b>
+                            <br> Everyone lives calm, violence-free, drone-like lives - until
+                            a disease <b>breaks out</b> that causes people to <b>have emotions.</b></span>
+                        </p>
+                    </div>
+                    <div id="synopsis_02">
+                        <span><img src="image/synopsis_02.gif" id="synopsis_02_img"></span>
+                        <p id="synopsis-text_02">
+                             <span id="two">02</span><br>
+                             <span id="text"> After becoming infected, Silas, now an outcast, is drawn to Nia who has<br> 
+                             managed to hide her symptoms. When they discover that they are both <br>
+                             sick,<b> they must decide</b> whether to hide within their society or seek <br>
+                             <b>freedom</b> elsewhere.</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="synopsis-btn">
+                    <span id="synopsis-bt01" class="selected"></span>
+                    <span id="synopsis-bt02"></span>
+                </div>
+                <div id="lang"><a id="en" class="lang_selected">EN</a><a id="kr">KR</a></div>
+            </div>
+        </section>
+
+        <!-- 패럴럭스 스크롤링 사용예정-->
+        <section id="characters" style="display:none">
+            <div class="wrap">
+                <h2>CHARACTERS</h2>
+                <div id="characters-image">
+                    <div id="photo">
+                        <img src="image/NIA/01000.png">
+                        <img src="image/SILAS/01000.png">
+                    </div>
+                </div>
+                <div id="skroll-body" >
+                    <div id="characters-Nia"> 
+                        <dl>
+                            <dt>NIA</dt>
+                            <dd>Do you realize <br>
+                                what would happen if anyone saw us?<br>
+                                It can’t happen, you know that.<br> 
+                                If we stayed here we’ll be found out.</dd>
+                        </dl>
+                    </div>
+                    <div id="characters-Silas">
+                        <dl>
+                            <dt>SILAS</dt>
+                            <dd>I can’t stay away from you.<br>
+                                I can’t not be around you.<br>
+                                I’ve been watching you,<br>
+                                the way you look at the world,<br>
+                                the way you experience things, it’s different.
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+        </section>
+        <section id="highlight">
+
+        </section>
+        <section id="soundtrack" style="display:none">
+            <div class="wrap">
+            <h2>SOUNDTRACK</h2>
+            <div id="soundtrack-albumcover">
+                <ul id="soundtrack-list-wrap">
+                    <li>
+                        <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                    <li>
+                    <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                    <li>
+                    <a><img></a>
+                        <div class="soundtrack-info">사운드 정보 및 간략 설명
+                            <h3><a>SOUND NAME</a></h3>
+                            <span>공유하기 버튼</span>
+                        </div>
+                    </li>
+                </ul>
+                <a class="btn-prev">prev button</a>
+                <a class="btn-next">next button</a>
+            </div>
+            </div>
+        </section>
+        <section id="photo" style="display:none">
+            <div class="wrap">
+                <h2>PHOTO</h2>
+            </div>
+
+        </section>
+    </section>
+
+    <script type="text/javascript">
+        var s = skrollr.init();
+        var position = $(window).scrollTop();
+        console.log(position);
+
+        </script>     
+</body>
+</html>
