@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sprite Animation</title>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+<div class="cat2">&nbsp;</div>
+</div>
+
+<script>
+    var Sprite;
+    $(document).ready(function(){
+
+        $('.cat2').mouseenter(function(){
+            Sprite.play(false);
+        });
+        $('.cat2').mouseleave(function(){
+            Sprite.play(true);
+        });
+
+        Sprite = {
+            _isReverse:false,
+            _timer:0,
+            appInit:function(){
+                var _this = Sprite;
+                _this.layout();
+                _this.reset();
+                _this.resetInit();
+            },
+            layout:function(){
+                this.$el = $('.cat2');
+            },
+            reset:function(){
+                this._cuId = 0;
+                this._max = 23;
+                this._col = 6;
+                this._row = 4;
+                this._maxW = 1686;
+                this._maxH = 2000;
+                this._width = this._maxW / this._col;
+                this._height = this._maxH / this._row;
+                this.update();
+            },
+            resetInit:function(){
+
+            },
+            play:function(event){
+                var _this = Sprite;
+                clearInterval(_this._timer);
+                if(event == false){
+                    _this._isReverse = false;
+                }else if(event == true){
+                    _this._isReverse = true;
+                }
+                _this._timer = setInterval(_this.progress, 100);
+            },
+            stop:function(){
+
+            },
+            progress:function(){
+                var _this = Sprite;
+                if(!_this._isReverse){
+                    _this._cuId++;
+                }else{
+                    _this._cuId--;
+                }
+                if(_this._cuId >= _this._max -1){
+                    _this._cuId = _this._max;
+                }
+                else if(_this._cuId < 0){
+                    _this._cuId = 0;
+                }
+                _this.update();
+            },
+            update:function(){
+                var _this = Sprite, x, y;
+                //_this._cuId = 7;
+               // console.log(_this._cuId % _this._row);
+                x = _this._cuId % _this._col * _this._width * -1;
+                y = Math.floor( _this._cuId / _this._col) * _this._height * -1;
+                _this.$el.css({'background-position':x + 'px ' + y + 'px '});
+            },
+        };
+        Sprite.appInit();
+
+
+        
+    })
+
+</script>
+</body>
+</html>
