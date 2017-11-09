@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sprite Animation</title>
+<link rel="stylesheet" href="./css/style.css"/>
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+ <!-- <script type="text/javascript" src="./js/sprite.js"></script> -->
+</head>
+<body>
+<div id="wrap">
+<!-- <div class="zootopia">&nbsp;</div> -->
+<div class="minion">&nbsp;</div>
+<div class="util">
+    <button class="btn-play">Play</button>
+    <button class="btn-stop">Stop</button>
+    <button class="btn-reset">Reset</button>
+</div>
+</div>
+<script type="text/javascript">
+var Sprite;
+$(document).ready(function(){
+    Sprite = {
+        _isReverse:false,
+        _timer:0,
+        appInit:function(){
+            var _this = Sprite;
+            //this
+            //Sprite
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+        },
+        layout:function(){
+            this.$el = $('.minion');
+            this.$btnPlay = $('.btn-play');
+            this.$btnStop = $('.btn-stop');
+            this.$btnReset = $('.btn-reset');
+        },
+        reset:function(){
+            this._cuId = 0;
+            this._max = 48;
+            this._col = 7;// 가로에 몇개?
+            this._row = 7;// 세로에 몇줄?
+            this._maxW = 1008;
+            this._maxH = 1008;
+            this._width = this._maxW / this._col;//각 아이템들의 x 좌표(base) 1008 / 7 = 144
+            this._height = this._maxH / this._row;//각 아이템들의 y 좌표(base) 1008 / 7 = 144
+            
+            // this._imgs = [
+            //     {x:0, y:0},
+            //     {x:-144, y:-144},
+            //     {x:-288, y:-288},
+            //     {x:-288, y:-288},
+            //     {x:-288, y:-288},
+            //     {x:-288, y:-288}
+            //     //...48....
+            //     //...
+            //     //...
+            //     //48 번 째 객체.
+            // ];
+            // var intervalTimer, timeoutTimer, intervalCallback;
+            // this._timer = setInterval(function(){
+            //     //100ms 마다 이 구역의 함수가 실행됨.
+            //     console.log('interval');
+            // }, 100);
+            // var intervalCallback = function(){
+            //     console.log('interval');
+            // };
+            // intervalTimer = setInterval(intervalCallback, 100);
+            // intervalCallback = function(){
+            //     console.log('interval');
+            // };
+            // timeoutTimer = setTimeout(function(){
+            //     //100ms 의 시간만큼 이 구역의 함수가 1번 실행됨.
+            //     console.log('timeout');
+            // }, 100);
+            // var timeoutCallback = function(){
+            //     console.log('timeout');
+            // };
+            // timeoutTimer = setTimeout(timeoutCallback, 100);
+            this.update();
+        },
+        resetInit:function(){
+            var _this = Sprite;
+            //이벤트 추가.
+            // this.$el.on('click', function(e){
+            //     e.preventDefault();
+            //     //this.play();//실행이 안됨.
+            //     _this._cuId = 0;
+            //     _this.play();
+            //     //== Sprite.play();
+            // });
+            // this.$el.hover(function(){
+            //     if(_this._isReverse){ // true.
+            //         _this._isReverse = false;
+            //     }
+            //     _this.play();
+            //     //순방향으로 재생.
+            //     // _this._isReverse
+            // }, function(){
+            //     if(!_this._isReverse){ // false.
+            //         _this._isReverse = true;
+            //     }
+            //     _this.play();
+            //     //역방향으로 재생.
+            // });
+            // this.$el.on('mouseenter', function(){
+
+            // }).on('mouseleave', function(){
+
+            // });
+            this.$btnPlay.on('click', function(){
+                // _this._cuId = 0;
+                _this.play();
+            });
+            this.$btnStop.on('click', function(){
+                _this.stop();
+            });
+            this.$btnReset.on('click', function(){
+                _this.stop();
+                _this._cuId = 0;
+                _this.update();
+            });
+        },
+        play:function(){
+            var _this = Sprite;
+            clearInterval(_this._timer);//setInterval, setTimeout
+            //시간을 필요로하는 메소드를 정지, 삭제(리셋).
+            _this._timer = setInterval(_this.progress, 60);
+        },
+        stop:function(){
+            var _this = Sprite;
+            clearInterval(_this._timer);
+        },
+        progress:function(){
+            var _this = Sprite;
+            if(!_this._isReverse){
+                //순방향.
+                _this._cuId++;//0 -> 1, 1 -> 2... progress 함수가 실행될 때마다.
+            }else{
+                //역방향.                
+                _this._cuId--;//48 -> 47, 47 -> 46... progress 함수가 실행될 때마다.
+            }
+            
+            if(_this._cuId <= 0){
+                _this._cuId = 0;
+            }
+            if(_this._cuId >= _this._max - 1){
+                _this._cuId = _this._max - 1;
+            }
+            //~ 현재의 프레임 번호를 설정.
+            _this.update();
+        },
+        update:function(){
+            var _this = Sprite, x, y;
+            
+
+
+            //계산법.
+            x = _this._cuId % _this._col * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._row) * _this._height * -1;
+
+            // x = _this._imgs[_this._cuId]['x'];
+            // y = _this._imgs[_this._cuId]['y'];
+
+            _this.$el.css({'background-position':x + 'px ' + y + 'px'});//띄어쓰기 확인.
+        }
+    };
+    Sprite.appInit();
+});
+</script>
+</body>
+</html>
