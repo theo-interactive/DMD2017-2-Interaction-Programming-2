@@ -57,16 +57,15 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
 $(document).ready(function(){
     
     var $win = $(window),
      $wrap=$('#wrap'), 
      $section = $('.section'),_winH,_max = $section.length;
-
      $.each($section,function(i,d){
          var $el = $(d);
-
          $el.css({
             'z-index':_max + i
         });
@@ -81,15 +80,12 @@ $(document).ready(function(){
         $wrap.height(_winH * _max);
         parallax();
         }
-
     });
-
     var parallax = function(){
         var scrollTop = $win.scrollTop();
         //console.log(scrollTop);
             $.each($section,function(i,d){
-                                        // 스크롤에서 어디에 위치되는 지 알려줌.
-                                        // $imgArea = 
+                                       
                 var $el = $(d), 
                 $img=$el.find('img'),
                 $title = $el.find('.title'),
@@ -97,34 +93,28 @@ $(document).ready(function(){
                 limitT = _winH * i, 
                 limitB = limitT +_winH, 
                 elY , imgY, titleY, descY;
-                //console.log(limitT);
-              
                 
                 if(scrollTop > limitT - _winH && scrollTop <= limitB) {
-                    //console.log(i,scrollTop,limitT,limitB);
-                    //console.log(i);
+
                     elY = limitT-scrollTop;
                     $el.css({'transform':'translate3d(0,'+ elY +'px, 0)'});
                     
                     if( i > 0 ){
-
                         if( i == 0 ){
                             imgY = elY * -1;
                             titleY = 0;
                             descY = 0;
                         }else{
-                            imgY = elY /5* -1;
-                            titleY = Math.min( 0,elY /3);
-                            descY = Math.max( 0,elY /5);
+                            imgY = elY /2* -1;
+                            titleY = Math.min( 0,elY /5);
+                            descY = Math.max( 0,elY /2);
                         }
     
                         $img.css({'transform': 'translate3d(0, '+ imgY + 'px, 0)'});
-                        $title.css({'transform': 'translate3d('+ titleY + 'px, 0, 0)'});
-                        $desc.css({'transform': 'translate3d(0, '+ descY + 'px, 0)'});
+                        $title.css({'transform': 'translate3d('+ titleY*20+ 'px, 0, 0)'});
+                        $desc.css({'transform': 'translate3d(0, '+ descY*100 + 'px, 0)'});
                     }else{
-
                     } 
-
                 }else{
                     $el.css({'transform': 'translate3d(0,100vh, 0)'});
                     $img.css({'transform': 'translate3d(0, 0, 0)'});
@@ -138,7 +128,6 @@ $(document).ready(function(){
         });
         
     };
-
     $win.trigger('resize');
     
 });
