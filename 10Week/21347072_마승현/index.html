@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Parallax Scroll</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/0.jpeg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 1</p>
+            <p class="desc">Section 1 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/1.jpeg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 1</p>
+            <p class="desc">Section 1 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/2.jpeg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 2</p>
+            <p class="desc">Section 2 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/3.jpeg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 3</p>
+            <p class="desc">Section 3 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/4.jpeg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 4</p>
+            <p class="desc">Section 4 description</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+// Code Start!!
+
+var $win = $(window),
+    $section = $('.section'),
+    $wrap = $('#wrap');
+
+var _winH,
+    _max = $section.length;
+
+$.each($section, function(i,d){
+    var $el = $(d);
+    $el.css({
+        'z-index': _max - i
+    })
+});
+
+$win.on({
+    'scroll':function(){
+        parallax();
+    },
+    'resize':function(){
+        parallax();
+        _winH = $win.height();
+        $wrap.height(_winH * _max);
+    }
+});
+
+var parallax = function(){
+    var st = $win.scrollTop();
+
+    $.each($section, function(i,d){
+        var $el = $(d),
+            $img = $el.find('img'),
+            $title = $el.find('.title'),
+            $desc = $el.find('.desc');
+
+        var limitT = _winH * i,
+            limitB = limitT + _winH;
+
+        var elY, imgY, titleY, descY;
+
+        // if(i > 0){
+        //
+        // }else{
+        //
+        // };
+
+        if(st > limitT - _winH && st <= limitB){
+            elY = limitT - st;
+            console.log(elY+'a');
+            $el.css({'transform':'translate3d(0,'+ elY +'px,0)'});
+            if(i > 0){
+                imgY = elY * -1;
+                imgY = elY /2 * -1;
+                titleY = elY/2.7 * -1;
+                descY = elY/3 * -1;
+                $img.css({'transform':'translate3d(0,'+ imgY +'px,0)'});
+                $title.css({'transform':'translate3d(0,'+ titleY +'px,0)'});
+                $desc.css({'transform':'translate3d(0,'+ descY +'px,0)'});
+            }else{
+
+            };
+        }else{
+            $el.css({'transform':'translate3d(0,100vh,0)'});
+            $img.css({'transform':'translate3d(0,0,0)'});
+            if(i > 0){
+                $title.css({'transform':'translate3d(0,0,0)'});
+                $desc.css({'transform':'translate3d(0,0,0)'});
+            };
+        };
+    });
+};
+
+//doccument
+$win.trigger('resize');
+});// ready
+</script>
+</body>
+</html>
