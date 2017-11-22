@@ -1,3 +1,6 @@
 # 윤수영의 프로젝트.
 
-- 프로젝트에 대한 정보를 입력해주세요.
+- <img src="images/peach.png" width=50px; >
+
+<hr/>
+
