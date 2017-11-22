@@ -14,6 +14,10 @@
     <div class="section">
         <div class="image-area">
             <img src="./img/0.jpg">
+            <div class="text-area">
+            <p class="title">Section 0</p>
+            <p class="desc">Section 0 description</p>
+        </div>
         </div>
     </div>
     <div class="section">
@@ -64,11 +68,9 @@ $(document).ready(function(){
          var $el = $(d);
 
          $el.css({
-            'z-index':_max - i
+            'z-index':_max + i
         });
      });
-    /*$win.on({'scroll',function(){}){
-    }).on({'resize',function(){})*/
     
     $win.on({
         'scroll':function(){
@@ -103,40 +105,40 @@ $(document).ready(function(){
                     //console.log(i);
                     elY = limitT-scrollTop;
                     $el.css({'transform':'translate3d(0,'+ elY +'px, 0)'});
+                    
                     if( i > 0 ){
+
                         if( i == 0 ){
                             imgY = elY * -1;
                             titleY = 0;
                             descY = 0;
                         }else{
-                            imgY = elY /2 * -1;
-                            // Math.min(); 음수일 경우만 불러오는 , 양수일 경우는 0.
-                            // Math.max(); 양수일 경우만 불러오는 , 음수일 경우는 0.
+                            imgY = elY /5* -1;
                             titleY = Math.min( 0,elY /3);
                             descY = Math.max( 0,elY /5);
                         }
-                                                // translate3d(x,y,z) : 움직임이 제일 자연스러움
-                                                // translateX(x)
-                                                // translateY(y)
-                                                // translate2d(x,y) : background url / cover로 설정 후 $imgArea.css({'background-position':'0'+imgY +'px'})
-                      $img.css({'transform': 'translate3d(0, '+ imgY + 'px, 0)'});
+    
+                        $img.css({'transform': 'translate3d(0, '+ imgY + 'px, 0)'});
                         $title.css({'transform': 'translate3d('+ titleY + 'px, 0, 0)'});
                         $desc.css({'transform': 'translate3d(0, '+ descY + 'px, 0)'});
                     }else{
-                    }                    
+
+                    } 
+
                 }else{
-                    $el.css({'transform':'translate3d(0,100vh, 0)'});
-                    $img.css({'transform':'translate3d(0, 0, 0)'});
+                    $el.css({'transform': 'translate3d(0,100vh, 0)'});
+                    $img.css({'transform': 'translate3d(0, 0, 0)'});
                   
                     if(i > 0){
-                    $title.css({'transform':'translate3d(0, 0, 0)'});
-                    $desc.css({'transform':'translate3d(0, 0, 0)'});
+                    $title.css({'transform': 'translate3d(0, 0, 0)'});
+                    $desc.css({'transform': 'translate3d(0, 0, 0)'});
                         
                     }
                 }
-        })
+        });
         
     };
+
     $win.trigger('resize');
     
 });
