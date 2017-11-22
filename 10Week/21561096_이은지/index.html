@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Parallax Scroll</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/0.jpg">
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/1.jpg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 1</p>
+            <p class="desc">Section 1 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/2.jpg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 2</p>
+            <p class="desc">Section 2 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/3.jpg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 3</p>
+            <p class="desc">Section 3 description</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="image-area">
+            <img src="./img/4.jpg">
+        </div>
+        <div class="text-area">
+            <p class="title">Section 4</p>
+            <p class="desc">Section 4 description</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    var $win = $(window),
+     $wrap=$('#wrap'), 
+     $section = $('.section'),_winH,_max = $section.length;
+
+     $.each($section,function(i,d){
+         var $el = $(d);
+
+         $el.css({
+            'z-index':_max - i
+        });
+     });
+    /*$win.on({'scroll',function(){}){
+    }).on({'resize',function(){})*/
+    
+    $win.on({
+        'scroll':function(){
+        parallax();
+        },
+    'resize':function(){
+        _winH = $win.height();
+        $wrap.height(_winH * _max);
+        parallax();
+        }
+
+    });
+
+    var parallax = function(){
+        var scrollTop = $win.scrollTop();
+        //console.log(scrollTop);
+            $.each($section,function(i,d){
+                                        // 스크롤에서 어디에 위치되는 지 알려줌.
+                                        // $imgArea = 
+                var $el = $(d), 
+                $img=$el.find('img'),
+                $title = $el.find('.title'),
+                $desc = $el.find('.desc'),
+                limitT = _winH * i, 
+                limitB = limitT +_winH, 
+                elY , imgY, titleY, descY;
+                //console.log(limitT);
+              
+                
+                if(scrollTop > limitT - _winH && scrollTop <= limitB) {
+                    //console.log(i,scrollTop,limitT,limitB);
+                    //console.log(i);
+                    elY = limitT-scrollTop;
+                    $el.css({'transform':'translate3d(0,'+ elY +'px, 0)'});
+                    if( i > 0 ){
+                        if( i == 0 ){
+                            imgY = elY * -1;
+                            titleY = 0;
+                            descY = 0;
+                        }else{
+                            imgY = elY /2 * -1;
+                            // Math.min(); 음수일 경우만 불러오는 , 양수일 경우는 0.
+                            // Math.max(); 양수일 경우만 불러오는 , 음수일 경우는 0.
+                            titleY = Math.min( 0,elY /3);
+                            descY = Math.max( 0,elY /5);
+                        }
+                                                // translate3d(x,y,z) : 움직임이 제일 자연스러움
+                                                // translateX(x)
+                                                // translateY(y)
+                                                // translate2d(x,y) : background url / cover로 설정 후 $imgArea.css({'background-position':'0'+imgY +'px'})
+                      $img.css({'transform': 'translate3d(0, '+ imgY + 'px, 0)'});
+                        $title.css({'transform': 'translate3d('+ titleY + 'px, 0, 0)'});
+                        $desc.css({'transform': 'translate3d(0, '+ descY + 'px, 0)'});
+                    }else{
+                    }                    
+                }else{
+                    $el.css({'transform':'translate3d(0,100vh, 0)'});
+                    $img.css({'transform':'translate3d(0, 0, 0)'});
+                  
+                    if(i > 0){
+                    $title.css({'transform':'translate3d(0, 0, 0)'});
+                    $desc.css({'transform':'translate3d(0, 0, 0)'});
+                        
+                    }
+                }
+        })
+        
+    };
+    $win.trigger('resize');
+    
+});
+</script>
+</body>
+</html>
