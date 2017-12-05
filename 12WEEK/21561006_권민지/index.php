@@ -47,30 +47,27 @@ $(document).ready(function(){
         success:function(data){
             // console.log(data);
             var items = data["items"], $list = $('.wrap'), html = '';
-            // var items = data["items"][0] = category , category 있을 때 첫번째 category
-            // console.log(items);
             $.each(items, function(i, d){
                 var title = d["title"], album = d["album"], date = d["date_year"] + "." + d["date_month"] + "." + d["date_day"],
                 time = d["time"], artist = d["artist"], genre = d["genre"], img = d["cover"];
                 html += '<div class="item">';
-                html += '<div class="img">'
-                html += '<img src="' + img + '" alt="">'
-                html += '</div>'
-                html += '<div class="txt">'
-                html +=     '<ul class="info">'
-                html +=         '<li class="album">' + album + '</li>'
-                html +=         '<li class="title">' + title + '</li>'
-                html +=         '<li class="artist">' + artist + '</li>'
-                html +=     '</ul>'
-                html +=     '<p class="time">' + time + '</p>'
-                html +=     '<ul class="clearfix">'
-                html +=         '<li class="genre">' + genre + '</li>'
-                html +=         '<li class="date">' + date + '</li>'
-                html +=     '</ul>'
+                html +=     '<div class="img">'
+                html +=     '<img src="' + img + '" alt="">'
+                html +=     '</div>'
+                html +=     '<div class="txt">'
+                html +=         '<ul class="info">'
+                html +=             '<li class="album">' + album + '</li>'
+                html +=             '<li class="title">' + title + '</li>'
+                html +=             '<li class="artist">' + artist + '</li>'
+                html +=         '</ul>'
+                html +=         '<p class="time">' + time + '</p>'
+                html +=         '<ul class="clearfix">'
+                html +=             '<li class="genre">' + genre + '</li>'
+                html +=             '<li class="date">' + date + '</li>'
+                html +=         '</ul>'
                 html +=     '</div>'
                 html += '</div>'
-                if(i == items.length - 1){//24
-                    // console.log(i);
+                if(i == items.length - 1){
                     $list.empty().html(html);
                     var $item = $list.children('.item');
                     var orders = shuffle($item.length);
@@ -79,17 +76,9 @@ $(document).ready(function(){
                         // 초기세팅
                         TweenLite.set($image, {css:{'autoAlpha':0, 'y':10}});
                         TweenLite.set($info, {css:{'autoAlpha':0, 'x':5, 'y':40}});
-                        // 애니메이션
-                        //한번에
-                        // TweenLite.to($poster, 0.2, {css:{'autoAlpha':1, y:0}, delay:0.5});
-                        // TweenLite.to($name, 0.2, {css:{'autoAlpha':1, y:0}, delay:0.7});
-                        // 순차적
-                        // TweenLite.to($poster, 0.2, {css:{'autoAlpha':1, y:0}, delay:0.5 + 0.2 * j});
-                        // TweenLite.to($name, 0.2, {css:{'autoAlpha':1, y:0}, delay:0.7 + 0.2 * j});
                         //랜덤
                         TweenLite.to($image, 0.2, {css:{'autoAlpha':1, y:0}, delay:0.1 + 0.1 * orders[j]});
                         TweenLite.to($info, 0.2, {css:{'autoAlpha':1, x:0,y:0}, delay:0.1 + 0.1 * orders[j]});
-                        // autoAlpha : 0 = hidden
                     })
 
                     ///////////애니메이션 시작.(리스트 아이템)
