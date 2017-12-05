@@ -56,11 +56,11 @@ h1{
 .wrap img{width:100%}
 .item .img{display:inline-block;width:40%;height:100%}
 .item .txt{position:absolute;display:inline-block;height:100%;width:60%;padding:2% 0 0 5%;box-sizing:border-box}
-.txt .album{font-size:0.5rem}
-.txt .time{padding-top:4%;font-size:0.6rem}
+.txt .album{opacity:0.6;font-size:0.5rem}
+.txt .time{padding-top:4%;opacity:0.8;font-size:0.6rem}
 .txt .title{font-size:0.8rem;font-weight:bold}
 .txt .artist{font-size:0.7rem}
-.txt .date, .txt .genre{font-size:0.6rem}
+.txt .date, .txt .genre{opacity:0.5;font-size:0.6rem}
 .clearfix .genre{float:left}
 .clearfix .date{float:right}
 .clearfix{position:absolute;bottom:0;display:block;width:80%;content:'';clear:both;padding-top:8%}
