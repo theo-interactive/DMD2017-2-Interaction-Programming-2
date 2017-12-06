@@ -1,0 +1,92 @@
+html {
+    background: #FFFFFF;
+  
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+.home .title{
+    margin: 50px;
+}
+.home h1{
+    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
+    font-size: 48px;
+    color: rgb(0, 0, 0, 0);;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(38, 38, 38, 0.69);
+    width: 352px;
+}
+
+.home h1 span{
+    font-weight: 100;
+}
+.home .title ul{
+    padding-top: 25px;
+}
+.home .title li{
+    font-weight: 100;
+    line-height: 18px;
+}
+.title ul .type2{
+    display: none;
+}
+.home .key-wrapper {
+position: absolute;
+top: 50%;
+left: 50%;
+margin: -120px -642px;
+transition: ease-in 0.5s all;
+}
+
+.home .row {text-align: center;}
+
+.home .key {
+margin: 3px 1px;
+width: 70px;
+height: 70px;
+border: 1px solid #262626;
+border-radius: 5px;
+display: inline-block;
+
+line-height: 52px;
+text-align: center;
+text-transform: uppercase;
+
+    -webkit-transition: .5s;
+        -moz-transition: .5s;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+                transition: .5s;
+}
+
+.home .k32 {
+width: 346px;
+}
+
+.home .active {
+border: 1px solid #007DFF;
+background-color: rgba(0, 125, 255, 0.47);
+color: white;
+
+-webkit-transition: 0s;
+        -moz-transition: 0s;
+            -ms-transition: 0s;
+                transition: 0s;
+}
+/*typing effect
+.text {
+    font: 18px 'Courier New', monospace;
+    color: #0f0;
+  }
+  
+  .indicate_blink {
+    display: none;
+  }
+*/
+
+.navkeyopen {
+        margin: -120px -642px;
+        transition: ease-in 0.5s all;
+        
+}
