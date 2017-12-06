@@ -1,0 +1,316 @@
+/* 01. PHONE
+==================================================*/
+
+@media only screen and (min-width:300px) and (max-width: 640px) {
+
+    .navbar-toggle .icon-bar {
+        background: #f8f8f8;
+    }
+
+    .navigation-background .navbar-toggle .icon-bar {
+        background: #fff;
+    }
+
+    .navbar-toggle {
+        margin-right: 0px;
+        margin-top: -30px;
+    }
+
+    .navbar {
+        min-height: 0px;
+    }
+
+    .navigation-menu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+
+    .navigation-menu .navbar-nav li a:hover {
+        color: #737373;
+    }
+
+    .navigation-background .navigation-menu .navbar-nav li a:hover {
+        color: #737373;
+    }
+
+    .navigation-background .navigation-menu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 420px;
+    }
+
+    .navbar-toggle {
+        margin-top: -30px;
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, .9);
+    }
+
+    .navigation-background .navbar-collapse {
+        background: rgba(0, 0, 0, .9);
+    }
+
+    .custom-navbar .nav li.active>a {
+        border-bottom: 2px solid transparent !important;
+        color: #636363;
+    }
+
+    .flex-control-paging li a {
+        margin-top: -90px;
+        height: 8px;
+        width: 8px;
+    }
+
+    .home-text h1 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 45px;
+        font-weight: 500;
+    }
+
+    #about {
+        padding: 70px 0 45px 0;
+    }
+
+    #services {
+        padding: 65px 0 50px 0;
+    }
+
+    #portfolio {
+        padding: 65px 0 60px 0;
+    }
+
+    #hire {
+        padding: 65px 0 70px 0;
+    }
+
+    #blog {
+        padding: 65px 0 50px 0;
+    }
+
+    #testimonial {
+        padding: 55px 0 80px 0;
+    }
+
+    #contact {
+        padding: 65px 0 60px 0;
+    }
+
+    .about-img img {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .service-item {
+        background: #ffffff;
+        padding: 24px 22px 42px;
+        margin-bottom: 30px;
+        position: relative;
+        top: 0;
+        -webkit-transition: all ease-in-out 0.4s;
+        transition: all ease-in-out 0.4s;
+        text-align: center;
+    }
+
+    .grid figure {
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 48%;
+    }
+
+    .blog-item {
+        margin-bottom: 30px;
+    }
+
+    .social-icons-footer li a {
+        width: 45px;
+    }
+
+    .scroll-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* 02. TABLET
+==================================================*/
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+
+    .navigation-menu .navbar-nav li a {
+        padding: 30px 11px;
+        font-size: 12px;
+    }
+
+    .navigation-background .navigation-menu .navbar-nav li a {
+        padding: 30px 11px;
+        font-size: 12px;
+    }
+
+    .navigation-background .logo {
+        padding-top: 28px;
+    }
+
+    #about {
+        padding: 90px 0 65px 0;
+    }
+
+    #services {
+        padding: 80px 0 60px 0;
+    }
+
+    #portfolio {
+        padding: 80px 0 75px 0;
+    }
+
+    #hire {
+        padding: 80px 0 85px 0;
+    }
+
+    #blog {
+        padding: 80px 0 60px 0;
+    }
+
+    #testimonial {
+        padding: 70px 0 105px 0;
+    }
+
+    #contact {
+        padding: 80px 0 60px 0;
+    }
+
+    .about-img img {
+        margin-bottom: 10px;
+        padding-right: 10px;
+    }
+
+    .service-item {
+        padding: 24px 22px 42px;
+        margin-bottom: 30px;
+    }
+
+    .blog-item {
+        margin-bottom: 30px;
+    }
+
+    .blog-item .blog-img {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* 03. XX
+==================================================*/
+
+@media only screen and (min-width:768px) {
+
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .preloader:before {
+        left: -2px;
+        top: -2px;
+        border-width: 2px;
+    }
+
+    .preloader>.icon {
+        height: 37.5px;
+        width: 15.9px;
+        margin-top: -18.75px;
+        margin-left: -7.95px;
+    }
+
+    .custom-navbar {
+        padding: 0px;
+        background: 0 0;
+    }
+
+    .custom-navbar.top-nav-collapse {
+        padding: 0px;
+        background: #fff;
+        border-bottom: 1px solid #f3f3f3;
+        -webkit-transition: all .8s;
+        transition: all .8s;
+    }
+
+    #header .site-heading,
+    #header .post-heading,
+    #header .page-heading {
+        padding: 150px 0;
+    }
+
+    #header .site-heading h1,
+    #header .page-heading h1 {
+        font-size: 80px;
+    }
+
+    #header .post-heading h1 {
+        font-size: 55px;
+    }
+
+    #header .post-heading .subheading {
+        font-size: 30px;
+    }
+
+}
+
+
+/* 04. XX
+==================================================*/
+
+@media only screen and (min-width:1200px) {
+
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .preloader>.icon {
+        height: 50px;
+        width: 21.2px;
+        margin-top: -25px;
+        margin-left: -10.6px;
+    }
+
+}
+
+
+/* 05. XX
+==================================================*/
+
+@media only screen and (min-width: 766px) and (max-width: 1024px) {
+
+    .grid figure {
+        margin: 2px;
+        padding: 0;
+        min-width: 90%;
+        max-width: 90%;
+        max-height: 90%;
+        width: 48%;
+    }
+
+    .home-text h1 {
+        font-size: 33px;
+    }
+
+}
