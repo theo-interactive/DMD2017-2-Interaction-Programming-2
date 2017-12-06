@@ -209,8 +209,6 @@ p{line-height: 2.4em;}
   width: 120%; height: 120%;
   position: fixed;
   z-index: -99;
-  object-fit: fill;
-  border: 5px solid #d3d;
   filter: blur(13px);
 }
 #img_1 img{
