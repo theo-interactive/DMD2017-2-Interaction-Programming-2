@@ -1,0 +1,340 @@
+{
+  "movieChartList": {
+    "RESERVE": [
+      {
+        "movieCode": 152385,
+        "movieTitle": "꾼",
+        "posterImageUrl": "/20171107_251/1510033896133nWqxG_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 36.86,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "36.86",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 154272,
+        "movieTitle": "오리엔트 특급 살인",
+        "posterImageUrl": "/20171120_242/15111404926409w9n3_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 17.73,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001002",
+            "name": "12세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001002",
+          "name": "12세 관람가"
+        },
+        "usGradeList": [
+          {
+            "code": "1011003",
+            "name": "Parental Strongly Cautioned"
+          }
+        ],
+        "lastUsGrade": {
+          "code": "1011003",
+          "name": "Parental Strongly Cautioned"
+        },
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "17.73",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 160399,
+        "movieTitle": "기억의 밤",
+        "posterImageUrl": "/20171129_172/1511930306592dumMz_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 16.7,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "16.70",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 155411,
+        "movieTitle": "반드시 잡는다",
+        "posterImageUrl": "/20171024_139/1508812701319AUuRe_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 9.41,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "9.41",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 39440,
+        "movieTitle": "이프 온리",
+        "posterImageUrl": "/20171121_75/1511230561589Rvq85_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 4.18,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [
+          {
+            "code": "1011003",
+            "name": "Parental Strongly Cautioned"
+          }
+        ],
+        "lastUsGrade": {
+          "code": "1011003",
+          "name": "Parental Strongly Cautioned"
+        },
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "4.18",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 144379,
+        "movieTitle": "러빙 빈센트",
+        "posterImageUrl": "/20171013_210/1507861351048TMJcR_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 3.5,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [
+          {
+            "code": "1011003",
+            "name": "Parental Strongly Cautioned"
+          }
+        ],
+        "lastUsGrade": {
+          "code": "1011003",
+          "name": "Parental Strongly Cautioned"
+        },
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "3.50",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 116866,
+        "movieTitle": "저스티스 리그",
+        "posterImageUrl": "/20170925_296/150631600340898aUX_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 3,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001002",
+            "name": "12세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001002",
+          "name": "12세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "3.00",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 134898,
+        "movieTitle": "토르: 라그나로크",
+        "posterImageUrl": "/20170928_85/1506564710105ua5fS_PNG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 1.6,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001002",
+            "name": "12세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001002",
+          "name": "12세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "1.60",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 164932,
+        "movieTitle": "해피 데스데이",
+        "posterImageUrl": "/20171030_113/15093310622251GtNg_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 1.26,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001003",
+            "name": "15세 관람가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001003",
+          "name": "15세 관람가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "1.26",
+        "formattedSaleRate": "0.00"
+      },
+      {
+        "movieCode": 161242,
+        "movieTitle": "범죄도시",
+        "posterImageUrl": "/20170915_299/1505458505658vbKcN_JPEG/movie_image.jpg",
+        "weekendAudience": 0,
+        "openDate": null,
+        "pointSum": 0,
+        "joinNumber": 0,
+        "reserveRatio": 0.42,
+        "saleRate": null,
+        "salePossibleYn": false,
+        "lendingPossibleYn": false,
+        "adult": false,
+        "korGradeList": [
+          {
+            "code": "1001004",
+            "name": "청소년 관람불가"
+          }
+        ],
+        "lastKoreanGrade": {
+          "code": "1001004",
+          "name": "청소년 관람불가"
+        },
+        "usGradeList": [],
+        "lastUsGrade": null,
+        "theater": 0,
+        "formattedWeekendAudience": "0",
+        "point": "0.00",
+        "formattedReserveRatio": "0.42",
+        "formattedSaleRate": "0.00"
+      }
+    ]
+  }
+}
