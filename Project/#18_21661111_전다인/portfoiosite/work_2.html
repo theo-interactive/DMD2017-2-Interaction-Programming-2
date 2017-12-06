@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+    html, body {
+        width: 100%;
+        height: 300%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #3498db;
+    }
+    
+    h2 {
+        margin-top: 80px;
+        color: #3498db;
+        font-family: Raleway;
+        text-align: center;
+    }
+    
+    .scroooll {
+        border-radius: 50%;
+        position: fixed;
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        top: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+    }
+    
+    </style>
+    <script>
+        jQuery( document ).ready( function( $ ) {
+
+        var winHeight = $( window ).height();
+
+        $( window ).scroll( function(){ // Quando l'utente effettua lo scrolling...
+
+            var scrTop = $( document ).scrollTop() / winHeight, // Valore dello scrolling effettuato dall'utente
+                scrTopFixed = scrTop.toFixed(2), // Il risultato è a due cifre dopo la virgola
+                scrTransform = scrTopFixed * 90; // Il risultato viene corretto per rappresentare i gradi della rotazione
+
+            $( '.scroooll' ).css({
+                '-webkit-transform': "rotateZ(" + scrTransform + "deg)",
+                '-moz-transform': "rotateZ(" + scrTransform + "deg)",
+                'transform': "rotateZ(" + scrTransform + "deg)",
+            });
+
+        }); // Closure dell'evento Scroll
+
+        }); // Closure dell'evento Ready
+    </script>
+</head>
+<body>
+        <div class="scroooll">
+            <h2>Scroooll!</h2>
+        </div>
+</body>
+</html>

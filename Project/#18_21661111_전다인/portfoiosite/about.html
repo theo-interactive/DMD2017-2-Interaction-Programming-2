@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/work.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <title>21661111_dain_work</title>
+    <script>
+    $(document).ready(function(){
+        console.log(($( window ).width()));
+        console.log(($( window ).height()));
+        $('#menu-icon2').click(function(){
+            $(this).toggleClass('open');
+            $('.nav').toggleClass('navopen');          
+        });
+    });
+
+    function typeEffect(element, speed) {
+	var text = $(element).text();
+	$(element).html('');
+	
+	var i = 0;
+	var timer = setInterval(function() {
+					if (i < text.length) {
+						$(element).append(text.charAt(i));
+						i++;
+					} else {
+						clearInterval(timer);
+					}
+				}, speed);
+    }
+
+    $( document ).ready(function() {
+    var speed = 95;
+    var delay = $('.type1').text().length * speed + speed;
+    typeEffect($('.type1'), speed);
+    setTimeout(function(){
+        $('.type2').css('display', 'inline-block');
+        typeEffect($('.type2'), speed);
+    }, delay);
+    });
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        <div id="menu-icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="title">
+        <h1>About Me</h1>
+    </div>
+    <ul>
+        <li>
+            type |taip|
+            <dl class="type">
+                <dt>명사</dt>
+                <dd>1.①형（型） , 타입, 정형, 양식, 원형, 유형; （널리） 종류, 타입(kind); 《구어》…타입의 사람, (어딘가 남다른) 사람</dd>
+                <dt>동사, 타동사</dt>
+                <dd>1.〈편지서류 등을〉 타이프하다, 타자하다(typewrite)〔off〕; 활자화하다.</dd>
+            </dl>
+        </li>
+        <li>
+                Type-r
+                안녕하세요 하루종일 typing하는 type-r 전다인 입니다.
+                
+                일을하다보면 여러 타입(type)의 클라이언트와 프로젝트를 접하게 된다.
+                그 때마다 그들에게 맞는 type 의 결과물 만들어 낼 수 있는 그런 사람이 되고싶다.
+                
+                나는 코딩을 하기때문에 타자기를 두드리는 시간이 많다.
+                이렇게 타이핑하는 코드들은 나중에 많은 type의 사람들을 만족시킬 수 있는 결과물로 재탄생하게된다.
+        </li>
+    </ul>
+    
+
+    <div class="nav">
+        <ol>
+        <li><a href="javascript:void(0);" onClick="window.location.hash = ''">Home</a></li>
+        <li><a href="#experience">My Work</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/people.html">People</a></li>
+        </ol>
+        <ul class="compcont">
+        <li>Design and Dvelope<br>
+            by Jeon Dain base in South Korea, Seoul<br>Tel 010.2865.5817<br><a href="/map.html" target="_blank">View Map</a></li>
+        <li><strong>behance</strong><a href="https://www.behance.net/plusx">Contact@plus-ex.com</a></li>
+        <li><strong>facebook</strong><a href="https://www.facebook.com/plus.experience">recruit@plus-ex.com</a></li>
+        <li><strong>instagram</strong><a href="https://instagram.com/plusx_design">recruit@plus-ex.com</a></li>
+        </ul>
+    </div>
+    
+        <div class="submenu">
+            <dl>
+                <dt>Interaction Design</dt>
+                <dd>Holoplay project</dd>
+                <dd>Reason to live</dd>
+                <dd>Leap motion play</dd>
+            </dl>
+            <dl>
+                <dt>UX/UI Design</dt>
+                <dd>My music library</dd>
+                <dd>Travel shop</dd>
+                <dd>Film portfolio</dd>
+            </dl>
+        </div>
+    
+</body>
+</html>

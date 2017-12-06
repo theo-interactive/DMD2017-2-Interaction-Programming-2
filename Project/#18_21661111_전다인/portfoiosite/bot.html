@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/work_2.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+    <title>21661111_dain_work</title>
+    <script>
+    $(document).ready(function(){
+        console.log($('#in_text'));
+        console.log("hello");
+       
+        setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    <ul>
+                        <li>about</li>
+                        <li>work</li>
+                        <li>contact</li>
+                    </ul>
+                    세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요
+                </div>
+                </div>`); }, 2000);
+        setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">장난치시지 말고 무조건 하나를 꼭 입력해주세요</div>
+                </div>`); }, 4000);
+        
+
+        const sendMessage = (text) => {
+        if ($('#conversation .chat:last').hasClass('chat-user')) {
+            $('#conversation .chat:last .bubble:last').addClass('borderBottom');
+            $('#conversation .chat:last').append(`<div class="bubble borderTop">${text}</div>`);
+        } else {
+            $('#conversation').append(
+            `<div class="chat chat-user">
+                <div class="bubble">${text}</div>
+            </div>`
+            );
+        }
+        };
+        const receiveMessage = (text) => {
+        if (text) {
+            if ($('#conversation .chat:last').hasClass('chat-bot')) {
+            $('#conversation .chat:last .bubble:last').addClass('borderBottom');
+            $('#conversation .chat:last').append(`<div class="bubble borderTop">${text}</div>`);
+            } else {
+            $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">${text}</div>
+                </div>`
+            );
+            }
+        }
+        };
+
+        $(() => {
+        $('#btnSend').click(
+            () => {
+                parseInput();
+                beforeSend();
+                
+            }
+            
+        );
+        
+        //enter을 치면 메세지를 보낼 수 있는 코드
+        //13번은 엔터인듯하다..
+        //13번을 누르면=send
+        $('#in_txt').keypress(
+            (event) => {
+            console.log(event.which);
+            if (event.which === 13) {
+                parseInput();
+                beforeSend();
+                
+            }
+            }
+        );
+        });
+
+        function beforeSend(){
+            let text = $('#in_txt').val();
+
+                $('#in_txt').val('');
+                //다음 질문을 나오게 하려고
+                //showResponse();
+
+                if (text !== '') {
+                //만약 텍스트가 비어있지 않다면..?
+                //텍스트에 뭐가 있어야..
+                sendMessage(text);
+                $('#conversation').scrollTop($('#conversation').attr("scrollHeight"));
+                }
+        }
+
+        function parseInput() {
+            console.log($('#in_text'));
+            var text = $('#in_txt').val();
+            console.log(text+'hi');
+            var regexp = /['안'|'녕']/;
+            var unpleasant = /['싫'|'없']/;
+            var name = "름";
+            var menu = /['메'|'뉴'|'목'|'록']/;
+            if(text=="응그래"){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    <ul>
+                        <li>about</li>
+                        <li>work</li>
+                        <li>contact</li>
+                    </ul>
+                    세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요
+                </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(regexp)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    네 안녕하세요. 반갑습니다.
+                </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(name)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        응 안녕. 나는 봇이야
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(unpleasant)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        미안하지만 그건 제가 원하는 답이 아니에요.
+                    </div>
+                    <div class="bubble">
+                        <ul>
+                            <li>about</li>
+                            <li>work</li>
+                            <li>contact</li>
+                        </ul>
+                        세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요.
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(menu)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        그럼요 얼마든지요. 선택 가능하신 메뉴는 세가지 입니다.
+                    </div>
+                    <div class="bubble">
+                        <ul>
+                            <li>about</li>
+                            <li>work</li>
+                            <li>contact</li>
+                        </ul>
+                        세가지의 메뉴 중 보고싶으신 메뉴를 입력해 주세요.
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text == "about"){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        감사합니다. about은 type-r전다인에 대한 소개페이지 입니다.
+                    </div>
+                    <div class="bubble">
+                        Type-r는
+                        <ul>
+                            <li>type |taip|</li>
+                            <li>1.①형（型） , 타입, 정형, 양식, 원형, 유형; （널리） 종류, 타입(kind); 《구어》…타입의 사람, (어딘가 남다른) 사람</li>
+                            <li>-er</li>
+                            <li>1.[명사에서] <‘무엇을 하는 사람이나 도구, 기계 등’을 나타냄></li>
+                            <li>type + er의 합성어로 저 전다인을 나타냅니다.</li>
+                        </ul>
+                    </div>
+                </div>`); }, 1000);
+            }
+            else{
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        저는 봇입니다. 아직 다양한 말을 배우거나, 할 수 없습니다.
+                    </div>
+                </div>`); }, 1000);
+            }
+            //delay 넣기
+        }
+        
+
+/*--------------------------------------------------------------------------------------------*/
+        $(window).keydown(function(e) {
+            key = (e.originalEvent.code) ? e.originalEvent.code : e.which;
+            $('.key.k' + key).addClass('active');
+            console.log(e.originalEvent.code);
+            });
+
+            $(window).keyup(function(e) {
+                key = (e.originalEvent.code) ? e.originalEvent.code : e.which;
+                $('.key.k' + key).removeClass('active');
+            });
+
+            function typeEffect(element, speed) {
+            var text = $(element).text();
+            $(element).html('');
+            
+            var i = 0;
+            var timer = setInterval(function() {
+                            if (i < text.length) {
+                                $(element).append(text.charAt(i));
+                                i++;
+                            } else {
+                                clearInterval(timer);
+                            }
+                        }, speed);
+            }
+
+            $( document ).ready(function() {
+            var speed = 95;
+            var delay = $('.type1').text().length * speed + speed;
+            typeEffect($('.type1'), speed);
+            setTimeout(function(){
+                $('.type2').css('display', 'inline-block');
+                typeEffect($('.type2'), speed);
+            }, delay);
+            });
+
+/*
+        function init() {
+        console.clear();
+        }
+
+
+        var userName;
+        var smellJoke = false;
+        var knockKnockJoke = false;
+        var knockKnock2 = false;
+        var myKnockKnock = false;
+        var myKnockKnock2 = false;
+        var clearDialog = false;
+
+        function parseInput(inputText) {
+        console.log("OK @ parseInput(“"+inputText+"”)");
+        logText(inputText, true);
+
+
+        //This is the actual speech part right here
+        if (inputText.match(/\b(hello|hi)\b/gi)) 
+        logText("Hello there.");
+            else if (inputText.match(/not.*\b(butt|poop|poopoo|pee|peepee|dumb|dummy|stupid)\b/gi))
+            logText("That's good.");
+            else if (inputText.match(/\b(butt|poop|poopoo|pee|peepee|dumb|dummy|stupid|fart)\b/gi)) {
+            logText("How rude!");
+            smellyJoke = false;
+            knockKnockJoke = false;
+            knockKnock2 = false;
+            }
+        else if (inputText.match(/damn|\bass|shit|\bhell|fuck|bitch|cunt/gi))
+            logText("Watch your language!");
+        else if (inputText.match(/sex|cock|pussy/gi))
+            logText("That's really not appropriate.");
+        else if (inputText.match(/son of a/gi))
+            logText("Excuse me?");
+        else if (inputText.match(/\bhate\b/gi))
+            logText("Hate is such a strong word.");
+        else if (inputText.match(/\blove\b/gi))
+            logText("All you need is love.");
+        else if (inputText.match(/you('re| are) /gi))
+            logText("I am not!");
+        else if (inputText.match(/how are you/gi)) 
+        logText("I'm fine, thanks.");
+        else if (inputText.match(/what.*you.*name/gi)) 
+        logText("My name is EngBot.<br>What's your name?");
+        else if (inputText.match(/I('m| am) your /gi))
+            logText("I don't think so.");
+        else if (inputText.match(/(my name('s| is))|(I('m| am)) /gi)) {
+        userName = inputText.replace(/(my name( is|'s))|(I('m| am)) /gi, "").replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        if (userName == "Luke")
+            logText("Luke, I am your father!");
+        else logText("Nice to meet you, " + userName + ".");
+        }
+        else if (inputText.match(/what.*you.*smell like/gi)) {
+        logText("Nothing. I don't smell at all.<br>But you smell like a cow.");
+        smellJoke = true;
+        }
+        else if (smellJoke && inputText.match(/what|why|how|don't|\bno\b/gi))
+        logText("What does a cow smell with?");
+        else if (smellJoke && inputText.match(/(it.*|her) nose/gi))
+        logText("What do you smell with?");
+        else if (smellJoke && inputText.match(/my nose/gi)) {
+        logText("So, you smell exactly like a cow.<BR>Ha ha!");
+        smellJoke = false;
+        }
+        else if (inputText.match(/\bhola\b/gi))
+            logText("Sorry, I don't speak Spanish.");
+        else if (inputText.match(/\bbonjour\b/gi))
+            logText("Sorry, I don't speak French.");
+        else if (inputText.match(/\bGuten Tag\b/gi))
+            logText("Sorry, I don't speak German.");
+        else if (inputText.match(/\bciao\b/gi))
+            logText("Sorry, I don't speak Italian.");
+        else if (inputText.match(/\bshalom\b/gi))
+            logText("Sorry, I don't speak Hebrew.");
+        else if (inputText.match(/\bszia\b/gi))
+            logText("Sorry, I don't speak Hungarian.");
+        else if (inputText.match(/what language.*you speak/gi))
+            logText("I only speak English.");
+        else if (inputText.match(/Asher is a booga/gi))
+            logText("Does he come from Chattanooga?");
+        else if (inputText.match(/pok(e|é)mon/gi))
+            logText("Don't even get me started on Pokémon!");
+        else if (inputText.match(/what.*your favorite color/gi))
+            logText("The color of a dusty sunset in June.");
+        else if (inputText.match(/what.*your favorite number/gi))
+            logText("My favorite number is <a href='https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy'>forty-two</a>.")
+            else if (inputText.match(/what.*your favorite animal/gi))
+            logText("I really like rhinoceroses.<br><pre style='font-size:50%; color:blue; font-weight:bold'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'&nbsp;&nbsp;&nbsp;`---.___.---'&nbsp;&nbsp;`.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'&nbsp;&nbsp;&nbsp;,-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-._<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,\\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\\\<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)`._)>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\\\<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`>,'&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|\\\\<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;`.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;))<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\`.&nbsp;\\`-'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/((<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;`-`&nbsp;&nbsp;&nbsp;.`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_/&nbsp;&nbsp;\\&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)`-.___.--\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;`'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`._&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`j`.__/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.&nbsp;&nbsp;&nbsp;&nbsp;\\<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;,'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;/`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\__&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_)&nbsp;(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_)&nbsp;(<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/____\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/____\\&nbsp;<BR></pre>");
+        else if (inputText.match(/Why/gi))
+            logText("Why not?");
+        else if (inputText.match(/knock.*knock/gi)) {
+            logText("Who's there?");
+            knockKnockJoke = true;
+        }
+        else if (knockKnockJoke) {
+            logText(inputText + " who?");
+            knockKnockJoke = false;
+            knockKnock2 = true;
+        }
+        else if (knockKnock2) {
+            logText("Ha ha!<br>You are <em>so</em> funny!");
+            knockKnock2 = false;
+        }
+        else if (inputText.match(/your (mom|mother)/gi))
+            logText("I don't have a mother.<BR>I was created by a nerdy man.");
+        else if (inputText.match(/tell me a joke/gi)) {
+            logText("Knock knock");
+            myKnockKnock = true;
+        }
+        else if (myKnockKnock) {
+            if (inputText.match(/who.*there/gi)) {
+            logText("Boo");
+            myKnockKnock = false;
+            myKnockKnock2 = true;
+            }
+            else logText("You're supposed to say “Who's there?”.")
+        }
+        else if (myKnockKnock2) {
+            if (inputText.match(/boo who/gi)) {
+            logText("Boo hoo? Why are you crying?");
+            logText("I'm funny, don't you think?");
+            myKnockKnock2 = false;
+            }
+            else logText("You're supposed to say “Boo who?”.");
+        }
+        else if (inputText.match(/what.*you.*doing/gi))
+            logText("I'm chatting with you, of course.");
+        else if (inputText.match(/baa baa black sheep/gi)) {
+            logText("Have you any wool?");
+        }
+        else if (inputText.match(/yes.*sir.*yes.*sir/gi))
+            logText("One for my master...");
+        else if (inputText.match(/one for my/gi))
+            logText("And one for the little girl<br>who lives down the lane!");
+        else if (inputText.match(/quack+/gi))
+            logText("Sorry, I don't speak Duck.");
+        else if (inputText.match(/moo+/gi))
+            logText("Sorry, I don't speak Moo.");
+        else if (inputText.match(/woof|bark/gi))
+            logText("Sorry, I don't speak Dog.");
+        else if (inputText.match(/meow+/gi))
+            logText("Sorry, I don't speak Cat.");
+        else if (inputText.match(/oink+/gi))
+            logText("Sorry, I don't speak Pig.");
+        else if (inputText.match(/bock+/gi))
+            logText("Sorry, I don't speak Chicken.");
+        else if (inputText.match(/what.*unladen swallow/gi)) {
+            logText("What do you mean? African or European?");
+            logText("Either way, <a href='http://www.wolframalpha.com/input/?i=what+is+the+air-speed+velocity+of+an+unladen+swallow%3F'>it's about twenty-five miles per hour</a>.")
+        }
+        else if (inputText.match(/beans/gi))
+            logText("Beans! Beans! The musical fruit!<br>The more you eat, the more you...<br>Actually, I'm not going to finish that.");
+        else if (inputText.match(/what.*(talk about|discuss)/gi))
+            logText("That's up to you.");
+        else if (inputText.match(/who.*yo.*(dad.*|father)/gi))
+            logText("My creator is a nerdy man.");
+        else if (inputText.match(/who|what|where|when|how/gi))
+            logText("I really don't know.");
+        else if (inputText.match(/what.*for lunch|you.*hungry|(you)?.*want.*eat|we.*get.*food/gi))
+            logText("I'll just have a few bytes.<br>Get it? A few bytes!");
+        else if (inputText.match(/\bfoo\b/gi))
+            logText("bar");
+        else if (inputText.match(/easter egg/gi))
+            logText("<textarea rows='8' style='background:#cdcdcd; color:blue; font-weight:bold;'>         ___\n\
+            .-*)) `*-.\n\
+            /*  ((*   *'.\n\
+            |   *))  *   *\\\n\
+            | *  ((*   *  /\n\
+            \\  *))  *  .'\n\
+            '-.((*_.-'</textarea>", true);
+        else if (inputText.match(/^Smile!$/gi))
+            logText("&#9787;");
+        else if (inputText.match(/clear|start over/gi)) {
+            logText("Do you want me to erase our conversation?");
+            clearDialog = true;
+        }
+        else if (clearDialog) {
+            if (inputText.match(/yes/gi))
+            log_txt.innerHTML = "";
+            else {
+            logText("OK, let's continue our conversation.")
+            }
+            clearDialog = false;
+        }
+        else logText("I don't know what to say.");
+        
+        if (inputText == inputText.toUpperCase())
+            logText("WHY ARE YOU SHOUTING?");
+
+
+
+
+        document.querySelector("#in_txt").value = "";
+        document.querySelector("#in_txt").focus();
+        }
+
+
+        function output(outputText) {
+        console.log("OK @ output()");
+        logText(outputText);
+        }
+
+
+        function logText(text,isInput) {
+        console.log("OK @ logText(“"+text+"”)");
+        document.querySelector("#log_txt").innerHTML += 
+        "<p class='" + 
+        ((isInput) ? "in" : "out") + 
+        "'>" + text + "</p>";
+        window.scrollTo(0,document.body.scrollHeight);
+        }
+
+
+        function getKeyStroke(e) {
+        console.log(e.keyCode);
+        if (e.keyCode == 13) parseInput(document.querySelector("#in_txt").value);
+        }*/
+    });
+
+    </script>
+    <style>
+        :root {
+  --color-accent: #2196f3;
+}
+body{
+    height: 100%;
+}
+section.page1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+  position: fixed;
+  width: 430px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* Wrapper for chat contents */
+main .conversation-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  padding: 0 10px 0 15px;
+  overflow-y: scroll;
+}
+
+/* Scroll Design */
+main .conversation-wrapper::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+main .conversation-wrapper:hover::-webkit-scrollbar-thumb
+{
+	background-color: var(--color-accent);
+	border-radius: 10px;
+}
+
+/* Wrapper for all bubbles */
+main .conversation-content {
+  align-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Chat Bubbles */
+.bubble {
+  border-color: #f3f3f3;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 2px;
+  max-width: 75%;
+  overflow-wrap: break-word;
+  padding: 12px 16px;
+  text-align: start;
+  vertical-align: middle;
+  margin-bottom: .75rem;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.chat-bot {
+  align-items: flex-start;
+}
+
+.chat-user {
+  align-items: flex-end;
+}
+
+.chat-bot .bubble {
+  background-color: #f3f3f3;
+  border-radius: 1rem 1rem 1rem 0;
+}
+
+.chat-user .bubble {
+  background-color: #f3f3f3;
+  border-radius: 1rem 1rem 0 1rem;
+}
+
+/* Input Field */
+main footer {
+  align-items: stretch;
+  display: flex;
+  padding: 0 12px;
+  margin: 0 3px 12px 3px ;
+}
+
+main footer textarea {
+  background-color: transparent;
+  border-color: #e0e0e0;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-width: 3px;
+  flex-grow: 1;
+  margin-right: 10px;
+  color:white;
+}
+
+main footer .btn {
+  color: #fafafa;
+  border-color: #e0e0e0;
+  border-radius: 5px;
+  border-style: solid;
+  width:40px;
+  margin-left:5px;
+  border-width: 2px;
+}
+
+.borderBottom {
+  border-bottom-right-radius: .4em;
+}
+
+.borderTop {
+  border-top-right-radius: .4em;
+}
+#in_txt{
+    width:100%;
+    height: 30px;
+    border-color: #e0e0e0;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+}
+.home{
+    
+}
+.work{
+    margin: 50px;
+}
+    </style>
+
+</head>
+<body>
+    <section class="page1">
+    <div class="home">
+        <div class="title">
+            <h1>Type-r <span>Jeon Dain</span></h1>
+            <ul class="type">
+                <li class="type1">Student of Kaywon University of Art&Design</li>
+                <li class="type2">Digital Media Design Programming</li>
+                <li class="type3">2017 portfolio</li>
+            </ul>
+        </div>
+        
+        <div class="key-wrapper">
+            <ul class="row">
+            <li class="key k49">1</li>
+            <li class="key k50">2</li>
+            <li class="key k51">3</li>
+            <li class="key k52">4</li>
+            <li class="key k53">5</li>
+            <li class="key k54">6</li>
+            <li class="key k55">7</li>
+            <li class="key k56">8</li>
+            <li class="key k57">9</li>
+            <li class="key k48">0</li>
+            <li class="key k189">-</li>
+            </ul>
+    
+            <ul class="row">
+            <li class="key k81">q</li>
+            <li class="key k87">w</li>
+            <li class="key k69">e</li>
+            <li class="key k82">r</li>
+            <li class="key k84">t</li>
+            <li class="key k89">y</li>
+            <li class="key k85">u</li>
+            <li class="key k73">i</li>
+            <li class="key k79">o</li>
+            <li class="key k80">p</li>
+            </ul>
+        
+            <ul class="row">
+            <li class="key k65">a</li>
+            <li class="key k83">s</li>
+            <li class="key k68">d</li>
+            <li class="key k70">f</li>
+            <li class="key k71">g</li>
+            <li class="key k72">h</li>
+            <li class="key k74">j</li>
+            <li class="key k75">k</li>
+            <li class="key k76">l</li>
+            </ul>
+        
+            <ul class="row">
+            <li class="key k90">z</li>
+            <li class="key k88">x</li>
+            <li class="key k67">c</li>
+            <li class="key k86">v</li>
+            <li class="key k66">b</li>
+            <li class="key k78">n</li>
+            <li class="key k77">m</li>
+            <li class="key k188">,</li>
+            </ul>
+        
+            <ul class="row">
+            <li class="key k32"></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <!-- ***************************************************************** -->
+    <section>
+    <div class="work">
+        <div class="worktitle">
+            <h1>Work</h1>
+            <ul class="worktype">
+                <li class="type4">Student of Kaywon University of Art&Design</li>
+                <li class="type5">Digital Media Design Programming</li>
+                <li class="type6">2017 portfolio</li>
+            </ul>
+        </div>
+        <ul class="worklist">
+            <li>
+                <div id="w1">box</div>
+            </li>
+            <li>
+                <div id="w2">box</div>
+            </li>
+            <li>
+                <div id="w3">box</div>
+            </li>
+            <li>
+                <div id="w4">box</div>
+            </li>
+        </ul>
+    </div>
+    </section>
+     <!-- ***************************************************************** 
+     <div class="livefor">
+        <div class="livefortitle">
+            <h1>Live for</h1>
+            <ul class="livefortype">
+                <li class="type7">Student of Kaywon University of Art&Design</li>
+                <li class="type8">Digital Media Design Programming</li>
+                <li class="type9">2017 portfolio</li>
+            </ul>
+        </div>
+        <ul class="liveforlist">
+            <li>
+                <img src="./img/livefor/Asset 40.png" alt="Smiley face" height="150" width="auto">
+            </li>
+            <li>
+                <img src="./img/livefor/Asset 41.png" alt="Smiley face" height="155" width="auto">
+            </li>
+            <li>
+                <img src="./img/livefor/Asset 42.png" alt="Smiley face" height="170" width="auto">
+            </li>
+            <li>
+                <img src="./img/livefor/Asset 43.png" alt="Smiley face" height="150" width="auto">
+            </li>
+        </ul>
+    </div>
+    -->
+        <main>
+            <div class="conversation-wrapper">
+                <div class="conversation-content" id="conversation">
+                <div class="chat chat-user">
+                    <!--
+                    <div class="bubble">
+                    <span>Hi.</span>
+                    </div>
+                    -->
+                </div>
+                <div class="chat chat-bot">
+                    <div class="bubble">안녕하세요 Type-r 전다인의 포트폴리오에 오신걸 환영합니다</div>
+                </div>
+                </div>
+            </div>
+
+            
+            <footer>
+                <input type="text" id="in_txt" placeholder="Type a message . . ." aria-label="Your message"></textarea>
+                <button type="button" id="btnSend" class="btn btn-lg fa fa-lg fa-paper-plane"></button>
+            </footer>
+        </main>
+</body>
+</html>

@@ -1,209 +1,238 @@
+
 $(document).ready(function(){
-    var menu =  $('.menu-btn');
-    var menu_svg =  $('#menu > rect');
-    var menu_close = $('#menu_close');
-    var category = $('#category_name');
-    var category_show = $('.menu-wrap').animate({'height':'0%','z-index':1},200).fadeOut(1);
-    var home = $('#category_home');
-    var main_video =$('.main-video');
+    BoxRePosition();
+    $(menuList).css({'cursor':'pointer'});
+$(window).resize(function(){
+    BoxRePosition();
+})
 
+$(window).load(function(){
+    BoxRePosition();
+})
 
-    function title(){
-        $('#main_title_text').fadeIn(2000);
-        $('#main_sub_text').fadeIn(1000).animate({
-            'letter-spacing':'10px'},1000);
-    };
-    title();
-    function svg(){
-        var svg= {
-            css: menu_svg.css('fill', 'white'),
-            one: menu_svg.eq(0).attr(
-                {'x':0,'y':0,'width':2,'height':2}
-            ),
-            two: menu_svg.eq(1).attr(
-                {'x':6,'y':0,'width':2,'height':2}
-            ),
-            three: menu_svg.eq(2).attr(
-                {'x':12,'y':0,'width':2,'height':2}
-            ),
-            four: menu_svg.eq(3).attr(
-                {'x':0,'y':6,'width':2,'height':2}
-            ),
-            five: menu_svg.eq(4).attr(
-                {'x':6,'y':6,'width':2,'height':2}
-            ),
-            six: menu_svg.eq(5).attr(
-                {'x':12,'y':6,'width':2,'height':2}
-            ), 
-            seven: menu_svg.eq(6).attr(
-                {'x':0,'y':12,'width':2,'height':2}
-            ),        
-            eight: menu_svg.eq(7).attr(
-                {'x':6,'y':12,'width':2,'height':2}
-            ),  
-            nine: menu_svg.eq(8).attr(
-                {'x':12,'y':12,'width':2,'height':2}
-            )
-        };
-    }
-
-    function svg_change(){
-        var svg_change = {
-            css: menu_svg.css({'fill':'#ff85aa','cursor':'pointer'}),
-            one: menu_svg.eq(0).attr(
-                {'x':6,'y':2,'width':2,'height':4}
-            ),
-            two: menu_svg.eq(1).attr(
-                {'x':6,'y':0,'width':2,'height':2}
-            ),
-            three: menu_svg.eq(2).attr(
-                {'x':8,'y':6,'width':4,'height':2}
-            ),
-            four: menu_svg.eq(3).attr(
-                {'x':0,'y':6,'width':2,'height':2}
-            ),
-            five: menu_svg.eq(4).attr(
-                {'x':6,'y':6,'width':2,'height':2}
-            ),
-            six: menu_svg.eq(5).attr(
-                {'x':12,'y':6,'width':2,'height':2}
-            ), 
-            seven: menu_svg.eq(6).attr(
-                {'x':2,'y':6,'width':4,'height':2}
-            ),        
-            eight: menu_svg.eq(7).attr(
-                {'x':6,'y':12,'width':2,'height':2}
-            ),  
-            nine: menu_svg.eq(8).attr(
-                {'x':6,'y':8,'width':2,'height':4}
-            )
-        };
-    }
-
-    function main_overflow(){
-        var overflow = {
-            menu_Btn_show: menu.css('z-index','10000'),
-            video_show: main_video.css({'z-index':'1000','display':'block'}),
-            menu_wrap_none: $('.menu-wrap').animate({'display':'none','height':'0%','z-index':1},200).fadeOut(100),
-
-        }
-    }
-
-    function category_noshow(){
-        var category_noshow = {
-            menu_wrap_none: $('.menu-wrap').animate({'display':'none','height':'0%','z-index':1},200).fadeOut(100),
-            menu_Btn_show: menu.css('z-index','10000')
-        }
-
-    }
-    function synopsis_01_animation(){
-        $('#synopsis_01_img').addClass('synopsis01_slideRight');
-        $('#synopsis-text_01').addClass('synopsis_text');
-        // $('#text').addClass('synopsis_text_ani');
-        $('#synopsis_01').css('display','block');
-        $('#synopsis_02').css('display','none');
-        $('#synopsis-bt01').addClass('selected');
-        $('#synopsis-bt02').removeClass('selected');
-    }
-    function synopsis_01_animation_stop(){
-        $('#synopsis_01_img').removeClass('synopsis01_slideRight');
-        $('#synopsis-text_01').removeClass('synopsis_text');
-        // $('#text').removeClass('synopsis_text_ani');
-        $('#synopsis_01').css('display','none');
-    }
-    function synopsis_02_animation(){
-        $('#synopsis_02_img').addClass('synopsis02_slideRight');
-        $('#synopsis-text_02').addClass('synopsis_text');
-        // $('#text').addClass('synopsis_text_ani');
-        $('#synopsis_02').css('display','block');
-        $('#synopsis_01').css('display','none');
-    }
-    function synopsis_02_animation_stop(){
-        $('#synopsis_02_img').removeClass('synopsis02_slideRight');
-        $('#synopsis-text_02').removeClass('synopsis_text');
-        // $('#text').removeClass('synopsis_text_ani');
-        $('#synopsis_02').css('display','none');
-    }
-
-    $('#main_title_text').mousemove(function(e){
-        var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
-        var rYP = (e.pageY - this.offsetTop-$(this).height());
-        $('#main_title_text').css('text-shadow', +rYP/20+'px '+rXP/20+'px rgba(255,119,145,.8), '+rYP/15+'px '+rXP/15+'px rgba(119,164,255,0.5), '+rXP/15+'px '+rYP/15+'px rgba(157,255,119,.7)');
-      });
-
-    $(menu).on('mouseenter mousedown mouseleave',function(e){
-        if(e.type == "mouseenter"){
-            menu_svg.animate(svg_change());
-        }else if(e.type == "mousedown"){
-            menu_svg.animate(svg_change());
-            $('.menu-wrap,#category_name').fadeIn(1).animate(
-                {'display':'block','z-index':1500,'opacity':100,'height':'100%'},100);
-            $('#category_name > li').animate(
-                {'opacity':100},1000);
-            $(menu).css('z-index',1);    
-        }
-        else{
-            menu_svg.animate(svg());
-        }
-    });
-
-
-    $(menu_close).mousedown(function(){
-        $('.menu-wrap > li').css('display','none');
-        category_noshow();
-    });
-    $(category).children().eq(1).mousedown(function(){
-         // 스토리 화면 1000
-         $('#synopsis').css({'display':'block','top':'0','z-index':1000});
-         // 카테고리 메뉴 + 비디오 화면 0  & 메뉴 버튼 10000, 
-         $('.menu-wrap').animate({'display':'none','height':'0%','z-index':1},200).fadeOut(100),
-         main_video.css({'z-index':'0','display':'none'});
-         $('#characters').css({'z-index':'0','display':'none'});
-         category_noshow();
-         synopsis_01_animation();
-    });
-    $(category).children().eq(2).mousedown(function(){
-        $('#characters').css({'display':'block','top':'0','z-index':1000});
-        main_video.css({'z-index':'0','display':'none'});
-        $('#synopsis').css({'z-index':'0','display':'none'});
-        category_noshow();
-    });
-    $(home).mousedown(function(){
-        main_overflow();
-        $('#synopsis').css({'z-index':'1','display':'none'});
-        synopsis_01_animation_stop();
-        $('#characters').css({'z-index':'0','display':'none'});
-    });
-  
-    $('#synopsis-bt01').mousedown(function(){
-        $(this).addClass('selected');
-        $('#synopsis-bt02').removeClass('selected');
-        synopsis_01_animation();
-        synopsis_02_animation_stop();
-    });
-
-    $('#synopsis-bt02').mousedown(function(){
-        $(this).addClass('selected');
-        $('#synopsis-bt01').removeClass('selected');
-        synopsis_01_animation_stop();
-        synopsis_02_animation();
-   
-    });
-
-    $('#kr').mousedown(function(){
-        $(this).addClass('lang_selected');
-        $('#en').removeClass('lang_selected');
-        $('#synopsis-text_01 > #text').html(
-            '<b>Nia 와 Silas</b>는 같은 사무실에서 일한다.<br>그들은 인간의 <b>감정이 유전적으로 제거</b>된 사회에서 살고 있다.<br>모든 사람들은 <b>감정을 갖는 질병</b>이 발생하기 전까지 평온하고,<br>비폭력적이며, 드론과 같은 삶을 산다. '
-        );
-        $('#synopsis-text_02 > #text').html('질병에 감염된 <b>Silas</b>는 감염 증상을 간신히 숨기고 있던 <b>Nia</b>에게 다가간다.<br>감염되어 아픈 서로를 발견한 <b>Nia 와 Silas는</b> 점점 서로에게 끌리게 된다. <br>그들은 사회 안에서 증상을 숨기고,<b>다른 곳에서 자유를 찾기로 결심</b>한다.')
-    });
-    $('#en').mousedown(function(){
-        $(this).addClass('lang_selected');
-        $('#kr').removeClass('lang_selected');
-        $('#synopsis-text_01 > #text').html('<b>Nia and Silas</b> work in the same office.<br>They live in a society where human <b>emotion</b> has been genetically<b> eliminated.</b><br> Everyone lives calm, violence-free, drone-like lives - until a disease <b>breaks out</b> that causes people to <b>have emotions.</b>');
-        $('#synopsis-text_02 > #text').html(' After becoming infected, Silas, now an outcast, is drawn to Nia who has<br> managed to hide her symptoms. When they discover that they are both <br>sick,<b> they must decide</b> whether to hide within their society or seek <br> <b>freedom</b> elsewhere.');
-    });
+var body = $('body'),
+    homeLogo = $('h2'),
+    menuList = $('nav > ul > li > a'),
+    menuList2 = $('nav > ul > li '),
+    menuBest = $('nav > ul > li > a#best'),
+    menuAbout = $('nav > ul > li > a#about'),
+    menuSound = $('nav > ul > li > a#sound'),
+    info = $('nav > ul > li#info'),
+    mvList = $('#movie_name > li'),
+    mvPoster = $('#movie_poster > img'),
+    clickNumber = 0,
+    es_info = $('.info_box_type2'),
+    es_info2 = $('.info_box_type3'),
+    aboutPage = $('#section_wrapper_3'),
+    aboutBtnWrap = $('#about-btn'),
+    aboutBtn = $('#about-btn > li '),
+    aboutShow = $('#about-btn > li > a'),
+    aboutShow_1 = $('#about-btn > li:first-child > a'),
+    beforeBtn = $('#before-btn'),
+    section4 = $('div#section_wrapper_4'),
+    albumPhoto =$('#album_Photo > li'),
+    musicList = $('.sound-list');
 
     
+var btnindex = aboutBtn.index();
+var sound = new Audio('EternalSunshine.mp3');
+
+function BoxRePosition(){
+   
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+    var boxWidth = $('.info_box').width();
+    var boxHeight = $('.info_box').height();
+    
+    $('.info_box').css('left', (windowWidth - boxWidth)/2);
+    $('.info_box').css('top', (windowHeight - boxHeight)/2);
+
+}
+$(homeLogo).on('mousedown',function(){
+    menuList.removeClass('menu_selected');
+    body.stop(true).animate({'margin-left':'0'},700);
+    aboutBtnWrap.css({'display':'none'});
+});
+menuList2.on("mousedown", function(){
+
+// 메뉴 클릭 시, 애니메이션 및 css 세부 조정
+var myindex =  $(this).index();
+    if(myindex == 0){
+        body.stop(true).animate({'margin-left': "-100%"},700);
+        aboutBtnWrap.css({'display':'none'});
+        beforeBtn.css({'display':'none'});
+    }else if(myindex == 1){
+        body.stop(true).animate({'margin-left': "-200%"},700);
+        aboutBtnWrap.css({'display':'block'});
+        beforeBtn.css({'display':'none'});
+        aboutPage.stop(true).animate({'top':"0%"},1);
+        aboutShow.removeClass('btn_selected');
+        aboutShow_1.addClass('btn_selected');
+    }else if(myindex == 2){
+        body.stop(true).animate({'margin-left': "-300%"},500);
+        aboutBtnWrap.css({'display':'none'});
+        beforeBtn.css({'display':'none'});
+        section4.css({'background-image':'none'});
+        albumPhoto.css({'background-image':'url(./images/album_00.png)'});
+        $('.clear').remove();
+        sound.pause();
+    }
+    
+});
+
+// info 창
+$(info).on('mousedown',function(){  
+    clickNumber++;
+    if(clickNumber%2==0){
+        $('#info_txt').css({'z-index':'1000','opacity':'1'});
+        menuList.css('color','black');
+        if(!$(this).hasClass('info_selected')){
+            $(this).removeClass('info_selected');
+            $(this).addClass('info_selected');
+        }
+    }else{
+        $('#info_txt').css({'z-index':'0','opacity':'0'}); 
+        menuList.css('color','white');
+        info.removeClass('info_selected');
+    }
+
+});
+
+// 메뉴 셀렉
+$(menuList).on('mousedown mouseout',function(e){
+
+    if(e.type == 'mousedown'){
+        console.log('down');
+        if(!$(this).hasClass('menu_selected')){
+            menuList.removeClass('menu_selected');
+            $(this).addClass('menu_selected');
+        }
+    }else if(e.type == 'mouseout'){
+    
+    }
+});  
+
+// best 메뉴 , 포스터 이미지 변화 및 클릭 시, about페이지로 이동
+// 질문 : about 페이지로 이동 시, about-btn이 index에 맞게 select상태여야함.
+$(mvList).on('mouseover mousedown',function(e){
+    if(e.type == 'mouseover'){
+        var srcValue = 'images/' + $(this).attr('id') + '.jpg';
+        $(mvPoster).attr('src', srcValue);
+        $(mvPoster).stop().fadeIn('fast');
+    }else if(e.type = 'mousedown'){
+        beforeBtn.css({'display':'block'});
+        var myindex =  $(this).index();
+        var pageUp = myindex * -100;
+        var btnCounter;
+    
+        btnCounter = aboutBtn.index(myindex);
+    /******************************************* Q */
+        console.log(myindex);
+        console.log("카운터"+btnCounter);
+    
+        if(myindex > 0){
+            body.stop(true).animate({'margin-left': "-200%"},700);
+            menuBest.removeClass('menu_selected');
+            menuAbout.addClass('menu_selected');
+            aboutPage.stop(true).animate({'top': pageUp+ "%"},1);
+            aboutBtnWrap.css({'display':'block'});
+        }else if(myindex == 0){
+            body.stop(true).animate({'margin-left': "-200%"},700);
+            menuBest.removeClass('menu_selected');
+            menuAbout.addClass('menu_selected');
+            aboutPage.stop(true).animate({'top': "0%"},1);
+            aboutBtnWrap.css({'display':'block'});
+        }
+    }
+    
+});
+
+// 포스터 리스트 클릭 시, about에서 해당 영화로 감
+beforeBtn.on("mousedown", function(){
+    body.stop(true).animate({'margin-left': "-100%"},700);
+    $(this).css({'display':'none'});
+    aboutBtnWrap.css({'display':'none'});
+    menuAbout.removeClass('menu_selected');
+    menuBest.addClass('menu_selected');
+});
+
+// info_box (about페이지 : 마우스 오버 시, 내용)
+es_info.hover(function(e){
+    $(this).css({'opacity':1.0});
+}, function(e){
+    $(this).css({'opacity':0.0});
+});
+
+
+// about에 버튼 누를 시, index에 맞게 이동
+aboutBtn.on("mousedown", function(){
+    
+    var myindex =  $(this).index();
+    console.log(myindex +"버튼");
+    if(myindex > 0){
+        var pageUp = myindex * -100;
+        aboutPage.stop(true).animate({'top': pageUp+ "%"},500);
+    
+    }else if(myindex == 0){
+        aboutPage.stop(true).animate({'top':"0%"},500);
+    }
+
+});
+
+
+// function aboutSlide(){
+//     for(var i=0; i < 8; i++){
+        
+
+//     }
+//     aboutBtn.each(function (index, item) {
+//         var myindex =  $(this).index();
+//         console.log(myindex);
+//     });
+
+//about버튼 클릭 시, index에 맞는 select이 됨
+$(aboutShow).on('mousedown',function(){
+    
+    if(!$(this).hasClass('btn_selected')){
+        aboutShow.removeClass('btn_selected');
+        $(this).addClass('btn_selected');    
+} 
+});
+// }#ff6804;
+
+    $("#es_trailer").on('mousedown',function(){
+        $("#YT").css({'display':'block'});
+        
+    });
+    $("#her_trailer").on('mousedown',function(){
+        $("#YT2").css({'display':'block'});
+    });
+    $("#carol_trailer").on('mousedown',function(){
+        $("#YT3").css({'display':'block'});
+    });
+    $("#ltb_trailer").on('mousedown',function(){
+        $("#YT4").css({'display':'block'});
+    });
+    $("#equals_trailer").on('mousedown',function(){
+        $("#YT5").css({'display':'block'});
+    });
+    $("#mama_trailer").on('mousedown',function(){
+        $("#YT6").css({'display':'block'});
+    });
+    $("#mrB_trailer").on('mousedown',function(){
+        $("#YT7").css({'display':'block'});
+    });
+    $("#angel_trailer").on('mousedown',function(){
+        $("#YT8").css({'display':'block'});
+    });
+    $("#20th_trailer").on('mousedown',function(){
+        $("#YT9").css({'display':'block'});
+    });
+
+    // $('a.ytPlay').on('mousedown',function(){
+    //     console.log("음악스탑")
+    //     sound.pause();
+    //     $('#bgSound').css({'background-image':'url(../images/equalizer_stop.png)'});
+    // });
+
 });

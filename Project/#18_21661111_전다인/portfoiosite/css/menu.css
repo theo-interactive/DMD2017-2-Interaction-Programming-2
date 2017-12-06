@@ -1,0 +1,118 @@
+.box {
+    position: absolute;
+    float:right;
+    right: 0;
+    width:40px; 
+    margin:0 50px 0 0; 
+    padding:0px;
+    z-index: 100;
+}
+  .box:after {
+    clear:both;
+    display:block;
+    content:'';
+}
+  .box > div {float:right;
+}
+  #menu-icon2{
+    position: relative;
+    width: 40px;
+    height: 24px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+} 
+  #menu-icon2 span{
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #000000;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+} 
+  #menu-icon2 span:nth-child(1) {top: 0px;}
+  #menu-icon2 span:nth-child(2) {top: 12px;}
+  #menu-icon2 span:nth-child(3) {top: 24px;}
+  
+  #menu-icon2.open span:nth-child(1) {
+    top: 12px;
+    transform: rotate(-45deg);
+    background: #FFFFFF;
+}
+  #menu-icon2.open span:nth-child(2) {
+    opacity: 0;    /*클릭하면 중간선이 사라집니다.*/
+}
+  #menu-icon2.open span:nth-child(3) {
+    top: 12px;
+    transform: rotate(-135deg);
+    background: #FFFFFF;
+}
+
+.nav{
+    position: fixed;
+    width: 430px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: #000000;
+    /* 추가 CSS */
+   transition: ease-in 0.5s all;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+   transform: translateX(100%);
+}
+.nav ol {
+    position: absolute;
+    left: 38px;
+    top: 18%;
+    width: 350px;
+}
+.nav ol li {
+    height: 84px;
+    vertical-align: top;
+}
+.nav ol li a {
+    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
+    font-size: 34px;
+    color: #4c4c4c;
+    font-weight: 200;
+}
+.nav ol li a:hover {
+    color: #FFFFFF;
+}
+.nav .compcont {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 113px;
+    overflow: hidden;
+    padding-top: 14px;
+    border-top: 1px solid #262626;
+}
+.nav .compcont li {
+    overflow: hidden;
+    margin-top: 15px;
+    vertical-align: top;
+    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 16px;
+}
+.nav .compcont li strong {
+    display: block;
+    font-weight: normal;
+}
+.navopen {
+    transition: ease-in 0.5s all;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
