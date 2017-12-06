@@ -1,0 +1,81 @@
+.work{}
+.work .worktitle{}
+.work .worktitle h1{
+    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
+    font-size: 48px;
+    padding-bottom: 25px;
+    /*border-bottom: 1px solid rgba(38, 38, 38, 0.69);*/
+    width: 260px;
+}
+.work .worktitle .worktype{padding-bottom: 25px;}
+.work .worktitle .worktype li{}
+
+.work ul{
+
+}
+.work>.worklist li{
+    float:left;
+    /*background-color:grey;*/
+    /*border-right: 1px solid rgba(0, 0, 0, 0.16);*/
+    width:350px;
+    height:800px;
+}
+.work>.worklist li:first-child{
+    /*border-left: 1px solid rgba(0, 0, 0, 0.16);*/
+}
+.work .worklist li div{
+    width:340px;
+    height: 800px;
+    background-color: thistle;
+    margin-left: 5px;
+}
+.work .worklist li #w1{
+    background-image: url('../img/livefor.jpeg');
+    background-position-x: -80px;
+    background-size:cover;
+}
+.work .worklist li #w2{
+    background-image: url('../img/holoplay_2.jpg');
+    background-position-x: -80px;
+    background-size:cover;
+}
+.work .worklist li #w3{
+    background-image: url('../img/travel.jpg');
+    background-size:cover;
+}
+.work .worklist li #w4{
+    background-image: url('../img/pic.jpg');
+    background-position-x: -80px;
+    background-size:cover;
+}
+.livefor{}
+.livefor .livefortitle{}
+.livefor .livefortitle h1{
+    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
+    font-size: 48px;
+    padding-bottom: 25px;
+    /*border-bottom: 1px solid rgba(38, 38, 38, 0.69);*/
+    width: 260px;
+}
+.livefor .livefortitle .livefortype{padding-bottom: 25px;}
+.livefor .livefortitle .livefortype li{}
+
+.livefor ul{
+
+}
+.livefor>.liveforlist li{
+    float:left;
+    margin-left: 110px;
+}
+.livefork>.liveforlist>li:first-child{
+ 
+}
+.livefor>.liveforlist li:nth-child(3) img{
+    margin-top: -23px;
+
+}
+{}
+.livefor>.liveforlist li:nth-child(3){  
+}
+.livefor>.liveforlist li:last-child{
+}
