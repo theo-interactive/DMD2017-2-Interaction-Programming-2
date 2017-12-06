@@ -1,0 +1,124 @@
+{
+    "items": [
+        { 
+            "title": "SEOULITE",
+            "id" : "01",
+            "singer": "이하이",
+            "desc": "✽추천 곡 : 한숨",
+            "poster": "https://pop1gasa.files.wordpress.com/2016/04/543699.jpg",
+            "url": "https://www.youtube.com/watch?v=vakcSQTSvd4&index=1&list=PLDikQmQ7zQRxnxrKYHLue2dczZW_qG9Cj",
+            "desc2":" 앨범에 담긴 다양한 장르의 음악이 여러 가지 모습을 담고 있는 서울이라는 도시의 다양한 색깔과 어우러진다.",
+            "score":"★★★★"
+        },
+        {
+            "title": "Full desc RED PLANET",
+            "id" : "02",
+            "singer":"볼빨간 사춘기",
+            "desc": "✽추천 곡 : 우주를 줄게",
+            "poster": "https://i.pinimg.com/736x/9a/7e/70/9a7e7027209917a744f1d26fd30de472--red-planet-cd-album.jpg",
+            "url": "https://www.youtube.com/watch?v=9U8uA702xrE",
+            "desc2":"온전히 그녀들만의 색으로 가득 채워진 별, 특유의 순수한 소녀 감성으로 붉게 물들여져 있는 그녀들만의 세상은 어떤 세상일까?",
+            "score":"★★★★★"
+        },
+        {
+            "title": "3집 [03]",
+            "id" : "03",
+            "singer":"어반자카파",
+            "desc": "✽추천 곡 : 코끝에 겨울",
+            "poster": "https://tuneuplyrics.files.wordpress.com/2013/11/urbanzakapa-03.jpg",
+            "url": "https://www.youtube.com/watch?v=Q0_ehd_17fk",
+            "desc2":"나의 우울로 당신을 안아줄 수 있다면...<br> 감성음악의 뉴아이콘, 어반자카파의 세번째 정규앨범 (03)",
+            "score":"★★★★"
+        },
+        {
+            "title": "Purpose",
+            "id" : "04",
+            "singer":"저스틴 비버",
+            "desc": " ✽추천 곡 : Love Yourself",
+            "poster": "http://www.directlyrics.com/img/upload/0c4c026a.jpg",
+            "url": "https://www.youtube.com/watch?v=mqt10gn7e8k",
+            "desc2":"소년에서 남자로 돌아온 Justin Bieber의 새 앨범 [Purpose]",
+            "score":"★★★★★"
+        },
+        {
+            "title": "Blue Neighbourhood",
+            "id" : "05",
+            "singer":"트로이시반",
+            "desc": "✽추천 곡 : Youth",
+            "poster": "https://is5-ssl.mzstatic.com/image/thumb/Music6/v4/7d/e9/e5/7de9e568-a8e5-9f86-d65a-49c1f305f2ac/UMG_cvrart_00602547600639_01_RGB72_1800x1800_15UMGIM55648.jpg/1200x630bb.jpg",
+            "url": "https://www.youtube.com/watch?v=XYAghEq5Lfw",
+            "desc2":"섬세한 감성을 지닌 팝의 어린왕자 트로이 시반(Troye Sivan)",
+            "score":"★★★★★"
+        },
+        {
+            "title": "나에게 넌",
+            "id" : "06",
+            "singer":"다비치",
+            "desc": "✽추천 곡 : 나에게 넌",
+            "poster": "https://images.genius.com/6b59c21d5826e0f8b67d1501b20b4c64.600x600x1.jpg",
+            "url": "https://www.youtube.com/watch?v=7RBP9tAkRxU",
+            "desc2":"올 가을을 물들일 다비치의 가을 감성 노래",
+            "score":"★★★★"
+        },
+        {
+            "title": "BLUE MOON",
+            "id" : "07",
+            "singer":"효린 , 창모",
+            "desc": "✽추천 곡 : Blue Moon",
+            "poster": "https://pbs.twimg.com/media/C9drEWtVwAAynS4.jpg",
+            "url": "https://www.youtube.com/watch?v=GeJAee3m3Ik",
+            "desc2":"항상 같이 있고 싶은 그 사랑, 어떻게 표현해야 할까. ‘효린’ 과 ‘창모’ 는 이런 사랑을 말하는 새로운 방식을 논한다.",
+            "score":"★★★★"
+        },
+        {
+            "title": "1집 O",
+            "id" : "08",
+            "singer":"데미안 라이스",
+            "desc": "✽추천 곡 : The Blower's Daughter",
+            "poster": "http://hontai.elite-peeps.net/ftp/Damien%20Rice/Singles/%5B2001%5D%20-%20The%20Blowers%20Daughter/folder.jpg",
+            "url": "https://www.youtube.com/watch?v=5YXVMCHG-Nk",
+            "desc2":"가슴 시린 쓸쓸함과 떨림을 아름다움으로 승화시키는 대표 감성 싱어송라이터",
+            "score":"★★★★★"
+        },
+        {
+            "title": "있잖아,",
+            "id" : "09",
+            "singer":"라즈베리필드",
+            "desc": "✽추천 곡 : She was right",
+            "poster": "https://i.ytimg.com/vi/esw1HMIf3m0/maxresdefault.jpg",
+            "url": "https://www.youtube.com/watch?v=uwGxuzV7qAs",
+            "desc2":"달콤쌉사름한 인생을 노래하는 밴드 라즈베리필드의 세번째 싱글 [있잖아,]",
+            "score":"★★★★★"
+        },
+        {
+            "title": "Warm On A Cold Night",
+            "id" : "10",
+            "singer":"혼네",
+            "desc": "✽추천 곡 : Warm On A Cold Night",
+            "poster": "http://notefolio.net/data/img/65/27/65273cf82745c0ab0559ea8adfa6e418ccf4d2de8c05a075afcf3e824277d6f1_v1.jpg",
+            "url": "https://www.youtube.com/watch?v=CX5f0NcqlMs",
+            "desc2":"소울과 신스의 로맨틱한 결합, 영국 출신 일렉트로닉 듀오 'HONNE'의 새 EP [Warm On A Cold Night]",
+            "score":"★★★★"
+        },
+        {
+            "title": "4 Walls / COWBOY",
+            "id" : "11",
+            "singer":"에프엑스",
+            "desc": "✽추천 곡 : 4walls",
+            "poster": "https://mojosakun.files.wordpress.com/2015/10/b268b-_42bwalls_2b-2bthe2b4th2balbum.jpg",
+            "url": "https://www.youtube.com/watch?v=4j7Umwfx60Q",
+            "desc2":" f(x)의 새로운 면을 보여주는 어퍼 DANCE SONG이며, f(x)의 매력을 충분히 느낄 수 있는 작품",
+            "score":"★★★★★"
+        },
+        {
+            "title": "열꽃, Part 1",
+            "id" : "12",
+            "singer":"타블로",
+            "desc": "✽추천 곡 : 나쁘다",
+            "poster": "https://i.pinimg.com/originals/f2/01/12/f20112d605f797ea3242aa726d802f28.png",
+            "url": "https://www.youtube.com/watch?v=v1NCS38xUzo",
+            "desc2":" 사람이 심하게 아플 때 피부에 돋아나는 붉은 점을 의미하는 '열꽃'처럼 아픔의 시간을 겪으며 그것을 극복해내는 와중에 탄생된 곡",
+            "score":"★★★★★"
+        }
+     ]
+}   

@@ -1,18 +1,23 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Slabo+27px&amp;subset=latin-ext" rel="stylesheet">
-        <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
-        <title>Tokyo</title>
-    </head>
-    <body>
-        <div class="wrap">
-            <section class="main">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&amp;subset=latin-ext" rel="stylesheet">
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <title>Tokyo</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="main">
             <div class="banner">
                 <nav role="navigation" class="paddle-nav">
                     <ul>
@@ -22,9 +27,12 @@
                 </nav>
                 <nav class="dot-nav">
                     <ul>
-                    <li><span class="selected">&nbsp;</span></li><li>
-                        <span>&nbsp;</span></li><li>
-                        <span>&nbsp;</span></li><li>
+                        <li><span class="selected">&nbsp;</span></li>
+                        <li>
+                            <span>&nbsp;</span></li>
+                        <li>
+                            <span>&nbsp;</span></li>
+                        <li>
                     </ul>
                 </nav>
                 <div class="banner-wrap">
@@ -32,7 +40,7 @@
                     <div class="banner-container">
                         <div class="banner-item">
                             <div class="image-area">
-                                <img src="./img/main-1.jpg" alt="도쿄 이미지"/>
+                                <img src="./img/main-1.jpg" alt="도쿄 이미지" />
                             </div>
                             <div class="text-area">
                                 <div class="desc">cultivated</div>
@@ -41,7 +49,7 @@
                         </div>
                         <div class="banner-item">
                             <div class="image-area">
-                                <img src="./img/main-2.jpg" alt="도쿄 불꽃놀이"/>
+                                <img src="./img/main-2.jpg" alt="도쿄 불꽃놀이" />
                             </div>
                             <div class="text-area">
                                 <div class="desc">colourful</div>
@@ -50,7 +58,7 @@
                         </div>
                         <div class="banner-item">
                             <div class="image-area">
-                                <img src="./img/main-3.jpg" alt="후지산"/>
+                                <img src="./img/main-3.jpg" alt="후지산" />
                             </div>
                             <div class="text-area">
                                 <div class="desc">charming</div>
@@ -62,416 +70,315 @@
             </div>
         </section>
 
-            <section class="content">
-                <div class="grid-wrap">
-                    <div class="grid">
-                        <div class="item">
-                            <div class="figure">
-                                <img src="./img/graph1.png" alt="아이콘">
-                            </div>
-                            <span>01</span>
-                            <span>Five million people a year</span>
+        <section class="content">
+            <div class="grid-wrap">
+                <div class="grid">
+                    <div class="item">
+                        <div class="figure">
+                            <img src="./img/graph1.png" alt="아이콘">
                         </div>
-                        <div class="item">
-                            <div class="figure">
+                        <span>01</span>
+                        <span>Five million people a year</span>
+                    </div>
+                    <div class="item">
+                        <div class="figure">
                             <img src="./img/graph2.png" alt="아이콘">
-                            </div>
-                            <span>02</span>
-                            <span>An annual increase in tourism</span>
                         </div>
-                        <div class="item">
-                            <div class="figure">
-                                <img src="./img/graph3.png" alt="아이콘">
-                            </div>
-                            <span>03</span>
-                            <span>Increase in visitor population</span>
+                        <span>02</span>
+                        <span>An annual increase in tourism</span>
+                    </div>
+                    <div class="item">
+                        <div class="figure">
+                            <img src="./img/graph3.png" alt="아이콘">
                         </div>
+                        <span>03</span>
+                        <span>Increase in visitor population</span>
                     </div>
                 </div>
+            </div>
 
             <div class="parallax">
                 <div class="parallax-img">
                     <div class="txt">
                         <p class="title">お会あいできてうれしいです。</p>
-                        <p>Tokyo is full of charms and promises a fun visit every time. Discover yet another new attraction in Tokyo.</p>
+                        <p>Tokyo is full of charms and promises a fun visit every time. Discover yet another new attraction
+                            in Tokyo.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section>
-        <div class="info">
-            <ul>
-                <li id="left-area">
-                <div class="info-wrap">
-                    <img src="./img/info-land.jpeg" alt="도쿄타워">
-                    <div class="txt-box">
-                        <h3>LANDMARK</h3>
-                        <p>In addition, several skyscrapers house restaurants on their top floors from where diners can simultaneously enjoy good food and good views of the city.</p>
-                    </div>
-                    <span>Night View</span>
-                </div>
-            </li>
-            <li id="right-area">
-            <div class="info-wrap">
-                <div class="txt-box">
-                    <h3>CITY</h3>
-                    <p>It is one of Japan's 47 prefectures, consisting of 23 central city wards and multiple cities, towns and villages west of the city center.</p>
-                </div>
-                <img src="./img/info-city.jpeg" alt="도쿄 이미지">
-                <span>various of Tokyo</span>
+            <div class="info">
+                <ul>
+                    <li id="left-area">
+                        <div class="info-wrap">
+                            <img src="./img/info-land.jpeg" alt="도쿄타워">
+                            <div class="txt-box">
+                                <h3>LANDMARK</h3>
+                                <p>In addition, several skyscrapers house restaurants on their top floors from where diners
+                                    can simultaneously enjoy good food and good views of the city.</p>
+                            </div>
+                            <span>Night View</span>
+                        </div>
+                    </li>
+                    <li id="right-area">
+                        <div class="info-wrap">
+                            <div class="txt-box">
+                                <h3>CITY</h3>
+                                <p>It is one of Japan's 47 prefectures, consisting of 23 central city wards and multiple cities,
+                                    towns and villages west of the city center.</p>
+                            </div>
+                            <img src="./img/info-city.jpeg" alt="도쿄 이미지">
+                            <span>various of Tokyo</span>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="txt-box">
+                                <h3>FOOD</h3>
+                                <p>There is many things to do for all ages and all different types of food to satisfy. With
+                                    many restaurants, shops, and hotels one could never be bored.</p>
+                            </div>
+                            <img src="./img/info-food.jpg" alt="음식 사진">
+                            <span>Enjoy Taste food</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="info-wrap">
-                    <div class="txt-box">
-                        <h3>FOOD</h3>
-                        <p>There is many things to do for all ages and all different types of food to satisfy. With many restaurants, shops, and hotels one could never be bored.</p>
-                    </div>
-                    <img src="./img/info-food.jpg" alt="음식 사진">
-                    <span>Enjoy Taste food</span>
-                </div>
-            </li>
-        </ul>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="slide_wrap">
-            <a href="slide/city.html" target="_blank">
-            <div class="slide">
-                <h2>City</h2>
-                <span>The 23 wards Area</span>
-                <div class="slide_inner">
-                    <p>consisting of 23 central city wards and multiple cities, towns and villages west of the city center.</p>
-                </div>
-            </div>
-            </a>
-            <a href="slide/land.html" target="_blank">
-                <div class="slide">
-                    <h2>Landmark</h2>
-                    <span>Night Views</span>
-                    <div class="slide_inner">
-                        <p>As dusk falls, the sprawling metropolis of Tokyo transforms into a city of bright lights.</p>
+
+        <!-- food 페이지 끝 -->
+        <section class="sliderr">
+            <article class="slide_container">
+              <div class="slide__content">
+                <h1 class="slide_title">CITY</h1>
+                <p>consisting of 23 central city wards and multiple cities, towns and villages west of the city
+                    center.
+                </p>
+                <div class="slide_inner-text">
+                  <div class="wrap city">
+                    <div class="slide_main city">
+                      <h2>Introduces the various of Tokyo</h2>
                     </div>
-                </div>
-            </a>
-            <a href="slide/food.html" target="_blank">
-                <div class="slide">
-                    <h2>Food</h2>
-                    <span>Enjoy Taste</span>
-                    <div class="slide_inner">
-                        <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-                    <!-- city 페이지 -->
-                    <div class="wrap city">
-                        <div class="slide_main city">
-                            <h2>Introduces the various of Tokyo</h2>
-                        </div>
-        
                     <div class="c-wrapper">
-                        <div class="c-box-wrapper">
-                            <div class="c-img-box">
-                                <img src="img/city-1.jpg" alt="신주쿠 이미지">
-                            </div>
-                            <div class="c-txt-box">
-                                <h3>Shinjuku</h3>
-                                <p>This district centered around Shinjuku Station, which serves the most passengers in Japan, includes the shopping area of the East Exit and the business area of the West Exit.</p>
-                            </div>
+                      <div class="c-box-wrapper">
+                        <div class="c-img-box">
+                          <img src="img/city-1.jpg" alt="신주쿠 이미지">
                         </div>
+                        <div class="c-txt-box">
+                          <h3>Shinjuku</h3>
+                          <p>This district centered around Shinjuku Station, which serves the most passengers in Japan, includes the
+                            shopping area of the East Exit and the business area of the West Exit.</p>
+                        </div>
+                      </div>
                     </div>
         
                     <div class="c-grid">
-                        <div class="c-item">
-                            <img src="img/sjk-slide1.jpg" alt="도쿄도청">
-                            <div class="c-txt">
-                                <h3>Tokyo Metropolitan Government Office</h3>
-                                <p>2-8-1 Nishi-Shinjuku</p>
-                            </div>
+                      <div class="c-item">
+                        <img src="img/sjk-slide1.jpg" alt="도쿄도청">
+                        <div class="c-txt">
+                          <p>Tokyo Metropolitan Government Office</p>
+                          <p>2-8-1 Nishi-Shinjuku</p>
                         </div>
-                        <div class="c-item">
-                            <img src="img/sjk-slide2.jpg" alt="신주쿠 교엔">
-                            <div class="c-txt">
-                                <h3>Shinjuku Gyoen</h3>
-                                <p>2-8-1 Nishi-Shinjuku</p>
-                            </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sjk-slide2.jpg" alt="신주쿠 교엔">
+                        <div class="c-txt">
+                          <p>Shinjuku Gyoen</p>
+                          <p>2-8-1 Nishi-Shinjuku</p>
                         </div>
-                        <div class="c-item">
-                            <img src="img/sjk-slide3.jpeg" alt="코쿤 타워">
-                            <div class="c-txt">
-                                <span>Cocoon Tower</span>
-                                <span>1-7-3 Nishi Shinjuku</span>
-                            </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sjk-slide3.jpeg" alt="코쿤 타워">
+                        <div class="c-txt">
+                          <p>Cocoon Tower</p>
+                          <p>1-7-3 Nishi Shinjuku</p>
                         </div>
-                        <div class="c-item">
-                            <img src="img/sjk-slide4.jpeg" alt="love 동상">
-                            <div class="c-txt">
-                                <span>Shinjuku LOVE</span>
-                                <span>Shinjuku-ku</span>
-                            </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sjk-slide4.jpeg" alt="love 동상">
+                        <div class="c-txt">
+                          <p>Shinjuku LOVE</p>
+                          <p>Shinjuku-ku</p>
                         </div>
+                      </div>
                     </div>
                     <!-- shibuya -->
                     <div class="c-wrapper">
-                        <div class="c-box-wrapper harajuku">
-                            <div class="c-txt-box">
-                                <h3>Harkajuku</h3>
-                                <p>It is the center of Japan's most extreme teenage cultures and fashion styles, but also offers shopping for adults and some historic sights.</p>
-                            </div>
-                            <div class="c-img-box">
-                                <img src="img/city-2.jpg" alt="하라주쿠 이미지">
-                            </div>
+                      <div class="c-box-wrapper harajuku">
+                        <div class="c-txt-box">
+                          <h3>Harkajuku</h3>
+                          <p>It is the center of Japan's most extreme teenage cultures and fashion styles, but also offers shopping
+                            for adults and some historic sights.</p>
                         </div>
-                    </div>
-    
-                    <div class="c-grid">
-                        <div class="c-item">
-                            <img src="img/hjk-slide1.jpg" alt="nezu 박물관">
-                            <div class="c-txt">
-                                <span>Nezu Museum</span>
-                                <span>6-5-1 Minami Aoyama</span>
-                            </div>
-                        </div>
-                        <div class="c-item">
-                            <img src="img/hjk-slide2.jpg" alt="디자인 갤러리">
-                            <div class="c-txt">
-                                <span>Design Festa Gallery Harajuku</span>
-                                <span>3-20-18 Jingumae</span>
-                            </div>
-                        </div>
-                        <div class="c-item">
-                            <img src="img/hjk-slide3.jpg" alt="오모테산도힐즈">
-                            <div class="c-txt">
-                                <span>Omotesando Hills</spanp>
-                                <span>4-12-10 Jingumae</spanp>
-                            </div>
-                        </div>
-                        <div class="c-item">
-                            <img src="img/hjk-slide4.jpg" alt="요요기공원">
-                            <div class="c-txt">
-                                <span>Yoyogi Park</span>
-                                <span>Yoyogikamizono-cho/2 Jinnan</spanp>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="c-wrapper">
-                            <div class="c-box-wrapper">
-                                <div class="c-img-box">
-                                    <img src="img/city-3.jpg" alt="시부야 이미지">
-                                </div>
-                                <div class="c-txt-box">
-                                    <h3>Shibuya</h3>
-                                    <p>A youth district full of cute Japanese products. Famous places include the all-time favorite meeting place, the Hachiko statue, and the “Shibuya Scramble Crossing.”</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="c-grid">
-                            <div class="c-item">
-                                <img src="img/sby-slide1.jpg" alt="시부야109">
-                                <div class="c-txt">
-                                    <span>SHIBUYA109</span>
-                                    <span>2-29-1 Dogenzaka,</span>
-                                </div>
-                            </div>
-                            <div class="c-item">
-                                <img src="img/sby-slide2.jpg" alt="코스모 천문관">
-                                <div class="c-txt">
-                                    <span>Cosmo Planetarium</span>
-                                    <span>Shibuya Cultural Center Owada</span>
-                                </div>
-                            </div>
-                            <div class="c-item">
-                                <img src="img/sby-slide3.jpg" alt="Toguri">
-                                <div class="c-txt">
-                                    <span>Toguri Museum of Art</span>
-                                    <span>1-11-3 Shoto</span>
-                                </div>
-                            </div>
-                            <div class="c-item">
-                                <img src="img/sby-slide4.jpg" alt="NHK 방송">
-                                <div class="c-txt">
-                                    <span>Entire World of NHK</span>
-                                    <span>2-2-1, Jinnan</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- city 페이지 끝 -->
-
-                <!-- landmark 페이지 시작 -->
-                <div class="wrap land">
-                    <div class="slide_main land">
-                        <h2>Tokyo Night Guide</h2>
-                    </div>
-            
-                <div class="c-wrapper">
-                    <div class="c-box-wrapper">
                         <div class="c-img-box">
-                            <img src="img/land-skytree.jpg" alt="스카이트리 이미지">
+                          <img src="img/city-2.jpg" alt="하라주쿠 이미지">
                         </div>
-                        <div class="c-txt-box sky">
-                            <h3>Skytree</h3>
-                            <p>The Tokyo Skytree (東京スカイツリー) is a television broadcasting tower and landmark of Tokyo.</p>
-                        </div>
+                      </div>
                     </div>
-                </div>
-            
-                <div class="c-wrapper">
-                    <div class="c-box-wrapper tower">
-                        <div class="c-txt-box tow">
-                                <h3>Tokyo Tower</h3>
-                                <p>Standing 333 meters high in the center of Tokyo, Tokyo Tower (東京タワー) is the world's tallest.</p>
-                            </div>
-                        <div class="c-img-box">
-                            <img src="img/land-tower.jpg" alt="도쿄타워 이미지">
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="c-wrapper">
-                        <div class="c-box-wrapper">
-                            <div class="c-img-box">
-                                    <img src="img/land-roppongi.jpg" alt="롯폰기힐즈 이미지">
-                                </div>
-                            <div class="c-txt-box rop">
-                                <h3>Roppongi Hills</h3>
-                                <p>The Tokyo City View observation deck is one of Tokyo's best.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- land 페이지 끝 -->
-
-    <!-- food 페이지 시작 -->
-    <div class="wrap food">
-        <div class="slide_main food">
-            <h2>Enjoy delicious food in Tokyo</h2>
-        </div>
-
-        <div class="col_wrap">
-            <div class="col_txt">
-                <div class="txt_box">
-                    <h3>Sushi</h3>
-                    <span>- 寿司</span>
-                    <p>
-                        Sushi is the most famous Japanese dish outside of Japan, and one of the most popular 
-                        dishes among the Japanese themselves. In Japan, sushi is usually enjoyed on special 
-                        occasions, such as a celebration. 
-                    </p>
-                </div>
-            </div>
-            <div class="col_img sushi">
-                <img src="img/sushi.jpg" alt="초밥 사진">
-            </div>
-        </div>
-        <!-- 추후 기능 추가 -->
-        <div class="parallax">
-                <div class="parallax-img">
-                    <div class="txt">
-                        <p class="title">Taste it</p>
-                        <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
-                    </div>
-                </div>
-            </div>
-        <div class="col_wrap last">
-        <div class="col_img">
-                <img src="img/ramen.jpg" alt="라멘 사진">
-            </div>
-            <div class="col_txt">
-                <div class="txt_box">
-                    <h3>Ramen</h3>
-                    <span>- ラーメン</span>
-                    <p>
-                        Ramen is a noodle soup dish that was originally imported from China and has become 
-                        one of the most popular dishes in Japan in recent decades. Ramen are inexpensive 
-                        and widely available, two factors that also make them an ideal option for budget 
-                        travelers.
-                    </p>
-                </div>
-            </div>
-        </div>
-            <div class="parallax">
-                <div class="parallax-img">
-                    <div class="txt">
-                        <p class="title">Taste it</p>
-                        <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- food 페이지 끝 -->
-    </div>
-<script>
-    (function($){
-        $(document).ready(function(){
-            $('.banner-wrap').width($('.banner').width()).height($('.banner').height());
-            $('.banner-container').width($('.banner-wrap').width() * $('.banner-item').length).height('100%');
-            $('.banner-item').css({'width' : $('.banner-wrap').width(), 'height' : '100%'});
-            var _id = 0;
-            var _max = $('.banner-item').length;
-            var _isAni = false;
-            var slideLeft = function(){
-                if(_isAni) return false;
-                if(_id === 0){
-                    return false;
-                }else{
-                    _id--;
-                    slide();
-                }
-            }
-            var slideRight = function(){
-                if(_isAni) return false;
-                if(_id === _max - 1){
-                    return false;
-                }else{
-                    _id++;
-                    slide();
-                }
-            }
-            var slide = function(bool = false){
-                if(!bool){
-                    _isAni = true;
-                    $('.banner-container').stop(true).animate({'margin-left' : $('.banner').width() * _id * -1}, 500, function(){
-                        dotSelect();
-                        paddleCheck();
-                        _isAni = false;
-                    });                
-                }else{
-                    $('.banner-container').stop(true).css({'margin-left' : $('.banner').width() * _id * -1});
-                    dotSelect();
-                    paddleCheck();
-                    _isAni = false;
-                }
-            }
-            var dotSelect = function(){
-                var $span = $('.dot-nav').find('span');
-                $span.removeClass('selected');
-                $span.eq(_id).addClass('selected');
-            }
-            var paddleCheck = function(){
-                var $arrow = $('.paddle-nav').find('.arrow');
-                if(_id === 0){
-                    $('.arrow.prev').addClass('disabled');
-                    $('.arrow.next').removeClass('disabled');
-                }else if(_id === _max - 1){
-                    $('.arrow.prev').removeClass('disabled');
-                    $('.arrow.next').addClass('disabled');
-                }else{
-                    $arrow.removeClass('disabled');
-                }
-            }
-            $(window).trigger('resize');
-            $('.arrow.prev').on('click', slideLeft);
-            $('.arrow.next').on('click', slideRight);
-            paddleCheck();
-        });
-
         
-})(jQuery);
-</script>
-        </div>
-    </body>
+                    <div class="c-grid">
+                      <div class="c-item">
+                        <img src="img/hjk-slide1.jpg" alt="nezu 박물관">
+                        <div class="c-txt">
+                          <p>Nezu Museum</p>
+                          <p>6-5-1 Minami Aoyama</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/hjk-slide2.jpg" alt="디자인 갤러리">
+                        <div class="c-txt">
+                          <p>Design Festa Gallery Harajuku</p>
+                          <p>3-20-18 Jingumae</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/hjk-slide3.jpg" alt="오모테산도힐즈">
+                        <div class="c-txt">
+                          <p>Omotesando Hills</p>
+                          <p>4-12-10 Jingumae</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/hjk-slide4.jpg" alt="요요기공원">
+                        <div class="c-txt">
+                          <p>Yoyogi Park</p>
+                          <p>Yoyogikamizono-cho 2 Jinnan</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="c-wrapper">
+                      <div class="c-box-wrapper">
+                        <div class="c-img-box">
+                          <img src="img/city-3.jpg" alt="시부야 이미지">
+                        </div>
+                        <div class="c-txt-box">
+                          <h3>Shibuya</h3>
+                          <p>A youth district full of cute Japanese products. Famous places include the all-time favorite meeting place,
+                            the Hachiko statue, and the “Shibuya Scramble Crossing.”</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="c-grid">
+                      <div class="c-item">
+                        <img src="img/sby-slide1.jpg" alt="시부야109">
+                        <div class="c-txt">
+                          <p>SHIBUYA109</p>
+                          <p>2-29-1 Dogenzaka</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sby-slide2.jpg" alt="코스모 천문관">
+                        <div class="c-txt">
+                          <p>Cosmo Planetarium</p>
+                          <p>Shibuya Cultural Center</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sby-slide3.jpg" alt="Toguri">
+                        <div class="c-txt">
+                          <p>Toguri Museum of Art</p>
+                          <p>1-11-3 Shoto</p>
+                        </div>
+                      </div>
+                      <div class="c-item">
+                        <img src="img/sby-slide4.jpg" alt="NHK 방송">
+                        <div class="c-txt">
+                          <p>Entire World of NHK</p>
+                          <p>2-2-1, Jinnan</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+        
+            <article class="slide_container">
+              <div class="slide__content">
+                <h1 class="slide_title">LANDMARK</h1>
+                <p>As dusk falls, the sprawling metropolis of Tokyo transforms into a city of bright lights.</p>        
+                <div class="slide_inner-text">
+<!-- 수정중 -->
+                </div>
+              </div>
+            </article>
+            <article class="slide_container">
+              <div class="slide__content">
+                <h1 class="slide_title">FOOD</h1>
+                <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>        
+                <div class="slide_inner-text">
+        
+                  <!-- food -->
+                  <div class="wrap food">
+                    <div class="slide_main food">
+                      <h2>Enjoy delicious food in Tokyo</h2>
+                    </div>
+        
+                    <div class="col_wrap" id="col_wrap01">
+                      <div class="col_txt">
+                        <div class="txt_box">
+                          <h3 id="name01">Sushi</h3>
+                          <span id="subtitle01">- 寿司</span>
+                          <p id="desc01">
+                            Sushi is the most famous Japanese dish outside of Japan, and one of the most popular dishes among the Japanese themselves.
+                            In Japan, sushi is usually enjoyed on special occasions, such as a celebration.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col_img sushi">
+                        <img id="photo01" src="img/sushi.jpg" alt="초밥 사진">
+                      </div>
+                    </div>
+                    <div class="parallax">
+                      <div class="parallax-img">
+                        <div class="txt">
+                          <p class="title">Taste it</p>
+                          <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_wrap last" id="col_wrap02">
+                      <div class="col_img">
+                        <img id="photo02" src="img/ramen.jpg" alt="라멘 사진">
+                      </div>
+                      <div class="col_txt">
+                        <div id="txt_box">
+                          <h3 id="name02">Ramen</h3>
+                          <span id="subtitle02">- ラーメン</span>
+                          <p id="desc02">
+                            Ramen is a noodle soup dish that was originally imported from China and has become one of the most popular dishes in Japan
+                            in recent decades. Ramen are inexpensive and widely available, two factors that also make them an ideal
+                            option for budget travelers.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="parallax">
+                      <div class="parallax-img">
+                        <div class="txt">
+                          <p class="title">Taste it</p>
+                          <p>88,000 restaurants and more Michelin stars than any other city in the world.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <i class="fa fa-close slider__close"></i>
+          </section>
+
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js'></script>
+
+          <script src="js/main.js"></script>
+
+
+
+
+    </div>
+
+    </div>
+</body>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <title>21661111_dain_index</title>
+    <script>
+    $(window).keydown(function(e) {
+	key = (e.keyCode) ? e.keyCode : e.which;
+	$('.key.k' + key).addClass('active');
+	console.log(key);
+    });
+
+    $(window).keyup(function(e) {
+        key = (e.keyCode) ? e.keyCode : e.which;
+        $('.key.k' + key).removeClass('active');
+    });
+
+    $(document).ready(function(){
+        $('#menu-icon2').click(function(){
+            $(this).toggleClass('open');
+            $('#nav').toggleClass('navopen');
+            $('.key-wrapper').toggleClass('navkeyopen');
+            $("#nav").load("bot.html");           
+        });
+    });
+
+    function typeEffect(element, speed) {
+	var text = $(element).text();
+	$(element).html('');
+	
+	var i = 0;
+	var timer = setInterval(function() {
+					if (i < text.length) {
+						$(element).append(text.charAt(i));
+						i++;
+					} else {
+						clearInterval(timer);
+					}
+				}, speed);
+    }
+
+    $( document ).ready(function() {
+    var speed = 95;
+    var delay = $('.type1').text().length * speed + speed;
+    typeEffect($('.type1'), speed);
+    setTimeout(function(){
+        $('.type2').css('display', 'inline-block');
+        typeEffect($('.type2'), speed);
+    }, delay);
+    });
+/*---typing effect----
+    var count = -1;
+    var rate = 100;
+    function typeIt(text, name, cursor) {
+    $('.indicate').text(cursor);
+    var chars = text.split('');
+    setInterval(function() {
+        $(name).append(chars[(++count)]);
+    }, rate)
+    }
+
+    setInterval(function() {
+    if ($('.indicate').attr('class').indexOf('indicate_blink') > -1) {
+        $('.indicate').removeClass('indicate_blink');
+    } else {
+        $('.indicate').addClass('indicate_blink');
+    }
+    }, 400)
+
+    typeIt('type anything you want to', '.text', '_');
+*/
+    </script>
+</head>
+<body>
+    <!--typing effect
+    <span class="text"></span><span class="indicate"></span>
+    -->
+    <div class="box">
+        <div id="menu-icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Type-r <span>Jeon Dain</span></h1>
+        <ul class="type">
+            <li class="type1">Student of Kaywon University of Art&Design</li>
+            <li class="type2">Digital Media Design Programming</li>
+            <li class="type3">2017 portfolio</li>
+        </ul>
+    </div>
+    
+    <div class="key-wrapper">
+        <ul class="row">
+        <li class="key k49">1</li>
+        <li class="key k50">2</li>
+        <li class="key k51">3</li>
+        <li class="key k52">4</li>
+        <li class="key k53">5</li>
+        <li class="key k54">6</li>
+        <li class="key k55">7</li>
+        <li class="key k56">8</li>
+        <li class="key k57">9</li>
+        <li class="key k48">0</li>
+        <li class="key k189">-</li>
+        </ul>
+
+        <ul class="row">
+        <li class="key k81">q</li>
+        <li class="key k87">w</li>
+        <li class="key k69">e</li>
+        <li class="key k82">r</li>
+        <li class="key k84">t</li>
+        <li class="key k89">y</li>
+        <li class="key k85">u</li>
+        <li class="key k73">i</li>
+        <li class="key k79">o</li>
+        <li class="key k80">p</li>
+        </ul>
+    
+        <ul class="row">
+        <li class="key k65">a</li>
+        <li class="key k83">s</li>
+        <li class="key k68">d</li>
+        <li class="key k70">f</li>
+        <li class="key k71">g</li>
+        <li class="key k72">h</li>
+        <li class="key k74">j</li>
+        <li class="key k75">k</li>
+        <li class="key k76">l</li>
+        </ul>
+    
+        <ul class="row">
+        <li class="key k90">z</li>
+        <li class="key k88">x</li>
+        <li class="key k67">c</li>
+        <li class="key k86">v</li>
+        <li class="key k66">b</li>
+        <li class="key k78">n</li>
+        <li class="key k77">m</li>
+        <li class="key k188">,</li>
+        </ul>
+    
+        <ul class="row">
+        <li class="key k32"></li>
+        </ul>
+    </div>
+
+    <div id="nav">
+    
+    </div>
+</body>
+</html>
