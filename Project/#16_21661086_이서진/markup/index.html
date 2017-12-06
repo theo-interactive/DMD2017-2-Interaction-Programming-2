@@ -4,220 +4,836 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SJCINEMA</title>
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/font.css" rel="stylesheet" type="text/css" />
-    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link href="css/font.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>  
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/skrollr.js"></script>
-    <title>Equals</title>
+    <script src="js/data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
-
 <body>
-    <header>
-        <div class="menu-btn">
-            Menu-Bt
-            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <g id="menu">
-                    <rect id="menu_point1" x="0" y="0" width="2" height="2">menu_point1</rect>
-                    <rect id="menu_point2" x="6" y="0" width="2" height="2">menu_point2</rect>
-                    <rect id="menu_point3" x="12" y="0" width="2" height="2">menu_point3</rect>
-                    <rect id="menu_point4" x="0" y="6" width="2" height="2">menu_point4</rect>
-                    <rect id="menu_point5" x="6" y="6" width="2" height="2">menu_point5</rect>
-                    <rect id="menu_point6" x="12" y="6" width="2" height="2">menu_point6</rect>
-                    <rect id="menu_point7" x="0" y="12" width="2" height="2">menu_point7</rect>
-                    <rect id="menu_point8" x="6" y="12" width="2" height="2">menu_point8</rect>
-                    <rect id="menu_point9" x="12" y="12" width="2" height="2">menu_point9</rect>
-                </g>
-            </svg>
-        </div>
-        <div class="share-btn">
-            <span id="share_icon"></span>
-        </div>
-        
-        <div class="menu-wrap">
-            <div id="list-wrap">
-                <nav id="category">
-                    <ul id="category_name">
-                        <li><a id="menu_close" >X</a></li>
-                        <li><a id="category_one" class="category">SYNOPSIS</a></li>
-                        <li><a id="category_two" class="category">CHARACTERS</a></li>
-                        <li><a id="category_three" class="category">TRAILER</a></li>
-                        <li><a id="category_four" class="category">SOUND TRACK</a></li>
-                        <li><a id="category_five" class="category"> PHOTO</a></li> 
-                    </ul> 
-                    <div id="category_home"><span><a>home</a></span></div>
-                    
-                     
-                </nav>
-            </div>   
-        </div>
-    </header>
-    <section id ="main">
-        <div class="overflow">
-                <div id="main-bottom">
-                        <div id="sound_Control"></div>
-                        <div id="clock" style="display:none">
-                            <span id="sec">0</span>
-                            <span id="min">0</span> <span>:</span> <span id="hour">0</span>
-                        </div> 
-                    </div>
-            <div class="main-video">
-                <video src="video/equals.mp4" autoplay type="video/mp4" 
-                 id="video" autoplay loop></video>
-                    <div id="main_text-warp">
-                        <div id="main_text">
-                        <div id="logo">
-                        <span id="main_title_text" data text="EQUALS"style="display:none">EQUALS</span>
-                        <span id="main_sub_text" 
-                        style="display:none">FIND YOUR EQUALS</span>
-                        </div>
-                        </div>
-                        <div id="ticket"><a href="http://tickets.equals-the-movie.com/" target="blank">Ticket</a></div>
-                    </div>
-            </div>     
-     
-        </div>
-    </section>
-    <!-- 패럴럭스 스크롤링 사용예정-->
-    <section id="contents_container">
-        <section id="synopsis"  style="display:none">
-            <div class="wrap">
-                <div id="synopsis-text">
-                    <h2>SYNOPSIS</h2>
-                    <div id="synopsis_01">
-                        <span><img src="image/synopsis_01.gif" id="synopsis_01_img"></span>
-                        <p id="synopsis-text_01">
-                            <span id="one">01</span><br>
-                            <span id="text"><b>Nia and Silas</b> work in the same office.<br>
-                            They live in a society where human <b>emotion</b> has been genetically<b> eliminated.</b>
-                            <br> Everyone lives calm, violence-free, drone-like lives - until
-                            a disease <b>breaks out</b> that causes people to <b>have emotions.</b></span>
-                        </p>
-                    </div>
-                    <div id="synopsis_02">
-                        <span><img src="image/synopsis_02.gif" id="synopsis_02_img"></span>
-                        <p id="synopsis-text_02">
-                             <span id="two">02</span><br>
-                             <span id="text"> After becoming infected, Silas, now an outcast, is drawn to Nia who has<br> 
-                             managed to hide her symptoms. When they discover that they are both <br>
-                             sick,<b> they must decide</b> whether to hide within their society or seek <br>
-                             <b>freedom</b> elsewhere.</span>
-                        </p>
-                    </div>
-                </div>
-                <div id="synopsis-btn">
-                    <span id="synopsis-bt01" class="selected"></span>
-                    <span id="synopsis-bt02"></span>
-                </div>
-                <div id="lang"><a id="en" class="lang_selected">EN</a><a id="kr">KR</a></div>
+    <nav>
+        <h2><a>SJCINEMA</a></h2>
+        <ul>
+            <li><a id="best">BEST</a></li>
+            <li><a id="about">ABOUT</a></li>
+            <li><a id="sound">SOUND</a></li>
+            <li id="info">info</li>
+        </ul>
+        <span id="bgSound"></span>
+    </nav>
+    <span id="info_txt">
+            <p class="info_box">
+                WELCOME !<br>
+                I <span class="color">INVITE</span> YOU<br>
+                TO MY CINEMA.
+            </p>
+        </span>
+    <section id="main">
+        <div id="section_wrapper_1" class="section">
+            <div id="main_text">
+                <ol id="ticket_info">
+                    <li id="date">
+                        <span id="year">2017</span>
+                        <span>-</span>
+                        <span id="month">
+                        </span>
+                        <span>-</span>
+                        <span id="day"></span>
+                    </li>
+                    <span id="seat_info_wrapper">
+                        <li id="seat_info">
+                            SEAT
+                            <span id="seat_T">H
+                                <span>-</span>
+                                <span id="seat_N"></span>
+                            </span>
+                        </li>
+                        <li id="time">
+                            <span id="hour"></span>
+                            <span>:</span>
+                            <span id="min"></span>
+                            <span>-</span>
+                            <span id="hour_end"></span>
+                            <span>:</span>
+                            <span id="min_end"></span>
+                        </li>
+                        <li id="barcode"></li>
+                    </span>
+                </ol>
+
             </div>
-        </section>
+            <div id="main_photo"></div>
+        </div>
+        <div id="section_wrapper_2" class="section">
+            <div id="movie_list">
+                <div class="scrollbar" id="scroll_style">
+                    <div class="force-overflow">
+                        <ul id="movie_name">
+                            <li id="poster_1" class="movie_name_list"><a href="#">
+                                <span class="title">이터널 선샤인 (Eternal Sunshine)</span>
+                                <span class="movie_Y"> 2004</span>
+                                </a>
+                            </li>
+                            <li id="poster_2" class="movie_name_list"><a href="#">
+                                <span class="title">그녀 (Her)</span>
+                                <span class="movie_Y">2013</span>
+                                </a>
+                            </li>
+                            <li id="poster_3" class="movie_name_list"><a href="#">
+                                <span class="title">캐롤 (Carol)</span>
+                                <span class="movie_Y">2015</span>
+                                </a>
+                            </li>
+                            <li id="poster_4" class="movie_name_list"><a href="#">
+                                <span class="title">라우더 댄 밤즈 (
+                                    Louder Than Bombs)</span>
+                                <span class="movie_Y">2015</span>
+                                </a>
+                            </li>
+                            <li id="poster_5" class="movie_name_list"><a href="#">
+                                <span class="title">이퀄스 (Equals)</span>
+                                <span class="movie_Y">2015</span>
+                                </a>
+                            </li>
+                            <li id="poster_6" class="movie_name_list"><a href="#">
+                                <span class="title">내일의 안녕 (Mama)</span>
+                                <span class="movie_Y">2015</span>
+                                </a>
+                            </li>
+                            <li id="poster_7" class="movie_name_list"><a href="#">
+                                <span class="title">괜찮아요, 미스터 브래드 (Brad's Status)</span>
+                                <span class="movie_Y">2017</span>
+                                 </a>
+                            </li>
+                            <li id="poster_8" class="movie_name_list"><a href="#">
+                                <span class="title">나의 엔젤 (Mon Ange, Angel)</span>
+                                <span class="movie_Y">2017</span>
+                                </a>
+                            </li>
+                            <li id="poster_9" class="movie_name_list"><a href="#">
+                                <span class="title">우리의 20세기 (20th Century Women)</span>
+                                <span class="movie_Y">2017</span>
+                                </a>
+                            </li>
 
-        <!-- 패럴럭스 스크롤링 사용예정-->
-        <section id="characters" style="display:none">
-            <div class="wrap">
-                <h2>CHARACTERS</h2>
-                <div id="characters-image">
-                    <div id="photo">
-                        <img src="image/NIA/01000.png">
-                        <img src="image/SILAS/01000.png">
+                        </ul>
                     </div>
                 </div>
-                <div id="skroll-body" >
-                    <div id="characters-Nia"> 
-                        <dl>
-                            <dt>NIA</dt>
-                            <dd>Do you realize <br>
-                                what would happen if anyone saw us?<br>
-                                It can’t happen, you know that.<br> 
-                                If we stayed here we’ll be found out.</dd>
-                        </dl>
-                    </div>
-                    <div id="characters-Silas">
-                        <dl>
-                            <dt>SILAS</dt>
-                            <dd>I can’t stay away from you.<br>
-                                I can’t not be around you.<br>
-                                I’ve been watching you,<br>
-                                the way you look at the world,<br>
-                                the way you experience things, it’s different.
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-        </section>
-        <section id="highlight">
+            </div>
 
-        </section>
-        <section id="soundtrack" style="display:none">
-            <div class="wrap">
-            <h2>SOUNDTRACK</h2>
-            <div id="soundtrack-albumcover">
-                <ul id="soundtrack-list-wrap">
-                    <li>
-                        <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
-                    <li>
-                    <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
-                    <li>
-                    <a><img></a>
-                        <div class="soundtrack-info">사운드 정보 및 간략 설명
-                            <h3><a>SOUND NAME</a></h3>
-                            <span>공유하기 버튼</span>
-                        </div>
-                    </li>
+            <div id="movie_poster">
+                <img src="./images/poster_1.jpg" alt="MoviePoster">
+            </div>
+        </div>
+        <div id="section_wrapper_3" class="section" >
+            <span id="before-btn-wrapper">
+                <span id="before-btn">
+            </span>
+            <span id="about-btn-wrapper">
+                <ul id="about-btn">
+                    <li><a class="btn_selected"></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
                 </ul>
-                <a class="btn-prev">prev button</a>
-                <a class="btn-next">next button</a>
+            </span>
+            <div id="mvAbout_1">
+                <div id="YT" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                        <div id="iframe_Wrap">
+                        <iframe id="ytplayer" src="https://www.youtube.com/embed/dEnArpOvwOI?&enablejsapi=1"
+                        frameborder="0" allowfullscreen ></iframe>
+                        </div>
+                    </span>
+                    <span id="black_screen"></span>
+                </div>
+                
+                <ol id="storyInfo">
+                    <li></li>
+                    <li>     
+                         <div class="info_box_type2 info_box1">
+                            <p class="tralier"><a id="es_trailer" class="ytPlay"></a></p>  
+                        </div>
+                    </li>
+                </ol>
+                <ol id="characters">
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p>
+                                <b>Joel</b><br>
+                                <span id="story">
+                                <b class="famous">이 기억만큼은<br> 남겨주세요</b><br>
+                                “<br>취소할래요. 
+                                내 말 알아듣죠?<br>
+                                다 취소한다구요. 
+                                내 말 들려요? <br>
+                                제발 이 기억만큼은 남겨주세요..<br>
+                                그만하고 싶어요 <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>Eternal Sunshine</b><br>
+                                <span id="story">
+                                <b class="famous">티끌 없는 마음에 찾아오는 영원한 햇살</b><br>
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 미국 (2004) 
+                                    <b class="bold">장르 |</b> 멜로/로맨스, 드라마, SF
+                                    <b class="bold">출연 |</b> 짐 캐리, 케이트 윈슬렛, 커스틴 던스트  등
+                                </span>
+                                <br>
+                                오랜 시간 함께했던 연인 조엘과 클레멘타인은, 이별을 앞둔 커플이 대개 그렇듯 
+                                크게 싸우고 서로 깊은 상처를 주고 결국 헤어진다. 고통 속에 살던 클레멘타인은 
+                                기억을 지워주는 회사 ‘라쿠나’를 찾아가 조엘과의 모든 추억을 머릿속에서 지운다. 
+                                어느 날 클레멘타인과 마주친 조엘은 그녀가 자신이 누군지 전혀 알아보지 못하는 것을 보고,
+                                그녀가 기억을 지웠음을 알게 된다. 그리고 조엘 역시 자신의 기억을 지우려 하는데..
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box4">
+                            <p>
+                                <b>Clementine</b><br>
+                                <span id="story">
+                                <b class="famous">사랑은 그렇게<br>다시 기억된다</b><br>
+                                “ <br>전 클레멘타인인데, 조엘의 기억을 지울게요. <br>
+                                너무 따분한 것도 지우는 이유가 되나요? 
+                                그 사람하고 같이 있으면 제 자신이 싫어져요. 
+                                보는 것조차 가소롭고, 비굴한 미소라니! 
+                                완전 시들해 졌어요... <br>”
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
             </div>
+            <div id="mvAbout_2">
+                <div id="YT2" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                            <iframe id="ytplayer2" src="https://www.youtube.com/embed/S4IdRHoITac?&enablejsapi=1"
+                            frameborder="0" allowfullscreen ></iframe>
+                        </div>
+                    </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box1">
+                            <p>
+                                <b>HER</b><br>
+                                <span id="story">
+                                <b class="famous">사랑에 빠지면<br>다 미치게 돼</b><br>
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 미국 (2013) 
+                                    <b class="bold">장르 |</b> 멜로/로맨스, 드라마
+                                    <b class="bold">출연 |</b> 호아킨 피닉스, 스칼렛 요한슨, 루니 마라  등
+                                </span>
+                                테오도르는 다른 사람들의 편지를 대신 써주는 대필 작가로, 
+                                아내와 별거 중이다. 타인의 마음을 전해주는 일을 하고 있지만, 
+                                정작 자신은 너무 외롭고 공허한 삶을 살고 있다. 그러던 어느 날, 
+                                스스로 생각하고 느끼는 인공 지능 운영체제인 사만다를 만나게 된다. 
+                                자신의 말에 귀 기울이고, 이해해주는 사만다로 인해 조금씩 행복을 
+                                되찾기 시작한 ‘테오도르’는 점점 그녀에게 사랑을 느끼게 되는데…
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                <ol id="characters">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p class="tralier"><a id="her_trailer" class="ytPlay"></a></p>  
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>Theodore</b><br>
+                                <span id="story">
+                                <b class="famous">새로운 느낌없이<br>그렇게 사는거지</b><br>
+                                “<br>
+                                그런 생각이 들어요.<br>난 앞으로 내가 느낄 감정을 벌써 
+                                다 경험 해버린 게 아닐까? 그리고 여기서부터는 앞으로는 쭉..
+                                새로운 느낌은 하나도 없게 되는건 아닐까..   
+                               
+                                <br>”
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                  
+                    <li></li>
+                </ol>
             </div>
-        </section>
-        <section id="photo" style="display:none">
-            <div class="wrap">
-                <h2>PHOTO</h2>
+            <div id="mvAbout_3">
+                <div id="YT3" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                                <iframe id="ytplayer3" src="https://www.youtube.com/embed/JsMF87BbS88?&enablejsapi=1"
+                                frameborder="0" allowfullscreen ></iframe>
+                            </div>
+                        </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li id="carol_photo">
+                        <div class="info_box_type2 info_box1">
+                            <p>
+                                <b>Carol</b><br>
+                                <span id="story">
+                                <b class="famous">
+                                    우린 서로에게<br>가장 놀라운 선물이야</b>
+                                <br>
+                                “<br>우연이란 건 세상에 없어요.<br>
+                                모든 건 제자리로 돌아오기 마련이에요.<br>                  
+                                언젠가 내 마음을 이해하게 될 거예요.<br>
+                                 그날이 오면 그곳에서 당신을 반겨줄게요. <br>
+                                 영원한 일출처럼 우리 앞에 펼쳐진 삶을<br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                <ol id="storyInfo">
+                    <li></li>
+                    <li>
+                        <span class="w70"></span>
+                        <span class="w30">
+                            <div class="info_box_type2 info_box2">
+                                <p class="tralier"><a id="carol_trailer" class="ytPlay"></a></p>
+                            </div>
+                        </span> 
+                    </li>
+                    <li>   
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>CAROL</b><br>
+                                <span id="story">
+                                <b class="famous">당신의 마지막,나의 처음...</b><br>
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 영국,미국 (2015) 
+                                    <b class="bold">장르 |</b> 멜로/로맨스, 드라마
+                                    <b class="bold">출연 |</b> 케이트 블란쳇, 루니 마라  등
+                                </span>
+                                <br><br>
+                                하나뿐인 딸을 두고 이혼 소송 중인 캐롤과 헌신적인 
+                                남자친구가 있지만 확신이 없던 테레즈, 각자의 상황을 잊을 만큼
+                                통제할 수 없이 서로에게 빠져드는 감정의 혼란 속에서 둘은 확신하게 된다.
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                <ol id="characters">
+                    <li>
+                        <div class="info_box_type2 info_box4">
+                            <p>
+                                <b>Therese</b><br>
+                                <span id="story">
+                                <b class="famous">인생에 단 한 번,<br>
+                                    오직 그 사람만 보이는 순간이 온다</b><br>
+                                “<br>특정한 어떤 사람이 좋아질 때도 있지. 
+                                그 사람에게 끌리거나 끌리지 않는 이유는 알 방법이 없어. 
+                                우리가 아는 건 그 사람에게 끌리느냐 아니냐 뿐이야.
+                                그런데 세상 일이 핀볼 움직임처럼 단순하지 않아.
+                                무반응인 넛들도 있지만 모두 살아있긴 하잖아.<br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div id="mvAbout_4">
+                <div id="YT4" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                                <iframe id="ytplayer4" src="https://www.youtube.com/embed/O89y-0wLsbE?&enablejsapi=1"
+                                frameborder="0" allowfullscreen ></iframe>
+                            </div>
+                        </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li>   
+                        <div class="info_box_type2 info_box1">
+                            <p>
+                                <b class="mv_name">LOUDER THAN<br>BOMBS</b><br>
+                                <span id="story">
+                                <b class="famous"> 비로소 진실과 마주하는 순간</b><br><br>
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 노르웨이,프랑스 (2015) 
+                                    <b class="bold">장르 |</b> 드라마
+                                    <b class="bold">출연 |</b> 제시 아이젠버그,이자벨 위페르 등
+                                </span>
+                                <br>
+                                대학에서 사회학을 가르치는 젊은 교수 조나가 어머니의 기일을 맞아 오랜만에 집으로 돌아온다. 
+                                종군 사진 작가였던 어머니의 3 주기 기념 전시를 위해 자료들을 정리한다. 
+                                그는 어머니가 떠난 뒤 사이가 서먹해진 아버지와 동생의 사이에서 관계를 회복하기 위해 노력한다. 
+                                한편, 어머니의 오랜 파트너였던 리처드는 어머니의 사고에 대한 비밀을 기사화하겠다고 선언하고, 
+                                이를 반대하던 조나는 또 다른 진실과 마주하게 되는데… 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p class="tralier"><a id="ltb_trailer" class="ytPlay"></a></p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+                <ol id="storyInfo">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>Isabelle</b><br>
+                                <span id="story">
+                                <b class="famous">
+                                    폭발의 굉음보다 거대한 상실의 소리</b>
+                                <br>
+                                “<br>하지만 어느 순간,<br>나는 그들의 일상을 방해하는 사람이 된다.<br>
+                                 여기가 내가 있을 곳이 아닌 것 같다.<br>나를 원치 않는 것은 아니지만,<br>
+                                 내가 필요한 것 같진 않다.<br>” 
+                                </span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li></li>
+                </ol>
+            </div>
+            <div id="mvAbout_5">
+                <div id="YT5" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                                <iframe id="ytplayer5" src="https://www.youtube.com/embed/QtnG5DbVKdc?&enablejsapi=1"
+                                frameborder="0" allowfullscreen ></iframe>
+                            </div>
+                        </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box1">
+                            <p class="tralier"><a id="equals_trailer" class="ytPlay"></a></p>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p>
+                                <b>Silas</b><br>
+                                <span id="story">
+                                <b class="famous">느낌에 <br>잘못이란 건 없어</b><br>  
+                                “<br>어릴 때부터 우린 이렇게 배웠잖아. <br>
+                                ‘인류의 목적은 우주 탐구이다’. 
+                                우리가 왜 존재하는지 어디에서 온 건지 그 답을 멀리서 찾지. 
+                                그런데 8억 마일 먼 곳에 있는 줄 알았던 답이 사실은 바로 우리 앞에 있었어. 
+                                이제야 내 존재의 의미를 알게 됐어.<br>”
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>  
+                            <div class="info_box_type2 info_box3">
+                                <p>
+                                    <b>EQUALS</b><br>
+                                    <span id="story">
+                                    <b class="famous">당신도 느껴지나요?</b><br><br>  
+                                    <span id="mv_info">
+                                        <b class="bold">국가 |</b> 미국 (2015) 
+                                        <b class="bold">장르 |</b> 드라마,SF
+                                        <b class="bold">출연 |</b> 니콜라스 홀트, 크리스틴 스튜어트  등
+                                    </span>
+                                    모든 감정이 통제되고, 사랑만이 유일한 범죄가 된 감정통제구역. <br>
+                                    어느 날 동료의 죽음을 목격한 사일러스는 현장에서 니아의 미묘한 표정 변화를 보고,
+                                    그녀가 감정보균자임을 알게 된다.
+                                    니아를 관찰하던 사일러스는 생전 처음으로 낯선 감정을 느끼고 감정 억제 치료를 받지만,
+                                    니아를 향한 마음은 점점 커져만 간다.
+                                    사일러스와 니아는 서로 사랑을 나누지만 뜻하지 않은 위기에 처한다. 
+                                    결국 두 사람은 사랑을 지키기 위한 탈출을 결심하는데…
+                                    </span>
+                                 </p>
+                            </div>
+                        </span>
+                        <span id="eq_photo">
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box4">
+                            <p>
+                                <b>Nia</b><br>
+                                <span id="story">
+                                <b class="famous">세상이 이 감정을 <br>알아줬으면 좋겠어</b><br>
+                                “<br>호박벌은 기체역학적으로는 하늘을 날 수 없어.<br>호박벌은 기체역학을 몰라.<br>
+                                 본인이 날 수 없다는 사실을 모르기 때문에<br>날아다닐 수 있는거야.
+                                <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div id="mvAbout_6">
+                <div id="YT6" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                                <iframe id="ytplayer6" src="https://www.youtube.com/embed/9K0_v9iawXs?&enablejsapi=1"
+                                frameborder="0" allowfullscreen ></iframe>
+                            </div>
+                        </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box1">
+                            <p class="tralier"><a id="mama_trailer" class="ytPlay"></a></p>
+                        </div>
+                    </li>
+                </ol>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p>
+                                <b>Magda</b><br>
+                                <span id="story">
+                                <b class="famous">나는 내 삶을 믿어 <br>이 순간 살아있는 지금의 나</b><br>
+                                “<br>사랑한다, 이게 우리가 사는 이유야.<br>
+                                삶을 마음껏 누려야 해, 최대한 행복하게.<br>
+                                 자기 자신과 곁에 있는 사람을 위하면서 살아야 해.
+                                <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>Ma Ma</b><br>
+                                <span id="story">
+                                <b class="famous">가슴은 사라져도,<br>내 심장은 뛰고 있으니까</b><br><br>  
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 스페인,프랑스(2015) 
+                                    <b class="bold">장르 |</b> 드라마
+                                    <b class="bold">출연 |</b> 페넬로페 크루즈, 루이스 토사 등
+                                </span>
+                                <br>
+                                남편과의 별거 중 느닷없이 마그다에게 찾아온 시한부의 삶.<br> 
+                                그러나 불행의 시간에 허덕이기보다는 
+                                홀로 남게 될 아들과 주위 사람들의 아픈 가슴을 보듬어줌과 동시에 
+                                여성으로서의 의미 있는 삶을 택하는데... 
+                                마침내 찾아온 새 생명에 대한 설렘 속에서 
+                                불행을 행복으로 바꾸어 내는 마그다.    
+                                당신의 텅 빈 가슴을 어루만져줄 그녀의 이야기가 시작된다.
+                                </span>
+                                </p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+            </div>
+            <div id="mvAbout_7" >
+                <div id="YT7" class="YT_all">
+                        <span id="video">
+                            <span class="video_close"></span>
+                                <div id="iframe_Wrap">
+                                    <iframe id="ytplayer7" src="https://www.youtube.com/embed/j18NTb0zb3I?&enablejsapi=1"
+                                    frameborder="0" allowfullscreen ></iframe>
+                                </div>
+                            </span>
+                        <span id="black_screen"></span>
+                    </div>
+                <ol id="characters">
+                    <li></li>
+                    <li>  
+                        <div class="info_box_type2 info_box1">
+                            <p>
+                                <b>Brad</b><br>
+                                <span id="story">
+                                <b class="famous">인생은 놀라운거야.<br>이렇게 멋지다니.</b><br>
+                                “<br>트로이가 하버드를 입학하고 난 후<br>나와 그 아이의 미래를 그려본다.
+                                더 보이지 않는다.<br> 그냥 길을 걷는 우리 부자가 있다.<br> 우린 여전히 살아있다.
+                                <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p class="tralier"><a id="mrB_trailer" class="ytPlay"></a></p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>BRAD'S STATUS</b><br>
+                                <span id="story">
+                                <b class="famous">내 인생 이대로 괜찮을까?</b><br><br>  
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 미국 (2017) 
+                                    <b class="bold">장르 |</b> 드라마
+                                    <b class="bold">출연 |</b> 벤 스틸러, 마이클 쉰 등
+                                </span>
+                                <br>
+                                평온했던 삶이 송두리째 흔들리고 있는 이 남자의 인생 타임라인!<br> 
+                                비영리 단체에서 일하며 평범한 하루를 보내는 브래드는 사회에 영향력을 행세하는 크레이그, 
+                                절대 갑부 제이슨, 은퇴 후 안락한 삶을 살고 있는 빌리 등 잘나가는 대학 동창들의 SNS를 보며
+                                열등감에 휩싸인다. 그러던 중 아이비리그에 지원하려는 아들 트로이와 함께 보스턴으로 
+                                캠퍼스 투어를 떠나고, 잠시나마 아들의 명문대 진학이 자신의 초라함을 보상해 줄거란 
+                                즐거운 상상을 한다. 하지만 트로이의 실수로 하버드 입학 면접 기회를 잃게 되고,
+                                브래드는 아들을 위해 껄끄러운 사이인 크레이그에 연락해 도움을 청하게 되는데..
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+            <div id="mvAbout_8">
+                <div id="YT8" class="YT_all">
+                    <span id="video">
+                        <span class="video_close"></span>
+                            <div id="iframe_Wrap">
+                                <iframe id="ytplayer8" src="https://www.youtube.com/embed/D-sILwgxh8A?&enablejsapi=1"
+                                frameborder="0" allowfullscreen ></iframe>
+                            </div>
+                        </span>
+                    <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box1">
+                            <p>
+                                <b>Madeleine</b><br>
+                                <span id="story">
+                                <b class="famous">난 너의 모습 그대로를 사랑할 거야.</b><br>
+                                “<br>널 느끼는 방법을 배울 거야.
+                                눈에 보이지 않아도 네 소리가 들리고 좋은 향기가 나.
+                                눈에 보이지 않아도 마음으로 널 느낄수 있어.
+                                보이지 않아도 널 느낄수 있어.
+                                 <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p class="tralier"><a id="angel_trailer" class="ytPlay"></a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>MON ANGE , ANGEL</b><br>
+                                <span id="story">
+                                <b class="famous">마음으로…<br>날 보는 널 느낄 수 있어</b><br><br>  
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 벨기에 (2017) 
+                                    <b class="bold">장르 |</b> 멜로/로맨스
+                                    <b class="bold">출연 |</b> 플뢰르 제프리어, 마야 도리 등
+                                </span>
+                                <br>
+                                앞이 보이지 않아 늘 혼자인 소녀 마들렌에게 몸이 투명한 소년 엔젤이 찾아온다. 
+                                보이지 않지만 엔젤의 모든 것을 느낄 수 있는 그녀는 어느새 엔젤에게 깊은 감정을 느낀다. 
+                                하지만 두 사람은 마들렌의 눈 수술 때문에 이별하게 되고, 몇 년 뒤 시력을 회복해 집으로 돌아온 ‘마들렌’은 ‘엔젤’을 애타게 찾지만, 
+                                그의 흔적조차 찾을 수 없는데.. 
+                                과연 마들렌은 엔젤을 다시 만날 수 있을까?
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+            </div>
+            <div id="mvAbout_9">
+                <div id="YT9" class="YT_all">
+                <span id="video">
+                    <span class="video_close"></span>
+                        <div id="iframe_Wrap">
+                            <iframe id="ytplayer9" src="https://www.youtube.com/embed/H6sAQOwFxHc?&enablejsapi=1"
+                            frameborder="0" allowfullscreen ></iframe>
+                        </div>
+                    </span>
+                <span id="black_screen"></span>
+                </div>
+                <ol id="characters">
+                    <li></li>
+                    <li>
+                        <div class="info_box_type2 info_box1">
+                            <p class="tralier"><a id="20th_trailer" class="ytPlay"></p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ol>
+                <ol id="storyInfo">
+                    <li>
+                        <div class="info_box_type2 info_box2">
+                            <p>
+                                <b>Dorothea </b><br>
+                                <span id="story">
+                                <b class="famous"> 행복한지 따져보는 건 우울해지는 지름길이야.</b><br>
+                                “<br>우리가 인생을 이해할 날이 올 지는 모르겠어.
+                                널 도와줄 사람이 예상하거나 원하는 사람이 아닐 지도 몰라.
+                                그냥 나타날거야.
+                                지금이야 정말 힘들지만 아무리 힘들어도 금방 괜찮아져. 
+                                그래봐야 또 힘들어지지만...
+                                    <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box3">
+                            <p>
+                                <b>20th CENTURY WOMEN</b><br>
+                                <span id="story">
+                                <b class="famous">인생이란 거대하고,<br>알 수 없는 거란다</b><br><br>  
+                                <span id="mv_info">
+                                    <b class="bold">국가 |</b> 미국 (2017) 
+                                    <b class="bold">장르 |</b> 드라마
+                                    <b class="bold">출연 |</b> 아네트 베닝, 그레타 거윅 등
+                                </span>
+                                <br>
+                                산타바바라에서 쉐어하우스를 운영하는 55살의 싱글맘 도로시아는 
+                                하루하루 달라지는 사춘기 아들 제이미가 걱정이다. 그녀는 함께 사는 
+                                24살의 포토그래퍼 애비와 17살인 제이미의 친구 줄리에게 고민을 털어놓는다. 
+                                그렇게 시작된 그녀들의 인생 교육은 모두에게 새로운 변화를 가져오는데…
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info_box_type2 info_box4">
+                            <p>
+                                <b>Abbe </b><br>
+                                <span id="story">
+                                <b class="famous">난 제정신이 아니야.</b><br>
+                                “<br>열정이 표현할 수 있는 범위를 넘어서면, 날것 그대로의 에너지가 표출돼.
+                                네 인생을 어떤 식으로 예상하건 간에 절대 마음처럼 흘러가지 않아.
+                                <br>” 
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ol>   
             </div>
 
-        </section>
+        </div>
+        <div id="section_wrapper_4" class="section">
+            <div id="album_Info">
+                <ol id="album_Photo">
+                    <li></li>
+                </ol>
+                <ol id="album_desc">
+                    <li id="aboutMusic-wrapper">
+                        <ul id="aboutMusic">
+                           <li>
+                               <span id="music_genre-wrapper">
+                                    <dl id="music_genre">
+                                        <dt>Genre</dt>
+                                        <!-- <dd id="genre" class="clear"></dd> -->
+                                    </dl>
+                               </span>
+                               <span id="music_date-wrapper">
+                                    <dl id="music_date">
+                                        <dt>Date</dt>
+                                        <!-- <dd id="date" class="clear"></dd> -->
+                                    </dl>
+                               </span>
+                           </li>
+                           <li>
+                               <dl id="music_info">
+                                   <dt>Music &amp; Singer</dt>
+                                   <dd id="music-desc-wrapper">
+                                       <!-- <p id="music_title">Everybody's Got To Learn Sometime</p>
+                                       <span id="music_desc">dsacdadsdsadsfds</span> -->
+                                   </dd>
+                               </dl>
+                           </li>
+                        </ul>
+                        <ul id="soundControl">
+                            <li>
+                                <audio preload id="audio" controls="controls">Your browser does not support HTML5 Audio!
+                                    
+                                </audio>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div id="soundList">
+                 <div class="scrollbar" id="scroll_style">
+                    <div class="force-overflow">
+                        <ul id="list-wrapper">
+                            <!-- json 데이터 받아오기 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
+                            <!-- <li class="sound-list"></li> -->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                        </ul>
+                    </div>
+            </div>
+            <!-- <div id="audiowrap">
+                    <div id="audio0">
+                        <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                    </div>
+                    <div id="tracks">
+                        <a id="btnPrev">&larr;</a>
+                        <a id="btnNext">&rarr;</a>
+                    </div>
+                </div>
+                <div id="plwrap">
+                    <ul id="plList"></ul>
+                </div>
+            </div> -->
+        </div>
     </section>
+    
 
-    <script type="text/javascript">
-        var s = skrollr.init();
-        var position = $(window).scrollTop();
-        console.log(position);
-
-        </script>     
+ 
 </body>
 </html>
