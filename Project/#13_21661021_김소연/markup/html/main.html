@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PortFolio</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        function switchClass(i) {
+            var lis = $('#home-news > div');
+            lis.eq(i).removeClass('home_header_on');
+            lis.eq(i).removeClass('home_header_out');
+            lis.eq(i = ++i % lis.length).addClass('home_header_on');
+            lis.eq(i = ++i % lis.length).addClass('home_header_out');
+            setTimeout(function() {
+                switchClass(i);
+            }, 3500);
+        }
+        $(window).load(function() {
+            switchClass(-1);
+        });
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+                var target = this.hash;
+	            var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+    </script>
+</head>
+<body>
+   <nav id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="#main"><li>main</li></a>
+      <a href="#about"><li>About</li></a>
+      <a href="#Portfolio"><li>PortFolio</li></a>
+      <a href="#contact"><li>Contact</li></a>
+    </ul>
+   </nav>
+    <article id="main">
+        <div class="page">
+        <div id="home-news">
+            <div class="home_header">
+                <strong>Welcome</strong>
+                <span>to Soyeon's World</span>
+            </div>
+            <div class="home_header">
+                <strong>Enjoy,</strong>
+                <span>Have a nice day. </span>
+            </div>
+            <div class="home_header">
+                <span>Are you</span>
+                <strong>Ready?</strong>
+            </div>
+        </div>
+    </div>
+    </article>
+    <article id="about">
+        <h2>About me</h2>
+    
+    <h3><br>Hello, my name is Soyeon Kim.I am Web Designer.<br/>I can use html, css, javascript, and jquery.<br />
+        If you want to see more about me you can see more works.</h3>
+        <div id="button">
+            <a id="click" href = "#Portfolio" class="click-btn">More</a>
+        </div>
+    </article>
+    <article id="Portfolio">
+        <h2>Portfolio</h2>
+        <h3>creative imagination in my world</h3>
+      <div class="container">
+		<div id="carousel">
+            <figure><a href = "../1/jellybean.html"><img src="../images/bg1.jpg" alt=""></a></figure>
+            <figure><a href = "../2/arti.html"><img src="../images/bg2.jpg" alt=""></a></figure>
+            <figure><a href = "../3/ikea.html"><img src="../images/bg3.jpg" alt=""></a></figure>
+            <figure><a href = "../4/icon.html"><img src="../images/bg4.jpg" alt=""></a></figure>
+            <figure><img src="" alt=""></figure>
+			<figure><img src="" alt=""></figure>
+			<figure><img src="" alt=""></figure>
+			<figure><img src="" alt=""></figure>
+			<figure><img src="" alt=""></figure>
+		</div>
+	</div>
+    </article>
+    <article id="contact">
+        <h2>Contact</h2>
+        <h3>Email : jadejun@naver.com<br />Phone : 010-2334-5422<br />Behance : <a href="https://www.behance.net/jadejund224">www.behance.net/jadejund224</a></h3>
+    </article>
+</body>
+</html>
