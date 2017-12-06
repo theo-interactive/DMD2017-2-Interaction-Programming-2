@@ -1,0 +1,94 @@
+{
+   "items": [
+        {
+          "title": "Best Friend (Feat. NERVO & The Knocks & Alisa Ueno)",
+          "id" : "01",
+          "singer": "Sofi Tukker",
+          "album": "Ultra 2018",
+          "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/002/646/81002646_1510815857139_1_600x600.JPG",
+          "url": "http://www.genie.co.kr/detail/songInfo?xgnm=87545633",
+          "genre":"POP / 일렉트로니카"
+        },
+        {
+            "title": "Bedroom",
+            "id" : "02",
+            "singer": "Mabel",
+            "album": "Bedroom",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/945/456/80945456_1494407215411_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=87127406",
+            "genre":"POP / 팝"
+          },
+          {
+            "title": "Weather",
+            "id" : "03",
+            "singer": "Novo Amor",
+            "album": "Woodgate, NY",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/419/095/80419095_1397615833544_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=82446949",
+            "genre":"POP / 팝"
+          },
+          {
+            "title": "iT's YoU",
+            "id" : "04",
+            "singer": "Zayn",
+            "album": "Mind Of Mine (Deluxe Edition)",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/794/850/80794850_1456479052634_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=85999024",
+            "genre":"POP / 팝"
+          },
+          {
+            "title": "Pretty",
+            "id" : "05",
+            "singer": " 김새한길",
+            "album": "Pretty",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/715/416/80715416_1444897327270_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=85235413",
+            "genre":"가요 / R&B/소울"
+          },
+          {
+            "title": "밤편지",
+            "id" : "06",
+            "singer": "아이유 (IU)",
+            "album": "밤편지",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/933/154/80933154_1490341401069_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=87034188",
+            "genre":"가요 / 발라드"
+          },
+          {
+            "title": "Waltz For Derby",
+            "id" : "07",
+            "singer": " Bill Evans",
+            "album": " The Legendary Best : Chopin Of Jazz Piano",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/475/811/80475811_1415608414455_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=87127406",
+            "genre":"재즈 / 정통"
+          },
+          {
+            "title": "오늘밤 뭐해?",
+            "id" : "08",
+            "singer": " 이츠 (it's)",
+            "album": "Bedroom",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/394/811/80394811_1389255812494_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=82223967",
+            "genre":"가요 / 인디"
+          },
+          {
+            "title": "Seasons Of Love (렌트의 대표곡)",
+            "id" : "09",
+            "singer": " Various Artists",
+            "album": " Rent",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/036/122/038/36122038_1422453800978_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=36123526",
+            "genre":"OST / 전체"
+          },
+          {
+            "title": "부디",
+            "id" : "10",
+            "singer": " 심규선 (Lucia) & 에피톤 프로젝트 (Epitone Project)",
+            "album": " 두 번째, 방",
+            "poster": "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/213/420/80213420_1_600x600.JPG",
+            "url": "http://www.genie.co.kr/detail/songInfo?xgnm=80889675",
+            "genre":"가요 / 발라드"
+          }
+      ]
+}
