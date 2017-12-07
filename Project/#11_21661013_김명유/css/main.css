@@ -1,6 +1,7 @@
 @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 html,body{height: 100%; font-family: 'Noto Sans KR', sans-serif;}
-body{overflow-x: hidden;background-color: #fff2e5;}
+body{overflow-x: hidden;background-color: #fff2e5;-ms-overflow-style: none;}
+body::-webkit-scrollbar {display:none;}
 li{list-style: none;}
 
 section{position: relative; height: 100%;}
@@ -8,16 +9,25 @@ section .content{width: 1200px; margin: 0 auto; position: relative; height: 100%
 /*--- music-icon ---*/
 div.music{
   width: 50px; height: 50px;
+  top: 30px; right: 25px;
   background: url('../images/music.png')no-repeat center;
   background-size: cover;
-  position: fixed; top: 30px; right: 30px;
-  z-index: 9999; cursor: pointer;
-  transition-property: transform,background;
-  transition-duration: 0.5s;
+  position: fixed; /*top: 30px; right: -25px;*/
+  z-index: 7000; cursor: pointer;
+  transition: all .5s;
+}
+div.music.icon{
+  animation-name: icon;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-delay: 1s;
+  animation-duration: 1s;
 }
 .wrap{height: 100%; transition: all 1s;}
 .wrap.blur{filter: blur(30px);}
 div.music.active{
+  background: url('../images/music-white.png')no-repeat center; background-size: cover;
+  right: 30px;
   -ms-transform: rotate(180deg); /* IE 9 */
   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
   transform: rotate(180deg);
@@ -164,24 +174,26 @@ div.music.active{
 .photo .content ul li img.h{height: 585px;}
 
 /*--photo pop-up*/
-
+.popup.active{visibility: visible; opacity: 1;}
 .popup{
-	display: none;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,.8);
+	visibility: hidden;
+  opacity: 0;
+	width: 100%; height: 100%;
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 0; left: 0;
 	z-index: 8000;
 	box-sizing: border-box;
+  transition: all 1s;
 }
+.popup.active img{visibility: visible; opacity: 1; width: 800px; height: 520px; margin: -260px 0 0 -400px; transition: all 1s;}
 .popup img{
+  visibility: hidden;
+  opacity: 0;
 	display: block;
   position: absolute;
-  width: 800px; height: 520px;
+  width: 0; height: 0;
   top: 50%; left: 50%;
-  margin: -260px 0 0 -400px;
+  margin: 0;
 }
 .popup img.h{
   width: 400px; height: 590px;
@@ -195,39 +207,50 @@ div.music.active{
   top: 0; left: 0;
   height: 100%; width: 100%;
   opacity: 0; visibility: hidden;
-  transition: all .6s;
-  z-index: 9000;
-  /*background: url('../images/background.jpg')no-repeat center;*/
+  transition: all .6s; transition-delay: .5s;
+  z-index: 6999;
+  background: url('../images/background.jpg')no-repeat center;
   background-attachment: fixed;
 }
 .ost.active{opacity: 1; visibility: visible;}
-.ost .content{width: 100%; height: 600px; position: absolute; top: 50%; margin-top: -300px;}
+.ost.active .content {left: 0;}
+.ost .content{
+  width: 100%; height: 600px;
+  position: absolute; top: 50%;
+  margin-top: -300px; left: -100%; color:#fff;
+  transition: left 1s; transition-delay: .5s;
+}
 .ost .content ul{width: 100%; height: 100%;}
 .ost .content>div{height: 100%; float: left;}
-.ost .content .album {width: 400px;}
+.ost .content .album {width: 400px; transition: width 1s; transition-delay: .5s; }
 .ost .content .album .album-img{
-  border-radius: 50%; padding-top: 40px;
-  margin: 0 auto;
+  border-radius: 50%;
+  margin: 105px auto 0;
   height: 260px; width: 260px;
   position: relative;
+  transition: margin 1s; transition-delay: 1s;
 }
 .ost .content .album .album-img .circle{
   position: absolute;
   top: 50%; left:50%;
   border-radius: 50%;
-  border: 1px solid #6a6a6a;
+  border: 1px solid #fff;
 }
-.ost .content .album .album-img .later{animation-delay: 0.5s;}
+.ost .content .album .album-img .later{animation-delay: 1s;}
 .ost .content .album .album-img .ani{
   animation-name: circle;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 }
-
+.ost .content .album img.rotate{
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 100s;
+}
 .ost .content .album img{display: block; width: 250px; height: 250px; margin: 0 auto; position: relative; z-index: 3;}
 .ost .content .track{margin: 0 auto; width: calc(100% - 400px);}
 .ost .content .track .tracklist_wrap{
-  height: 100%; padding: 0 50px; overflow-y: scroll;
+  height: 100%; padding: 0 100px; overflow-y: scroll;
   -ms-overflow-style: none;
 }
 .ost .content .track .tracklist_wrap::-webkit-scrollbar {display:none;}
@@ -235,30 +258,38 @@ div.music.active{
 .ost .content .track .tracklist_wrap table tr{height: 60px;}
 .ost .content .track .tracklist_wrap table td{vertical-align: middle;}
 .ost .content .track .tracklist_wrap table .num{width: 10%;}
-.ost .content .track .tracklist_wrap table .song{width: 80%;}
+.ost .content .track .tracklist_wrap table .song{width: 80%; cursor: pointer;}
+.ost .content .track .tracklist_wrap table tr td.active{opacity: 1;}
+.ost .content .track .tracklist_wrap table tr td{opacity: .5; transition: all .2s;}
+.ost .content .track .tracklist_wrap table tr:hover td{opacity: 1;}
 .ost .content .track .tracklist_wrap table .time{width: 10%; text-align: right;}
-.ost .content .track .tracklist_wrap table span{display: block; margin-top: 5px; color:#828282;}
+.ost .content .track .tracklist_wrap table span{display: block; margin-top: 5px;}
 
-.ost .content .audio-control{width: 100%; margin-top: 80px;}
-.ost .content .audio-control div ul{font-size: 11px;}
-.ost .content .audio-control .buttons {margin-top: 80px;}
-.ost .content .audio-control .buttons ul {width: 190px; margin: 0 auto; height: 40px;}
-.ost .content .audio-control .buttons ul li{
-  float: left;
-  width: 40px; height: 40px;
-  background: url('../images/icon.png')no-repeat;
-  background-size: 80px;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-.ost .content .audio-control .buttons ul li.prev{background-position: 0px -40px;}
-.ost .content .audio-control .buttons ul li.play{background-position: 0px 0px; margin: 0 30px;}
-.ost .content .audio-control .buttons ul li.next{background-position: -40px -40px;}
-.ost .content .audio-control .bar {}
-.ost .content .audio-control .bar ul li{line-height: 35px; text-align: center;}
-.ost .content .audio-control .bar ul li p{font-size: 20px; line-height: 30px; height: 30px;}
-
+.ost .content .txt{width: 100%; margin-top: 80px;}
+.ost .content .txt span{display: block; font-size: 20px; line-height: 30px; text-align: center;}
+.ost .content .txt span.play_singer{font-size: 15px;}
 @keyframes circle {
     from {width: 0; height: 0; opacity: 1; margin: 0;}
     to {width: 400px; height: 400px; opacity: 0; margin: -200px 0 0 -200px;}
+}
+@keyframes icon {
+    from {top: 30px; right: -10px;}
+    to {top: 30px; right: 25px;}
+}
+@keyframes rotate {
+    from {
+      -ms-transform: rotate(0deg); /* IE 9 */
+      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg); /* IE 9 */
+      -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+      transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width : 1600px) {
+  .popup.active img{width: 1150px; height: 700px; margin: -350px 0 0 -575px;}
+  .popup img.h{width: 520px; height: 700px; margin: -350px 0 0 -260px;}
 }
