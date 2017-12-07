@@ -4,7 +4,7 @@ div#masonry {
 display: flex; 
 flex-direction: column; 
 flex-wrap: wrap;
-height: 100vw;
+height: 60%;
 max-height: 800px;
 font-size: 0;
 overflow-y: scroll;
@@ -16,24 +16,7 @@ transition: .8s opacity;
 padding: 1px;
 vertical-align: top;
 }
-div#masonry img:first-child{  
-    width: 23.88%;
-    transition: .8s opacity;
-    padding: 1px;
-    vertical-align: top;
-    } 
-div#masonry img:nth-child(2) {  
-    width: 27%;
-    transition: .8s opacity;
-    padding: 1px;
-    vertical-align: top;
-    } 
-div#masonry img:last-child {  
-    width: 27%;
-    transition: .8s opacity;
-    padding: 1px;
-    vertical-align: top;
-    } 
+
 div#masonry:hover img { opacity: 0.3; }
 div#masonry:hover img:hover { opacity: 1; } 
 
