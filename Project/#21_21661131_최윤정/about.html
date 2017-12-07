@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/menu.css"/>
+    <link rel="stylesheet" href="./css/about.css"/>
+    <link rel="stylesheet" href="./css/animate.css"/>
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <title>About</title>
+</head>
+<body>
+    <section>
+            <header>
+                <div class="btn"></div>
+                <div onclick="history.back();" class="page_cover"></div>
+                <div id="menu">
+                    <div onclick="history.back();" class="close"></div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="first after">MAIN</a></li>
+                            <li><a href="about.html" class="first after">ABOUT</a></li>
+                            <li><a href="poster.html" class="first after">POSTER</a></li>
+                            <li><a href="title_sequence.html" class="first after">TITLE<br />SEQUENCE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        <div id="section_body">
+            <h1> About</h1>
+            <div class="nav">
+                <ul>
+                    <li><button class="arrow left-bt"></button></li>
+                    <li><button class="arrow right-bt"></button></li>
+                </ul>
+            </div>
+            <div class="slider-wrap slider-container">
+                <div class="slider-content img-area">
+                    <img src="img/about/top.jpg" alt="">
+                    <div class="text-area animated fadeIn">
+                        <p> 
+                            <b><span class="red">솔 바스</span>는 1920년 뉴욕에서 태어났다.</b><br>
+                            솔 바스는 <span class="red">20대 때부터</span> 할리우드에서의 본격적인 커리어를 쌓아갔다. <br>
+                            지금의 확고부동한 명성을 안겨준 <span class="red">오프닝 타이틀 시퀀스</span> 작업에서는<br> 30대 무렵인 1950년대부터 두각을 나타냈다. <br>
+                            <!-- 1954년에 오토 프레밍거가 제작과 연출을 겸한 뮤지컬 영화 <카르멘 존스>에서 솔 바스는 포스터를 디자인했는데, <br>
+                            결과물에 대해 오토 프레밍거가 상당히 만족스러워 하며 내친김에 오프닝 타이틀 시퀀스 작업까지 맡겼다고 한다.<br>
+                            이렇게 솔 바스는 자신의 기량과 크리에이티비티를 가장 잘 표현해낼 수 있는 영역으로 인도되었고, 서서히 날개를 펼치기 시작한 것이다. -->
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-content img-area">
+                    <img src="img/about/left1.jpg" alt="">
+                    <div class="text-area">
+                        <p> 
+                            <!-- <b>솔 바스는 1920년 뉴욕에서 태어났다.</b><br>
+                            솔 바스는 20대 때부터 할리우드에서의 본격적인 커리어를 쌓아갔다. <br>
+                            지금의 확고부동한 명성을 안겨준 오프닝 타이틀 시퀀스 작업에서는<br> 30대 무렵인 1950년대부터 두각을 나타냈다. <br> -->
+                            1954년에 오토 프레밍거가 제작과 연출을 겸한 <br>뮤지컬 영화 <카르멘 존스>에서 솔 바스는 포스터를 디자인했는데, <br>
+                            결과물에 대해 오토 프레밍거가 상당히 만족스러워 하며<br> 내친김에 오프닝 타이틀 시퀀스 작업까지 맡겼다고 한다.<br>
+                            이렇게 솔 바스는 자신의 기량과 크리에이티비티를 가장 잘 표현해낼 수 있는 영역으로 인도되었고,<br> 서서히 날개를 펼치기 시작한 것이다.
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="slider-content img-area">
+                    <img src="img/about/right.jpg" alt="">
+                    <div class="text-area">
+                        <p> 
+                            “평범한 것을 비범한 것으로 만들기(Making the ordinary extraordinary)”
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="article">
+                <div id="left">
+                    <div id="p_button">
+                        <a href="poster.html"><p>Poster</p></a>
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="t_button">
+                        <a href="title_sequence.html"><p>Opening</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script>
+        $(".btn").click(function() {
+          $("#menu,.page_cover,html").addClass("open");
+          window.location.hash = "#open";
+        });
+        
+        window.onhashchange = function() {
+          if (location.hash != "#open") {
+            $("#menu,.page_cover,html").removeClass("open");
+          }
+        };
+
+        $('#left').mouseover(function(){
+            $('#p_button').find('p').addClass('text-up');
+        }).mouseout(function(){
+            $('#p_button').find('p').removeClass('text-up');
+        })
+        $('#right').mouseover(function(){
+            $('#t_button').find('p').addClass('text-up');
+        }).mouseout(function(){
+            $('#t_button').find('p').removeClass('text-up');
+        })
+    </script>
+</body>
+</html>

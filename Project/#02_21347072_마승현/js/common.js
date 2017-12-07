@@ -15,8 +15,8 @@ $('.audiobox').on('click', function(){
   }else{
     audio.pause();
     $(this).addClass('stop');
-  }
-})
+  };
+});
 //video button
 var clickVideoButton = function(){
   var i = $(this).index();
@@ -101,10 +101,8 @@ var commonScroll = function(){
     $panImg.css({
       'filter':'grayscale('+ (160 - (zeroInt($panImg))*0.12) +'%)'
     })
-    console.log(160- zeroInt($panImg)*0.12);
-  }
-
-
+    // console.log(160- zeroInt($panImg)*0.12);
+  };
 };
 
 //document ready..;

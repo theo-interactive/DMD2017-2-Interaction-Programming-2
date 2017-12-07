@@ -1,0 +1,22 @@
+.player{
+    /* padding-top:130px; */
+    /* clear:both; */
+    /* height:420px; */
+    position: absolute;left:50%;top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    -ms-transform:translateX(-50%) translateY(-50%);
+    -webkit-transform:translateX(-50%) translateY(-50%);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.2)
+}
+html,body{height:100%;background-color:#141c22;}
+section{height:100%;}
+section #section_body{height:100%;width:800px;}
+section #section_body h1{position:fixed;z-index:90;font-size:50px;color:#fff;margin-top: 50px;margin-left: 50px;margin-bottom: 50px;}
+section #section_body h2{
+    font-size:20px;color:#fff;	
+    position: absolute;bottom:10%;left:50%;transform: translateX(-50%);
+}

@@ -4,17 +4,13 @@
 img{
   vertical-align: middle;
 }
-
-
-
 .audiobox{
-  width: 20px; height: 20px;
+  width: 24px; height: 24px;
   display: inline-block;
-  position: fixed; right: 15px; top: 15px;
+  position: fixed; right: 13px; top: 13px;
   z-index: 9999;
   cursor: pointer;
 }
-
 .bars{
   display: block;
   height: 100%;
@@ -22,11 +18,11 @@ img{
   overflow: hidden;
 }
 .bars span:nth-child(1) {
-  animation: heightChange 0.75s infinite;
+  animation: heightChange 1s infinite;
   background: rgba(199, 199, 199, 0.8);
 }
 .bars span:nth-child(2) {
-  animation: heightChange 1s infinite;
+  animation: heightChange 0.75s infinite;
   background: rgba(163, 163, 163, 0.8);
 }
 .bars span:nth-child(3) {
@@ -34,11 +30,11 @@ img{
   background: rgba(142, 142, 142, 0.8);
 }
 .bars span:nth-child(4) {
-  animation: heightChange 1.5s infinite;
+  animation: heightChange 1.75s infinite;
   background: rgba(120, 116, 116, 0.8);
 }
 .bars span:nth-child(5) {
-  animation: heightChange 1.75s infinite;
+  animation: heightChange 1.5s infinite;
   background: rgba(91, 91, 91, 0.8);
 }
 .bars span {
@@ -46,7 +42,6 @@ img{
   height: 100%;
   width: 20%;
   float: left;
-  background: #333;
   position: relative;
   bottom: 0;
 }
@@ -257,8 +252,17 @@ footer{
   color: #999;
   letter-spacing: 0.3em;
   font-size: 20px;
-  margin: 5%;
+  margin-top: 5%;
   text-align: center;
+}
+footer .madeby{
+  border: 1px solid rgba(0, 0, 0, 0.91);
+  font-size: 12px;
+  color: #fff;
+  margin-top: 4%;
+  background-color: #111;
+  padding: 1% 0;
+  letter-spacing: 0.25em;
 }
 #view{height: 100px;}
 #view div{
