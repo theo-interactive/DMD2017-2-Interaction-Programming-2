@@ -38,23 +38,77 @@ function toTop_or_toBottom(){
 $(window).on("scroll",function(){
   toTop_or_toBottom()
 });
-$(".ko").on({"mouseover":function(){$(this).text("Korean").css("letter-spacing","-0.03em");},"mouseleave":function(){
-  $(this).text("한국어").removeAttr("style");
-}
-});
-$(".ja").on({"mouseover":function(){$(this).text("Japanese").css("letter-spacing","-0.03em");},"mouseleave":function(){
-  $(this).text("日本語").removeAttr("style");
-}});
+// $(".ko").on({"mouseover":function(){$(this).text("Korean").css("letter-spacing","-0.03em");},"mouseleave":function(){
+//   $(this).text("한국어").removeAttr("style");
+// }
+// });
 ;}
 );
 
 
+// 버튼 클릭시 이동버튼
+// $('#scroll_bar').click(function(event){
+//                 event.preventDefault();
+//             $('html,body').animate({scrollTop: $('#about').offset().top},'slow');
+// });
+// $('.text_indent:first').click(function(event){
+//                 event.preventDefault();
+//             $('html,body').animate({scrollTop: $('#web').offset().top},'slow');
+// });
 
-$('#scroll_bar').click(function(event){
-                event.preventDefault();
-            $('html,body').animate({scrollTop: $('#about').offset().top},'slow');
-});
-$('.text_indent:first').click(function(event){
-                event.preventDefault();
-            $('html,body').animate({scrollTop: $('#web').offset().top},'slow');
-});
+
+
+// 음악 재생 멈춤
+function init() {
+  width = window.innerWidth,
+  height = window.innerHeight;
+}
+
+function onMouseDown(event) {
+  mouseDown = true;
+}
+function onTouchStart(event) {
+  const targetClass = event.target.classList[0];
+  if (targetClass === 'toggle' || targetClass === 'toggle-music') return;
+  event.preventDefault();
+  mouseDown = true;
+}
+
+function onMouseUp() {
+  mouseDown = false;
+}
+function onTouchEnd(event) {
+  const targetClass = event.target.classList[0];
+  if (targetClass === 'toggle' || targetClass === 'toggle-music') return;
+  event.preventDefault();
+  mouseDown = false;
+}
+
+const worldMusic = document.querySelector('.world-music');
+const btnMusic = document.querySelector('.toggle-music');
+let playMusic = false;
+btnMusic.addEventListener('click', toggleMusic);
+worldMusic.volume = 0.8;
+worldMusic.loop = true;
+
+function toggleMusic() {
+  playMusic = !playMusic;
+  btnMusic.classList.toggle('music-off');
+  playMusic ? worldMusic.play() : worldMusic.pause();
+}
+
+
+
+// var worldMusic = document.querySelector('.world-music');
+// var btnMusic = document.querySelector('.toggle-music');
+// let playMusic = false;
+// var audio = new Audio('./music.mp3');
+// btnMusic.addEventListener('click', function(){
+//   if(playMusic =! playMusic){
+//       audio.play();
+//   }else{
+//     audio.pause();
+//   }
+// });
+// worldMusic.volume = 0.8;
+// worldMusic.loop = true;

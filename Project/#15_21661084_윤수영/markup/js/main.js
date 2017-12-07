@@ -127,23 +127,23 @@ $header_conRight.siblings(".scroll").stop().animate({"top":"120px"},8000,"linear
         $nav_line.addClass("s_"+[4]);
       }
     }
-    if(scrollBottom>=($(document).height()-($("#contact").height()/2))){
-      if(msgPopupFlag!==true){
-        var hours=now.getHours();
-        var minutes=now.getMinutes();
-        if(hours<10){hours="0"+hours;}
-        if(minutes<10){minutes="0"+minutes;}
-        $(".msg").append('<time><span class="hours"></span>:<span class="minutes"></span></time>');
-        $("span.hours").text(hours);
-        $("span.minutes").text(minutes);$contact_popup.eq(0).addClass("on")
-        setTimeout(function(){
-            $contact_popup.eq(1).addClass("on")},1000);
-        setTimeout(function(){
-          $contact_popup.eq(2).addClass("on")},2000);
-        setTimeout(function(){
-          $contact_popup.eq(3).addClass("on")},3000);
-        msgPopupFlag=true;}
-      }
+    // if(scrollBottom>=($(document).height()-($("#contact").height()/2))){
+    //   if(msgPopupFlag!==true){
+    //     var hours=now.getHours();
+    //     var minutes=now.getMinutes();
+    //     if(hours<10){hours="0"+hours;}
+    //     if(minutes<10){minutes="0"+minutes;}
+    //     $(".msg").append('<time><span class="hours"></span>:<span class="minutes"></span></time>');
+    //     $("span.hours").text(hours);
+    //     $("span.minutes").text(minutes);$contact_popup.eq(0).addClass("on")
+    //     setTimeout(function(){
+    //         $contact_popup.eq(1).addClass("on")},1000);
+    //     setTimeout(function(){
+    //       $contact_popup.eq(2).addClass("on")},2000);
+    //     setTimeout(function(){
+    //       $contact_popup.eq(3).addClass("on")},3000);
+    //     msgPopupFlag=true;}
+    //   }
     });
     var now=new Date();
     var year=now.getYear();
@@ -172,7 +172,8 @@ $mouseIcon.on("click",function(evt){
   $body.stop().animate({scrollTop:secTop[1]},800);
 });
 $keepScrollBtn.on("click",function(evt){
-  evt.preventDefault();console.log("이벤트 시작");
+  evt.preventDefault();
+  console.log("이벤트 시작");
   var tempIdx=$keepScrollBtn.index($(this));
   switch(tempIdx){
     case 0:idx=2
@@ -180,7 +181,7 @@ $keepScrollBtn.on("click",function(evt){
     break;
   }
   $body.stop().animate({scrollTop:secTop[idx]},800);});
-  var myinfo={mobile:"",mail:"nykim@nykim.net"};
+  var myinfo={mobile:"",mail:"behonest_@naver.com"};
   $("#about .mobile").text(myinfo.mobile);
   $("#about .mail").text(myinfo.mail);
   var iconStar=$("#about .ic_3");
@@ -303,11 +304,11 @@ $designList.on("mouseenter",function(){
       });
     });
   });
-$(function(){$("section#contact>.container>.main>.talk+p").on("click",function(){
-  $(this).toggleClass("on");
-  if($(this).hasClass("on")){
-    $(this).text("☆ 귀사에 입사를 희망합니다");
-  }else{$(this).text("봐주셔서 감사합니다 :)");
-}});
-});
+// $(function(){$("section#contact>.container>.main>.talk+p").on("click",function(){
+//   $(this).toggleClass("on");
+//   if($(this).hasClass("on")){
+//     $(this).text("☆ 귀사에 입사를 희망합니다");
+//   }else{$(this).text("봐주셔서 감사합니다 :)");
+// }});
+// });
 $(function(){});

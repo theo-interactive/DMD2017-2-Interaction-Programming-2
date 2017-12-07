@@ -1,5 +1,5 @@
 @charset "utf-8";.video_container{z-index:1000;}
-.container>.title{position:relative;padding:60px 0 0 0;height:70px;}
+.container .title{position:relative;padding:60px 0 0 0;height:70px;}
 .container>.title>h2{text-align:center;color:#6cadc4;font-size:56px;letter-spacing:-0.02em;font-weight:500;}
 .container>.title>h2:before{
   display:block;
@@ -13,11 +13,34 @@
 }
 .scroll{
   display:block;
-  width:220px;height:82px;
+  width:50px; height:50px;
   margin:70px auto 60px;
-  /*background-image:url(../images/main_scroll.png);*/
+  background-image:url('../img/down2.png');
+  background-size: cover;
 }
-.scroll>a{display:block;width:100%;height:100%;}
+.scroll>a{
+  display:block;
+  width:100%; height:100%;
+  /*color:black;*/
+}
+
+
+
+/*음악 재생 */
+.toggle-music {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background: url('https://res.cloudinary.com/elliepooh/image/upload/v1491889929/music_s7aiet.svg') center center / 60% no-repeat;
+  cursor: pointer;
+}
+.music-off {
+  background: url('https://res.cloudinary.com/elliepooh/image/upload/v1491890054/music-off_nrnsni.svg') center center / 60% no-repeat;
+}
+
+
 header{overflow:hidden;width:100%;position:relative; background-color: #82a5ae;}
 header>.container{position:relative;height:780px;}
 header>.container>.cont_left{
@@ -35,12 +58,14 @@ header .container .cont_left .bar{display:block;width:40px;height:5px;margin:22p
 header .container .cont_left .header_txt_2{margin-top:260px;font-size:28px;color:#fff;letter-spacing:0.2em;font-weight:400;}
 header .container .cont_left .header_txt_2+a.mouse{
   display:block;
-  width:50px;height:70px;
-  margin-top:70px;margin-left:330px;
-  content:'☟';
+  width:50px;height:45px;
+  margin-top:70px;margin-left:320px;
+  /*content:'';*/
   color:#fff;
   /*background-color: pink;*/
+  background-image: url('../img/down.png');
   background-repeat:no-repeat;
+  background-size: 100% 100%;
   transition:transform .5s;
   -webkit-transition:transform .5s;
 }
@@ -73,8 +98,20 @@ header .alert{display:none;z-index:1000;position:fixed;bottom:50%;left:50%;margi
 header .cont_left .title_1{position:relative;}
 header .cont_left .title_1:after{content:attr(data-hover);position:absolute;width:100%;left:0;bottom:0;transform:rotateX(90deg);-webkit-transform:rotateX(90deg);-moz-transform:rotateX(90deg);-o-transform:rotateX(90deg);-ms-transform:rotateX(90deg);opacity:0;color:transparent;height:0;}
 header .cont_left .title_1.on{color:transparent;}
-header .cont_left .title_1.on:after{transform:rotateX(0deg);-webkit-transform:rotateX(0deg);-moz-transform:rotateX(0deg);-o-transform:rotateX(0deg);-ms-transform:rotateX(0deg);top:0;opacity:1;transition:all 0.7s;-webkit-transition:all 0.7s;-moz-transition:all 0.7s;color:#ffde00;text-shadow:-1px -1px 0px rgba(205,205,205,0.3), 1px 1px 0px rgba(140,140,140,0.7);height:100%;}
-header .cont_left .title_2:hover{text-shadow:1px 1px 3px #999;border-bottom:1px solid #777;}
+header .cont_left .title_1.on:after{
+  transform:rotateX(0deg);
+  -webkit-transform:rotateX(0deg);
+  -moz-transform:rotateX(0deg);
+  -o-transform:rotateX(0deg);
+  -ms-transform:rotateX(0deg);
+  top:0;opacity:1;transition:all 0.7s;
+  -webkit-transition:all 0.7s;
+  -moz-transition:all 0.7s;
+  color:#ffde00;
+  text-shadow:-1px -1px 0px rgba(205,205,205,0.3), 1px 1px 0px rgba(140,140,140,0.7);
+  height:100%;
+}
+
 section#about>.container{position:relative;height:660px;}
 section#about>.container>.title>h2{margin-left:70px;}
 section#about>.container>.title>h2:before{
@@ -97,7 +134,10 @@ section#about .about_cont_center>p{margin-top:410px;font-size:15px;text-align:ce
 section#about .about_cont_right{width:30%;margin-top:135px;}
 section#about .about_cont_right>p{font-size:17px;line-height:24px;letter-spacing:-0.02em;}
 section#about .about_cont_right>button{position:absolute;bottom:260px;right:155px;width:230px;padding:10px 10px 8px 10px;font-size:18px;background:none;border:1px solid #f5989d;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s;outline:0;box-shadow:3px 3px 0px #ffc8cb;}
-section#about .about_cont_right>button:before{display:block;position:absolute;top:-28px;left:100%;width:31px;height:30px;
+section#about .about_cont_right>button:before{
+  display:block;position:absolute;
+  top:-28px;left:100%;
+  width:31px;height:30px;
   /*background-image:url(../images/sub_web_header_icon.png);*/
   content:'';transform:rotate(80deg);
 }
