@@ -6,11 +6,12 @@ $(window).resize(function(){
     BoxRePosition();
 })
 
-$(window).load(function(){
-    BoxRePosition();
-})
+// $(window).load(function(){
+//     BoxRePosition();
+// })
 
 var body = $('body'),
+    sceneChange = $('#sceneChange'),
     homeLogo = $('h2'),
     menuList = $('nav > ul > li > a'),
     menuList2 = $('nav > ul > li '),
@@ -32,6 +33,7 @@ var body = $('body'),
     section4 = $('div#section_wrapper_4'),
     albumPhoto =$('#album_Photo > li'),
     musicList = $('.sound-list');
+    musicSource =$('#source');
 
     
 var btnindex = aboutBtn.index();
@@ -58,24 +60,32 @@ menuList2.on("mousedown", function(){
 // 메뉴 클릭 시, 애니메이션 및 css 세부 조정
 var myindex =  $(this).index();
     if(myindex == 0){
-        body.stop(true).animate({'margin-left': "-100%"},700);
+        body.stop(true).animate({'margin-left': "-100%"},{duration:700, easing: 'easeInOutCubic'});
         aboutBtnWrap.css({'display':'none'});
         beforeBtn.css({'display':'none'});
+        sceneChange.animate({'display':'block','margin-left':'100%'},{duration:100, easing: 'easeInOutSine'}).fadeIn(400).fadeOut('slow');
+
     }else if(myindex == 1){
-        body.stop(true).animate({'margin-left': "-200%"},700);
+        body.stop(true).animate({'margin-left': "-200%"},{duration:700, easing: 'easeInOutCubic'});
         aboutBtnWrap.css({'display':'block'});
         beforeBtn.css({'display':'none'});
         aboutPage.stop(true).animate({'top':"0%"},1);
         aboutShow.removeClass('btn_selected');
         aboutShow_1.addClass('btn_selected');
+     
     }else if(myindex == 2){
-        body.stop(true).animate({'margin-left': "-300%"},500);
+        body.stop(true).animate({'margin-left': "-300%"},{duration:500, easing: 'easeInOutCubic'});
         aboutBtnWrap.css({'display':'none'});
         beforeBtn.css({'display':'none'});
         section4.css({'background-image':'none'});
         albumPhoto.css({'background-image':'url(./images/album_00.png)'});
+
         $('.clear').remove();
-        sound.pause();
+       
+        //if(musicList.hasClass('list-selected')){
+            $('.sound-list').removeClass('list-selected');
+        //};  
+     
     }
     
 });
@@ -112,31 +122,41 @@ $(menuList).on('mousedown mouseout',function(e){
     }
 });  
 
+
+var cuMyIndex = 0;
+
 // best 메뉴 , 포스터 이미지 변화 및 클릭 시, about페이지로 이동
 // 질문 : about 페이지로 이동 시, about-btn이 index에 맞게 select상태여야함.
 $(mvList).on('mouseover mousedown',function(e){
+    cuMyIndex =  $(this).index();
+
     if(e.type == 'mouseover'){
         var srcValue = 'images/' + $(this).attr('id') + '.jpg';
         $(mvPoster).attr('src', srcValue);
         $(mvPoster).stop().fadeIn('fast');
     }else if(e.type = 'mousedown'){
         beforeBtn.css({'display':'block'});
-        var myindex =  $(this).index();
-        var pageUp = myindex * -100;
+        var pageUp = cuMyIndex * -100;
         var btnCounter;
-    
-        btnCounter = aboutBtn.index(myindex);
+       
+        // 무비 리스트에 일치하는 버튼 리스트가 select....
+
+        // btnCounter = aboutBtn.index();
+
     /******************************************* Q */
-        console.log(myindex);
-        console.log("카운터"+btnCounter);
-    
-        if(myindex > 0){
-            body.stop(true).animate({'margin-left': "-200%"},700);
+
+        if(cuMyIndex  > 0){
+            aboutShow.removeClass('btn_selected');
+            aboutShow.eq(cuMyIndex).addClass('btn_selected');
+            body.stop(true).animate({'margin-left': "-200%"},{duration:700, easing: 'easeInOutSine'});
             menuBest.removeClass('menu_selected');
             menuAbout.addClass('menu_selected');
             aboutPage.stop(true).animate({'top': pageUp+ "%"},1);
             aboutBtnWrap.css({'display':'block'});
-        }else if(myindex == 0){
+
+        }else if(cuMyIndex  == 0){
+            aboutShow.removeClass('btn_selected');
+            aboutShow.eq(cuMyIndex).addClass('btn_selected');
             body.stop(true).animate({'margin-left': "-200%"},700);
             menuBest.removeClass('menu_selected');
             menuAbout.addClass('menu_selected');
@@ -171,24 +191,15 @@ aboutBtn.on("mousedown", function(){
     console.log(myindex +"버튼");
     if(myindex > 0){
         var pageUp = myindex * -100;
-        aboutPage.stop(true).animate({'top': pageUp+ "%"},500);
+        aboutPage.stop(true).animate({'top': pageUp+ "%"},{duration:500, easing: 'easeInOutCirc'});
     
     }else if(myindex == 0){
-        aboutPage.stop(true).animate({'top':"0%"},500);
+        aboutPage.stop(true).animate({'top':"0%"},{duration:500, easing: 'easeInOutCirc'});
     }
 
 });
 
 
-// function aboutSlide(){
-//     for(var i=0; i < 8; i++){
-        
-
-//     }
-//     aboutBtn.each(function (index, item) {
-//         var myindex =  $(this).index();
-//         console.log(myindex);
-//     });
 
 //about버튼 클릭 시, index에 맞는 select이 됨
 $(aboutShow).on('mousedown',function(){
@@ -198,7 +209,7 @@ $(aboutShow).on('mousedown',function(){
         $(this).addClass('btn_selected');    
 } 
 });
-// }#ff6804;
+
 
     $("#es_trailer").on('mousedown',function(){
         $("#YT").css({'display':'block'});
