@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+    <title>21661111_dain_work</title>
+    <script>
+    $(document).ready(function(){
+        console.log($('#in_text'));
+        console.log("hello");
+       
+        setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    <ul>
+                        <li>about</li>
+                        <li>work</li>
+                        <li>contact</li>
+                    </ul>
+                    세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요
+                </div>
+                </div>`); }, 2000);
+        setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">장난치시지 말고 무조건 하나를 꼭 입력해주세요</div>
+                </div>`); }, 4000);
+        
+
+        const sendMessage = (text) => {
+        if ($('#conversation .chat:last').hasClass('chat-user')) {
+            $('#conversation .chat:last .bubble:last').addClass('borderBottom');
+            $('#conversation .chat:last').append(`<div class="bubble borderTop">${text}</div>`);
+        } else {
+            $('#conversation').append(
+            `<div class="chat chat-user">
+                <div class="bubble">${text}</div>
+            </div>`
+            );
+        }
+        };
+        const receiveMessage = (text) => {
+        if (text) {
+            if ($('#conversation .chat:last').hasClass('chat-bot')) {
+            $('#conversation .chat:last .bubble:last').addClass('borderBottom');
+            $('#conversation .chat:last').append(`<div class="bubble borderTop">${text}</div>`);
+            } else {
+            $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">${text}</div>
+                </div>`
+            );
+            }
+        }
+        };
+
+        $(() => {
+        $('#btnSend').click(
+            () => {
+                parseInput();
+                beforeSend();
+                
+            }
+            
+        );
+        
+        //enter을 치면 메세지를 보낼 수 있는 코드
+        //13번은 엔터인듯하다..
+        //13번을 누르면=send
+        $('#in_txt').keypress(
+            (event) => {
+            console.log(event.which);
+            if (event.which === 13) {
+                parseInput();
+                beforeSend();
+                
+            }
+            }
+        );
+        });
+
+        function beforeSend(){
+            let text = $('#in_txt').val();
+
+                $('#in_txt').val('');
+                //다음 질문을 나오게 하려고
+                //showResponse();
+
+                if (text !== '') {
+                //만약 텍스트가 비어있지 않다면..?
+                //텍스트에 뭐가 있어야..
+                sendMessage(text);
+                $('#conversation').scrollTop($('#conversation').attr("scrollHeight"));
+                }
+        }
+
+        function parseInput() {
+            console.log($('#in_text'));
+            var text = $('#in_txt').val();
+            console.log(text+'hi');
+            var regexp = /['안'|'녕']/;
+            var unpleasant = /['싫'|'없']/;
+            var name = "름";
+            var menu = /['메'|'뉴'|'목'|'록']/;
+            if(text=="응그래"){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    <ul>
+                        <li>about</li>
+                        <li>work</li>
+                        <li>contact</li>
+                    </ul>
+                    세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요
+                </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(regexp)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                <div class="bubble">
+                    네 안녕하세요. 반갑습니다.
+                </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(name)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        응 안녕. 나는 봇이야
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(unpleasant)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        미안하지만 그건 제가 원하는 답이 아니에요.
+                    </div>
+                    <div class="bubble">
+                        <ul>
+                            <li>about</li>
+                            <li>work</li>
+                            <li>contact</li>
+                        </ul>
+                        세가지의 메뉴중 먼저 보고싶으신 메뉴를 입력해 주세요.
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text.match(menu)){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        그럼요 얼마든지요. 선택 가능하신 메뉴는 세가지 입니다.
+                    </div>
+                    <div class="bubble">
+                        <ul>
+                            <li>about</li>
+                            <li>work</li>
+                            <li>contact</li>
+                        </ul>
+                        세가지의 메뉴 중 보고싶으신 메뉴를 입력해 주세요.
+                    </div>
+                </div>`); }, 1000);
+            }
+            else if(text == "about"){
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        감사합니다. about은 type-r전다인에 대한 소개페이지 입니다.
+                    </div>
+                    <div class="bubble">
+                        Type-r는
+                        <ul>
+                            <li>type |taip|</li>
+                            <li>1.①형（型） , 타입, 정형, 양식, 원형, 유형; （널리） 종류, 타입(kind); 《구어》…타입의 사람, (어딘가 남다른) 사람</li>
+                            <li>-er</li>
+                            <li>1.[명사에서] <‘무엇을 하는 사람이나 도구, 기계 등’을 나타냄></li>
+                            <li>type + er의 합성어로 저 전다인을 나타냅니다.</li>
+                        </ul>
+                    </div>
+                </div>`); }, 1000);
+            }
+            else{
+                setTimeout(function(){ $('#conversation').append(
+                `<div class="chat chat-bot">
+                    <div class="bubble">
+                        저는 봇입니다. 아직 다양한 말을 배우거나, 할 수 없습니다.
+                    </div>
+                </div>`); }, 1000);
+            }
+            //delay 넣기
+        }
+    });
+
+    </script>
+<style>
+:root {
+  --color-accent: #2196f3;
+}
+body{
+    height: 100%;
+}
+section.page1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+  position: fixed;
+  width: 430px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* Wrapper for chat contents */
+main .conversation-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  padding: 0 10px 0 15px;
+  overflow-y: scroll;
+}
+
+/* Scroll Design */
+main .conversation-wrapper::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+main .conversation-wrapper:hover::-webkit-scrollbar-thumb
+{
+	background-color: var(--color-accent);
+	border-radius: 10px;
+}
+
+/* Wrapper for all bubbles */
+main .conversation-content {
+  align-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Chat Bubbles */
+.bubble {
+  border-color: #f3f3f3;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 2px;
+  max-width: 75%;
+  overflow-wrap: break-word;
+  padding: 12px 16px;
+  text-align: start;
+  vertical-align: middle;
+  margin-bottom: .75rem;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.chat-bot {
+  align-items: flex-start;
+}
+
+.chat-user {
+  align-items: flex-end;
+}
+
+.chat-bot .bubble {
+  background-color: #f3f3f3;
+  border-radius: 1rem 1rem 1rem 0;
+}
+
+.chat-user .bubble {
+  background-color: #f3f3f3;
+  border-radius: 1rem 1rem 0 1rem;
+}
+
+/* Input Field */
+main footer {
+  align-items: stretch;
+  display: flex;
+  padding: 0 12px;
+  margin: 0 3px 12px 3px ;
+}
+
+main footer textarea {
+  background-color: transparent;
+  border-color: #e0e0e0;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-width: 3px;
+  flex-grow: 1;
+  margin-right: 10px;
+  color:white;
+}
+
+main footer .btn {
+  color: #fafafa;
+  border-color: #e0e0e0;
+  border-radius: 5px;
+  border-style: solid;
+  width:40px;
+  margin-left:5px;
+  border-width: 2px;
+}
+
+.borderBottom {
+  border-bottom-right-radius: .4em;
+}
+
+.borderTop {
+  border-top-right-radius: .4em;
+}
+#in_txt{
+    width:100%;
+    height: 30px;
+    border-color: #e0e0e0;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+}
+</style>
+
+</head>
+<body>
+    <main>
+        <div class="conversation-wrapper">
+            <div class="conversation-content" id="conversation">
+            <div class="chat chat-user">
+                <!--
+                <div class="bubble">
+                <span>Hi.</span>
+                </div>
+                -->
+            </div>
+            <div class="chat chat-bot">
+                <div class="bubble">안녕하세요 Type-r 전다인의 포트폴리오에 오신걸 환영합니다</div>
+            </div>
+            </div>
+        </div>
+
+        
+        <footer>
+            <input type="text" id="in_txt" placeholder="Type a message . . ." aria-label="Your message"></textarea>
+            <button type="button" id="btnSend" class="btn btn-lg fa fa-lg fa-paper-plane"></button>
+        </footer>
+    </main>
+</body>
+</html>
