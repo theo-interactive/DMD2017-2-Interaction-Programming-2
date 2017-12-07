@@ -1,0 +1,18 @@
+@charset "utf-8";#design .design_modal_bg{display:none;z-index:200;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(225,225,225,0.8);}
+#design .design_modal{display:none;position:absolute;top:30px;left:50%;width:960px;height:92%;overflow-y:auto;overflow-x:hidden;margin-left:-480px;background-color:#fff;box-shadow:0px 2px 5px #666;}
+#design #lnb{z-index:100;position:fixed;top:0;width:960px;height:70px;margin:30px auto 0;border-bottom:1px solid #eaeaea;background-color:#fff;}
+#design #lnb>li{position:relative;float:left;width:140px;height:70px;line-height:60px;margin-left:10px;}
+#design #lnb>li:first-child{margin-left:40px;}
+#design #lnb>li:hover:after{display:block;position:absolute;left:0px;top:100%;content:'';width:140px;height:1px;background-color:#8d6969;}
+#design #lnb>li:hover>a{color:#8d6969;}
+#design #lnb>li.on>a{color:#8d6969;font-weight:600;}
+#design #lnb>li> a{display:inline-block;margin:13px 5px;letter-spacing:-0.02em;font-weight:400;font-size:20px;color:#aaa;}
+#design .design_modal>.design_modal_title{position:relative;margin-top:105px;padding-left:40px;}
+#design .design_modal>.design_modal_title>.num{font-size:80px;color:#e8cacc;}
+#design .design_modal>.design_modal_title>h3{font-size:90px;color:#8d6969;margin-top:-30px;line-height:135%;font-weight:800;}
+#design .design_modal>.design_modal_title>.desc{margin:30px 0 50px;font-size:16px;line-height:24px;}
+#design .design_modal>.design_modal_title>.desc>.desc_last{display:block;margin-top:6px;opacity:0.8;font-size:14px;letter-spacing:-0.03em;}
+#design .design_modal_main{width:960px;margin:0 auto;}
+#design .design_modal_main>img{display:block;width:945px;margin-bottom:60px;cursor:pointer;}
+#design .design_modal_bg>a.clse{display:block;width:40px;height:40px;position:absolute;top:40px;right:50%;margin-right:-560px;background-image:url(../images/all_btn.png);background-repeat:no-repeat;background-position:-85px -1px;}
+#design .design_modal_bg>a.clse:hover{opacity:0.5;transform:translateZ(0);-webkit-transform:translateZ(0);}

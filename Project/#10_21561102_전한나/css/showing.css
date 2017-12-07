@@ -1,0 +1,10 @@
+html, body {height:100%;}
+
+.nav {position:fixed; text-align:left; padding-left:100px; padding-top:50px; z-index:9999;}
+.nav ul li a {color:#111; line-height:3; font-size:12px; font-weight:300;}
+.nav ul li.work a {color:#a1a1a1;}
+.nav ul li a:hover {text-decoration:underline #a1a1a1;}
+.nav ul li a:active {background-color:#a1a1a1;}
+
+section {height:100%; margin:0 auto; display:table;}
+.showing {padding-top:50px;}

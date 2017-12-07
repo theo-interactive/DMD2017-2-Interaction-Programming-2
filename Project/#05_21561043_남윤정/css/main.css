@@ -91,6 +91,7 @@ section.poster2 > div {
 section.poster2 > div > div{
     position:absolute;
     opacity:0.8;
+    cursor:pointer;
 }
 section.poster2 > div > div.donut{
     width:40px;height:40px;
@@ -189,6 +190,7 @@ section.poster3 > div > div#keyboard_white > div{
     width:13px;height:70px;
     background-color:white;
     margin-top:120px;
+    cursor:pointer;
 }
 section.poster3 > div > div#keyboard_white > div#c1{
     left:2.5px;

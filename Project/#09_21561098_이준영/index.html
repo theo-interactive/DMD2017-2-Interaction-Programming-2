@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INFOGRAPHIC</title>
+<link href="css/style.css" rel="stylesheet">
+<style></style>
+</head>
+<body>
+<audio controls="controls" autoplay>
+    <source src="music.mp3" type="audio/mp3" />
+</audio>
+<div class="wrap">
+    <div id="overlay"></div>
+    <div id="blur-container">  
+        <div class="blur">
+            <div class="blur-circle1"></div>
+            <div class="blur-circle2"></div>
+            <div class="blur-circle3"></div>
+            <div class="blur-circle4"></div>
+        </div>
+    </div>
+    <div class="clock transform">
+        <div class="inside">
+            <div class="clock-content">
+                <p class='days'><span id="sun">SUN</span>&nbsp;&nbsp;<span id="mon">MON</span>&nbsp;&nbsp;<span id=tus"">TUS</span>&nbsp;&nbsp;<span id="wed">WED</span>&nbsp;&nbsp;<span id="thu">THU</span>&nbsp;&nbsp;<span id="fri">FRI</span>&nbsp;&nbsp;<span id="sat">SAT</span></p>
+                <br>
+                <p class='clock-text'><span id='hours'></span> : <span id='min'></span> : <span id='sec'></span>&nbsp;&nbsp;<span id='time'></span></p>
+                <p id=date>
+                    <span id='day'></span>
+                    <span id='month'></span>
+                    <span id='year'></span>
+                </p>
+            </div>
+        </div>
+    </div>
+        <div class="title-bg">
+        </div>
+		<div class="title-box" id="title-box">
+			<div id="title-top-control">
+				<div id="control-left"></div>
+				<div id="control-center"></div>
+				<div id="control-right"></div>
+			</div>
+			<div id="title-top-progress"><div></div></div>
+			<div id="title-sight-left">
+				<div class="sight-point"></div>
+				<div class="sight-point"></div>
+				<div class="sight-corner"></div>
+			</div>
+			<div id="title-sight-right">
+				<div class="sight-point"></div>
+				<div class="sight-point"></div>
+				<div class="sight-corner"></div>
+			</div>
+            <h1>ACCESS TO THE NETWORK</h1>
+			<h2>PLEASE WAIT...</h2>
+			<div id="title-bottom-control" >
+				<svg width="450" height="25">
+					<line x1="0" y1="0" x2="25" y2="25" fill="none" stroke-width="1" stroke="white"></line>
+					<line x1="25" y1="25" x2="425" y2="25" fill="none" stroke-width="1" stroke="white"></line>
+					<line x1="425" y1="25" x2="450" y2="0" fill="none" stroke-width="1" stroke="white"></line>
+				</svg>
+				<div class="svg-line-point"></div>
+				<div class="svg-line-point"></div>
+				<div class="svg-line-point"></div>
+			</div>
+			<div id="title-bottom-progress"><div></div></div>
+        </div>
+    <div class="transform-center transform">
+    <div class="circle-center">
+            <svg>
+                <circle cx="400" cy="400" r="35" stroke="rgba(255,255,255,0.5)" fill="none"></circle>
+                <circle class="animation"  cx="400" cy="400" r="50" fill="none" stroke-width="20" stroke="rgba(255,51,57,0.7)" stroke-dasharray="2 4"></circle>
+                <circle class="animation" cx="400" cy="400" r="50" fill="none" stroke-width="20" stroke="#0c0c0c" stroke-dasharray="60 100"></circle>
+                <circle cx="400" cy="400" r="65" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.8)" stroke-dasharray="1 4"></circle>
+                <circle class="animation"  cx="400" cy="400" r="100" fill="none" stroke-width="10" stroke="rgba(255,255,255,0.4)" stroke-dasharray="60 10" stroke-dashoffset="0"></circle>
+                <circle cx="400" cy="400" r="100" fill="none" stroke-width="10" stroke="rgba(255,51,57,0.8)" stroke-dasharray="60 1000" stroke-dashoffset="0"></circle>
+                <circle cx="400" cy="400" r="110" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)" stroke-dasharray="8 4" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="130" fill="none" stroke-width="24" stroke="rgba(255,255,255,0.5)" stroke-dasharray="20 13" stroke-dashoffset="0"></circle>
+				<circle cx="400" cy="400" r="130" fill="none" stroke-width="26" stroke="#0c0c0c" stroke-dasharray="680 0"></circle>
+                <circle cx="400" cy="400" r="140" stroke="rgba(255,255,255,0.5)" fill="none" stroke-dasharray="1200 3000" stroke-dashoffset="1200"></circle>
+                <circle cx="400" cy="400" r="150" fill="none" stroke-width="1" stroke="rgba(255,51,57,0.7)" stroke-dasharray="2 8"></circle>
+                <circle cx="400" cy="400" r="180" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)" stroke-dasharray="1200 3000" stroke-dashoffset="1200"></circle>
+                <circle cx="400" cy="400" r="190" fill="none" stroke-width="2" stroke="rgba(255,51,57,0.7)" ></circle>
+                <circle cx="400" cy="400" r="220" fill="none" stroke-width="40" stroke="rgba(255,255,255,0.1)" stroke-dasharray="600 80" stroke-dashoffset="965"></circle>
+                <circle class="animation"  cx="400" cy="400" r="300" fill="none" stroke-width="10" stroke="rgba(255,255,255,0.3)" stroke-dasharray="80 40" stroke-dashoffset="0"></circle>
+            </svg>
+        </div>
+        <div class="hud-line left">
+            <svg>
+                <line x1="0" y1="10" x2="220" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="220 220" stroke-dashoffset="220"></line>
+                <line x1="0" y1="10" x2="20" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="3"></line>
+                <line x1="240" y1="2" x2="250" y2="2" stroke="rgba(255,255,255,0.5)" stroke-width="2"></line>
+                <line x1="310" y1="10" x2="330" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="3"></line>
+                <circle cx="220" cy="10" r="3" fill="white"></circle>
+                <polyline points="180,10 190,2 260,2 270,10 350,10" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)" stroke-dasharray="170 170" stroke-dashoffset="170"></polyline>
+            </svg>
+        </div>
+        <div class="hud-line-post left">
+            <h3>POST VALUE</h3>
+            <svg>
+                <line x1="0" y1="0" x2="140" y2="0" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="140 140" stroke-dashoffset="-140"></line>
+                <line x1="0" y1="15" x2="140" y2="15" stroke="rgba(255,255,255,0.5)" stroke-width="10" stroke-dasharray="140 140" stroke-dashoffset="-140"></line>
+                <line x1="140" y1="15" x2="100" y2="15" stroke="rgba(255,255,255,0.5)" stroke-width="5"></line>
+                <polyline points="0,10 140,10 140,70 10,70 0,60 0,10" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)"></polyline>
+            </svg>
+        </div>
+        <div class="post-box left">
+            <svg>
+                <line x1="0" y1="0" x2="400" y2="0" stroke="rgba(255,255,255,0.8)" stroke-width="1" stroke-dasharray="400 400" stroke-dashoffset="400"></line>
+            </svg>
+            <div class="post first">
+                <div class="bar-bg"></div>
+            </div>
+            <div class="post second">
+                <div class="bar-bg"></div>
+            </div>
+            <div class="post third">
+                <div class="bar-bg"></div>
+            </div>
+            <div class="post fourth">
+                <div class="bar-bg"></div>
+            </div>
+        </div>
+        <div class="hud-line right">
+                <svg>
+                    <line x1="0" y1="10" x2="220" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="220 220" stroke-dashoffset="220"></line>
+                    <line x1="0" y1="10" x2="20" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="4"></line>
+                    <line x1="240" y1="2" x2="250" y2="2" stroke="rgba(255,255,255,0.5)" stroke-width="2"></line>
+                    <line x1="310" y1="10" x2="330" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="4"></line>
+                    <circle cx="220" cy="10" r="3" fill="white"></circle>
+                    <polyline points="180,10 190,2 260,2 270,10 350,10" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)" stroke-dasharray="170 170" stroke-dashoffset="170"></polyline>
+                </svg>
+        </div>
+        <div class="hud-line-post right">
+            <h3>POST VALUE</h3>
+            <svg>
+                <line x1="0" y1="0" x2="140" y2="0" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="140 140" stroke-dashoffset="140"></line>
+                <line x1="0" y1="15" x2="140" y2="15" stroke="rgba(255,255,255,0.5)" stroke-width="10" stroke-dasharray="140 140" stroke-dashoffset="140"></line>
+                <line x1="0" y1="15" x2="40" y2="15" stroke="rgba(255,255,255,0.5)" stroke-width="5"></line>
+                <polyline points="0,10 140,10 140,60 130,70 0,70 0,10" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.4)"></polyline>
+            </svg>
+        </div>
+        <div class="post-box right">
+            <svg>
+                <line x1="400" y1="0" x2="0" y2="0" stroke="rgba(255,255,255,0.8)" stroke-width="1" stroke-dasharray="400 400" stroke-dashoffset="400"></line>
+            </svg>
+                <div class="post first">
+                    <div class="bar-bg"></div>
+                </div>
+                <div class="post second">
+                    <div class="bar-bg"></div>
+                </div>
+                <div class="post third">
+                    <div class="bar-bg"></div>
+                </div>
+                <div class="post fourth">
+                    <div class="bar-bg"></div>
+                </div>
+            </div>
+    </div>
+            <div class="left-side transform">
+                <div class="myinfo">
+                    <div class="level">
+                        <p>LV<span>25</span></p>
+                    </div>
+                    <div class="info">
+                       <p class="name">LEE JUN YOUNG</p>
+                       <p class="job">UNIVERSITY STUDENT</p>
+                       <div class="experience"><span></span></div>
+                       <dl>
+                           <dt>CHARACTOR CREATATION TIME</dt>
+                           <dd>1993.11.25 AM 09:30</dd>
+                       </dl>
+                       <div class="delete">charactor delete</div>
+                    </div>
+                    <div class="skills">
+                        <svg>
+                            <circle class="animation"cx="230" cy="89" r="40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="5" stroke-dasharray="50 30"></circle>
+                            <circle class="animation"cx="230" cy="89" r="50" fill="rgba(255,51,57,0.1)" stroke="rgba(255,255,255,0.3)"></circle>
+                            <circle cx="230" cy="89" r="60" fill="none" stroke="rgba(255,51,57,0.5)" stroke-width="5"></circle>
+                            <circle class="animation" cx="230" cy="89" r="60" fill="none" stroke="#0c0c0c" stroke-width="5" stroke-dasharray="600 600" id="skillper"></circle>
+                            <circle cx="230" cy="89" r="70" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></circle>
+                            <circle class="animation" cx="230" cy="89" r="75" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="5"  stroke-dasharray="30 8"></circle>
+                            <polyline points="0,0 20,20 130,20" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+                            <polyline points="456,0 436,20 326,20" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+                            <polyline points="0,180 20,160 130,160" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+                            <polyline points="456,180 436,160 326,160" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+                            <polyline points="456,180 436,160 326,160" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)"></polyline>
+                            <line x1="20" y1="20" x2="130" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-dasharray="3 30"></line>
+                            <line x1="436" y1="20" x2="326" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-dasharray="3 30"></line>
+                            <line x1="20" y1="160" x2="130" y2="160" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-dasharray="3 30"></line>
+                            <line x1="436" y1="160" x2="326" y2="160" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-dasharray="3 30"></line>
+                            <line x1="20" y1="10" x2="130" y2="10" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-dasharray="3 3"></line>
+                            <line x1="436" y1="10" x2="326" y2="10" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-dasharray="3 3"></line>
+                            <line x1="20" y1="170" x2="130" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-dasharray="3 3"></line>
+                            <line x1="436" y1="170" x2="326" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-dasharray="3 3"></line>
+                        </svg>
+                        <div class="skill left" rel="60">HTML CSS</div>
+                        <div class="skill right" rel="35">JS JQUERY</div>
+                        <div id="skilltab"></div>
+                    </div>
+                </div>
+                <div class="pulse">
+                    <svg class="delay10">
+                    <line x1="0" y1="127" x2="456" y2="127" stroke="rgba(255,255,255,0.15)" stroke-width="216"  stroke-dasharray="1 21"></line>
+                    <line x1="230" y1="20" x2="230" y2="216" stroke="rgba(255,255,255,0.15)" stroke-width="460"  stroke-dasharray="1 21"></line>
+                    <path  stroke="#0c0c0c" fill="none"stroke-width="3"stroke-linejoin="round"
+                    d="M0,90 L500,90 "  /> 
+              <path  id="flat"style="stroke:rgba(255,51,57,1); fill:none;stroke-width:1;stroke-linejoin:round" d="M0,90 L500,90"  /> 
+                    <path stroke="rgba(255,51,57,0.1)" fill="none" stroke-width="1" stroke-linejoin="round"
+                        d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210" />                       
+                    <path  id="pulsar"stroke="rgba(255,51,57,1)" fill="none" stroke-width="1"stroke-linejoin="round"
+                        d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210" /> 
+                    </svg>
+                </div>
+            </div>
+            <div class="right-side transform">
+                <div class="map">
+                    <div class="position">
+                        Korea,Gyeonggi-do                        
+                    </div>
+                </div>
+                <div class="quests">
+                    <div class="quest">
+                        <div class="rank"></div>
+                        <p>INTERACTION<br/> WEB SITE</p>
+                        <div class="progress"><span></span></div>
+                        <div class="complete">complete</div>
+                    </div>
+                    <div class="quest">
+                        <div class="rank"></div>
+                        <p>portfolio<br/> WEB SITE</p>
+                        <div class="progress"><span></span></div>
+                        <div class="complete">complete</div>
+                    </div>
+                    <div class="quest">
+                        <div class="rank"></div>
+                        <p>now application<br/> Modified</p>
+                        <div class="progress"><span></span></div>
+                        <div class="complete">complete</div>
+                    </div>
+                </div>
+            </div>
+        <div class="status-box transform-bottom transform">
+            <svg>
+                <polyline points="0,20 400,20" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.2)"></polyline>
+                <polyline points="1000,20 600,20" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.2)"></polyline>
+                <polyline points="200,20 200,0 420,0" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.2)" stroke-dasharray="240 240" stroke-dashoffset="240"></polyline>
+                <polyline points="800,20 800,0 580,0" fill="none" stroke-width="2" stroke="rgba(255,255,255,0.2)" stroke-dasharray="240 240" stroke-dashoffset="240"></polyline>
+                <polyline points="200,20 200,0 220,0" fill="none" stroke-width="4" stroke="rgba(255,255,255,0.2)"></polyline>
+                <polyline points="800,20 800,0 780,0" fill="none" stroke-width="4" stroke="rgba(255,255,255,0.2)"></polyline>
+                <polyline points="210,100 250,100 285,135 715,135 750,100 790,100" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.2)"></polyline>
+            </svg>
+            <div class="battery">
+                <svg>
+                    <line x1="10" y1="23" x2="100" y2="23" stroke="rgba(255,255,255,0.5)" stroke-width="30" stroke-dasharray="5 5"></line>
+                    <line x1="100" y1="23" x2="105" y2="23" stroke="rgba(255,255,255,0.5)" stroke-width="30"></line>
+                    <line x1="10" y1="23" x2="105" y2="23" stroke="#0c0c0c" stroke-width="32" stroke-dasharray="100 100" stroke-dashoffset="0"></line>
+                </svg>
+            </div>
+            <h2>STATUS</h2>
+            <div class="temp right">
+                <h4>HIGHTEST</h4>
+                <p id="high"></p>
+                <h3>TEMP</h3>
+            </div>
+            <div class="temp left">
+                <h4>LOWEST</h4>
+                <p id="row"></p>
+                <h3>TEMP</h3>                
+            </div>
+            <div class="physical left">
+                <p>173cm</p>
+            </div>
+            <div class="physical right">
+                <p>??kg</p>
+            </div>
+        </div>
+        <div class="connect transform">
+            <svg>
+                <polyline points="20,0 20,80 120,80" fill="none" stroke-width="1" stroke="rgba(255,255,255,0.5)" stroke-dasharray="180 180" stroke-dashoffset="-180"></polyline>
+                <line x1="335" y1="80" x2="460" y2="80"  stroke-width="1" stroke="rgba(255,255,255,0.5)" stroke-dasharray="125" stroke-dashoffset="-125"></line>
+            </svg>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>    
+    </div>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

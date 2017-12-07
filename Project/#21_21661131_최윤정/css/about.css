@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+html{color: white;font-family: 'Open Sans', sans-serif;}
+html,body{height: 100%;}
+
+section{height:100%;width:100%;}
+section #section_body{overflow:hidden;position:relative;width:100%;height:100%}
+section #section_body h1{position:fixed;z-index:90;font-size: 50px;margin-top: 50px;margin-left: 50px;margin-bottom: 50px;}
+section #section_body .nav{position:absolute;top:0;right:0;left:0;bottom:0}
+section #section_body .nav button{overflow:hidden;position:absolute;top:50%;width:52px;height:52px;margin-top:-26px;background-color:transparent;border:0;text-indent:-9999px; outline:none;cursor:pointer;}
+section #section_body .nav button::before{display:block;position:absolute;top:0;width:100%;height:100%;text-indent:0;color:#fff;font-size:60px;line-height:60px;cursor:pointer;}
+section #section_body .nav{z-index:98}
+#section_body .nav button.arrow{opacity:1.0;-webkit-transition:opacity 120ms ease-in-out;-ms-transition:opacity 120ms ease-in-out;transition:opacity 120ms ease-in-out;}
+#section_body .nav button.arrow.disabled{opacity:0.0}
+#section_body .nav button.arrow.left-bt{left:18px}
+#section_body .nav button.arrow.right-bt{right:18px}
+#section_body .nav button.arrow.left-bt::before{content:'<';margin-left:-2px}
+#section_body .nav button.arrow.right-bt::before{content:'>';margin-left:2px}
+.slider-container{height:100%;width:100%;}
+.left-bt{top:50%;left:0;}
+.right-bt{top:50%;right:0}
+.slider-wrap{overflow:hidden;position:relative;width:100%;height:100%}
+.slider-container{position:absolute;width:100%;height:100%}
+.slider-content{position:relative;float:left;width:100%;height:100%}
+.slider-container::after{content:'';display:block;position:relative;clear:both;width:0;height:0}
+.slider-content{overflow:hidden}
+.slider-content .img-area{position:relative;width:100%;height:100%}
+.slider-content .img-area img{width:100%}
+.text-area{font-family:'Noto Sans KR',"Nanum Gothic", sans-serif;position:absolute;z-index:90;left:50px;top:160px;font-size:16px;font-weight:300;line-height:46px;}
+b{font-weight:500;}
+.red{color:#141c22;font-weight:700;}
+/* .slider-content .img-area .text-area h2{margin-top: 120px;margin-left: 50px;font-weight:500;} */
+/* .slider-content .img-area .text-area p{margin-left: 50px;font-weight: 100;word-break: keep-all;width: 500px;} */
+
+/******************article*******************/
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+/* .article{height: 100px;position: relative;} */
+.article{
+    width:100%;z-index:98;
+    position: absolute;bottom:0;
+    display:flex;display:-webkit-flex;display:-ms-flexbox;flex-wrap:wrap;justify-content:space-between;
+    height:20%;font-size:40px;
+}
+.article #left{background-color:#22303a;width:50%;height:100%;}
+.article #right{background-color:#141c22; width: 50%; height: 100%}
+
+.article #left #p_button{height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.article #left #p_button a{}
+.article #left #p_button a:link{text-decoration: none;color: white;}
+.article #left #p_button a:visited{text-decoration: none;color: white;}
+.article #left #p_button a:hover{}
+.article #left #p_button a:active{}
+.article #left #p_button a p{}
+
+.article #right #t_button{height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+}
+.article #right #t_button a{}
+.article #right #t_button a:link{text-decoration: none;color: white;}
+.article #right #t_button a:visited{text-decoration: none;color: white;}
+.article #right #t_button a:hover{}
+.article #right #t_button a:active{}
+.article #right #t_button a p{}
+
+.text-up{padding-bottom:30px;transition:All 0.5s ease;}
+.text-down{padding-bottom:0px;transition:All 0.5s ease;}
+
+@media screen and (min-width:1440px){
+    .slider-content1{background-position: 50% 0%;}
+    .slider-content1 #back_content{height: 500px;}
+}
+
+@media screen and (max-width:1280px){
+    .slider-content1{background-position: 50% 0%;}
+} 

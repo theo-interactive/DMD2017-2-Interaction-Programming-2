@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    $('section.poster1').show();
+    $('section.poster2').hide();
+    $('section.poster3').hide();
+    $('section.poster4').hide();
+
     $('ul#menu_page').hide();
     
     $('a#menu_bt').click(function(){
@@ -47,8 +52,81 @@ $(document).ready(function(){
           stack:'.connected-sortable ul'
         }).disableSelection();
     }
-    //poster3
+    //poster2
+    var box1 = $('.yellow');
+    var box2 = $('.black');
+    var box3 = $('.navy');
+    var box4 = $('.red');
+    var box5 = $('.salmon');
+    var box6 = $('.brown');
+    var box7 = $('.blue');
+    var box8 = $('.pink');
+    var box9 = $('.darkblue');
+    var box10 = $('.purple');
+    
+    $(box1).mouseover(function(){
+        TweenLite.to(box1, 3, {top:255, repeat:-1})
+    });
+    $(box1).mouseout(function(){
+        TweenLite.to(box1, 3, {top:0, repeat:-1})
+    });
+    $(box2).mouseover(function(){
+        TweenLite.to(box2, 3, {top:225, repeat:-1})
+    });
+    $(box2).mouseout(function(){
+        TweenLite.to(box2, 3, {top:0, repeat:-1})
+    });
+    $(box3).mouseover(function(){
+        TweenLite.to(box3, 3, {top:-225, repeat:-1})
+    });
+    $(box3).mouseout(function(){
+        TweenLite.to(box3, 3, {top:0, repeat:-1})
+    });
+    $(box4).mouseover(function(){
+        TweenLite.to(box4, 3, {left:-225, repeat:-1})
+    });
+    $(box4).mouseout(function(){
+        TweenLite.to(box4, 3, {left:0, repeat:-1})
+    });
+    $(box5).mouseover(function(){
+        TweenLite.to(box5, 3, {left:-225, repeat:-1})
+    });
+    $(box5).mouseout(function(){
+        TweenLite.to(box5, 3, {left:0, repeat:-1})
+    });
+    $(box6).mouseover(function(){
+        TweenLite.to(box6, 3, {top:-225, repeat:-1})
+    });
+    $(box6).mouseout(function(){
+        TweenLite.to(box6, 3, {top:0, repeat:-1})
+    });
+    $(box7).mouseover(function(){
+        TweenLite.to(box7, 3, {top:-225, repeat:-1})
+    });
+    $(box7).mouseout(function(){
+        TweenLite.to(box7, 3, {top:0, repeat:-1})
+    });
+    $(box8).mouseover(function(){
+        TweenLite.to(box8, 3, {top:-225, left:-225, repeat:-1})
+    });
+    $(box8).mouseout(function(){
+        TweenLite.to(box8, 3, {top:0, left:0, repeat:-1})
+    });
+    $(box9).mouseover(function(){
+        TweenLite.to(box9, 3, {left:-225, repeat:-1})
+    });
+    $(box9).mouseout(function(){
+        TweenLite.to(box9, 3, {left:0, repeat:-1})
+    });
+    $(box10).mouseover(function(){
+        TweenLite.to(box10, 3, {left:225, top:-225, repeat:-1})
+    });
+    $(box10).mouseout(function(){
+        TweenLite.to(box10, 3, {left:0, top:0, repeat:-1})
+    });
+    
 
+    //poster3
     var y = 0; 
 
     var c1 = new Audio('sound/c1.wav');
@@ -292,4 +370,16 @@ $(document).ready(function(){
     $("#a3").mouseover(function(){
         a2.play();
     });
+
+    //poster4
+    $('.poster4').mouseover(function(){
+        $(this).css({cursor:'none'});
+      });
+      
+      $(document).on('mousemove', function(e){
+        $('.cline').css({
+          left:  e.pageX - 450 ,
+          top:   e.pageY - 450
+        });
+      });
 });
