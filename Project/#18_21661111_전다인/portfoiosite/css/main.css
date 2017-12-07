@@ -1,15 +1,7 @@
-html {
-    background: #FFFFFF;
-  
-    color: #444;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-  }
-.home .title{
+.title{
     margin: 50px;
 }
-.home h1{
+h1{
     font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
     font-size: 48px;
     color: rgb(0, 0, 0, 0);;
@@ -18,30 +10,30 @@ html {
     width: 352px;
 }
 
-.home h1 span{
+h1 span{
     font-weight: 100;
 }
-.home .title ul{
+.title ul{
     padding-top: 25px;
 }
-.home .title li{
+.title li{
     font-weight: 100;
     line-height: 18px;
 }
 .title ul .type2{
     display: none;
 }
-.home .key-wrapper {
+.key-wrapper {
 position: absolute;
+width:890px;
 top: 50%;
 left: 50%;
-margin: -120px -642px;
+margin: -120px -445px;
 transition: ease-in 0.5s all;
 }
 
-.home .row {text-align: center;}
-
-.home .key {
+.row {text-align: center;}
+.key {
 margin: 3px 1px;
 width: 70px;
 height: 70px;
@@ -59,12 +51,10 @@ text-transform: uppercase;
             -ms-transition: .5s;
                 transition: .5s;
 }
-
-.home .k32 {
+.kspace {
 width: 346px;
 }
-
-.home .active {
+.active {
 border: 1px solid #007DFF;
 background-color: rgba(0, 125, 255, 0.47);
 color: white;
@@ -84,9 +74,3 @@ color: white;
     display: none;
   }
 */
-
-.navkeyopen {
-        margin: -120px -642px;
-        transition: ease-in 0.5s all;
-        
-}

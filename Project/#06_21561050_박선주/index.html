@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>space</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+  </head>
+<body>
+  <!-- <canvas id="space"></canvas> -->
+  <header>
+    <h1>SPACE</h1>
+  </header>
+  <div class="starback">
+    <iframe src="./starback.html"></iframe>
+  </div>
+  <div class="wrap">
+
+
+    <section id="section1">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/marqury.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy1.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>MERCURY</h2>
+        <div class="more">
+          more
+        </div>
+      </div>
+    </section>
+
+
+    <section id="section2">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/venus.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy3.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>VENUS</h2>
+        <div class="more">
+          more
+        </div>
+      </div>
+    </section>
+
+    <section id="section3">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/earth.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy2.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>EARTH</h2>
+        <div class="more">
+          more
+        </div>
+      </div>
+    </section>
+
+    <section id="section4">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/mars.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy6.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>MARS</h2>
+        <div class="more">
+        more
+        </div>
+      </div>
+    </section>
+
+    <section id="section5">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/jupiter.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy5.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>JUPITER</h2>
+        <div class="more">
+          more
+        </div>
+      </div>
+    </section>
+
+    <section id="section6">
+      <div class="planet-box">
+        <div class="planet">
+          <img src="./img/Saturn.png" />
+        </div>
+        <div class="galaxy">
+          <img src="./img/galaxy6.png" />
+        </div>
+      </div>
+      <div class="name-box">
+        <h2>SATURN</h2>
+        <div class="more">
+          more
+        </div>
+      </div>
+    </section>
+
+<script type="text/javascript">
+// var $win = $(window);
+// var zeroInt = function(selecter){
+//  var offInt = function(selecter){
+//    var i = selecter.offset().top - $win.height();
+//    return i;
+//  };
+//  var i = $win.scrollTop() - offInt(selecter);
+//  return i;
+// };
+// var sensorHeight = function(selecter,gap){
+//  if(zeroInt(selecter) > 0){
+//    selecter.css({
+//      'margin-top': gap + (zeroInt(selecter) * -0.02)  +'px'
+//    });
+//  }
+//
+// }
+//
+// sensorHeight($('.planet > img'),200);
+
+
+    $(window).bind('scroll', function(e){
+      parallaxScroll();
+      // sensorHeight($('.planet > img'),200);
+
+    });
+    function parallaxScroll(){
+      var scrolled = $(window).scrollTop();
+    $('.planet').css('margin-top',(100-(scrolled*.40))+'px');
+    $('.galaxy').css('margin-top',(300-(scrolled*.20))+'px');
+    }
+
+</script>
+
+</body>
+</html>

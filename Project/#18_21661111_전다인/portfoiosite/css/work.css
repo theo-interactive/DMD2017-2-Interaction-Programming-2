@@ -1,67 +1,64 @@
-body{
-    width: 100%;
-    height: 100%;
-    /*background-color: yellow;*/
-    overflow: hidden;
-    color: #444;
+#visual_work{
+}
+div#masonry { 
+display: flex; 
+flex-direction: column; 
+flex-wrap: wrap;
+height: 60%;
+max-height: 800px;
+font-size: 0;
+overflow-y: scroll;
+margin: 0 50px;
+}
+div#masonry img {  
+width: 33.3%;
+transition: .8s opacity;
+padding: 1px;
+vertical-align: top;
+}
+
+div#masonry:hover img { opacity: 0.3; }
+div#masonry:hover img:hover { opacity: 1; } 
+
+.contactlist{
+margin-left: 50px;
+}
+.contactlist li{
+font-family: 'PT Sans', sans-serif;
+color: #444;
+line-height: 1.4;
+}
+.contactlist li:first-child{
+    margin-bottom: 10px;
+}
+.contactlist li>a:link { color:#007DFF; text-decoration: none;}
+.contactlist li>a:visited { color:#007DFF; text-decoration: none;} 
+/*
+.mapWrapper{
+position: relative;
+right: 0;
+margin:50px;
+height: 500px;
+width: 90%;
+background-color: lightblue;
+}
+#googleMap{
+position: absolute;
+height: 100%;
+width: 100%;
+}
+*/
+.want{
     font-family: 'PT Sans', sans-serif;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
+    margin: 0 0 50px 50px;
+    font-size:110px;
+    color:#007DFF;
+    font-weight: 100;
+    line-height: 1.5;
 }
-.title{
-    margin: 50px;
+#want1{
+    display: none;
 }
-h1{
-    font-family: Helvetica Neue, 'Helvetica Neue', Helvetica;
-    font-size: 48px;
-    color: rgb(0, 0, 0, 0);;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(38, 38, 38, 0.69);
-    width: 260px;
-}
-.submenu{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width:350px;
-    /*background-color: red;*/
-    margin-bottom: 25px;
-
-}
-dl{
-    width: 260px;
-    margin-left: 53px;
-    margin-bottom: 15px;
-}
-dl dt{
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-dl dd{
-    font-weight: 200;
-}
-dl dd:last-child{
-    border-bottom: 1px solid rgba(38, 38, 38, 0.69);
-    padding-bottom: 15px;
-    font-weight: 200;
-}
-
-.list-item {
-    width: 400px;
-    height: 500px;
-    background: rgba(255, 0, 0, 0.1);
-    margin-left: 10px;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.scroll { 
-    margin-left: 350px;
-    margin-right: 50px;
-    height: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: auto;
+#want2{
+    display: none;
 }

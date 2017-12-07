@@ -6,14 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>박희영</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/star.css" rel="stylesheet" type="text/css" />
   <script src="js/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="./css/reset.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
 </head>
 
 <body>
-  <div id="main" class="sctn">
+<div id="main" class="sctn stars">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
     <div class="moon">
       <img src="./img/moon.png" alt="introimg" />
     </div>
@@ -28,11 +33,10 @@
       </div>
     </div>
     <div class="waves">
-      <span><img id="wv1"src="./img/wave1.png" alt="introimg"></span>
-      <span><img id="wv2"src="./img/wave2.png" alt="introimg"></span>
-      <span><img id="wv3"src="./img/wave3.png" alt="introimg"></span>
-      <span><img id="wv4"src="./img/wave4.png" alt="introimg"></span>
-      <span><img id="wv5"src="./img/wave5.png" alt="introimg"></span>
+      <span id="wv2"><img src="./img/wave2.png" alt="introimg"></span>
+      <span id="wv3"><img src="./img/wave3.png" alt="introimg"></span>
+      <span id="wv4"><img src="./img/wave4.png" alt="introimg"></span>
+      <span id="wv5"><img src="./img/wave5.png" alt="introimg"></span>
     </div>
   </div>
 
@@ -72,20 +76,23 @@
                 </div>
                 <div class="component text-area" id ="text2">
                     <div class="title">환경경영이란</div>
-                    <div class="desc">기존의 경영분야에 환경이라고 하는 분야를 추가하여 경영적 개념을 도입하는 것으로, <br />
-                      환경관리를 기업경영의 방침으로 삼고 기업활동이 환경에 미치는 부정적인 영향을 최소화하면서
-                      <br />환경적으로 건전하고 지속 가능한 발전을 도모하는 경영철학을 말합니다.</div>
+                    <div class="desc">
+                      환경관리를 기업경영의 방침으로 삼고<br />기업활동이 환경에 미치는 부정적인 영향을<br />최소화하면서 환경적으로 <br />건전하고 지속 가능한<br />발전을 도모하는 경영철학을 말합니다.</div>
                 </div>
             </div>
             <div class="banner-item">
-                <div class="image-area">
+              <div id="videowrap">
+                <div id="video" data-id="4EvPOXXh4gY"></div>
+                <div class="dim">&nbsp;</div>
+              </div>
+                <!-- <div class="image-area">
                     <img src="./img/banner/banner2.jpg"/>
                 </div>
                 <div class="component text-area" id ="text3">
                     <div class="title">보호가 필요한 멸종 위기의 해양생물들과<br />한화 아쿠아플라넷 제주의 노력</div>
                     <div class="desc">해양동물 전문구조∙치료기관은  <br />해안에 좌초, 고립되거나 그물에 혼획 되어지는 보호대상 해양동물들을 구조하고 치료한 후 <br /> 다시 바다로
 안전하게 돌려보내는 기관입니다.  <br />한화 아쿠아플라넷 제주는″해양동물 전문구조·치료기관″으로 지정을 받아  <br />해양생물의 보호에 앞장서고 있습니다.</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -94,6 +101,14 @@
 
   <div id="intro2" class="sctn">
     <div class="wrap">
+      <div class="bubble" id="bubble2"><img src="./img/bubble.png" alt=""></div>
+      <div id="bubbles">
+          <div class="bubbles x1"></div>
+          <div class="bubbles x2"></div>
+          <div class="bubbles x3"></div>
+          <div class="bubbles x4"></div>
+          <div class="bubbles x5"></div>
+      </div>
       <div class="wrapinner">
         <h2>
             AQUA PLANET 가치
@@ -124,12 +139,12 @@
   <div id="aquafriends" class="sctn">
     <div class="wrap">
       <h2>바닷속 친구들 소개 갤러리</h2>
-      <div class="btn">
+      <!-- <div class="btn">
         <a>전체<span class="bar">bar</span></a>
         <a>동물<span class="bar">bar</span></a>
         <a>식물<span class="bar">bar</span></a>
         <a>미생물<span class="bar">bar</span></a>
-      </div>
+      </div> -->
       <div class="oceangall">
         <div id="grid">
           <div class="grid">
@@ -254,7 +269,7 @@
             </colgroup>
             <tbody>
               <tr class="bg_f1_tr">
-                <th rowspan="3" scope="row" class="bg_f4_h"><a href="#">2F</a></th>
+                <th rowspan="3" scope="row" class="bg_f4_h"><a class="floornum 2f">2F</a></th>
                 <td><span class="tit1_1">전시실</span></td>
                 <td class="gray">아쿠아리움, 마린사이언스, 키즈플라넷</td>
               </tr>
@@ -267,7 +282,7 @@
                 <td class="gray">아쿠아플레이스, 빈스앤베리즈</td>
               </tr>
               <tr class="bg_f2_tr">
-                <th rowspan="3" scope="row" class="bg_f3_h"><a href="#">1F</a></th>
+                <th rowspan="3" scope="row" class="bg_f3_h"><a class="floornum 1f">1F</a></th>
                 <td><span class="tit2_1">전시실</span></td>
                 <td class="gray">아쿠아리움, 오션아레나</td>
               </tr>
@@ -280,7 +295,7 @@
                 <td class="gray">앤티앤스 프레즐</td>
               </tr>
               <tr class="bg_f3_tr">
-                <th rowspan="3" scope="row" class="bg_f2_h"><a href="#">B1F</a></th>
+                <th rowspan="3" scope="row" class="bg_f2_h"><a class="floornum 0f">B1F</a></th>
                 <td><span class="tit3_1">전시실</span></td>
                 <td class="gray">아쿠아리움, 오션아레나 입구</td>
               </tr>
@@ -298,7 +313,6 @@
         <div class="floorguide2">
           <div class="floorwrap">
             <img src="./img/2f.png" alt="map">
-
           </div>
         </div>
 
@@ -333,9 +347,43 @@
   <script>
   (function($){
       $(document).ready(function(){
+
+        var $floor = $('.floornum');
+        var $floorwrap = $('.floorwrap');
+        $floor.on({'click':function(){
+          $floorwrap.empty();
+          if ($(this).hasClass('2f')){
+            $floorwrap.append('<img src="./img/2f.png" alt="map">');
+          }else if ($(this).hasClass('1f')) {
+            $floorwrap.append('<img src="./img/1f.png" alt="map">');
+          }else {
+            $floorwrap.append('<img src="./img/b1f.png" alt="map">');
+          }            boxRePosition();
+        }
+      });
+        $(window).resize(function() {
+          boxRePosition();
+        })
+        //로드될때도 boxRePosition 실행
+        //안에 들어가있는 화면 중앙에 가게 하는 함수
+        //윈도우사이즈를 구해서 중앙으로 맞춰준다.
+        function boxRePosition() {
+          var image = new Image();
+          $('.floorwrap img').css({'visibility':'hidden'});
+          image.onload = function(){
+            var floorguide2 = $('.floorguide2').height();
+            var floorwrap = $('.floorwrap').height();
+            $('.floorwrap img').css({'visibility':'visible'});
+            //마이너스마진 안하고 싶을때 원도우에서 박스크기를뺀 나머지 값을 반반
+           $('.floorwrap').css('margin-top', (floorguide2 - floorwrap)/2);
+          }
+          image.src = $('.floorwrap img').attr('src');
+          //이러고 안에 들어가 있는 내용 (product를)포지션 값을 00 주면 된다.
+        }
+
           var $section = $('.sctn')
           var $win, $banner, $bannerWrap, $bannerContainer, $bannerItem, $bannerItemImage, $bannerItemImageEl,
-              $dotNav, $paddleNav, $dotEl, $paddleEl, $paddlePrevEl, $paddleNextEl, $section;
+              $dotNav, $paddleNav, $dotEl, $paddleEl, $paddlePrevEl, $paddleNextEl;
                 $win = $(window);
                 var _winH = $win.height(), _winW = $win.width(), _max = $section.length;
                 $win.on({'scroll':function(){
@@ -345,7 +393,7 @@
           var parallax = function(){
             var scrollTop = $win.scrollTop();//스크롤시 위치
             $roket = $('.logo');
-            $roket.css({'margin-top':-scrollTop*1.5});
+            $roket.css({'margin-top':-(100+scrollTop)*1.8});
             $wv1 = $('#wv1');
             $wv2 = $('#wv2');
             $wv3 = $('#wv3');
@@ -362,13 +410,13 @@
                 // console.log(i, scrollTop, limitT, limitB);
                 elY = limitT - scrollTop;
                 elX = limitF - scrollTop;
-                aa = elX/50 * -1 + '%';
-                // console.log(aa);
-                // $wv1.css({'left':elX/50 * -2 + '%'});
-                // $wv2.css({'left':elX/50 * -2 + '%'});
-                // $wv3.css({'left':elX/50 * -2 + '%'});
-                // $wv4.css({'left':elX/50 * -2 + '%'});
-                // $wv5.css({'left':elX/50 * -2 + '%'});
+                aa = elX/50 * -2 + '%';
+                 console.log(aa);
+                //$wv1.css({'left':elX/50 * 2 + '%'});
+                $wv2.css({'right':elX/70 * -4 + '%'});
+                $wv3.css({'left':elX/20 * -8 + '%'});
+                $wv4.css({'right':elX/70 * -10 + '%'});
+                $wv5.css({'left':elX/20 * -2 + '%'});
 
                 if(i > 0){
                   imgX = 0;
@@ -505,6 +553,99 @@
           resetInit();
           init();
       });
+  })(jQuery);
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var _YT;
+  //변경할 수 없는 함수...........
+  function onYouTubeIframeAPIReady() {
+    //window.YT
+    //window._YT = window.YT;
+    ////////
+    (function($){
+      $.extend(true, _YT, YT);
+      _YT.tvInit();
+      //jQuery 가 로드되는 시점.
+    })(jQuery);
+  }
+  (function($){
+    $(document).ready(function(){
+      //ready.
+      //window._YT;
+      _YT = {
+        _tv:'',
+        _videoId:'4EvPOXXh4gY',
+        _quality:'hd1080',
+        appInit:function(){
+          this.layout();
+          this.reset();
+          this.resetInit();
+        },
+        layout:function(){
+          this.$win = $(window);
+          this.$el = $('#video');
+          //<div id="video"></div>
+          //selector를 찾으면 배열값에 들어옴.
+          //첫번째 배열의 id. [0] .id
+        },
+        reset:function(){
+          this._elId = this.$el[0].id;
+          //this._videoId = this.$el.data('id');
+          //console.log(this._videoId);
+        },
+        resetInit:function(){
+          var _this = _YT;
+          this.$win.on('resize', _this.onResize);
+        },
+        tvInit:function(){
+          var _this = _YT;
+          _this._tv = new _YT.Player(_this._elId, {
+            suggestedQuality:_this._quality,
+            videoId: _this._videoId,
+            events: {
+              'onReady': _this.onTVReady,
+              'onStateChange': _this.onTVStateChange
+            },
+            playerVars:{
+                autoplay: 0,
+                showinfo: 0,
+                controls: 0
+            }
+          });
+        },
+        onTVReady:function(e){
+          _YT._tv.playVideo();
+          _YT.$el = $('#video');
+          _YT.$win.trigger('resize');
+        },
+        onTVStateChange:function(e){
+        },
+        playVideo:function(){
+          _YT._tv.playVideo();
+        },
+        stopVideo:function(){
+          _YT._tv.stopVideo();
+        },
+        onResize:function(){
+          var _this = _YT;
+          var ratioW = 16, ratioH = 9, ratio = ratioW/ratioH;
+          var ww = _this.$win.width(), wh = _this.$win.height(),videoW, videoH, videoT, videoL;
+          videoW = ww;
+          videoH = videoW / ratioW * ratioH;
+          if(ww/wh < ratio){
+              videoH = wh;
+              videoW = videoH / ratioH * ratioW;
+          }
+          videoT = wh / 2 - videoH / 2;
+          videoL = ww / 2 - videoW / 2;
+          _this._tv.setSize(videoW, videoH);
+          _this.$el.css({'top':videoT + 'px', 'left':videoL + 'px'});
+        }
+      }
+      _YT.appInit();
+    });
   })(jQuery);
   </script>
 </body>
