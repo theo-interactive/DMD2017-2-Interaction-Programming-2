@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+html,body {
+	background:#fff;height:100%;
+}
+.center{
+	display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+/* span{height:40px;width:40px;display:block;position:relative;}  */
+
+.prev{overflow:hidden;width:30px;margin-bottom: 60px;}
+.prev:before{
+	content:'';height:15px;width:15px; 
+	display:block;border:5px solid #333;
+	border-left-width:0;border-bottom-width:0; 
+	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+	position:absolute;top:5px;left:5px;
+}
+.prev:after{
+	content:'';height:35px;width:6px; 
+	display:block;background:#333; 
+	position:absolute;top:5px;left:12px;
+}
+
+.next{overflow:hidden; width:30px;}
+.next:before{
+	content:'';height:15px;width:15px; 
+	display:block;border:5px solid #333; 
+	border-right-width:0;border-top-width:0; 
+	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+	position:absolute;bottom:5px;left:5px;
+}
+.next:after{
+	content:'';height:35px;width:6px; 
+	display:block;background:#333; 
+	position:absolute;top:0px;left:12px;
+}
+/* --------------header------------ */
+header h1{font-size:50px;margin:50px 0 0 50px;}
+
+/* --------------section------------ */
+section{height:100%;}
+#section_body{height:100%;}
+#section_body h1{
+	position:fixed;
+	font-size:50px;color:#2a2a2a;
+	margin-top:50px;margin-bottom:50px;margin-left:50px;
+}
+#section_body .poster_list{font-weight: 300;text-align: center;position:fixed;left: 50px;top:50%;transform:translateY(-50%)}
+#section_body .poster_list ul{list-style: none;}
+#section_body .poster_list ul li{margin-bottom: 30px;padding-top: 5px;padding-bottom: 5px;}
+.list_c{background-color: #124b81;color: #fff;width: 20px;}
+
+/* poster_left_container */
+#section_body .poster_left_container{
+	width: 50%;float: left;height: 100%;	   
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-position:0 0;
+	/* background-size:cover; */
+}
+#section_body .poster_left_container img{width:350px;height:500px;margin-left: 50px;}
+.guide{position:absolute;z-index:99;bottom:0;left:20%;font-size:18px;font-weight:300;height:20px;padding-top:5px;padding-bottom:5px;margin-bottom:20px;width:140px;border:2px solid #141c22;text-align:center}
+.list-number{font-size:14px;color:rgb(94, 94, 94);}
+
+/* #two{
+	background:url('../img/poster/02_the shinning.jpg');
+}
+#three{
+	background:url('../img/poster/03_vertigo.jpg');
+} */
+
+
+/* poster_right_container */
+#section_body .poster_right_container{width:50%;float:right;background-color:#141c22;height: 100%;}
+#section_body .poster_right_container .poster_text{color: #fff;font-weight: 300}
+#section_body .poster_right_container .poster_text h2{font-family: 'Open Sans', sans-serif;color: #124b81;font-size: 23px;margin-bottom: 30px;}
+#section_body .poster_right_container .poster_text p{
+	font-family:'Noto Sans KR',"Nanum Gothic", sans-serif;font-size: 16px;line-height: 28px;font-weight: 100;
+	width: 400px;word-break: keep-all;
+}
+#button{position:absolute;right:20px;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}
+
+.poster-container{width:100%;height:100%;}
