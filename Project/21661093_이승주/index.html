@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>아이유-꽃갈피둘</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(window).load(function() {
+		$('#loader').hide();
+	}); //로딩 스크립트
+
+	var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	var player;
+	
+	function onYouTubeIframeAPIReady() {
+	  player = new YT.Player( "myplayer", {
+		  width: 970,
+		height: 600,
+		videoId: 'cxcxskPKtiI',
+		 showinfo: 0,
+		 controls: 0,
+		 rel : 0
+	  });
+	}
+
+	$(function() {
+	
+	var tv_behind2 = $('#tv_behind2');
+	var switch_m = $('#switch_m');
+
+	var playerBool = false;
+	  $("#power_switch").click(function() {
+		  if(playerBool == false){
+			TweenLite.to(tv_behind2,0.3,  {css:{'autoAlpha':0}, delay:0.3});
+			TweenLite.to(switch_m,0.5, {rotation:80, onComplete:player.playVideo()}, 0.3);
+		  playerBool = true;
+		} else if(playerBool == true){
+			TweenLite.to(tv_behind2,0.1,  {css:{'autoAlpha':1}, delay:0});
+			TweenLite.to(switch_m,0.5, {rotation:-20, onComplete:player.pauseVideo()}, 0.3);
+		  playerBool = false;
+		}
+	  });
+	});//유튜브 컨트롤 
+
+
+	function image_onclick(){
+			var arrImage=new Array("img/flower01.png", "img/flower02.png", "img/flower04.png", "img/flower04.png", "img/flower05.png");
+			var imgSource=document.targetImg;
+			var intRandom=Math.round(Math.random()*4);  
+			    //0~4의 값을 반환합니다.
+			while(imgSource.src.indexOf(arrImage[intRandom]) != -1){ //랜덤으로 나올게 할꺼임
+				intRandom=Math.round(Math.random()*4);
+			}
+			imgSource.src=arrImage[intRandom];
+		} //꽃 이미지 클릭시 변경 
+
+	
+		$(window).load(function(){
+			var audio;
+			var playlist;
+			var tracks;
+			var current;
+			init();
+
+			function init(){
+				current = 0;
+				audio = $('audio');
+				playlist = $('#playlist');
+				tracks = playlist.find('ul li a');
+				len = tracks.length - 0;   
+				audio[0].volume = 1.0;
+				playlist.find('a').click(function(e){
+					e.preventDefault();
+					link = $(this);
+					current = link.parent().index();
+					run(link, audio[0]);
+				});
+				audio[0].addEventListener('ended',function(e){
+					current++;
+					if(current == len){
+						current = 0;
+						link = playlist.find('a')[0];
+					}else{
+						link = playlist.find('a')[current];    
+					}
+					run($(link),audio[0]);
+				});
+
+			}
+			function run(link, player){
+					player.src = link.attr('href');
+					par = link.parent();
+					par.addClass('active').siblings().removeClass('active');
+					audio[0].load();
+					audio[0].play();	
+			}
+			});//음악플레이어 
+
+
+
+			function wow2(mm) {mm.src="img/photo2_1.png";}
+			function hul2(mm) {mm.src="img/photo2_0.png";}
+			function wow1(mm) {mm.src="img/photo1_1.png";}
+			function hul1(mm) {mm.src="img/photo1_0.png";}
+		</script>
+
+	</head>
+	<body>
+		<div id="loader">
+			<img src="img/info_logo.png" alt="">
+		</div>
+		<!--로딩끝-->
+		<div class="container">
+		<header>
+				<a href="#"><h1 class="menu">아이유-꽃갈피둘</h1></a>
+		  <div id="nav">
+			<nav>
+				<ul> 
+					<li><a href="">앨범소개</a></li>
+					<li><a href="">수록곡</a></li>
+					<li><a href="">사진집</a></li>
+					<li><a href="">뮤직비디오</a></li>
+				</ul>
+			</nav>
+		</div>
+		</header>
+		<main>
+			<section id="introduce">
+			  <div class="introduce_scroller">
+				<!--앨범소개-->
+				<h2> <img src="img/logo.png" alt="꽃 갈피둘" ></h2><!--이미지로넣기, 유료폰트라서-->
+				<div class="explain">
+				<p>
+					시간이 흘러도 바래지 않는, 소박하고 아름다운 추억의 흔적<br/>
+					아이유 두 번째 리메이크 앨범 [꽃갈피 둘]</p>
+
+					<p>오래된 서재에서 먼지를 털어내고 꺼내든 책 한 권. 한 장씩 책장을 <br/>
+						넘기다 책갈피처럼 끼워진 빛바랜 네 잎 클로버나 꽃잎들을 발견할 때가 있다.<br/> 
+					오래전 누군가가 마음을 담아 선물했을 소박하고 아름다운 흔적.<br/> 또 그 페이지마다 
+					밑줄이 그어져있는 기억할 만한 글귀들. <br/>
+						이러한 '꽃갈피'는 요즘은 점점 잊혀 가고 있는 예전 아날로그 세대의 <br/>
+						감성과 낭만을 보여주는 청년 문화의 상징 중 하나일지도 모른다.
+				</p>
+				<p>아이유의 두 번째 리메이크 앨범인 [꽃갈피 둘]은 지난 2014년 첫 선을<br/>
+					보여 대중과 평단의 뜨거운 호평을 이끌어낸 리메이크 음반 [꽃갈피]의 연장선에 놓인 작품으로,<br/>
+					   원곡에 담긴 아날로그 감성과 아이유 특유의 서정성이 마주한 스페셜 미니음반이다.<br/>
+					   지난 [꽃갈피] 앨범과 마찬가지로 아이유 본인이 평소 아껴왔던 '꽃갈피' 같은 이전 세대의 음악들을<br/>
+					   직접 선곡하였으며, 정재일, 고태영, 홍소진, 강이채, 적재, 임현제(혁오), 김성모, 정성하 등
+					   폭넓은 세대와 장르의 뮤지션들과 협업하여, 원곡 고유의 정서 위에 아이유의 색채를 덧입히는 작업에<br/>
+					   어느 때보다 섬세한 노력을 기울였다
+					   <br/>
+					   세대를 관통하는 추억의 노래들을 아이유의 순수한 음색으로 
+					재해석해낸 [꽃갈피 둘]은,<br/> 시간이 흘러도 바래지 않는, 소박하고 
+					아름다운 순간들을 되살려, 다시금 세대와 세대를 잇고<br/>
+					   그 속에 진한 공감과 울림을 선사하며, ‘꽃갈피’로써 추억의 선물, 그 자체가 되길 소망한다.
+				</p>
+			  </div>
+			  <img class="pen" src="img/pen.png" alt="연필 이미지" data-0="left:0px" data-1000="left:380px">
+			  <div class="flower01">
+					<img name="targetImg" onclick="image_onclick()" src="img/flower01.png" alt="꽃 이미지"  >
+				  	<div class="click"></div>
+				</div>
+				<!--꽃갈피 앨범이미지-->
+					<div class="Coffee"></div>
+					<div class="latter2"></div>
+					<div class="latter1" ></div>
+				<div class="album"  >
+					<img src="img/album.png" alt="앨범이미지" 
+					data-0="left:1250px; top: 150px;"  data-1500="left:2100px; top: 150px;"  >
+					<div class="vinyl_circle"   data-0="left:1250px; top: 150px;"  data-1500="left:2100px; top: 150px;"></div> 
+				</div>
+
+				</div>
+			</section>
+			<section id="lyrics">
+				<!--수록곡-->
+			  <div cass="album_boxer">
+				  <div class="note"></div>
+				<div class="album_in">
+						<audio id="audio" preload="auto" tabindex="0" controls="" >
+						<source type="audio/mp3" src="music/iu01_1.mp3">
+						</audio>
+						<div id="playlist">
+							<ul>
+								<li><a href="music/iu01_1.mp3">가을 아침</a></li>
+								<li><a href="music/iu01_2.mp3">비밀의 화원</a></li>
+								<li><a href="music/iu01_3.mp3">잠 못 드는 밤 비는 내리고</a></li>
+								<li><a href="music/iu01_4.mp3">어제밤 이야기</a></li>
+								<li><a href="music/iu01_5.mp3">개여울</a></li>
+								<li><a href="music/iu01_6.mp3">매일 그대와</a></li>
+							</ul>
+						</div>
+				  </div>
+				<!-- <div class="vinyl">
+					<div class="vinyl_circle"></div> 
+				</div> -->
+				<div class="typ"><img src="img/typ.png" alt="" data-1000="top:300px" data-1600="top: -70px" data-2500="top: -70px"  data-3100="top:300px;"></div>
+				</div>
+				<div class="atum1" data-1000="top:-450px;left: 1050px" data-2000="left: 1050px;top: -150px;"></div>
+				<div class="atum2" data-1100="top:-100px;left: 1200px" data-2300="left: 1600px;top: 600px;"></div>
+				<div class="atum3" data-1200="top:-450px;left: 1700px" data-2600="left: 1700px;top: -120px;"  ></div>
+			</section>
+			<section id="photo">
+				<div id="Polaroid_f">
+					<img src="img\Polaroid_f1.png" alt="" >
+				</div>
+				<div id="Polaroid">
+					<img src="img\Polaroid.png" alt="" data-1600="top:-450px;left:210px" data-2200="top:50px; left:210px" >
+				</div>
+				
+				<div  id="photo1">
+					<img  src="img/photo1_1.png" alt="" data-0="top:80px;left:1000px" >
+				</div>
+				<div id="photo2">
+					<img onmouseover="wow2(this)" onmouseout="hul2(this)" src="img/photo2_0.png" alt="" data-2300="top:900px;  left:700px;transform: rotate(-30deg);" data-2900="top:500px;  left: 1156px;transform: rotate(-30deg);">
+				</div>
+				<div id="photo3">
+					 <img  src="img/photo3_1.png"  alt="" data-2300="top:-600px; left: 480px" data-3400="top:-40px; left: 580px">
+					
+				</div>
+				<div id="photo4">
+					<img src="img/photo4.png" alt="" data-2200="top:1000px;left: 902px" data-3400="top:420px;left: 1500px">
+				</div>
+				<div id="photo5">
+					<img src="img/photo5.png" alt="" data-2000="top:-500px; left:1600px" data-3500="top:-100px;  left:1410px">
+				</div>
+			</section>
+
+
+			<section id="video">
+				<!--뮤직비디오-->
+				<div id="tv">
+					<div id="tv_film">
+						<img src="img/tv_film.png" alt="">
+					</div>
+					<div id="video_slide" class="tv_in">
+						<div id="myplayer"></div>
+						<div class="tv_behind"></div>
+						<div id="tv_behind2"></div>
+						<img src="img/tv.png" alt="">
+
+					</div>
+					<div id="power_switch"><!--누르면 뮤비재생되도록-->
+						<img src="img/channel_switch.png" alt="" id="switch_m">
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
+	
+	<script type="text/javascript">
+
+
+	// $(document).scrollTop()
+	// $(document).scroll(function (){
+	// if ($(document).scrollTop() >= 0 && $(document).scrollTop() < 1000) {
+	// 	//var pen = document.getElementsByClassName("pen");
+	// 	var pen = $('.pen')
+	// 	var base = Math.abs($(window).scrollTop() - pen.offset().left) / 3;
+	// 	console.log(base)
+	// 	//var x = Math.max(0, base);
+		
+	// 	var x = base
+	// 	TweenLite.set(pen,{css:{'x':x}});
+	// 	//TweenLite.to(pen,2,{css:{'x':380}});
+	// 	//	<img class="pen" src="img/pen.png" alt="연필 이미지"   data-0="left:100px" data-1000="left:380px">
+	// }else{}
+	// });
+
+	var Polaroid = document.getElementById( "Polaroid" );
+	var Polaroid_f = document.getElementById( "Polaroid_f" );
+	
+	// var tv_behind2 = document.getElementById( "tv_behind2" );
+	// var switch_m = document.getElementById( "switch_m" );	
+	// switch_m.onclick = power_switch;
+	Polaroid.onclick = Polaroid_m;
+
+	 // TweenLite.to($poster, 0.2, {css:{'autoAlpha':1}, delay:0.5});
+	//     TweenLite.to($name, 0.2, {css:{'autoAlpha':1}, delay:0.7});
+	//TweenLite.set(셀렉터,{'width':100+'%', 'height':100+'px', 'x':0, 'y':0}); //set - css 시간이 없다. setting. 초기값 세팅.
+	//TweenLite.to(셀렉터, 애니메이션 시간, {적용할 값, css, delay : 딜레이시간, ease : 가속도 ,onComplete : 애니메이션이 완료된 시점}); //애니메이션 할 때.
+   
+	function Polaroid_m() {
+		//Polaroid_f 필름 보이게 해야함!
+		TweenLite.to(Polaroid_f, 3,{css:{ 'x':200, 'y':290}});
+	};
+
+	</script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+
+        $.jInvertScroll(['main'],       
+            {
+            height: 6000,                 
+            onScroll: function(percent) {   }
+        });
+    }(jQuery));
+	            
+    </script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false
+	});
+	</script>
+
+</body>
+</html>
