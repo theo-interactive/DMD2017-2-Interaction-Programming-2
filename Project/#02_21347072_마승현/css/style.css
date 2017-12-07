@@ -194,10 +194,19 @@ p{line-height: 2.4em;}
 #img_1{
   height: 500px;
   overflow: hidden;
+  position: relative;
 }
 #img_1 video{
   opacity: 0.3;
   width: 100%;
+  position: fixed;
+  z-index: -99;
+  filter: blur(13px);
+}
+#img_1 iframe{
+  opacity: 0.3;
+  left: -10%; top: -10%;
+  width: 120%; height: 120%;
   position: fixed;
   z-index: -99;
   filter: blur(13px);

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +8,24 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <script src="js/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="./css/reset.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
 <body>
-  <nav class="dot-nav">
-    <ul>
-      <li><span class="">&nbsp;</span></li>
-      <li>
-        <span class="">&nbsp;</span></li>
-      <li>
-        <span class="">&nbsp;</span></li>
-      <li>
-        <span class="selected">&nbsp;</span></li>
-      <li>
-      </li>
-    </ul>
-  </nav>
   <div id="main" class="sctn">
     <div class="moon">
       <img src="./img/moon.png" alt="introimg" />
     </div>
     <h2>AQUA PLANET</h2>
     <div id="mainwrap" class="wrap">
-
       <div class="logo">
-        <h3>AQUA PLANET</h3>
-        <img class="rocket" src="./img/rocket.png" alt="introimg" />
-        <a href="http://www.aquaplanet.co.kr/jeju/index.jsp"><img src="./img/hanhwa.png" alt=""></a>
+        <div>
+          <h3>AQUA PLANET</h3>
+          <img class="rocket" src="./img/rocket.png" alt="introimg" />
+          <a href="http://www.aquaplanet.co.kr/jeju/index.jsp"><img src="./img/hanhwa.png" alt=""></a>
+        </div>
       </div>
-
     </div>
     <div class="waves">
       <span><img id="wv1"src="./img/wave1.png" alt="introimg"></span>
@@ -48,48 +36,60 @@
     </div>
   </div>
 
-  <div id="intro1" class="sctn">
-    <div class="wrap">
-      <div class="intro1gall">
-        <nav role="navigation" class="paddle-nav">
-          <ul>
-            <li><a class="arrow prev"></a></li>
-            <li><a class="arrow next"></a></li>
-          </ul>
-        </nav>
-        <div id="introgallwrap">
-          <ul class="introgall">
-            <li>
-              <div class="half">
-                <div>
-                  <p class="intro" id="orange"><span>아쿠아 플라넷 제주</span>는</p>
-                  <p class="intro">해양생물 보존의 가치를 공유하며, <br /><span>인간과 자연이 공생</span>하며 느낄 수 있는 <br />최고의 즐거움을 제공합니다.</p>
+  <div id="intro1" class="sctn banner">
+    <nav role="navigation" class="paddle-nav">
+        <ul>
+            <li><button class="arrow prev"></button></li>
+            <li><button class="arrow next"></button></li>
+        </ul>
+    </nav>
+    <div class="banner-wrap">
+        <div class="banner-container">
+            <div class="banner-item">
+              <div class="itemintro">
+                <div class="bubble"><img src="./img/bubble.png" alt=""></div>
+              <div class="title">AQUA PLANET</div>
+                <p>
+            			<a href="http://www.aquaplanet.co.kr/jeju/index.jsp" class="a"><img src="http://www.aquaplanet.co.kr/img/gate/gate_link2.png" alt="한화 아쿠아플라넷 제주"></a>
+            			<a href="http://www.aquaplanet.co.kr/yeosu/index.jsp" class="a"><img src="http://www.aquaplanet.co.kr/img/gate/gate_link3.png" alt="한화 아쿠아플라넷 여수"></a>
+            			<a href="http://www.aquaplanet.co.kr/ilsan/index.jsp" class="a"><img src="http://www.aquaplanet.co.kr/img/gate/gate_link4.png" alt="한화 아쿠아플라넷 일산"></a>
+                  <a href="http://www.aquaplanet.co.kr/63/index.jsp" class="a"><img src="http://www.aquaplanet.co.kr/img/gate/gate_link5.png" alt="한화 아쿠아플라넷 63"></a>
+            		</p>
+	            </div>
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner1.jpg"/>
                 </div>
-              </div>
-              <div class="half">
-                <div>
-                  <img id="introimg" src="./img/introimg.png" alt="introimg">
+                <div class="component text-area" id ="text1">
+                    <div class="title">AQUA PLANET은</div>
+                    <div class="desc">해양생물 보존의 가치를 공유하며, <br /><span>인간과 자연이 공생</span>하며 느낄 수 있는 <br />최고의 즐거움을 제공합니다.</div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="half">
-                <div>
-                  <p class="intro" id="orange"><span>아쿠아 플라넷 제주</span>는</p>
-                  <p class="intro">해양생물 보존의 가치를 공유하며, <br /><span>인간과 자연이 공생</span>하며 느낄 수 있는 <br />최고의 즐거움을 제공합니다.</p>
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner3.jpg"/>
                 </div>
-              </div>
-              <div class="half">
-                <div>
-                  <img id="introimg" src="./img/introimg.png" alt="introimg">
+                <div class="component text-area" id ="text2">
+                    <div class="title">환경경영이란</div>
+                    <div class="desc">기존의 경영분야에 환경이라고 하는 분야를 추가하여 경영적 개념을 도입하는 것으로, <br />
+                      환경관리를 기업경영의 방침으로 삼고 기업활동이 환경에 미치는 부정적인 영향을 최소화하면서
+                      <br />환경적으로 건전하고 지속 가능한 발전을 도모하는 경영철학을 말합니다.</div>
                 </div>
-              </div>
-            </li>
-          </ul>
-
+            </div>
+            <div class="banner-item">
+                <div class="image-area">
+                    <img src="./img/banner/banner2.jpg"/>
+                </div>
+                <div class="component text-area" id ="text3">
+                    <div class="title">보호가 필요한 멸종 위기의 해양생물들과<br />한화 아쿠아플라넷 제주의 노력</div>
+                    <div class="desc">해양동물 전문구조∙치료기관은  <br />해안에 좌초, 고립되거나 그물에 혼획 되어지는 보호대상 해양동물들을 구조하고 치료한 후 <br /> 다시 바다로
+안전하게 돌려보내는 기관입니다.  <br />한화 아쿠아플라넷 제주는″해양동물 전문구조·치료기관″으로 지정을 받아  <br />해양생물의 보호에 앞장서고 있습니다.</div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
   </div>
 
   <div id="intro2" class="sctn">
@@ -98,10 +98,10 @@
         <h2>
             AQUA PLANET 가치
           </h2>
-        <p>아쿠아플라넷의 가치는 일상에서 쉽게 접할 수 없는 다양한 해양생태계의 모습을 보여줌으로써 <br /> '해양문화의 가치'를 전파하고, '생태계 보존'이라는 명제를 대중에게 널리 알리고자 하는 것입니다.
-          <br />늘 새로운 감동으로 고객님들의 마음에 보답하는 아쿠아플라넷 제주가 될 수 있도록 최선을 다하겠습니다.
-          <br />세계의 바다를 담은
-          <아쿠아 플라넷 제주>에서 바다의 경외감을 넘어, 생명 보존에 대한 필요성을 느껴보시길 바랍니다.
+        <p>아쿠아플라넷의 가치는 <br /> 일상에서 쉽게 접할 수 없는 다양한 해양생태계의 모습을 보여줌으로써 <br /> '해양문화의 가치'를 전파, '생태계 보존'이라는 명제를 대중에게 널리 알리고자 하는 것입니다.
+          <br /> <br />늘 새로운 감동으로 고객님들의 마음에 보답하는<br />  아쿠아플라넷 제주가 될 수 있도록 최선을 다하겠습니다.
+          <br /> <br />세계의 바다를 담은
+          <아쿠아 플라넷 제주>에서 바다의 경외감을 넘어,<br />  생명 보존에 대한 필요성을 느껴보시길 바랍니다.
         </p>
         <ul class="imagewrap">
           <li id="value1">
@@ -330,6 +330,183 @@
         </div>
     </div>
   </div>
+  <script>
+  (function($){
+      $(document).ready(function(){
+          var $section = $('.sctn')
+          var $win, $banner, $bannerWrap, $bannerContainer, $bannerItem, $bannerItemImage, $bannerItemImageEl,
+              $dotNav, $paddleNav, $dotEl, $paddleEl, $paddlePrevEl, $paddleNextEl, $section;
+                $win = $(window);
+                var _winH = $win.height(), _winW = $win.width(), _max = $section.length;
+                $win.on({'scroll':function(){
+                  //console.log("ss");
+                  parallax();
+                }})
+          var parallax = function(){
+            var scrollTop = $win.scrollTop();//스크롤시 위치
+            $roket = $('.logo');
+            $roket.css({'margin-top':-scrollTop*1.5});
+            $wv1 = $('#wv1');
+            $wv2 = $('#wv2');
+            $wv3 = $('#wv3');
+            $wv4 = $('#wv4');
+            $wv5 = $('#wv5');
+
+            $.each($section, function(i, d){
+              // var $el = $(d), limitT = $el.offset().top, limitB = limitT + _winH, elY;
+              var $el = $(d), $img = $el.find($('.bubble')),
+              limitT = _winH * i, limitB = limitT + _winH, elY, imgX, imgY;
+              limitF = _winW;
+
+              if(scrollTop > limitT - _winH && scrollTop <= limitB){
+                // console.log(i, scrollTop, limitT, limitB);
+                elY = limitT - scrollTop;
+                elX = limitF - scrollTop;
+                aa = elX/50 * -1 + '%';
+                // console.log(aa);
+                // $wv1.css({'left':elX/50 * -2 + '%'});
+                // $wv2.css({'left':elX/50 * -2 + '%'});
+                // $wv3.css({'left':elX/50 * -2 + '%'});
+                // $wv4.css({'left':elX/50 * -2 + '%'});
+                // $wv5.css({'left':elX/50 * -2 + '%'});
+
+                if(i > 0){
+                  imgX = 0;
+                  imgY = elY /2 * 2;
+                  $img.css({'transform':'translate3d('+ imgX + 'px,'+ imgY + 'px, 0)'});
+                }else{
+                }
+              }
+            })
+          };
+          var layout = function(){
+              $banner = $('.banner');
+              $bannerWrap = $banner.children('.banner-wrap');
+              $bannerContainer = $bannerWrap.children('.banner-container');
+              $bannerItem = $bannerContainer.children('.banner-item');
+              $bannerItemImage = $bannerItem.children('.image-area');
+              $bannerItemImageEl = $bannerItemImage.children('img');
+              $dotNav = $banner.children('.dot-nav');
+              $dotNavEl = $dotNav.find('span');
+              $paddleNav = $banner.children('.paddle-nav');
+              $paddleEl = $paddleNav.find('.arrow');
+              $paddlePrevEl = $paddleNav.find('.arrow.prev');
+              $paddleNextEl = $paddleNav.find('.arrow.next');
+          };
+          var _cuId, _exId, _max, _bannerW, _bannerH, _isAni;
+          var resetInit = function(){
+              _cuId = 0;
+              _exId = _cuId;
+              _max = $bannerItem.length;
+              //_bannerW = $banner.width();
+              _isAni = false;
+              paddleCheck();
+              dotCheck();
+          };
+          var init = function(){
+              $paddleEl.on('click', onClickPaddleNav);
+              $dotNavEl.on('click', onClickDotNav)
+              $win.on('resize', function(){
+                  onResize();
+              });
+              $win.trigger('resize');
+          };
+          var onResize = function(){
+              _bannerW = $win.width();
+              _bannerH = $win.height();
+              //console.log(_bannerW, _bannerH);
+              $banner.width(_bannerW).height(_bannerH);
+              $bannerContainer.width(_bannerW * _max);
+              $bannerItem.width(_bannerW);
+              var oW = 1000, oH = 768, imgW, imgH, imgT, imgL;
+              imgW = _bannerW; //window. width.
+              //1000 : 768 = imgW : imgH;
+              imgH = Math.round(imgW * oH / oW);
+              if(imgH < _bannerH){
+                  imgH = _bannerH;
+                  //1000 : 768 = imgW : imgH;
+                  imgW = Math.round(imgH * oW / oH);
+              }
+              imgT = Math.round(_bannerH / 2 - imgH / 2); //1000.001212121...
+              //1000.001212121... 반올림. Math.round - 1000.531231 = 1001, 1000.312312 - 1000
+              //Math.floor - 내림 : 1000.56328423 -> 1000
+              //Math.ceil - 올림 : 1000.12121 -> 1001
+              //Math.abs - 절대값 : -1000 > 1000
+              imgL = Math.round(_bannerW / 2 - imgW / 2);
+              $bannerItemImageEl.width(imgW).height(imgH).css({'margin-top':imgT,'margin-left':imgL});
+              // $bannerContainer.width(_bannerW * _max);
+              // $bannerItem.width(_bannerW);
+              slide(true);
+          };
+          var onClickPaddleNav = function(e){
+              e.preventDefault();
+              if(_isAni) return;
+              if($(e.target).hasClass('prev')){
+                  _cuId--;
+                  if(_cuId < 0){
+                      _cuId = 0;
+                  }
+              }else if($(e.target).hasClass('next')){
+                  _cuId++;
+                  if(_cuId >= _max - 1){
+                      _cuId = _max - 1;
+                  }
+              }
+              if(_exId != _cuId){
+                  slide();
+              }
+          };
+          var onClickDotNav = function(e){
+              e.preventDefault();
+              if(_isAni) return;
+              var $el = $(this), id;
+              id = $dotNavEl.index(this);
+              if(!$el.hasClass('selected')){
+                  _cuId = id;
+                  if(_exId != _cuId){
+                      slide();
+                  }
+              }
+          };
+          var slide = function(b = false){
+              var left = _bannerW * _cuId * -1;
+              _isAni = true;
+              if(!b){
+                  //false.
+                  //애니메이션이 될 때.
+                  var duration;
+                  duration = 200 + Math.abs(_exId - _cuId) * 200;
+                  $bannerContainer.stop(true).animate({'left' : left}, duration, function(){
+                      paddleCheck();
+                      dotCheck();
+                      _exId = _cuId;
+                      _isAni = false;
+                  });
+              }else{
+                  //true.
+                  //리사이즈가 될 때.
+                  $bannerContainer.stop(true).css({'left' : left});
+                  _isAni = false;
+              }
+          };
+          var paddleCheck = function(){
+              $paddleEl.removeClass('disabled');
+              if(_cuId == 0){
+                  $paddlePrevEl.addClass('disabled');
+              }else if(_cuId == _max -1){
+                  $paddleNextEl.addClass('disabled');
+              }
+          };
+          var dotCheck = function(){
+              $dotNavEl.removeClass('selected');
+              $dotNavEl.eq(_cuId).addClass('selected');
+          }
+          layout();
+          resetInit();
+          init();
+      });
+  })(jQuery);
+  </script>
 </body>
 
 </html>

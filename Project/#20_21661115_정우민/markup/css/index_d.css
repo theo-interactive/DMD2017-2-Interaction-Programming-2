@@ -1,0 +1,83 @@
+/* DESKTOP*/
+@media screen and (min-width: 768px){
+    /* HEADER */
+    .header_wrap {position: fixed; top: 0; margin-top: -50px; z-index: 9999; display: block; background-color: rgba(0, 0, 0, 0.3); width: 100%; height: 50px;}
+    .header {width: 100%; height: 40px; padding: 5px;}
+    .header_inner {width: 100%; height: 40px;}
+    h1 {width: 214px; height: 40px; margin-left: 30px;}
+    h1 a {display: block; width: 214px; height: 40px; background-image: url(../img/logo01.png); background-position: 0 0; background-size: cover; font-size: 0; color: transparent; text-indent: -9999;}
+    .header_nav {position: absolute; top: 0; right: 30px; height: 30px; line-height: 50px; margin-top: 10px;}
+    nav {}
+    nav ul {text-align: center;}
+    nav ul li {display: inline-block; vertical-align: top; }
+    nav ul li a {position: relative;display: block; letter-spacing: 1pt; padding: 0 10px; height: 30px; line-height: 30px;}
+    nav ul li a span {position: relative; display:block; top: 0; left: 0; width: 100%; height: 30px; color: #fff;}
+    nav ul li a .btn_deco {position: absolute; display: block; top: 0; left: 0; background-color:#fff; width: 100%; height: 0;}
+    /* HEADER */
+
+    /* CONTENT */
+    .content_wrap {position: relative; width: 100%; height: 100vh; background-color: #000000; overflow: hidden;}
+    .content {position: relative; width: 100%; height: 100%; margin-left: 0%;}
+
+
+
+    #main {position: absolute; z-index: 7; top: 0; left: 0; margin-top: 0%; background-image: url(../img/bg00.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    #main h2 {position: absolute; margin-top: -50%; width: 500px; height: 300px; margin-right: auto; margin-left: auto;}
+    #main h2 img {width: 500px; height: 300px;}
+
+    #about {position: absolute; z-index: 5; top: 0; left: 0; margin-left : 0%; background-image: url(../img/bg01_small.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .about_inner {position: relative; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden; *background-color: #f99;}
+    .about_title {}
+    .about_title h2 {background-color: #8D3737; width: 200px; height: 38px; padding: 6px 12px; float: right; margin-right: -300px;}
+    .about_title img {width: 200px; height: 38px}
+    .about_title .slogun {margin-top: 2px; margin-right: -700px; font-size: 64px; font-family: 'NanumMyeongjo', serif; letter-spacing: 3px; font-weight: 900; float: right; clear: both; color: #fff; background-color: #8D3737; padding: 12px 24px; overflow: hidden}
+    .about_desc {clear: both; display: block; width: 700px; text-align: right; float: right; margin-top: 16px;}
+    .about_desc p {margin-top: 1px; margin-right: -700px; position: relative; clear: both; float: right; padding: 12px 24px; text-align: right; font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 300; color: #fff; letter-spacing: 1px; background-color: #8D3737;}
+    .about_desc p:nth-child(3), .about_desc p:nth-child(5) {margin-top: 6px;}
+
+    #guide {position: absolute; z-index: 4; top: 0; left: 0; margin-left : 100%; background-image: url(../img/bg02_small.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .guide_inner {background-color: transparent; text-align: center; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden;}
+    .guide_inner h2 {background-color: #456C26; font-size: 32px; padding: 4px 16px; display: inline-block; color: #fff; font-weight: 700; letter-spacing: 1px; margin-bottom: 30px;}
+    .guide_phone {position: absolute; margin-top: 100%; left: 50%; transform:translateX(-50%); border-radius: 30px; background-color: rgba(70, 108, 38, 0.705); background-image: url(../img/guide_img.png); width: 750px; height: 375px;background-size: 750px 375px;}
+
+    #notice {position: absolute; z-index: 3; top: 0; left: 0; margin-left : 200%; background-image: url(../img/bg03_small.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .notice_inner {background-color: #f9f; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden;}
+
+    #gallery {position: absolute; z-index: 2; top: 0; left: 0; margin-left : 300%; background-image: url(../img/bg04_small.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .gallery_inner {background-color: #99f; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden;}
+
+    #dl {position: absolute; z-index: 1; top: 0; left: 0; margin-left : 400%; background-image: url(../img/bg05_small.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .dl_inner{position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;}
+
+    .dl_box {position: absolute; top: 0; left:0; width: 410px; height: 250px; padding: 30px 20px; overflow: hidden; margin: 8% 0 0 15%; background-color: #7c4b4b99;}
+    .dl_box h2 {position: relative; float:left; font-size: 32px; color: #fff; font-weight: 700; letter-spacing: 3px; padding: 4px 12px 6px 16px; background-color: #663b3b; margin-bottom: 20px;}
+    .dl_slogun {clear: both; float: left;  font-size: 20px; color: #fff; padding: 4px 12px 6px; letter-spacing: 2px;  margin-bottom: 4px; background-color: #663b3b;}
+    .dl_now {clear: both; float:left; font-size: 20px; color: #fff; padding: 4px 12px 6px; letter-spacing: 2px; text-align: right; margin-bottom: 30px; background-color: #663b3b;}
+    .market_list {clear: both; float: left;}
+    .market_list li {display: inline-block; vertical-align: top; margin: 0;  margin-right: 6px;}
+    .market_list li:last-child {display: inline-block; vertical-align: top; margin-right:0;}
+    .goole_dl_btn {display: block; position: relative; width: 200px; height: 59px;}
+    .goole_dl_btn img {width: 200px; height: 59px;}
+    .ios_dl_btn {display: block; position: relative; width: 200px; height: 59px; overflow: hidden;}
+    .ios_dl_btn img {width: 200px; height: 59px; opacity: 0.4;}
+    .ios_dl_btn p {position: absolute; top: 0; left: 0; width: 196px; height: 55px; color: #fff; line-height: 55px; text-align: center; letter-spacing: 1pt; background-color: rgba(0, 0, 0, 0.6); border-radius: 6px; margin: 2px;}
+
+
+    /* CHARACTER*/
+    .character {position: fixed; z-index: 6; left: 15%; bottom: 70px; width: 304px;}
+    .baby {display: block; position: absolute; left: 0; bottom: 0; width: 150px; height: 135px; background-image: url(../img/babyM.png); background-size: 300px 135px; background-position: 0 0; margin: 0 77px;}
+    .child {display: none; position: absolute; left: 0; bottom: 0; width: 200px; height: 267px; background-image: url(../img/boy_m1.png); background-size: 1600px 267px; background-position: 0 0; margin: 0 52px;}
+    .boy {display: none; position: absolute; left: 0; bottom: 0; width: 250px; height: 336px; background-image: url(../img/boy_m2.png); background-size: 1500px 336px; background-position: 0 0; margin: 0 27px;}
+    .adult {display: none; position: absolute; left: 0; bottom: 0; width: 304px; height: 384px; background-image: url(../img/adult_m1.png); background-size: 1824px 384px; background-position: 0 0; margin: 0 0;}
+    .old {display: none; position: absolute; left: 0; bottom: 0; width: 200px; height: 352px; background-image: url(../img/adult_m2.png); background-size: 800px 352px; background-position: 0 0; margin: 0 52px;}
+
+    /* CONTENT */
+
+    /* FOOTER */
+    .footer_wrap {position: fixed;  z-index: 9999; bottom: 0px; width: 100%; height: 40px; background-color: transparent; padding: 5px 0;}
+    .footer {position: relative; width: 100%; height: 40px;}
+    .footer_inner {position: relative; }
+    .footer_inner .logo_5byte {height: 40px; position: absolute; left: 40px;}
+    .footer_inner .logo_woom {height: 26px; position: absolute; right: 40px; margin-top: 7px;}
+    /* FOOTER */
+}

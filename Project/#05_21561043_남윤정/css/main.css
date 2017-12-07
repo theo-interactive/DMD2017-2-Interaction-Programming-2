@@ -1,0 +1,485 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css?family=Armata');
+@import url('https://fonts.googleapis.com/css?family=Asap');
+
+body {width:100%;height:100%;background-color:white;}
+div#title {margin-left:40px;margin-top:30px;font-size:18px;position:absolute;font-family:'Noto Sans KR', sans-serif;}
+div#title > h1 {color:#207ce5;}
+div.menu > a#menu_bt {margin-top:2%;float:right;z-index:9999;background-color:transparent;border:none;padding:0px;position:relative;}
+div.menu > a#menu_bt:hover{cursor:pointer;}
+div.menu > a#menu_bt > div {width:50px;height:8px;background-color:#207ce5;margin-bottom:10px;margin-right:30px;}
+div.menu > ul {height:100%;width:100%;position:absolute;background-color:black;z-index:100;display:none;list-style:none;
+    font-family:'Noto Sans KR', sans-serif;}
+div.menu > ul > li {width:100%;height:50px;font-size:30px;text-align:center;margin-top:5%;color:white;}
+div.menu > ul > li:hover{background-color:#ccd4ee;cursor:pointer;}
+div.menu > ul > li#poster1{margin-top:16%;}
+section {width:100%;height:100%;position:absolute;}
+section.poster2 {display:none;}
+section.poster3 {display:none;}
+section.poster1 {display:none;}
+
+section.poster1 > ul {
+    width:370px;height:520px;background:linear-gradient(to bottom, #6EAEEF, rgba(247,225,250,1) 39%, rgba(247,225,250,1) 60%, #A1E7E0 100%);
+    text-align:center;overflow:hidden;position:absolute;
+    margin: calc(50vh - 45vh) calc(50vw - 33vh);
+    margin-top:100px;
+    box-shadow:6px 6px 50px gray;
+    }
+section.poster1 > ul > p#text {
+    color:white;font-size:5px;
+    font-family:'Noto Sans KR', sans-serif;
+    position: absolute;
+    text-align:left;
+    z-index:1;
+    margin:20px;
+    font-family:'Armata', sans-serif;
+}
+section.poster1 > ul > li {
+    width:70px;height:500px;
+    margin-top:10px;
+    float:left;
+}
+section.poster1 > ul > li:first-of-type{
+    margin-left:10px;
+}
+section.poster1 > ul > li:last-of-type{
+    margin-right:10px;
+}
+.connected-sortable {
+    margin:0 auto;
+    list-style:none;
+    width:90%;
+}
+section.poster1 > ul > li.dragable_item{
+    transition:transform .25s ease-in-out;
+    transition:box-shadow .25s ease-in-out;
+}
+section.poster1 > ul > li.dragable_item:hover{
+    cursor:pointer;
+}
+section.poster1 > ul > li.draggable-item.ui-sortable-helper{
+    box-shadow:0 0 8px rgba(53,41,41, .8);
+    transform:scale(1.015);
+    z-index:100;
+}
+section.poster1 > ul > li.draggable-item.ui-sortable-placeholder{
+    box-shadow:inset 0 0 10px #000000;
+}
+section.poster1 > ul > li#gra-1{
+    background: linear-gradient(to bottom, #85BFFA 0%, rgba(247,225,250,1) 68%, rgba(182,237,223,1) 100%);
+}
+section.poster1 > ul > li#gra-2{
+    background:linear-gradient(to bottom, #A8D2FC 0%, rgba(247,225,250,1) 7%, rgba(182,237,223,1) 43%, rgba(180,222,237,1) 64%, #A1E7E0 100%);
+}
+section.poster1 > ul > li#gra-3{
+    background: linear-gradient(to bottom, #9ACDFF 0%, rgba(247,225,250,1) 17%, rgba(252,210,244,1) 37%, #A1E7E0 100%);
+}
+section.poster1 > ul > li#gra-4{
+    background: linear-gradient(to bottom, #77B7F7 0%, rgba(247,225,250,1) 60%, #A1E7E0 100%);
+}
+section.poster1 > ul > li#gra-5{
+    background: linear-gradient(to bottom, #9ECFFD 0%, rgba(247,225,250,1) 10%, rgba(252,210,244,1) 37%, #A1E7E0 100%);
+}
+
+section.poster2 > div {
+    width:360px;height:500px;background-color:#e4dad8;
+    text-align:center;overflow:hidden;position: absolute;
+    margin: calc(50vh - 45vh) calc(50vw - 33vh);
+    margin-top:100px;
+    box-shadow:6px 6px 50px gray;
+    }
+section.poster2 > div > div{
+    position:absolute;
+    opacity:0.8;
+    cursor:pointer;
+}
+section.poster2 > div > div.donut{
+    width:40px;height:40px;
+    border-radius:100%;
+    border: 30px solid;
+}
+section.poster2 > div > div.circle{
+    width:100px;height:100px;
+    border-radius:100%;
+}
+section.poster2 > div > div.yellow{
+    background-color:#ffdd33;
+    margin-left:10px;
+    margin-top:-50px;
+}
+section.poster2 > div > div.black{
+    border-color:black;
+    margin-left:160px;
+    margin-top:50px;
+}
+section.poster2 > div > div.navy{
+    border-color:#00173d;
+    margin-left:10px;
+    margin-top:150px;
+    z-index:90;
+}
+section.poster2 > div > div.red{
+    background-color:#e7402e;
+    margin-left:60px;
+    margin-top:150px;
+}
+section.poster2 > div > div.salmon{
+    border-color:salmon;
+    margin-left:310px;
+    margin-top:150px;
+}
+section.poster2 > div > div.brown{
+    background-color:#6f422f;
+    margin-left:-50px;
+    margin-top:250px;
+}
+section.poster2 > div > div.blue{
+    border-color:#000080;
+    margin-left:160px;
+    margin-top:250px;
+    z-index:90;
+}
+section.poster2 > div > div.pink{
+    background-color:#8c145b;
+    margin-left:160px;
+    margin-top:300px;
+}
+section.poster2 > div > div.darkblue{
+    background-color:#00173d;
+    margin-left:310px;
+    margin-top:300px;
+}
+section.poster2 > div > div.purple{
+    background-color:purple;
+    margin-left:50px;
+    margin-top:450px;
+}
+section.poster2 > div > div.circle{
+    width:100px;height:100px;
+}
+section.poster2 > div > div.text{
+    color:black;
+    font-weight:800;
+}
+section.poster2 > div > div.title{
+    font-size:18px;
+    margin-top:10px;
+    margin-left:8px;
+}
+section.poster2 > div > div.number{
+    font-size:18px;
+    margin-top:10px;
+    margin-left:308px;
+}
+section.poster2 > div > div.name{
+    text-align:left;
+    font-size:13px;
+    margin-top:420px;
+    margin-left:10px;
+}
+
+section.poster3 > div {
+    width:360px;height:500px;background-color:#F95903;
+    text-align:center;overflow:hidden;position: absolute;
+    margin: calc(50vh - 45vh) calc(50vw - 33vh);
+    margin-top:100px;
+    box-shadow:6px 6px 50px gray;
+}
+section.poster3 > div > div#keyboard_white > div{
+    position:absolute;
+    width:13px;height:70px;
+    background-color:white;
+    margin-top:120px;
+    cursor:pointer;
+}
+section.poster3 > div > div#keyboard_white > div#c1{
+    left:2.5px;
+}
+section.poster3 > div > div#keyboard_white > div#d1{
+    left:20.5px;
+}
+section.poster3 > div > div#keyboard_white > div#e1{
+    left:38.5px;
+}
+section.poster3 > div > div#keyboard_white > div#f1{
+    left:56.5px;
+}
+section.poster3 > div > div#keyboard_white > div#g1{
+    left:74.5px;
+}
+section.poster3 > div > div#keyboard_white > div#a1{
+    left:92.5px;
+}
+section.poster3 > div > div#keyboard_white > div#b1{
+    left:110.5px;
+}
+section.poster3 > div > div#keyboard_white > div#c2{
+    left:128.5px;
+}
+section.poster3 > div > div#keyboard_white > div#d2{
+    left:146.5px;
+}
+section.poster3 > div > div#keyboard_white > div#e2{
+    left:164.5px;
+}
+section.poster3 > div > div#keyboard_white > div#f2{
+    left:182.5px;
+}
+section.poster3 > div > div#keyboard_white > div#g2{
+    left:200.5px;
+}
+section.poster3 > div > div#keyboard_white > div#a2{
+    left:218.5px;
+}
+section.poster3 > div > div#keyboard_white > div#b2{
+    left:236.5px;
+}
+section.poster3 > div > div#keyboard_white > div#c3{
+    left:254.5px;
+}
+section.poster3 > div > div#keyboard_white > div#d3{
+    left:272.5px;
+}
+section.poster3 > div > div#keyboard_white > div#e3{
+    left:290.5px;
+}
+section.poster3 > div > div#keyboard_white > div#f3{
+    left:308.5px;
+}
+section.poster3 > div > div#keyboard_white > div#g3{
+    left:326.5px;
+}
+section.poster3 > div > div#keyboard_white > div#a3{
+    left:344.5px;
+}
+section.poster3 > div > div#keyboard_white > div#a3{
+    margin-right:0px;
+}
+section.poster3 > div > div#keyboard_black > div{
+    width:13px;height:65px;
+    background-color:black;
+    position:absolute;
+    margin-top:85px;
+}
+/*1*/
+section.poster3 > div > div#keyboard_black > div#c1b{
+    margin-left:12px;
+}
+section.poster3 > div > div#keyboard_black > div#d1b{
+    margin-left:29px;
+}
+section.poster3 > div > div#keyboard_black > div#f1b{
+    margin-left:65px;
+}
+section.poster3 > div > div#keyboard_black > div#g1b{
+    margin-left:83px;
+}
+section.poster3 > div > div#keyboard_black > div#a1b{
+    margin-left:102px;
+}
+/*2*/
+section.poster3 > div > div#keyboard_black > div#c2b{
+    margin-left:137px;
+}
+section.poster3 > div > div#keyboard_black > div#d2b{
+    margin-left:155px;
+}
+section.poster3 > div > div#keyboard_black > div#f2b{
+    margin-left:191px;
+}
+section.poster3 > div > div#keyboard_black > div#g2b{
+    margin-left:210px;
+}
+section.poster3 > div > div#keyboard_black > div#a2b{
+    margin-left:228px;
+}
+/*3*/
+section.poster3 > div > div#keyboard_black > div#c3b{
+    margin-left:264px;
+}
+section.poster3 > div > div#keyboard_black > div#d3b{
+    margin-left:282px;
+}
+section.poster3 > div > div#keyboard_black > div#f3b{
+    margin-left:317px;
+}
+section.poster3 > div > div#keyboard_black > div#g3b{
+    margin-left:336px;
+}
+section.poster3 > div > div.text{
+    position:absolute;
+    text-align:right;
+    font-weight:800;
+    font-size:30px;
+    margin-top:350px;
+    margin-left:170px;
+    color:white;
+}
+section.poster3 > div > div.text > span{
+    color:black;
+}
+section.poster3 > div > div.text > div#up{
+    padding-bottom:40px;
+}
+section.poster3 > div > hr{
+    position: absolute;
+    width:100%;height:1px;
+    margin-top:480px;
+}
+
+section.poster4 > div {
+    width:370px;height:520px;background: linear-gradient(45deg, rgba(250,208,180,1) 0%, rgba(239,1,124,1) 100%);
+    text-align:center;overflow:hidden;position:absolute;
+    margin: calc(50vh - 45vh) calc(50vw - 33vh);
+    margin-top:100px;
+    box-shadow:6px 6px 50px gray;
+    }
+section.poster4 > div > p {
+    position: absolute;
+    color:white;
+    font-size:20px;
+    font-family: 'Asap', sans-serif;
+    margin-top:480px;
+    margin-left:10px;
+}
+section.poster4 > div > div {
+    position: absolute;
+    width:350px;height:450px;
+    margin-top:10px;margin-left:10px;
+    overflow: hidden;
+}
+section.poster4 > div > div > div {
+    border-radius:50%;
+    border:1px solid white;
+    position:absolute;
+}
+section.poster4 > div > div > div#cline-1{
+    width:10px;height:10px;
+    margin-left:250px;
+    margin-top:290px;
+}
+section.poster4 > div > div > div#cline-2{
+    width:40px;height:40px;
+    margin-left:235px;
+    margin-top:275px;
+}
+section.poster4 > div > div > div#cline-3{
+    width:70px;height:70px;
+    margin-left:220px;
+    margin-top:260px;
+}
+section.poster4 > div > div > div#cline-4{
+    width:100px;height:100px;
+    margin-left:205px;
+    margin-top:245px;
+}
+section.poster4 > div > div > div#cline-5{
+    width:130px;height:130px;
+    margin-left:190px;
+    margin-top:230px;
+}
+section.poster4 > div > div > div#cline-6{
+    width:160px;height:160px;
+    margin-left:175px;
+    margin-top:215px;
+}
+section.poster4 > div > div > div#cline-7{
+    width:190px;height:190px;
+    margin-left:160px;
+    margin-top:200px;
+}
+section.poster4 > div > div > div#cline-8{
+    width:220px;height:220px;
+    margin-left:145px;
+    margin-top:185px;
+}
+section.poster4 > div > div > div#cline-9{
+    width:250px;height:250px;
+    margin-left:130px;
+    margin-top:170px;
+}
+section.poster4 > div > div > div#cline-10{
+    width:280px;height:280px;
+    margin-left:115px;
+    margin-top:155px;
+}
+section.poster4 > div > div > div#cline-11{
+    width:310px;height:310px;
+    margin-left:100px;
+    margin-top:140px;
+}
+section.poster4 > div > div > div#cline-12{
+    width:340px;height:340px;
+    margin-left:85px;
+    margin-top:125px;
+}
+section.poster4 > div > div > div#cline-13{
+    width:370px;height:370px;
+    margin-left:70px;
+    margin-top:110px;
+}
+section.poster4 > div > div > div#cline-14{
+    width:400px;height:400px;
+    margin-left:55px;
+    margin-top:95px;
+}
+section.poster4 > div > div > div#cline-15{
+    width:430px;height:430px;
+    margin-left:40px;
+    margin-top:80px;
+}
+section.poster4 > div > div > div#cline-16{
+    width:460px;height:460px;
+    margin-left:25px;
+    margin-top:65px;
+}
+section.poster4 > div > div > div#cline-17{
+    width:490px;height:490px;
+    margin-left:10px;
+    margin-top:50px;
+}
+section.poster4 > div > div > div#cline-18{
+    width:520px;height:520px;
+    margin-left:-5px;
+    margin-top:35px;
+}
+section.poster4 > div > div > div#cline-19{
+    width:550px;height:550px;
+    margin-left:-20px;
+    margin-top:20px;
+}
+section.poster4 > div > div > div#cline-20{
+    width:580px;height:580px;
+    margin-left:-35px;
+    margin-top:5px;
+}
+section.poster4 > div > div > div#cline-21{
+    width:610px;height:610px;
+    margin-left:-50px;
+    margin-top:-10px;
+}
+section.poster4 > div > div > div#cline-22{
+    width:640px;height:640px;
+    margin-left:-65px;
+    margin-top:-25px;
+}
+section.poster4 > div > div > div#cline-23{
+    width:670px;height:670px;
+    margin-left:-80px;
+    margin-top:-40px;
+}
+section.poster4 > div > div > div#cline-24{
+    width:700px;height:700px;
+    margin-left:-95px;
+    margin-top:-55px;
+}
+section.poster4 > div > div > div#cline-25{
+    width:730px;height:730px;
+    margin-left:-110px;
+    margin-top:-70px;
+}
+section.poster4 > div > div > div#cline-26{
+    width:760px;height:760px;
+    margin-left:-125px;
+    margin-top:-85px;
+}
