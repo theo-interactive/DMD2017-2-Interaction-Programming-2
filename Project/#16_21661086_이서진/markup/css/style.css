@@ -12,6 +12,7 @@ body{
     font-family: 'Montserrat', sans-serif,'NanumSquare';
     overflow: hidden;
 }
+
 nav{
     position: absolute;
     z-index: 10000;
@@ -157,6 +158,15 @@ span#info_txt p {
 section{
     width:100%;
     height: 100%;
+}
+section #sceneChange{
+    position: absolute;
+    display: none;
+    z-index: 12000;
+    /* margin-left:100%; */
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
 }
 section #section_wrapper_1{ 
     position: relative;
@@ -1361,10 +1371,34 @@ section div#section_wrapper_4{
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.9);
 }
+section div#section_wrapper_4 #list-change{
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 1);
+}
+section div#section_wrapper_4 #section4-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
 section div#section_wrapper_4 div#album_Info{
     width:100%;
     height:70%;
 }
+section div#section_wrapper_4 div#album_Info.vis{
+    width:100%;
+    height:70%;
+} 
 section div#section_wrapper_4 div#album_Info ol{
     float:left;
 }
@@ -1385,8 +1419,29 @@ section div#section_wrapper_4 div#album_Info ol#album_Photo li{
     background-repeat: no-repeat;
     background-size: cover;
     color:transparent;
+    border-radius: 100%;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
 }
-section div#section_wrapper_4 div#album_Info ol#album_desc{
+section div#section_wrapper_4 div#album_Info ol#album_Photo li span{
+    
+}
+
+/* @-webkit-keyframes spin {
+    from {
+        top:0%;
+        left:0%;
+        -webkit-transform: rotate(0deg); 
+    }
+    
+    to {
+        top:0%;
+        top:0%;
+        -webkit-transform: rotate(360deg); 
+   }
+  } */
+
+  section div#section_wrapper_4 div#album_Info ol#album_desc{
     position: relative;
     width:62.5%;
     height: 100%;
@@ -1537,8 +1592,12 @@ section div#section_wrapper_4 #soundList ul li span p
     font-size: 25px;
     font-family: 'Montserrat-hairline';
 }
+
 section div#section_wrapper_4 #soundList ul li.list-selected{
     background-color:rgba(255,104,4,0.3);
+}
+section div#section_wrapper_4 #soundList ul li.list-selected2{
+    background-color:rgba(255,255,255,0.3);
 }
 section div#section_wrapper_4 #soundList ul li span.select-box{
     width: 1.5%;
@@ -1572,7 +1631,7 @@ section div#section_wrapper_4 #soundList ul li span p.mu_time{
 }
 section div#section_wrapper_4 audio {
     width:100%;
-    margin-top: 50px;
+    margin-top:100px;
 }
 /* section div#section_wrapper_4 audio {
     margin:0 15px 0 14px;
