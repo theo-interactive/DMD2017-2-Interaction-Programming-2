@@ -1,0 +1,128 @@
+/* MOBILE */
+@media screen and (max-width: 767px){
+    /* HEADER */
+    .header_wrap {position: fixed; top: 0; margin-top: -50px; z-index: 9999; display: block; background-color: rgba(0, 0, 0, 0.3); width: 100%; height: 50px;}
+    .header {width: 100%; height: 40px; padding: 5px;}
+    .header_inner {width: 100%; height: 40px;}
+    h1 {width: 214px; height: 40px; margin-left: 30px;}
+    h1 a {display: block; width: 214px; height: 40px; background-image: url(../img/logo01.png); background-position: 0 0; background-size: cover; font-size: 0; color: transparent; text-indent: -9999;}
+    .header_nav {position: absolute; top: 0; right: 30px; height: 30px; line-height: 50px; margin-top: 10px;}
+    nav {}
+    nav ul {text-align: center;}
+    nav ul li {display: inline-block; vertical-align: top; }
+    nav ul li a {position: relative;display: block; letter-spacing: 1pt; padding: 0 10px; height: 30px; line-height: 30px;}
+    nav ul li a span {position: relative; display:block; top: 0; left: 0; width: 100%; height: 30px; color: #fff;}
+    nav ul li a .btn_deco {position: absolute; display: block; top: 0; left: 0; background-color:#fff; width: 100%; height: 0;}
+    /* HEADER */
+
+    /* CONTENT */
+    .content_wrap {position: relative; width: 100%; height: 100vh; background-color: #000000; overflow: hidden;}
+    .content {position: relative; width: 100%; height: 100%; margin-left: 0%;}
+
+
+
+    #main {position: absolute; z-index: 7; top: 0; left: 0; margin-top: 0%; background-image: url(../img/bg00.jpg); background-size: cover; background-position: 50% 50%; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    #main h2 {position: absolute; margin-top: -50%; width: 500px; height: 300px; margin-right: auto; margin-left: auto;}
+    #main h2 img {width: 500px; height: 300px;}
+
+    #about {position: absolute; z-index: 5; top: 0; left: 0; margin-left : 0%; background-image: url(../img/bg01_small.jpg); background-size: cover; background-position: 0 0; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .about_inner {position: relative; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden; *background-color: #f99;}
+    .about_title {}
+    .about_title h2 {background-color: #8D3737; width: 200px; height: 38px; padding: 6px 12px; float: right; margin-right: -300px;}
+    .about_title img {width: 200px; height: 38px}
+    .about_title .slogun {margin-top: 2px; margin-right: -700px; font-size: 64px; font-family: 'NanumMyeongjo', serif; letter-spacing: 3px; font-weight: 900; float: right; clear: both; color: #fff; background-color: #8D3737; padding: 12px 24px; overflow: hidden}
+    .about_desc {clear: both; display: block; width: 700px; text-align: right; float: right; margin-top: 16px;}
+    .about_desc p {margin-top: 1px; margin-right: -700px; position: relative; clear: both; float: right; padding: 12px 24px; text-align: right; font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 300; color: #fff; letter-spacing: 1px; background-color: #8D3737;}
+    .about_desc p:nth-child(3), .about_desc p:nth-child(5) {margin-top: 6px;}
+
+    #guide {position: absolute; z-index: 4; top: 0; left: 0; margin-left : 100%; background-image: url(../img/bg02_small.jpg); background-size: cover; background-position: 0 0; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .guide_inner {background-color: transparent; text-align: center; width: 70%; height: 90%; margin: 3% 15%; overflow: hidden;}
+    .guide_inner h2 {background-color: #456C26; font-size: 32px; padding: 4px 16px; display: inline-block; color: #fff; font-weight: 700; letter-spacing: 1px; margin-bottom: 30px;}
+    .guide_phone {position: absolute; margin-top: 100%; left: 50%; transform:translateX(-50%); border-radius: 30px; background-color: rgba(70, 108, 38, 0.705); background-image: url(../img/guide_img.png); width: 750px; height: 375px;background-size: 750px 375px;}
+    .guide_phone a {position: absolute; margin: 0;}
+    .guide_phone a img {width: 100%;}
+    .health_btn {top: 23px; left: 86px;  width: 16%;}
+    .happy_btn {top: 23px; left: 224px;  width: 16%;}
+    .money_btn {top: 26px; left: 370px;  width: 5%;}
+    .dia_btn {top: 26px; left: 430px;  width: 5%;}
+    .character_btn {bottom: 90px; left: 200px;  width: 8%;}
+    .coin_btn {top: 200px; left: 330px; width: 5%;}
+    .event_btn {bottom: 90px; right: 200px;  width: 21%;}
+    .skill_btn {bottom: 27px; left: 86px;  width: 20%;}
+    .choice_btn {bottom: 30px; right: 190px;  width: 12%;}
+    .jump_btn {bottom: 30px; right: 86px;  width: 12%;}
+
+    .guide_desc {border-radius: 5px; position: absolute; top: 18px; left: 77px; display: none; width: 0px; *width: 560px; height: 260px; background-color: #000; padding: 40px 20px; overflow: hidden; }
+    .guide_close {position: absolute; top: 10px; right: 10px; width: 20px; height: 20px;font-size: 20px; line-height:20px; color:#fff; font-weight: 700;}
+    .guide_desc div {display:none; position: absolute; width: 560px;}
+    .guide_desc div.displayBlock {display:block;}
+    .guide_desc h3 {font-size: 24px; color: #fff; font-weight: 700px; margin-bottom: 20px; margin-top: 30px;}
+    .guide_desc p {font-size: 16px; color: #fff; }
+    
+
+
+
+    #notice {position: absolute; z-index: 3; top: 0; left: 0; margin-left : 200%; background-image: url(../img/bg03_small.jpg); background-size: cover; background-position: 0 0; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .notice_inner {*background-color: #f9f; width: 828px; height: 70%; margin: 3% auto; overflow: hidden; text-align: center;}
+    .notice_inner h2 {background-color: #666658; font-size: 32px; padding: 4px 16px; display: inline-block; color: #fff; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;}
+    .notice_list {text-align: left; width: 768px; height: 70%; margin: 0 auto; overflow-x: hidden; overflow-y: auto; padding: 30px; background-color: #66665899;}
+    .notice_list_ol {height: 100%;}
+    .notice_list_li {height: 40px; margin-bottom: 10px;}
+    .notice_item {width: 768px; height: 40px; *height:100%;}
+    .notice_title {background-color: #2b2b19; font-size: 20px; font-weight: 600; width: 768px; height: 40px;}
+    .notice_title a {cursor: pointer; display: block; width: 748px; height: 30px; padding: 5px 10px; line-height: 30px; color: #fff;}
+    .notice_title a span {height: 30px; font-size: 12px; font-weight: 300; padding: 5px 10px; float: right; color: #fff;}
+    .notice_desc {display: none; width: 728px; margin-left: 10px;  padding: 20px 10px; height: calc(100% - 80px);  overflow-y: auto; overflow-x: auto; background-color: #fff;}
+    .notice_desc pre {width: 728px; height: 100%;}
+
+    #gallery {position: absolute; z-index: 2; top: 0; left: 0; margin-left : 300%; background-image: url(../img/bg04_small.jpg); background-size: cover; background-position: 0 0; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .gallery_inner {width: 70%; height: 90%; margin: 3% 15%; overflow: hidden; text-align: center;}
+    .gallery_inner h2 {background-color: #2A4747; font-size: 32px; padding: 4px 16px; display: inline-block; color: #fff; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;}
+    .gal_list {position: relative; width: calc(100% - 20px); margin: 0 auto; text-align: center; background-color: rgba(42, 71, 71, 0.5); padding: 20px 20px 30px; overflow: hidden;}
+    .gal_list_ul {position: relative; display: inline-block; width: 400%;}
+    .gal_list_li {float: left;  margin: 4px 4px; position: relative; margin-left: 0;}
+    .gal_list_li img {width: 100%;}
+    .prev_next {}
+    .prev_next button {margin: 10px; width: 80px; height: 50px; background-color: #2A4747; color: #fff; text-align: center; line-height: 50px; font-weight: 600;}
+
+
+
+    #dl {position: absolute; z-index: 1; top: 0; left: 0; margin-left : 400%; background-image: url(../img/bg05_small.jpg); background-size: cover; background-position: 0 0; width: 100%; height: calc(100% - 100px); padding: 50px 0;}
+    .dl_inner{position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;}
+
+    .dl_box {position: absolute; top: 0; left:0; width: 410px; height: 250px; padding: 30px 20px; overflow: hidden; margin: 8% 0 0 15%; background-color: #7c4b4b99;}
+    .dl_box h2 {position: relative; float:left; font-size: 32px; color: #fff; font-weight: 700; letter-spacing: 3px; padding: 4px 12px 6px 16px; background-color: #663b3b; margin-bottom: 20px;}
+    .dl_slogun {clear: both; float: left;  font-size: 20px; color: #fff; padding: 4px 12px 6px; letter-spacing: 2px;  margin-bottom: 4px; background-color: #663b3b;}
+    .dl_now {clear: both; float:left; font-size: 20px; color: #fff; padding: 4px 12px 6px; letter-spacing: 2px; text-align: right; margin-bottom: 30px; background-color: #663b3b;}
+    .market_list {clear: both; float: left;}
+    .market_list li {display: inline-block; vertical-align: top; margin: 0;  margin-right: 6px;}
+    .market_list li:last-child {display: inline-block; vertical-align: top; margin-right:0;}
+    .goole_dl_btn {display: block; position: relative; width: 200px; height: 59px;}
+    .goole_dl_btn img {width: 200px; height: 59px;}
+    .ios_dl_btn {display: block; position: relative; width: 200px; height: 59px; overflow: hidden;}
+    .ios_dl_btn img {width: 200px; height: 59px; opacity: 1;}
+    .ios_dl_btn p {position: absolute; top: 0; left: 0; width: 196px; height: 55px; color: #fff; line-height: 55px; text-align: center; letter-spacing: -1pt; background-color: rgba(0, 0, 0, 0.6); border-radius: 6px; margin: 2px; margin-top: 59px;}
+
+    .game_intro {width: 800px; position: absolute; bottom: 300px; right: 15%;}
+    .game_intro img {width: 800px;}
+
+    /* CHARACTER*/
+    .character {position: fixed; z-index: 6; left: 12%; bottom: 70px; width: 304px;}
+    .baby {display: block; position: absolute; left: 0; bottom: 0; width: 150px; height: 135px; background-image: url(../img/babyM.png); background-size: 300px 135px; background-position: 0 0; margin: 0 77px;}
+    .child {display: none; position: absolute; left: 0; bottom: 0; width: 200px; height: 267px; background-image: url(../img/boy_m1.png); background-size: 1600px 267px; background-position: 0 0; margin: 0 52px;}
+    .boy {display: none; position: absolute; left: 0; bottom: 0; width: 250px; height: 336px; background-image: url(../img/boy_m2.png); background-size: 1500px 336px; background-position: 0 0; margin: 0 27px;}
+    .adult {display: none; position: absolute; left: 0; bottom: 0; width: 304px; height: 384px; background-image: url(../img/adult_m1.png); background-size: 1824px 384px; background-position: 0 0; margin: 0 0;}
+    .old {display: none; position: absolute; left: 0; bottom: 0; width: 200px; height: 352px; background-image: url(../img/adult_m2.png); background-size: 800px 352px; background-position: 0 0; margin: 0 52px;}
+
+    /* CONTENT */
+
+    /* FOOTER */
+    .footer_wrap {position: fixed;  z-index: 9999; bottom: 0px; width: 100%; height: 40px; background-color: transparent; padding: 5px 0;}
+    .footer {position: relative; width: 100%; height: 40px;}
+    .footer_inner {position: relative; }
+    .footer_inner .logo_5byte {height: 40px; position: absolute; left: 40px;}
+    .footer_inner p {height: 40px; position: absolute; left: 120px; line-height: 60px; font-size: 12px; color: #aaa;}
+    .footer_inner .logo_woom {height: 26px; position: absolute; right: 40px; margin-top: 7px;}
+    /* FOOTER */
+
+}
