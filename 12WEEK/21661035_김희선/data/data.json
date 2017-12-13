@@ -1,0 +1,73 @@
+{
+    "Music": [
+      {
+        "title": "春よ、来い / 봄이여 오라",
+        "video": "https://www.youtube.com/watch?v=gol5dFrv4Ao",
+        "cover": "./img/01.png",
+        "Singer": "山本みゆき",
+        "genre": "歌手"
+      },
+      {
+        "title": "The point of no return / 돌아갈 수 없는 길",
+        "video": "https://www.youtube.com/watch?v=Zh3AqYjDc7I",
+        "cover": "./img/02.jpg",
+        "Singer": "ramin karimloo / sierra boggess",
+        "genre": "Musical"
+      },
+      {
+        "title": "春よ、来い / 봄이여 오라",
+        "video": "https://www.youtube.com/watch?v=gol5dFrv4Ao",
+        "cover": "./img/01.png",
+        "Singer": "山本みゆき",
+        "genre": "歌手"
+      },
+      {
+        "title": "The point of no return / 돌아갈 수 없는 길",
+        "video": "https://www.youtube.com/watch?v=Zh3AqYjDc7I",
+        "cover": "./img/02.jpg",
+        "Singer": "ramin karimloo / sierra boggess",
+        "genre": "Musical"
+      },
+      {
+        "title": "春よ、来い / 봄이여 오라",
+        "video": "https://www.youtube.com/watch?v=gol5dFrv4Ao",
+        "cover": "./img/01.png",
+        "Singer": "山本みゆき",
+        "genre": "歌手"
+      },
+      {
+        "title": "The point of no return / 돌아갈 수 없는 길",
+        "video": "https://www.youtube.com/watch?v=Zh3AqYjDc7I",
+        "cover": "./img/02.jpg",
+        "Singer": "ramin karimloo / sierra boggess",
+        "genre": "Musical"
+      },
+      {
+        "title": "春よ、来い / 봄이여 오라",
+        "video": "https://www.youtube.com/watch?v=gol5dFrv4Ao",
+        "cover": "./img/01.png",
+        "Singer": "山本みゆき",
+        "genre": "歌手"
+      },
+      {
+        "title": "The point of no return / 돌아갈 수 없는 길",
+        "video": "https://www.youtube.com/watch?v=Zh3AqYjDc7I",
+        "cover": "./img/02.jpg",
+        "Singer": "ramin karimloo / sierra boggess",
+        "genre": "Musical"
+      }, {
+        "title": "春よ、来い / 봄이여 오라",
+        "video": "https://www.youtube.com/watch?v=gol5dFrv4Ao",
+        "cover": "./img/01.png",
+        "Singer": "山本みゆき",
+        "genre": "歌手"
+      },
+      {
+        "title": "The point of no return / 돌아갈 수 없는 길",
+        "video": "https://www.youtube.com/watch?v=Zh3AqYjDc7I",
+        "cover": "./img/02.jpg",
+        "Singer": "ramin karimloo / sierra boggess",
+        "genre": "Musical"
+      }
+    ]
+  }
