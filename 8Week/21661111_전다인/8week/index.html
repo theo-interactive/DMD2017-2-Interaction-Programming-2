@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+<title>Sprite Animation_21661111_jeondain</title>
+<link rel="stylesheet" href="./css/style.css"/>
+
+</head>
+<body>
+<div id="wrap">
+    <p>1) Smurf </p>
+    <div class="smurf"></div>
+    
+    <p>2) mungmung </p>
+    <div class="mung"></div>
+</div>
+<script type = "text/javascript">
+var Smurf;
+var Mim;
+$(document).ready(function(){
+    Smurf = {
+        _isReverse: false,
+        _timer : 0,
+        appInit:function(){
+            // this = Sprite라는 변수를 의미        // var_this = Sprite;라고 만들어줘도댐~
+            // Sprite안에 있는 layout,reset,resetInit 함수를 불러온다.
+            var _this =  Smurf;
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+           // _this.play();
+        },
+        layout:function(){
+            this.$el = $('.smurf');
+        },
+        reset:function(){
+            this._cuId = 0;
+            // 이미지 갯수 체크
+            this._max = 15;
+            this._row = 4;
+            this._col = 4;
+            this._maxW = 256;
+            this._maxH = 256;
+            this._width = this._maxW / this._col;    // 80
+            this._height = this._maxH / this._row;   // 80
+
+        },
+        resetInit:function(){
+
+        },
+        play:function(){
+            var _this = Smurf;
+            //clearInterval(_this._timer);
+            _this._timer = setInterval(_this.progress,70);
+
+        },
+        stop:function(){
+
+        },
+        progress:function(){
+            var _this = Smurf;
+            if(!_this._isReverse){
+                // 순방향
+                _this._cuId++;
+             
+            }else{
+                // 역방향
+                _this._cuId--;
+            }
+            // if(_this._cuId < 0){
+            //     _this._cuId = 0;
+            // }
+            if(_this._cuId >= _this._max){
+                _this._cuId = _this._max;
+            }
+           _this.update();
+
+        },
+        update:function(){
+            var _this =  Smurf, x, y;
+            //_this._CuId = 10;
+            // **************************************************************
+            x = _this._cuId % _this._row * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+            // **************************************************************
+            _this.$el.css({'background-position':x +'px ' + y +'px '});
+            
+            
+        },
+
+        
+           // console.log(_this._CuId % _this._row);     x의 위치
+           //console.log(Math.floor(_this._CuId / _this.col));    
+    };
+
+     Mung = {
+        _isReverse: false,
+        _timer : 0,
+        appInit:function(){
+            var _this =  Mung;
+            _this.layout();
+            _this.reset();
+            _this.resetInit();
+            _this.play();
+        },
+        layout:function(){
+            this.$el = $('.mung');
+        },
+        reset:function(){
+            this._cuId = 0;
+            // 이미지 갯수 체크
+            this._max = 38;
+            this._row = 7;
+            this._col = 6;
+            this._maxW = 291;
+            this._maxH = 248.5;
+            this._width = this._maxW / this._col;    // 80
+            this._height = this._maxH / this._row;   // 80
+
+        },
+        resetInit:function(){
+
+        },
+        play:function(){
+            var _this =  Mung;
+            //clearInterval(_this._timer);
+            $over = $('.mung');
+           
+            $over.on('mouseover mouseout',function(e){
+                if(e.type == 'mouseover'){
+                    console.log("Mung_over"+Mung._cuId);
+                    _this._timer = setInterval(_this.progress,70);
+                }else if(e.type == 'mouseout'){
+                    console.log("Mung_out");
+              
+                }
+
+            });
+                                        
+
+        },
+        stop:function(){
+
+        },
+        progress:function(){
+            var _this = Mung;
+            if(!_this._isReverse){
+                // 순방향
+                _this._cuId++;
+            }else{
+                // 역방향
+
+            }
+            // if(_this._cuId < 0){
+            //     _this._cuId = 0;
+            // }
+            if(_this._cuId >= _this._max){
+                _this._cuId = _this._max;
+            }
+            _this.update();
+
+        },
+        update:function(){
+            var _this =  Mung, x, y;
+            //_this._CuId = 10;
+
+            // **************************************************************
+            x = _this._cuId % _this._row * _this._width * -1;
+            y = Math.floor(_this._cuId / _this._col) * _this._height * -1;
+            // **************************************************************
+            _this.$el.css({'background-position':x +'px ' + y +'px '});
+
+           // console.log(_this._CuId % _this._row);     x의 위치
+           //console.log(Math.floor(_this._CuId / _this.col));
+        }
+
+        
+
+    };
+   
+    $over = $('.smurf');
+           
+    $over.on('mouseover mouseout',function(e){
+        if(e.type == 'mouseover'){
+            console.log("Smurf_over"+Smurf._cuId);
+            Smurf.play();
+       
+        }
+        else if(e.type == 'mouseout'){
+            console.log("Smurf_out"+Smurf._cuId);
+            Smurf.play();
+        }
+    });
+
+    Smurf.appInit();
+    Mung.appInit();
+
+});
+</script>
+</body>
+</html>
