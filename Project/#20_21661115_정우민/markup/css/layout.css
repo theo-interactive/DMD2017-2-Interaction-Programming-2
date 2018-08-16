@@ -1,8 +1,0 @@
-.header_wrap {position: fixed; top: 0; z-index: 9996; display: block; background-color: #00000033; width: 100%; height: 50px;}
-.header {width: 100%; height: calc(100% - 10px); padding-top: 10px;}
-
-.footer_wrap {position: fixed;  bottom: 0; width: 100%; height: 40px; background-color: #00000033; padding: 5px 0;}
-.footer {position: relative; width: 100%; height: 40px;}
-.footer_inner {position: relative; }
-.footer_inner .logo_5byte {height: 40px; position: absolute; left: 2%;}
-.footer_inner .logo_woom {height: 26px; position: absolute; right: 2%; margin-top: 7px;}
